@@ -1,3 +1,5 @@
+# int 既是数据类型也是函数
+
 In Python, `int` serves both as a data type and a function, performing different roles in each capacity.
 
 在 Python 中，`int` 既是数据类型也是函数，在每个容量中执行不同的角色。
