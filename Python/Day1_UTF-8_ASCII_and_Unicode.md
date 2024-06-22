@@ -1,4 +1,4 @@
-# UTF-8, ASCII, and Unicode 
+# UTF-8, ASCII, and Unicode
 Understanding the differences between UTF-8, ASCII, and Unicode is essential for handling text in various computing environments. Here's a detailed comparison presented in a markdown table to clarify these concepts:
 
 | Feature                | ASCII                         | Unicode                          | UTF-8                                         |
@@ -22,3 +22,7 @@ Understanding the differences between UTF-8, ASCII, and Unicode is essential for
 | **兼容性**             | 与旧系统广泛兼容。                        | 包括 ASCII 作为子集的通用字符集。                            | 对于前128个字符完全兼容 ASCII；对范围之外的字符使用额外的字节。      |
 | **使用场景**           | 主要用于只需要英文字母和常见符号的旧系统和简单文本文件。  | 需要广泛的不同语言字符和符号的应用程序。                             | 由于其效率和兼容性，被优先用于 Web 和多语言环境。                   |
 | **效率**               | 对于只包含基本 ASCII 集的文
+
+本最为高效。          | 由于某些编码（例如 UTF-32）的字符固定宽度，对于主要是英文的文本来说效率较低。 | 对于混合使用 ASCII 字符和其他全球脚本的文本非常高效。                 |
+
+**ASCII** 是基础而有限的，但对于仅英文文本非常高效。**Unicode** 是全面的，涵盖了全球语言所需的所有字符，但根据编码形式（UTF-16、UTF-32）可能需要更多存储空间。**UTF-8** 取得了平衡，有效编码 ASCII 的同时也能处理任何 Unicode 字符，使其成为互联网和全球应用的理想选择。
