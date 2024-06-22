@@ -1,4 +1,4 @@
-# 列表是可变序列
+# 列表是可变序列，这意味着它们可以在创建后被修改。它们可以包含不同类型的项，包括其他列表，允许创建嵌套结构
 
 Python supports a variety of compound data types that allow the combination of different values. Among these, the most commonly used is the **list**.
 
