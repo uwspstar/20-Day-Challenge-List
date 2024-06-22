@@ -50,6 +50,34 @@ print("Subset of string:", subset)
 print("Reverse of string:", reverse)
 ```
 
-These operations allow you to manipulate strings efficiently, whether you're accessing individual characters or extracting parts of the string.
+In the Python string slicing notation, `s[::-1]` is a commonly used idiom for reversing a string. Let's break down what each part of the slice notation means:
 
-这些操作允许你高效地操作字符串，无论是访问单个字符还是提取字符串的部分。
+在 Python 字符串切片符号中，`s[::-1]` 是一种常用的用于反转字符串的习语。让我们分解切片符号的每个部分的含义：
+
+- **`s`**: This is the string variable we are working with.
+
+  **`s`**：这是我们正在处理的字符串变量。
+
+- **`[ ]`**: The square brackets denote a slicing operation.
+
+  **`[ ]`**：方括号表示切片操作。
+
+- **`:`**: The colon inside the brackets is used to separate the start index, end index, and the step.
+
+  **`:`**：括号内的冒号用于分隔起始索引、终止索引和步长。
+
+- **First empty space before the first `:`**: This indicates the start index. When it's empty, it defaults to the start of the string.
+
+  **第一个 `:` 之前的空位**：这表示起始索引。当它为空时，默认为字符串的开始。
+
+- **Second empty space after the first `:` and before the second `:`**: This indicates the end index. When it's empty, it defaults to the end of the string.
+
+  **第一个 `:` 之后和第二个 `:` 之前的空位**：这表示终止索引。当它为空时，默认为字符串的结尾。
+
+- **`-1` after the second `:`**: This is the step. A step of `-1` tells Python to go backwards through the string. Essentially, it decrements the current index on each iteration.
+
+  **第二个 `:` 之后的 `-1`**：这是步长。步长为 `-1` 告诉 Python 向后通过字符串。本质上，它在每次迭代时减少当前索引。
+
+Putting it all together, `s[::-1]` starts at the end of the string (since no start is specified, it starts from the default end), ends at the beginning (since no end is specified, it stops at the default start), and moves with a step of `-1`, effectively reversing the string.
+
+综合起来，`s[::-1]` 从字符串的末尾开始（因为没有指定开始，所以从默认的末尾开始），结束在开始（因为没有指定结束，所以在默认的开始处停止），并以 `-1` 的步长移动，有效地反转了字符串。
