@@ -120,3 +120,26 @@ And here is a comparison table:
 | 列表     | 是   | `x = [1, 2, 3]`     | `x[0] = 'a'`                  |
 | 字典     | 是   | `x = {'key': 'value'}` | `x['new_key'] = 'new_value'` |
 | 集合     | 是   | `x = {1, 2, 3}`     | `x.add(4)`                    |
+
+That's correct! In Python, when you assign a list to a new variable, you're not actually creating a new independent copy of the list. Instead, the new variable refers to the same list. Changes made through any variable referencing this list will be visible through all variables referencing the same list.
+
+没错！在Python中，当你将一个列表赋值给一个新变量时，你实际上并没有创建一个新的独立的列表副本。相反，新变量引用了相同的列表。通过引用这个列表的任何变量所做的更改都会通过所有引用同一个列表的变量看到。
+
+Here's a Python code example to demonstrate this behavior:
+
+这里有一个Python代码示例来演示这种行为：
+
+```python
+original_list = [1, 2, 3]
+assigned_list = original_list  # Assigning the original list to a new variable
+
+assigned_list[0] = 99  # Changing an element via the assigned variable
+
+print("Original List:", original_list)  # Output will show the changed list
+print("Assigned List:", assigned_list)  # Output will be the same as the original list
+```
+
+The output of this code will show that both `original_list` and `assigned_list` have been updated to `[99, 2, 3]`. This is because both variables refer to the same list object in memory.
+
+这段代码的输出将显示`original_list`和`assigned_list`都被更新为`[99, 2, 3]`。这是因为两个变量都引用了内存中同一个列表对象。
+
