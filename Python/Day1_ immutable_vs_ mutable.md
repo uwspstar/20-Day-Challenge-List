@@ -143,3 +143,46 @@ The output of this code will show that both `original_list` and `assigned_list` 
 
 这段代码的输出将显示`original_list`和`assigned_list`都被更新为`[99, 2, 3]`。这是因为两个变量都引用了内存中同一个列表对象。
 
+In Python, when you assign a list to another variable, you're not creating a new list but instead creating a new reference to the original list. This means that any changes made to the new list will affect the original list as well, because they both refer to the same address in memory.
+
+在Python中，当你将一个列表赋值给另一个变量时，你并没有创建一个新的列表，而是创建了一个指向原始列表的新引用。这意味着对新列表的任何更改也会影响原始列表，因为它们都指向内存中的同一个地址。
+
+Here's an example to illustrate this:
+
+下面是一个例子来说明这一点：
+
+```python
+list1 = [1, 2, 3]
+list2 = list1
+list2.append(4)
+
+print("List1:", list1)
+print("List2:", list2)
+```
+
+This code will output:
+
+这段代码的输出将是：
+
+```
+List1: [1, 2, 3, 4]
+List2: [1, 2, 3, 4]
+```
+
+As you can see, adding an element to `list2` also adds it to `list1`.
+
+如你所见，向`list2`添加元素也会添加到`list1`。
+
+The comparison of different list operations is shown in the table below:
+
+不同列表操作的比较如下表所示：
+
+| Operation | Description in English | Description in Chinese |
+|-----------|------------------------|------------------------|
+| Assignment | Creates a new reference to the same list. | 创建一个指向同一个列表的新引用。 |
+| Copy (`list.copy()`) | Creates a shallow copy of the list, which is a new list with the same elements. | 创建列表的浅拷贝，这是一个具有相同元素的新列表。 |
+| Deep copy (`copy.deepcopy()`) | Creates a deep copy of the list, which is a completely new list with copies of the original elements. | 创建列表的深拷贝，这是一个包含原始元素副本的完全新列表。 |
+
+Understanding these differences is crucial when working with lists in Python to avoid unintended side effects.
+
+理解这些差异在使用Python处理列表时至关重要，以避免意外的副作用。
