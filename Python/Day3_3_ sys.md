@@ -66,3 +66,51 @@ print("Proceeding with the provided argument:", sys.argv[1])
 - **`sys.exit`** is used for terminating the program explicitly. It is useful for ending the script after completing a task or if an error condition is met.
 
   **`sys.exit`** 用于显式终止程序。在完成任务后或遇到错误条件时结束脚本非常有用。
+
+Certainly! Here’s a markdown table summarizing some of the key functions and variables of the `sys` module that we discussed, along with their descriptions and examples:
+
+### sys Module Features Table
+
+| Feature           | Description (EN)                                         | Description (CN)                                           | Example               |
+|-------------------|----------------------------------------------------------|------------------------------------------------------------|-----------------------|
+| `sys.argv`        | List of command-line arguments passed to a Python script | 传递给 Python 脚本的命令行参数列表                         | `sys.argv[1]`         |
+| `sys.exit`        | Exits from Python with a status code                     | 从 Python 退出，并返回状态码                               | `sys.exit(0)`         |
+| `sys.path`        | Search path for modules                                  | 模块的搜索路径                                             | `sys.path.append('/new/path')` |
+| `sys.version`     | Python interpreter version                               | Python 解释器版本                                          | `sys.version`         |
+| `sys.platform`    | Identifier for the platform running Python               | 运行 Python 的平台标识符                                   | `sys.platform`        |
+| `sys.modules`     | Dictionary mapping module names to loaded modules        | 将模块名称映射到已加载模块的字典                           | `sys.modules.keys()`  |
+| `sys.stdin`       | Standard input stream                                    | 标准输入流                                                 | `input = sys.stdin.read()` |
+| `sys.stdout`      | Standard output stream                                   | 标凈输出流                                                 | `sys.stdout.write("Hello\n")` |
+| `sys.stderr`      | Standard error stream                                    | 标准错误流                                                 | `sys.stderr.write("Error\n")` |
+
+### Example with Code Using sys Features
+
+```python
+import sys
+
+# Print Python version and platform
+print("Python version:", sys.version)
+print("Operating system:", sys.platform)
+
+# Add a directory to the path
+sys.path.append('/path/to/directory')
+
+# Print command-line arguments
+if len(sys.argv) > 1:
+    print("Arguments passed to script:", sys.argv[1:])
+
+# Redirect standard output
+with open('output.txt', 'w') as f:
+    sys.stdout = f
+    print("This will go to 'output.txt' instead of the console")
+```
+
+### Explanation | 解释
+
+- This code demonstrates how to use `sys.version` and `sys.platform` to check the Python version and the operating system.
+- It modifies the `sys.path` to include a new directory for module searching.
+- The script checks for any command-line arguments passed and prints them.
+- It also shows how to redirect the standard output (`sys.stdout`) to a file, which is useful for logging or writing output to a file instead of the console.
+
+Using these features, you can effectively manage and interact with your Python environment and system properties, enhancing the flexibility and capability of your scripts.
+
