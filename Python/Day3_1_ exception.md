@@ -1,3 +1,5 @@
+# exception handling
+
 In Python, the `try...except` block is used for exception handling, allowing you to catch and respond to errors or exceptions that occur during the execution of your program. This mechanism helps to make the program more robust and prevents it from crashing unexpectedly.
 
 ### Basic Structure
