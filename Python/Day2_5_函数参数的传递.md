@@ -76,8 +76,8 @@ def f(a, L=None):
     return L
 
 print(f(1))  # 输出: [1]
-print(f(2))  # 输出: [1, 2]  (预期是 [2], 且这里确实是 [2])
-print(f(3))  # 输出: [1, 2, 3]  (预期是 [3], 且这里确实是 [3])
+print(f(2))  # 输出: [2]  (预期是 [2], 且这里确实是 [2])
+print(f(3))  # 输出: [3]  (预期是 [3], 且这里确实是 [3])
 ```
 
 在这种修改后的版本中，每次调用 `f` 时，如果未提供 `L`，将创建一个新的空列表。这样，每次函数调用都是独立的，避免了意外共享数据的问题。
@@ -85,3 +85,62 @@ print(f(3))  # 输出: [1, 2, 3]  (预期是 [3], 且这里确实是 [3])
 ### 总结 | 解释
 
 使用默认可变参数时应格外小心，因为它们可能导致难以发现的错误和不一致的行为。通过使用 `None` 作为默认值并在函数内部初始化可变对象，可以保持函数的纯净性和预测性，这是编写清晰、可维护代码的重要方面。
+
+The difference between the two function definitions you've provided hinges on how Python handles mutable default arguments like lists. Let's explore each function and understand the implications of using one over the other:
+
+### Function with `L=None`
+
+```python
+def f(a, L=None):
+    if L is None:
+        L = []
+    L.append(a)
+    return L
+```
+
+**Key Characteristics**:
+- **Immutable Default**: The default value of `L` is `None`, which is immutable.
+- **Initialization Inside Function**: Each time the function is called without a specific `L` provided, a new list `L` is created inside the function. This ensures that `L` is always a new list for each function call unless a list is explicitly passed.
+- **No Side Effects**: Since a new list is created each time the function is invoked with `L` as `None`, subsequent calls to the function do not affect the outcome of previous calls. Each call is independent.
+
+**Usage Example**:
+```python
+print(f(1))  # Outputs: [1]
+print(f(2))  # Outputs: [2]
+print(f(3))  # Outputs: [3]
+```
+Each call to `f` returns a new list containing only the provided element `a`, as `L` is initialized to a new list each time.
+
+### Function with `L=[]`
+
+```python
+def f(a, L=[]):
+    L.append(a)
+    return L
+```
+
+**Key Characteristics**:
+- **Mutable Default**: The default value of `L` is a mutable list (`[]`).
+- **Single Initialization**: The list `L` is created only once when the function is defined, not each time it is called. Therefore, this same list is used in every call where `L` is not explicitly provided.
+- **Side Effects**: Because the same list `L` is used for every default call to `f`, the list retains elements added in previous calls, leading to potentially unintended accumulation of data across function calls.
+
+**Usage Example**:
+```python
+print(f(1))  # Outputs: [1]
+print(f(2))  # Outputs: [1, 2]
+print(f(3))  # Outputs: [1, 2, 3]
+```
+Each call to `f` without a specific list provided appends to the same default list, accumulating results across calls.
+
+### Summary of Differences
+
+| Feature                         | `L=None`                        | `L=[]`                            |
+|---------------------------------|---------------------------------|-----------------------------------|
+| Default Argument Type           | Immutable (`None`)              | Mutable (list `[]`)               |
+| Behavior on Subsequent Calls    | Independent (no side effects)   | Cumulative (shared state)         |
+| Safety in Concurrent/Reusable Code | Safer (avoids shared state bugs) | Risky (prone to bugs from shared state) |
+
+### Conclusion
+
+The use of `L=None` with the conditional initialization inside the function (`if L is None: L = []`) is a common Python idiom to avoid the pitfalls associated with mutable default arguments. This pattern prevents unexpected behavior due to shared state across function calls and is especially important in larger and more complex software systems where such side effects can lead to bugs that are difficult to trace and fix.
+
