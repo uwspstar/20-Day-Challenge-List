@@ -104,3 +104,48 @@ for i in range(4):
 
 In conclusion, I recommend using the first example with the nested list comprehension for its clarity and efficiency.
 
+The code snippet you've provided is an example of using nested list comprehensions to transpose a matrix in Python. Let’s break down how it works and why it is an effective method for this task.
+
+### Breakdown of the Code
+
+```python
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+]
+
+transposed_matrix = [[row[i] for row in matrix] for i in range(4)]
+print(transposed_matrix)
+```
+
+#### Output
+
+```
+[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
+```
+
+### Explanation
+
+1. **Outer List Comprehension**: `for i in range(4)`
+   - This outer loop iterates over each column index of the matrix (from 0 to 3). Each iteration represents a new row in the transposed matrix.
+
+2. **Inner List Comprehension**: `[row[i] for row in matrix]`
+   - For each iteration of the outer loop, the inner list comprehension collects elements from all rows of the original matrix that correspond to the current column index `i`.
+   - `row[i]` accesses the `i`th element of each row.
+   - This creates a new list of elements that forms a single row in the transposed matrix.
+
+### Why It Works Well
+
+- **Simplicity and Clarity**: This method clearly shows the intent to pick each element from the same position across all rows and group them into a new row. The intent is more visually apparent compared to traditional loop structures.
+- **Single-line Solution**: Achieving matrix transposition in a single line (excluding variable declarations) makes the code compact and easy to use in functional programming contexts or within larger expressions.
+- **Scalability**: The approach works seamlessly for any number of rows, assuming each row has the same number of elements. Just change the `range(4)` to `range(len(matrix[0]))` to make it dynamically adapt to any number of columns.
+
+### Advantages Over Other Methods
+
+- **Compared to using a for-loop**: Nested list comprehensions can often be more succinct and potentially offer better performance for this kind of matrix manipulation by leveraging Python’s list comprehension efficiencies.
+- **Compared to using `zip()`**: While `zip(*matrix)` is extremely concise and intuitive for those familiar with Python’s unpacking and zip mechanisms, the list comprehension approach may be clearer for those who are learning or prefer a more "step-by-step" visualization of data flow.
+
+### Conclusion
+
+Nested list comprehensions provide a powerful way to handle tasks like matrix transposition, combining clarity with the efficiency of Python's list handling capabilities. It's a technique that balances the expressiveness of Python with practical performance considerations, making it a useful tool for data manipulation tasks.
