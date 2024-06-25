@@ -1,6 +1,8 @@
 # `zip()` 函数 
 
 Absolutely, using built-in functions like `zip()` often leads to more efficient, readable, and concise code. In the context of transposing a matrix or switching rows with columns in a list of lists, `zip()` is an extremely useful tool.
+
+### `zip(*iterables, strict=False)` 
 The function `zip(*iterables, strict=False)` in Python allows for parallel iteration over multiple iterables (like lists, tuples, etc.), returning a tuple composed of an item from each iterable.
 
 Python 中的函数 `zip(*iterables, strict=False)` 允许在多个可迭代对象（如列表、元组等）上进行并行迭代，返回一个由每个可迭代对象中的一个数据项组成的元组。
