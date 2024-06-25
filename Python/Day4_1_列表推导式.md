@@ -72,7 +72,11 @@ transposed = []
 for i in range(4):
     transposed.append([row[i] for row in matrix])
 ```
+#### Output
 
+```
+[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
+```
 #### Explanation
 
 - **English**: This snippet initializes an empty list called `transposed`. It iterates over the range of the number of columns in the original matrix (4 columns, hence `range(4)`). For each index `i`, it uses a list comprehension to gather the `i`th element from each row (which becomes a column in the transposed matrix) and appends this list to `transposed`.
@@ -89,7 +93,11 @@ for i in range(4):
         transposed_row.append(row[i])
     transposed.append(transposed_row)
 ```
+#### Output
 
+```
+[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
+```
 #### Explanation
 
 - **English**: This approach also starts with an empty list called `transposed`. It loops over the indices representing the columns of the matrix. Within each iteration, it initializes another list called `transposed_row`. Then, it iterates over each row of the matrix, appending the `i`th element of each row to `transposed_row`. Finally, it appends `transposed_row` to the main list `transposed`.
