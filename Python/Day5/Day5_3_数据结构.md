@@ -1,4 +1,6 @@
 # 数据结构
+- https://docs.python.org/zh-cn/3/tutorial/datastructures.html#
+
 在计算机科学中，数据结构是存储、组织和管理数据的方式，用于有效地访问和修改数据。Python作为一种高级编程语言，内置了多种强大的数据结构，它们使得数据操作和处理更加便捷和高效。这里将详细介绍Python中的主要数据结构，包括它们的特点、用途以及如何在Python中使用它们。
 
 ### Python内置的主要数据结构
