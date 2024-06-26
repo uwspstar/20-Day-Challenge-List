@@ -245,4 +245,70 @@ Using Python lists to implement stacks is straightforward and efficient. However
 
 使用 Python 列表实现堆栈是直接和高效的。然而，对于队列，由于其性能优势，最好使用 `collections.deque`，特别是在处理大型数据集或需要频繁在数据结构的两端插入和删除的操作时。
 
+In Python, dictionaries are fundamental data structures that map immutable keys to corresponding values. This makes dictionaries incredibly versatile and useful for various applications where quick lookup and data organization are needed. Understanding the types of objects that can be used as keys in dictionaries is crucial for effective Python programming.
 
+在 Python 中，字典是基本的数据结构，用于将不可变键映射到相应的值。这使得字典在需要快速查找和数据组织的各种应用中非常灵活和有用。了解可以作为字典键的对象类型对于有效的 Python 编程至关重要。
+
+### Dictionary Keys | 字典键
+
+#### English
+Dictionaries use keys for indexing; these keys can be any immutable type. Strings and numbers can always be used as keys because of their immutable nature. If a tuple contains only strings, numbers, or other tuples, then it can also serve as a key. However, if a tuple contains any mutable object, either directly or indirectly, it cannot be used as a key. Lists cannot be used as keys because they can be modified in place using methods like `append()`, `extend()`, indexing assignments, or slicing.
+
+#### 中文
+字典使用键进行索引；这些键可以是任何不可变类型。由于字符串和数字的不可变性，它们总是可以作为键使用。如果一个元组只包含字符串、数字或其他元组，那么它也可以作为键。然而，如果一个元组直接或间接地包含任何可变对象，则不能用作键。列表不能用作键，因为它们可以使用 `append()`、`extend()`、索引赋值或切片等方法进行原地修改。
+
+### Why Immutability Matters | 为什么不变性很重要
+
+#### English
+The requirement for keys to be immutable in dictionaries stems from the need to have a consistent hash value for each key. A hash value is used internally by the dictionary to quickly locate the key-value pair. If a key’s value can change, its hash value can also change, which would compromise the integrity of the dictionary’s structure, leading to errors or incorrect data retrieval.
+
+#### 中文
+字典中键必须是不可变的要求源于每个键需要具有一致的哈希值的需求。哈希值在字典内部用于快速定位键值对。如果键的值可以改变，它的哈希值也可以改变，这将破坏字典结构的完整性，导致错误或不正确的数据检索。
+
+### Examples of Valid and Invalid Dictionary Keys | 有效和无效字典键的示例
+
+#### English
+Here are some examples to illustrate valid and invalid keys in Python dictionaries:
+
+```python
+# Valid dictionary keys
+valid_dict = {
+    "name": "Alice",
+    42: "The answer",
+    (1, 2, 3): "Tuple with immutable elements"
+}
+
+# Invalid dictionary key example (because it includes a list)
+try:
+    invalid_dict = {
+        (1, 2, [3, 4]): "Tuple with a list"
+    }
+except TypeError as e:
+    print(f"Error: {e}")
+```
+
+#### 中文
+这里有一些示例来说明 Python 字典中有效和无效的键：
+
+```python
+# 有效的字典键
+valid_dict = {
+    "name": "Alice",
+    42: "答案",
+    (1, 2, 3): "包含不可变元素的元组"
+}
+
+# 无效的字典键示例（因为它包含了一个列表）
+try:
+    invalid_dict = {
+        (1, 2, [3, 4]): "包含列表的元组"
+    }
+except TypeError as e:
+    print(f"错误：{e}")
+```
+
+### Conclusion | 结论
+
+Using appropriate types as dictionary keys is essential for maintaining the functionality and reliability of dictionary operations in Python. Always ensure that keys are immutable to avoid unexpected behaviors and errors in your programs.
+
+在 Python 中，使用适当的类型作为字典键对于保持字典操作的功能性和可靠性至关重要。始终确保键是不可变的，以避免程序中出现意外行为和错误。
