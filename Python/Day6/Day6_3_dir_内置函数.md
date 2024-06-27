@@ -2,6 +2,8 @@ The built-in function `dir()` in Python is used to find the names defined in a m
 
 Python中的内置函数`dir()`用于查找模块定义的名称。它返回一个排序后的字符串列表，包含模块定义的变量、函数、类和其他类型对象的名称。`dir()`可以用于任何对象（Python中的一切都是对象），它帮助你快速了解哪些函数和属性可用。
 
+dir() 不会列出内置函数和变量的名称。这些内容的定义在标准模块 builtins 中
+
 Here's a detailed explanation of how `dir()` is used:
 
 以下是如何使用`dir()`的详细解释：
