@@ -180,6 +180,61 @@ The `zip(*matrix)` technique is highly effective for transposing matrices due to
 
 `zip(*matrix)` 技术由于能够根据元素在多个列表中的位置将它们分组，因此在转置矩阵方面非常有效。它简洁、易读，并利用了 Python 强大的可迭代对象处理能力。
 
+#### Example with `zip()`:
+```python
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+    print('What is your {0}?  It is {1}.'.format(q, a))
 
+```
+In the Python code you provided, `zip()` is used to combine two lists, `questions` and `answers`, into pairs. Each pair consists of elements from the same positions in each list. The `for` loop then iterates over these pairs, and for each iteration, it formats and prints a string using the `format()` method of string objects.
 
+这段 Python 代码使用 `zip()` 将两个列表 `questions` 和 `answers` 组合成对。每对包含来自每个列表相同位置的元素。`for` 循环随后遍历这些对，并在每次迭代中使用字符串对象的 `format()` 方法格式化并打印一个字符串。
+
+Here's a step-by-step explanation of how the code works:
+
+以下是代码工作原理的逐步解释：
+
+### Code Breakdown | 代码解析
+
+1. **List Definitions | 列表定义**:
+   - `questions = ['name', 'quest', 'favorite color']`
+   - `answers = ['lancelot', 'the holy grail', 'blue']`
+   These lists store strings representing questions and their corresponding answers.
+
+   这些列表存储代表问题及其相应答案的字符串。
+
+2. **Using `zip()` Function | 使用 `zip()` 函数**:
+   - `zip(questions, answers)`
+   This call to `zip()` takes two lists and zips them together, meaning it pairs each element from the first list with the element at the same position in the second list. The result is an iterable of tuples.
+
+   这个对 `zip()` 的调用将两个列表压缩在一起，意味着它将第一个列表的每个元素与第二个列表中相同位置的元素配对。结果是一个元组的迭代器。
+
+3. **Looping Over Pairs | 遍历对**:
+   - `for q, a in zip(questions, answers):`
+   Here, the `for` loop iterates over the iterable produced by `zip()`. Each iteration unpacks a tuple into two variables, `q` (question) and `a` (answer).
+
+   这里，`for` 循环遍历 `zip()` 产生的迭代器。每次迭代都将一个元组解包成两个变量，`q`（问题）和 `a`（答案）。
+
+4. **Printing Formatted Strings | 打印格式化字符串**:
+   - `print('What is your {0}?  It is {1}.'.format(q, a))`
+   The `print()` function outputs a formatted string, where `{0}` and `{1}` are placeholders for the first and second arguments passed to `format()`, respectively. `q` fills `{0}`, and `a` fills `{1}`, resulting in a sentence that combines the question and answer.
+
+   `print()` 函数输出一个格式化字符串，其中 `{0}` 和 `{1}` 是分别传递给 `format()` 的第一和第二个参数的占位符。`q` 填充 `{0}`，而 `a` 填充 `{1}`，结果是一个结合了问题和答案的句子。
+
+### Example Output | 示例输出
+
+If you run this code, the output will be:
+如果运行这段代码，输出将是：
+
+```
+What is your name?  It is lancelot.
+What is your quest?  It is the holy grail.
+What is your favorite color?  It is blue.
+```
+
+Each line combines a question from the `questions` list with its corresponding answer from the `answers` list, presented in a conversational format.
+
+每行将 `questions` 列表中的一个问题与其在 `answers` 列表中的相应答案结合起来，以对话格式呈现。
 
