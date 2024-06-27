@@ -173,5 +173,40 @@ This is generally discouraged as it can lead to conflicts with existing names in
 
 By understanding these import mechanisms and conventions, you can write Python code that is both efficient and easy to manage.
 
+In Python, there are two scenarios where the cache is not checked when importing modules:
+
+在Python中，导入模块时有两种情况不会检查缓存：
+
+1. Modules loaded directly from the command line are recompiled every time they are loaded, and the results of the compilation are not stored. This ensures that the most recent version of the code is always executed.
+
+1. 从命令行直接载入的模块，每次载入都会重新编译，且不存储编译结果。这确保总是执行代码的最新版本。
+
+2. If the source module is not available, Python won't check the cache. This means if the `.py` file is missing but a `.pyc` (compiled file) exists, Python will not use the `.pyc` file and will raise an error instead.
+
+2. 如果没有源模块，Python就不会检查缓存。这意味着如果`.py`文件缺失但存在`.pyc`（编译后的文件），Python将不会使用`.pyc`文件，而会引发错误。
+
+These mechanisms help ensure that Python's behavior is predictable and that it runs the correct version of the code in various scenarios.
+
+这些机制有助于确保Python的行为是可预测的，并且在不同的场景中运行正确的代码版本。
+When Python loads a program from a `.pyc` file, the execution speed of the program is not faster than when it is loaded from a `.py` file. The `.pyc` files, which are pre-compiled bytecode files, primarily provide a speed advantage in the loading phase, not in the execution phase.
+
+当Python从`.pyc`文件加载程序时，程序的执行速度并不比从`.py`文件加载时更快。`.pyc`文件是预编译的字节码文件，主要在加载阶段提供速度优势，而不是在执行阶段。
+
+Here’s a detailed explanation:
+
+以下是详细解释：
+
+1. **Loading Time**: `.pyc` files help in reducing the loading time because Python doesn't need to compile the source code into bytecode again; it directly loads the pre-compiled bytecode. This is where the time-saving comes from.
+
+1. **加载时间**：`.pyc`文件有助于减少加载时间，因为Python无需再次将源代码编译成字节码，而是直接加载预编译的字节码。这是节省时间的地方。
+
+2. **Execution Speed**: Once the bytecode is loaded into memory, whether it comes from a `.py` file or a `.pyc` file, it executes at the same speed. The execution speed of the bytecode is independent of its source format.
+
+2. **执行速度**：一旦字节码被加载到内存中，无论它来自`.py`文件还是`.pyc`文件，它的执行速度都是相同的。字节码的执行速度与其源格式无关。
+
+Thus, the main benefit of `.pyc` files is in reducing the start-up time of Python programs, especially when the programs are large or complex and the compilation step can be notably time-consuming.
+
+因此，`.pyc`文件的主要好处在于减少Python程序的启动时间，特别是当程序很大或复杂且编译步骤可能非常耗时时。
+
 通过理解这些导入机制和约定，您可以编写既高效又易于管理的 Python 代码。
 
