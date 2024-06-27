@@ -112,3 +112,66 @@ This approach makes Python scripts versatile, allowing them to function both as 
 Modules are a key concept in Python that facilitates code reuse and organization. By creating files for different tasks and importing them as needed, you can keep your code base manageable and maintainable.
 
 模块是 Python 中促进代码重用和组织的一个关键概念。通过为不同任务创建文件并根据需要导入它们，您可以保持代码库的可管理性和可维护性。
+
+In Python, modules can import other modules, which is a fundamental feature that supports modular programming by allowing code separation and reuse. You can place import statements at the beginning of a module or script, which is a common convention for clarity and organization, though not strictly required. When a module is imported, its names (functions, classes, variables) become part of the importing module’s global namespace. This facilitates access to these names within the importing module.
+
+在 Python 中，模块可以导入其他模块，这是支持模块化编程的基本功能，通过允许代码分离和重用。通常将 import 语句放在模块或脚本的开头，这是一个常见的约定，用于清晰和组织，尽管这不是强制要求。当一个模块被导入时，它的名称（函数、类、变量）成为导入模块的全局命名空间的一部分。这便于在导入模块内访问这些名称。
+
+### Standard Import Statement | 标准导入语句
+
+**Example | 示例:**
+
+```python
+import math
+print(math.sqrt(16))  # Outputs: 4.0
+```
+
+This statement imports the entire `math` module, and you access its functions by prefixing them with `math.`.
+
+这条语句导入整个 `math` 模块，您可以通过前缀 `math.` 来访问它的函数。
+
+### Importing Specific Names | 导入特定名称
+
+You can also import specific attributes or functions from a module directly into the global namespace of the importing module. This means you can use them without prefixing them with the module name.
+
+您还可以直接从模块中导入特定的属性或函数到导入模块的全局命名空间中。这意味着您可以使用它们而无需前缀模块名。
+
+**Example | 示例:**
+
+```python
+from math import sqrt
+print(sqrt(16))  # Outputs: 4.0
+```
+
+This imports only the `sqrt` function from the `math` module.
+
+这只从 `math` 模块导入 `sqrt` 函数。
+
+### Importing Everything | 导入所有内容
+
+It's possible to import all names from a module directly into the global namespace using the following syntax:
+
+可以使用以下语法将一个模块中的所有名称直接导入到全局命名空间中：
+
+```python
+from module_name import *
+```
+
+This is generally discouraged as it can lead to conflicts with existing names in the global namespace and can make the code harder to understand and debug.
+
+这通常不被推荐，因为它可能导致与全局命名空间中现有名称的冲突，并且可以使代码更难理解和调试。
+
+### Guidelines for Imports | 导入指南
+
+1. **Clarity and Maintenance**: Place all import statements at the top of the file for clarity and easy maintenance.
+2. **Avoid Global Imports**: Avoid using `from module_name import *` except in specific situations where you are sure it won't cause namespace issues.
+3. **Use Aliases**: If module names are long or likely to conflict, use aliases.
+
+1. **清晰与维护**：为了清晰和易于维护，将所有导入语句放在文件顶部。
+2. **避免全局导入**：除非在特定情况下您确信不会引起命名空间问题，否则避免使用 `from module_name import *`。
+3. **使用别名**：如果模块名称很长或可能发生冲突，使用别名。
+
+By understanding these import mechanisms and conventions, you can write Python code that is both efficient and easy to manage.
+
+通过理解这些导入机制和约定，您可以编写既高效又易于管理的 Python 代码。
+
