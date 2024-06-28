@@ -218,3 +218,58 @@ except InvalidUsage as e:
 ```
 
 Creating and using custom exceptions allows you to handle errors more gracefully and in a way that is more aligned with the specific workflows and errors of your application. This can significantly improve the maintainability and readability of your error handling code.
+
+The `finally` clause in Python is a crucial part of exception handling that ensures a block of code is executed at the end of a `try...except` sequence, regardless of whether an exception was raised or not. This makes it ideal for clean-up actions that need to be performed under all circumstances, such as closing files or releasing resources.
+
+Python中的`finally`子句是异常处理的重要部分，确保在`try...except`序列结束时执行代码块，无论是否引发异常。这使其非常适合在所有情况下都需要执行的清理操作，如关闭文件或释放资源。
+
+### Complex Scenarios Involving `finally`
+
+Here are some more complex scenarios involving the `finally` clause and how Python handles them:
+
+### 涉及`finally`的复杂场景
+
+以下是一些涉及`finally`子句的更复杂的场景以及Python如何处理它们：
+
+1. **Exception Raised in `try`, Not Handled in `except`**: If an exception is raised during the execution of the `try` block and it is not handled by an `except` clause, the exception is temporarily paused while the `finally` clause executes. After `finally` completes, the exception is re-raised.
+
+1. **`try`中引发的异常，未在`except`中处理**：如果在执行`try`块期间引发了异常，并且未被`except`子句处理，异常会在`finally`子句执行期间暂时暂停。`finally`完成后，异常将被重新引发。
+
+2. **Exception Raised in `except` or `else`**: If an exception occurs in an `except` or `else` clause, it behaves similarly: the `finally` clause will execute, and then the exception will be re-raised afterward.
+
+2. **在`except`或`else`中引发异常**：如果在`except`或`else`子句中发生异常，其行为类似：`finally`子句将执行，然后之后重新引发异常。
+
+3. **Control Statements in `finally`**: If `finally` includes control statements like `break`, `continue`, or `return`, they can alter the flow. For instance, if `return` is used in `finally`, it will take precedence over any `return` in the `try` or `except` blocks, and no exceptions will be re-raised.
+
+3. **`finally`中的控制语句**：如果`finally`包括`break`、`continue`或`return`等控制语句，它们可以改变流程。例如，如果在`finally`中使用`return`，它将优先于`try`或`except`块中的任何`return`，并且不会重新引发任何异常。
+
+4. **`try` Block with `break`, `continue`, or `return`**: If a `try` block contains a `break`, `continue`, or `return` statement and these are executed, the `finally` clause will still execute before the flow of control moves out of the block.
+
+4. **带有`break`、`continue`或`return`的`try`块**：如果`try`块包含`break`、`continue`或`return`语句，并且这些语句被执行，`finally`子句仍将在控制流出块之前执行。
+
+### Example
+
+Here is a Python code example that illustrates some of these principles:
+
+### 示例
+
+这是一个Python代码示例，说明了其中一些原则：
+
+```python
+def demo_finally():
+    try:
+        return "from try"
+    except:
+        return "from except"
+    else:
+        return "from else"
+    finally:
+        return "from finally"
+
+result = demo_finally()
+print(result)  # This will print "from finally"
+```
+
+In this example, even though the `try` block has a `return` statement, the `return` statement in the `finally` clause overrides it, and "from finally" is returned and printed.
+
+在这个示例中，尽管`try`块有一个`return`语句，`finally`子句中的`return`语句将其覆盖，返回并打印了"from finally"。
