@@ -114,3 +114,56 @@ with open('output.txt', 'w') as f:
 
 Using these features, you can effectively manage and interact with your Python environment and system properties, enhancing the flexibility and capability of your scripts.
 
+In Python, `sys.argv` is a list in the `sys` module that contains the command-line arguments passed to a script. When you run a Python script from the command line, `sys.argv` captures all the arguments provided. The first item in this list, `sys.argv[0]`, is always the name of the script itself, and the subsequent items are the additional arguments passed.
+
+在Python中，`sys.argv` 是 `sys` 模块中的一个列表，包含传递给脚本的命令行参数。当你从命令行运行一个Python脚本时，`sys.argv` 捕获提供的所有参数。这个列表的第一个项目，`sys.argv[0]`，总是脚本本身的名称，后续的项目是传递的额外参数。
+
+Here's an example of how to use `sys.argv`:
+
+```python
+import sys
+
+# Print all arguments
+print("All arguments:", sys.argv)
+
+# Print each argument
+for i, arg in enumerate(sys.argv):
+    print(f"Argument {i}: {arg}")
+```
+
+以下是如何使用 `sys.argv` 的示例：
+
+```python
+import sys
+
+# 打印所有参数
+print("所有参数:", sys.argv)
+
+# 打印每个参数
+for i, arg in enumerate(sys.argv):
+    print(f"参数 {i}: {arg}")
+```
+
+To use this script, you would run it from the command line with additional arguments. For example:
+
+要使用此脚本，您可以在命令行中使用额外的参数运行它。例如：
+
+```bash
+python myscript.py arg1 arg2 arg3
+```
+
+This would output:
+
+这将输出：
+
+```
+All arguments: ['myscript.py', 'arg1', 'arg2', 'arg3']
+Argument 0: myscript.py
+Argument 1: arg1
+Argument 2: arg2
+Argument 3: arg3
+```
+
+The `sys.argv` feature is particularly useful for scripts that need to interact with command-line inputs, making them configurable at runtime without hardcoding values within the script.
+
+`sys.argv` 功能特别适用于需要与命令行输入交互的脚本，使它们在运行时可配置，无需在脚本中硬编码值。
