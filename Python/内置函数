@@ -1,2 +1,23 @@
 # 内置函数 
 [内置函数](https://docs.python.org/zh-cn/3/library/functions.html)
+
+Python的内置函数是不需要额外导入模块即可使用的函数，它们是Python标准库的一部分，提供了许多基本功能。
+
+Python's built-in functions are functions that can be used without importing additional modules. They are part of the Python standard library and offer many fundamental capabilities.
+
+这里有一些常用的Python内置函数的例子：
+
+Here are some examples of commonly used Python built-in functions:
+
+| 函数 | 用途 | 示例 |
+| --- | --- | --- |
+| `len()` | 返回项目的长度 | `len("Hello")` -> 5 |
+| `print()` | 打印输出信息 | `print("Hello World")` |
+| `type()` | 返回项目的类型 | `type(12)` -> `<class 'int'>` |
+| `int()` | 将一个值转换为整数 | `int("123")` -> 123 |
+| `str()` | 将一个值转换为字符串 | `str(123)` -> "123" |
+
+这些函数对于日常的编程非常有用，尤其是在进行数据处理和调试时。
+
+These functions are very useful for daily programming, especially when dealing with data processing and debugging.
+
