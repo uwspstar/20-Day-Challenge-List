@@ -1,4 +1,6 @@
-这段话描述的是 Python 中方法调用与函数调用之间的关系。在 Python 中，当你调用一个对象的方法时，这个对象会自动作为第一个参数传递给该方法。这种机制是面向对象编程的一个重要特性，它让方法能够访问和操作实例对象的数据。
+# Python 中方法调用与函数调用之间的关系
+
+在 Python 中，当你调用一个对象的方法时，这个对象会自动作为第一个参数传递给该方法。这种机制是面向对象编程的一个重要特性，它让方法能够访问和操作实例对象的数据。
 
 This paragraph describes the relationship between method calls and function calls in Python. In Python, when you call a method of an object, the object is automatically passed as the first argument to that method. This mechanism is an important feature of object-oriented programming, allowing methods to access and manipulate the data of the instance object.
 
