@@ -3,7 +3,6 @@ Focus on one thing for 20 days:
 
 Here is a markdown table outlining the different study plans:
 
-```markdown
 | 序号 | 学习计划                       | 时间安排 |
 |------|-----------------------------|----------|
 | 1    | [20天学Python](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Python)                | 20天     |
@@ -14,7 +13,6 @@ Here is a markdown table outlining the different study plans:
 | 6    | [20天学Algorithm]()             | 20天     |
 | 7    | [7天学Docker]()                 | 7天      |
 | 8    | [7天学Git]()                    | 7天      |
-```
 
 
 要成为一个工具中高级专家，例如AI RAG（Retrieval-Augmented Generation），确实可能需要遵循“2000小时定律”。这条定律基于流行的“10000小时定律”，后者提出要在某个领域达到专家水平大约需要10000小时的练习。2000小时可以被视为中高级水平的一种标准。
