@@ -116,3 +116,37 @@ Slicing is implemented in Python through the `__getitem__` method of sequence ty
 切片通过序列类型的 `__getitem__` 方法实现，该方法解释传递给它的切片对象 (`slice(start, stop, step)`)。这允许高效且方便地提取序列的部分，无需创建循环或更复杂的列表推导。
 
 </details>
+
+
+<details>
+  <summary>4. What is docstring in Python?</summary>
+
+A **docstring** in Python is a string literal that appears right after the definition of a function, method, class, or module. This string acts as the documentation for that block of code.
+
+**Python中的文档字符串**是出现在函数、方法、类或模块定义之后的字符串字面值。此字符串作为该代码块的文档。
+
+Here’s a simple example of a function with a docstring:
+
+这是一个带有文档字符串的函数的简单示例：
+
+```python
+def greet(name):
+    """
+    Greet a person with their name.
+    用他们的名字问候一个人。
+    """
+    print(f"Hello, {name}!")
+```
+
+### Docstring Usage Comparison
+
+| Feature | Usage in Code | Purpose |
+|---------|---------------|---------|
+| **Function Docstring** | `def function(): "Description"` | Describes what the function does. 描述函数的功能。 |
+| **Class Docstring** | `class MyClass: "Description"` | Provides information about the class. 提供关于类的信息。 |
+| **Module Docstring** | At the top of a file, `"Description"` | Describes the module's purpose. 描述模块的目的。 |
+
+Docstrings are used by various tools and modules like `help()`, `__doc__`, and Sphinx to automatically generate documentation for your code.
+
+文档字符串被`help()`、`__doc__`和Sphinx等各种工具和模块用于为你的代码自动生成文档。
+</details>
