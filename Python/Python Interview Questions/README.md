@@ -1,7 +1,7 @@
 # Python Interview Questions
 
 <details>
-  <summary>1. What is `__init__`?</summary>
+  <summary>1. What is __init__?</summary>
 
   1. **What is `__init__`?**
 
