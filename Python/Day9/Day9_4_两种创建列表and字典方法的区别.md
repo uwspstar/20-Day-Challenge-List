@@ -1,3 +1,5 @@
+# `[]` and `list()`, `{}` and `dict()`
+
 In Python, both `[]` and `list()` can be used to create a list, but they have different usage contexts and performance characteristics. Let's explore the differences between these two methods of creating lists:
 
 在 Python 中，`[]` 和 `list()` 都可以用来创建列表，但它们有不同的使用上下文和性能特性。让我们探索这两种创建列表方法的区别：
