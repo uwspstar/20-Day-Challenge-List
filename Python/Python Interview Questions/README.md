@@ -75,7 +75,8 @@ print(my_array)  # Output: array('i', [1, 2, 3, 4])
 Lists in Python are implemented as dynamic arrays in the backend but are designed to be more flexible by allowing mixed data types. This flexibility comes at the cost of performance when dealing with purely numerical data.
 
 在后端，Python 列表是作为动态数组实现的，但它们设计得更加灵活，允许混合数据类型。这种灵活性在处理纯数值数据时会以性能为代价。
-</details>
+
+
 Arrays in Python, while needing a specific type to be declared, provide optimizations for storing and manipulating large amounts of uniform data, especially numeric, which makes them particularly useful in data analysis and scientific computing.
 
 Python 的数组虽然需要声明特定类型，但为存储和操作大量统一数据提供了优化，尤其是数值数据，这使得它们在数据分析和科学计算中特别有用。
