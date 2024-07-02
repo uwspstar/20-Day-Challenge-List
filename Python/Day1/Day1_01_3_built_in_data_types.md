@@ -53,3 +53,33 @@ When you use these data types in Python, the interpreter handles the memory allo
 These data types are essential for writing efficient Python code and are used in virtually every Python program. Understanding how and when to use them effectively can significantly impact the performance and scalability of your applications.
 
 这些数据类型对于编写高效的 Python 代码至关重要，并且几乎在每个 Python 程序中都有使用。理解如何以及何时有效使用它们可以显著影响您的应用程序的性能和可扩展性。
+
+Here's a comparison table that specifically outlines whether each of the common Python data types is mutable or immutable. This distinction is crucial for understanding how data types behave when they are modified in your code.
+
+### Mutability Table
+
+| Data Type   | Mutable / Immutable | Description in English                                       | Description in Chinese                                    |
+|-------------|---------------------|--------------------------------------------------------------|-----------------------------------------------------------|
+| `int`       | Immutable           | Cannot be changed after creation.                            | 创建后不能更改。                                            |
+| `float`     | Immutable           | Cannot be changed after creation.                            | 创建后不能更改。                                            |
+| `str`       | Immutable           | Cannot be changed after creation; a new string must be created. | 创建后不能更改；必须创建一个新字符串。                          |
+| `bool`      | Immutable           | Cannot be changed after creation.                            | 创建后不能更改。                                            |
+| `list`      | Mutable             | Can be changed after creation; items can be added or removed.  | 创建后可以更改；可以添加或删除项目。                          |
+| `tuple`     | Immutable           | Cannot be changed after creation.                            | 创建后不能更改。                                            |
+| `dict`      | Mutable             | Can be changed after creation; key-value pairs can be added or removed. | 创建后可以更改；可以添加或删除键值对。                          |
+| `set`       | Mutable             | Can be changed after creation; elements can be added or removed, automatically handles duplicates. | 创建后可以更改；元素可以添加或删除，自动处理重复项。               |
+
+### Behind the Scenes Explanation
+
+- **Immutable types** like integers, floats, strings, tuples, and booleans are fixed once they are created. Any operations that seem to modify these data types actually create a new object and reassign the reference to this new object. For example, when you add two strings in Python, a new string is created, and the variable points to this new string.
+  
+  **不可变类型**，如整数、浮点数、字符串、元组和布尔值，一旦创建就固定了。任何看似修改这些数据类型的操作实际上都会创建一个新对象，并将引用重新分配给这个新对象。例如，在 Python 中添加两个字符串时，会创建一个新字符串，变量将指向这个新字符串。
+
+- **Mutable types** like lists, dictionaries, and sets can be modified after their creation. This means you can add, remove, or change items directly in these objects without creating a new object each time. This mutability makes them very flexible, but it also means you need to be cautious when copying or passing them between functions to avoid unintended side effects.
+
+  **可变类型**，如列表、字典和集合，可以在创建后修改。这意味着您可以在不每次都创建新对象的情况下直接添加、删除或更改这些对象中的项目。这种可变性使它们非常灵活，但也意味着在复制或在函数之间传递时需要小心，以避免意外的副作用。
+
+Understanding the mutability of different data types helps in managing memory more efficiently and can influence how you structure data and algorithms in your programs.
+
+了解不同数据类型的可变性有助于更有效地管理内存，并且可以影响您在程序中如何构建数据和算法。
+
