@@ -150,3 +150,48 @@ Docstrings are used by various tools and modules like `help()`, `__doc__`, and S
 
 文档字符串被`help()`、`__doc__`和Sphinx等各种工具和模块用于为你的代码自动生成文档。
 </details>
+
+<details>
+  <summary>5. What is `self` in Python?</summary>
+In Python, the `self` keyword is used in object-oriented programming to refer to the instance of the class. It helps differentiate between instance variables and methods from local variables and functions within the class methods.
+
+在Python中，`self`关键字用于面向对象编程中，指代类的实例。它有助于区分类方法中的实例变量和方法与局部变量和函数。
+
+Here's how `self` is used:
+
+以下是`self`的使用方法：
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name  # instance variable
+        self.age = age    # instance variable
+
+    def greet(self):
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+```
+
+### Comparison of `self` with local variables
+
+| Context | `self` Variable | Local Variable |
+|---------|-----------------|----------------|
+| **Definition** | Used to store data or methods relevant to each instance. 用于存储与每个实例相关的数据或方法。 | Temporary variables within a method, not accessible outside. 方法内的临时变量，外部无法访问。 |
+| **Usage** | `self.name` binds the name to the instance. `self.name` 将名称绑定到实例。 | Local variables are used for temporary storage within a method. 局部变量用于方法内的临时存储。 |
+
+The use of `self` allows the class to manage its data, and ensures that each instance has its own set of data. When a method is called, the instance on which the method is called is passed automatically to `self`.
+
+使用`self`允许类管理其数据，并确保每个实例都有自己的数据集。当调用一个方法时，调用该方法的实例自动传递给`self`。
+
+</details>
+
+<details>
+  <summary></summary>
+</details>
+
+
+<details>
+  <summary></summary>
+</details>
+
+
+
