@@ -240,16 +240,21 @@ These attribute types help in structuring and securing Python code by defining c
 
 
 <details>
-  <summary></summary>
+  <summary>7.</summary>
 </details>
 
 <details>
-  <summary></summary>
+  <summary>8.</summary>
 </details>
 
 <details>
-  <summary></summary>
+  <summary>9.</summary>
 </details>
+
+<details>
+  <summary>10.</summary>
+</details>
+
 
 
 
