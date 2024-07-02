@@ -49,3 +49,46 @@ except ImportError:
   **异常处理**：在模块不是关键或存在后备选项的情况下，使用 `pass` 暂时忽略 `ImportError` 可以很有用。
 
 The `pass` statement serves an important role in maintaining the flow of Python scripts while acting as a placeholder, ensuring that the script adheres to Python's syntactical requirements even when no actual action is required.
+
+The `pass` statement in Python is used as a placeholder for future code. It acts as a null operation, meaning it does nothing when executed. This can be useful in a variety of situations where you need to define syntactically correct code but do not yet have the implementation.
+
+Python中的`pass`语句用作将来代码的占位符。它作为一个空操作，执行时不做任何事情。这在多种情况下非常有用，比如你需要定义语法上正确的代码，但尚未有实现。
+
+### Purposes of the `pass` Statement
+
+1. **Developing New Code**: When you're laying out new classes or functions but aren't ready to implement them, you can use `pass` to avoid syntax errors and maintain the flow of the program.
+2. **Placeholding**: It serves as a placeholder to remind you or indicate to others that this block of code is intentionally left empty for now.
+3. **Mandatory Code Blocks**: In Python, code structures like loops, functions, and class definitions require a block of code. If there's no code to execute, you can use `pass` to satisfy this requirement without affecting the execution.
+
+### `pass`语句的用途
+
+1. **开发新代码**: 当你在布局新的类或函数但还未准备好实现它们时，你可以使用`pass`来避免语法错误并保持程序的流程。
+2. **占位符**: 它作为一个占位符，用来提醒你或向他人表明这一代码块现在有意地保留为空。
+3. **强制代码块**: 在Python中，像循环、函数和类定义这样的代码结构需要一个代码块。如果没有要执行的代码，你可以使用`pass`来满足这一要求，而不影响执行。
+
+### Example Usage
+
+**Using `pass` in a Function**:
+```python
+def my_function():
+    pass  # Implementation will be added later.
+```
+
+**Using `pass` in a Class**:
+```python
+class MyClass:
+    pass  # Details to be added in the future.
+```
+
+**Using `pass` in a Loop or Conditional Statement**:
+```python
+for item in my_list:
+    if item == 'placeholder':
+        pass  # Do nothing
+    else:
+        print(item)
+```
+
+These examples show how `pass` can be effectively used to create syntactically correct placeholders, allowing for uninterrupted development and later implementations.
+
+这些例子展示了如何有效地使用`pass`来创建语法正确的占位符，允许不中断的开发和稍后的实现。
