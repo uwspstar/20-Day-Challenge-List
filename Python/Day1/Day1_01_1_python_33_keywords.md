@@ -45,9 +45,7 @@ Python 关键字是不能用作标识符（如变量名、函数名、类名等�
 
 ### Explanation and Use | 解释和使用
 
-These keywords are fundamental to programming in Python and
-
- are used to define the flow and operation of code. Each keyword has a specific purpose:
+These keywords are fundamental to programming in Python and are used to define the flow and operation of code. Each keyword has a specific purpose:
 
 这些关键字是 Python 编程的基础，用于定义代码的流程和操作。每个关键字都有特定的用途：
 
