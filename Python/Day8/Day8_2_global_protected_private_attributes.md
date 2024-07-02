@@ -1,3 +1,4 @@
+# global, protected, and private
 In Python, the concept of global, protected, and private attributes relates to the accessibility and visibility of variables within different parts of the code.
 
 **全局、受保护和私有属性**在Python中，这一概念涉及到在代码的不同部分中变量的可访问性和可见性。
