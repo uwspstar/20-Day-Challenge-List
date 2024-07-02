@@ -12,10 +12,10 @@ On the other hand, a weakly-typed language, such as Javascript, will simply outp
 类型检查可以在两个阶段进行：
 Type-checking can be done at two stages:
 
-静态 - 在执行前检查数据类型。
+`静态 - 在执行前检查数据类型`。
 Static - Data types are checked before execution.
 
-动态 - 在执行期间检查数据类型。
+`动态 - 在执行期间检查数据类型`。
 Dynamic - Data types are checked during execution.
 
 Python 是一种解释型语言，逐行执行代码，因此类型检查是在执行过程中动态进行的。因此，Python 是一种动态类型语言。
