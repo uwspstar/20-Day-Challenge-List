@@ -25,13 +25,13 @@ Python is an interpreted language, executes each statement line by line, and thu
 
 Here's a comparison in a markdown table format to clarify further:
 
-```markdown
+ 
 | Feature | Static Typing | Dynamic Typing |
 |---------|---------------|----------------|
 | **Type Checking Time** | Before execution | During execution |
 | **Examples** | C++, Java | Python, JavaScript |
 | **Flexibility** | Less flexible, types must be specified | More flexible, types determined at runtime |
 | **Error Detection** | Early, at compile time | Late, at runtime |
-```
+ 
 
 解释语言在执行每条语句时进行类型检查，从而在执行过程中动态地进行类型检查。因此，Python 是一种动态类型语言。
