@@ -83,7 +83,7 @@ Understanding the mutability of different data types helps in managing memory mo
 
 了解不同数据类型的可变性有助于更有效地管理内存，并且可以影响您在程序中如何构建数据和算法。
 
-In Python, there are several built-in data types that you'll frequently encounter. These data types are fundamental to handling various kinds of data in Python programs. Below is a detailed description, organized by category, including both English and Chinese explanations:
+In Python, there are several built-in data types that you'll frequently encounter. These data types are fundamental to handling various kinds of data in Python programs.
 
 ### None Type
 - **NoneType**: Represents the NULL values in Python.
