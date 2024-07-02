@@ -83,3 +83,50 @@ Understanding the mutability of different data types helps in managing memory mo
 
 了解不同数据类型的可变性有助于更有效地管理内存，并且可以影响您在程序中如何构建数据和算法。
 
+In Python, there are several built-in data types that you'll frequently encounter. These data types are fundamental to handling various kinds of data in Python programs. Below is a detailed description, organized by category, including both English and Chinese explanations:
+
+### None Type
+- **NoneType**: Represents the NULL values in Python.
+  - **NoneType**: 在 Python 中代表 NULL 值。
+
+### Numeric Types
+- **int**: Stores integer literals including hex, octal, and binary numbers as integers.
+  - **int**: 存储整数，包括十六进制、八进制和二进制数。
+- **float**: Stores literals containing decimal values and/or exponent signs as floating-point numbers.
+  - **float**: 存储包含小数值和/或指数符号的浮点数。
+- **complex**: Stores complex numbers in the form (A + Bj) and has attributes: real and imag.
+  - **complex**: 存储复数形式 (A + Bj)，具有 real 和 imag 属性。
+- **bool**: Stores boolean value (True or False).
+  - **bool**: 存储布尔值（True 或 False）。
+
+### Sequence Types
+- **list**: Mutable sequence used to store a collection of items.
+  - **list**: 可变序列，用于存储项目集合。
+- **tuple**: Immutable sequence used to store a collection of items.
+  - **tuple**: 不可变序列，用于存储项目集合。
+- **range**: Represents an immutable sequence of numbers generated during execution.
+  - **range**: 表示执行期间生成的不可变数字序列。
+- **str**: Immutable sequence of Unicode code points to store textual data.
+  - **str**: 不可变的 Unicode 码点序列，用于存储文本数据。
+
+### Mapping Types
+- **dict**: Stores a comma-separated list of key-value pairs.
+  - **dict**: 存储键值对的逗号分隔列表。
+
+### Set Types
+- **set**: Mutable unordered collection of distinct hashable objects.
+  - **set**: 可变的无序集合，包含不同的可哈希对象。
+- **frozenset**: Immutable collection of distinct hashable objects.
+  - **frozenset**: 不可变的独特可哈希对象集合。
+
+### Modules
+- Modules are containers for Python code, which can define functions, classes, and variables. Modules allow you to organize related code into a manageable and reusable manner.
+  - 模块是 Python 代码的容器，可以定义函数、类和变量。模块允许您以可管理和可重用的方式组织相关代码。
+
+### Callable Types
+- Callable types include user-defined functions, instance methods, generator functions, and some other built-in functions and methods.
+  - 可调用类型包括用户定义的函数、实例方法、生成器函数和一些其他内置函数和方法。
+
+These data types are essential for writing efficient Python code and are used in virtually every Python program. Understanding how and when to use them effectively can significantly impact the performance and scalability of your applications.
+
+这些数据类型对于编写高效的 Python 代码至关重要，并且几乎在每个 Python 程序中都有使用。理解如何以及何时有效使用它们可以显著影响您的应用程序的性能和可扩展性。
