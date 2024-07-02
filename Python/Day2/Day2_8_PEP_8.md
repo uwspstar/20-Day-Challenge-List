@@ -55,6 +55,40 @@ PEP 8（Python Enhancement Proposal 8，Python增强提案8）是编写 Python �
 
 PEP 8 serves as a fundamental guide for writing clean and maintainable Python code. By following these guidelines, developers can ensure their code is accessible and understandable to others in the Python community.
 
-PEP
+PEP 8 是 Python 的官方样式指南。
+PEP 8 is the official style guide for Python.
+
+它的目的是提供一套编码规范，以保证 Python 代码具有一致的风格和易于理解。
+Its purpose is to provide a coding standard that ensures Python code has a consistent style and is easy to understand.
+
+这样做的主要原因是使代码对于所有Python用户来说都更容易读写。
+The main reason for this is to make the code more readable and writable for all Python users.
+
+遵循 PEP 8 可以帮助团队维护统一的代码风格，从而减少错误并提高代码质量。
+Following PEP 8 helps teams maintain a consistent code style, which reduces errors and improves code quality.
+
+### 代码示例/Code Example:
+```python
+# Good formatting according to PEP 8
+def calculate_area(width, height):
+    return width * height
+
+# Poor formatting not according to PEP 8
+def calculateArea(Width,height):
+    return Width*height
+```
+
+### 比较表格/Comparison Table:
+| Aspect                  | Good Formatting       | Poor Formatting       |
+|-------------------------|-----------------------|-----------------------|
+| Function Naming         | `calculate_area`      | `calculateArea`       |
+| Variable Naming         | Lowercase with underscores | Mixed case         |
+| Whitespace Usage        | Spaces around operators (`*`, `=`) | No spaces around operators |
+
+这个表格展示了遵循和不遵循 PEP 8 的代码格式之间的区别。
+This table shows the differences between code formatting that follows and does not follow PEP 8.
+
+遵循 PEP 8 的重要性在于它背后的原理：提高代码的可读性和可维护性。
+The importance of following PEP 8 lies in the principles behind it: improving the readability and maintainability of the code.
 
  
