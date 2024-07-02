@@ -41,6 +41,10 @@ def example():
 
 example()
 print("Outside function:", x)
+
+# Inside function: modified global local
+# Outside function: modified global
+
 ```
 
 This example demonstrates how modifying a global variable affects it both inside and outside the function. The variable `y` remains local and is not accessible outside the function.
