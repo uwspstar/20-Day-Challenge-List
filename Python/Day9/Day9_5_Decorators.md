@@ -234,4 +234,53 @@ def fibonacci(n):
     return fibonacci(n-1) + fibonacci(n-2)  # Recursively calculate the Fibonacci number using the memoized function.
 
 print(fibonacci(10))  # Output the 10th Fibonacci number, which is 55.
-`1``
+```
+
+In Python, `*args` and `**kwargs` are special syntax elements used in function definitions to handle variable numbers of arguments. They are particularly useful when defining wrapper functions in decorators, where the wrapper must work with any arguments that the original function expects.
+
+在Python中，`*args` 和 `**kwargs` 是在函数定义中用来处理可变数量参数的特殊语法元素。它们在定义装饰器中的包装函数时特别有用，因为包装函数必须能够处理原始函数期望的任何参数。
+
+### `*args`
+
+- `*args` allows a function to accept any number of positional arguments (arguments that are not named).
+- `*args` 允许函数接受任何数量的位置参数（未命名的参数）。
+- It is typically used when you are not sure how many arguments might be passed to your function, or if you want to accept a list or tuple of arguments.
+- 当你不确定可能会传递给你的函数多少个参数，或者如果你想接受一个列表或元组的参数时，通常会使用它。
+- Inside the function, `args` is accessible as a tuple.
+- 在函数内部，`args` 可以作为元组访问。
+
+### `**kwargs`
+
+- `**kwargs` allows a function to accept any number of keyword arguments (arguments that are provided by name).
+- `**kwargs` 允许函数接受任何数量的关键字参数（通过名称提供的参数）。
+- This is useful for functions that need to handle named arguments not explicitly defined in the function signature.
+- 这对于需要处理在函数签名中未明确定义的命名参数的函数非常有用。
+- Inside the function, `kwargs` is accessible as a dictionary.
+- 在函数内部，`kwargs` 可以作为字典访问。
+
+### Example Usage in a Decorator
+
+Here’s how `*args` and `**kwargs` might be used in a decorator to ensure that any function with any type of arguments can be wrapped:
+
+以下是如何在装饰器中使用 `*args` 和 `**kwargs`，以确保可以包装任何类型参数的任何函数：
+
+```python
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Before calling the function")
+        result = func(*args, **kwargs)  # Pass all received arguments to the original function.
+        print("After calling the function")
+        return result
+    return wrapper
+
+@my_decorator
+def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+
+greet("Alice", greeting="Hi")
+```
+
+This example shows how `*args` and `**kwargs` enable the `wrapper` function to accept and pass along any combination of positional and keyword arguments to the function it decorates, making the decorator flexible and applicable to a wide variety of functions.
+
+这个示例展示了如何通过 `*args` 和 `**kwargs`，使 `wrapper` 函数能够接受并传递任何组合的位置参数和关键字参数给它装饰的函数，使装饰器灵活且适用于多种函数。
+
