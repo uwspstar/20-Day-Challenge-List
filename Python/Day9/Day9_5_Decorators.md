@@ -284,3 +284,66 @@ This example shows how `*args` and `**kwargs` enable the `wrapper` function to a
 
 这个示例展示了如何通过 `*args` 和 `**kwargs`，使 `wrapper` 函数能够接受并传递任何组合的位置参数和关键字参数给它装饰的函数，使装饰器灵活且适用于多种函数。
 
+Yes, access control decorators can indeed be used to manage API access, and this technique is especially relevant in web frameworks like FastAPI. These decorators help enforce security measures by controlling who can access specific functions or endpoints based on predefined criteria such as user roles, permissions, or authentication status.
+
+是的，访问控制装饰器确实可以用来管理API访问，这种技术在FastAPI等Web框架中尤其相关。这些装饰器通过根据预定义的标准（如用户角色、权限或认证状态）控制谁可以访问特定的函数或端点来帮助执行安全措施。
+
+Here's a step-by-step example of how you might implement an access control decorator in FastAPI:
+
+这里是在FastAPI中实现访问控制装饰器的逐步示例：
+
+### Step 1: Define the Access Control Decorator
+
+First, we define a decorator that checks if the user has the required permission to access a specific endpoint.
+
+首先，我们定义一个装饰器，用于检查用户是否具有访问特定端点的所需权限。
+
+```python
+from fastapi import HTTPException, Depends, status
+from fastapi.security import OAuth2PasswordBearer
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+def has_permission(required_permission: str):
+    def decorator(func):
+        async def wrapper(*args, **kwargs):
+            token = kwargs.get('token') or (await oauth2_scheme(kwargs['request']))
+            user_permissions = decode_token(token)  # This should implement the logic to extract user details from the token
+            if required_permission not in user_permissions:
+                raise HTTPException(
+                    status_code=status.HTTP_401_UNAUTHORIZED,
+                    detail="You don't have permission to access this resource."
+                )
+            return await func(*args, **kwargs)
+        return wrapper
+    return decorator
+```
+
+### Step 2: Use the Decorator in FastAPI Routes
+
+Apply the decorator to FastAPI routes to protect them. This example assumes you have some way to decode and verify tokens to extract user permissions.
+
+在FastAPI路由中应用装饰器以保护它们。此示例假设您有某种方法来解码和验证令牌以提取用户权限。
+
+```python
+from fastapi import FastAPI, Depends
+
+app = FastAPI()
+
+@app.get("/protected-data")
+@has_permission("admin")  # Only users with 'admin' permission can access this endpoint
+async def read_protected_data(token: str = Depends(oauth2_scheme)):
+    return {"data": "This is protected data"}
+```
+
+### Step 3: Handling Authentication and Permissions
+
+In this setup, you will need a way to handle user authentication and token management. FastAPI works well with tools like OAuth2 and JWT for managing security tokens.
+
+在此设置中，您需要一种处理用户身份验证和令牌管理的方法。FastAPI可以很好地与OAuth2和JWT等工具配合使用，以管理安全令牌。
+
+### Summary
+
+This example shows how to create a simple access control decorator in FastAPI. The decorator uses a security scheme to extract the token from the request, decode it to verify the user's permissions, and either proceed with the request or deny access based on those permissions.
+
+此示例展示了如何在FastAPI中创建一个简单的访问控制装饰器。装饰器使用安全方案从请求中提取令牌，解码它以验证用户的权限，并根据这些权限继续请求或拒绝访问。
