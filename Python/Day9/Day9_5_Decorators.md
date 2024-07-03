@@ -183,3 +183,55 @@ Here's a comparison table illustrating the approach:
 This approach to decorators demonstrates the flexibility of Python in structuring applications in a way that is both functional and maintainable.
 
 这种对装饰器的方法展示了Python在构建应用程序方面的灵活性，既功能强大又易于维护。
+
+```python
+def memoize(func):
+    """
+    A decorator to store the results of function calls in order to speed up future calls.
+    This is useful for optimizing functions with expensive or frequent calls with the same arguments.
+
+    Parameters:
+    func (callable): The function to be memoized.
+
+    Returns:
+    callable: A wrapper function that checks the cache before calling the original function.
+    """
+    cache = {}  # Initializes an empty dictionary to store function results based on arguments.
+    
+    def wrapper(*args):
+        """
+        A wrapper function that checks if the function has been called with the given arguments.
+        If yes, it returns the cached result; otherwise, it computes, caches, and returns the result.
+
+        Parameters:
+        *args: Variable length argument list for the function.
+
+        Returns:
+        The result of the function either from the cache or computed.
+        """
+        if args in cache:
+            return cache[args]  # Return the cached result if available.
+        result = func(*args)  # Call the function if not found in cache and get the result.
+        cache[args] = result  # Store the new result in the cache.
+        return result  # Return the newly computed result.
+    
+    return wrapper  # Return the wrapper function to be used as a decorator.
+
+@memoize
+def fibonacci(n):
+    """
+    Calculates the nth number in the Fibonacci sequence using recursion and memoization.
+    The sequence starts with Fibonacci(0) = 0 and Fibonacci(1) = 1. 
+
+    Parameters:
+    n (int): The position in the Fibonacci sequence to calculate.
+
+    Returns:
+    int: The nth Fibonacci number.
+    """
+    if n in (0, 1):
+        return n  # Return 0 or 1 if n is 0 or 1 respectively.
+    return fibonacci(n-1) + fibonacci(n-2)  # Recursively calculate the Fibonacci number using the memoized function.
+
+print(fibonacci(10))  # Output the 10th Fibonacci number, which is 55.
+`1``
