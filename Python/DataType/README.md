@@ -1,4 +1,6 @@
-# 存储数据集合
+# 内置类型
+- https://docs.python.org/zh-cn/3/library/stdtypes.html
+### 存储数据集合
 
 Set 是 Python 中用于存储数据集合的四种内置数据类型之一，另外三种是 List（列表）、Tuple（元组）和 Dictionary（字典），每种类型都有不同的特性和用途。
 
