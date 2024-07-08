@@ -191,3 +191,120 @@ nums.forEach((n, i) => {
 
 By following these guidelines, you can write more efficient and readable code.
 通过遵循这些指导原则，你可以编写更高效和可读的代码。
+
+Here is a comparison table for `enumerate`, `enumerator`, and `enumeratable`:
+
+### Comparison Table
+### 比较表
+
+| Feature           | `enumerate` (Python)                                      | `IEnumerator` (C#)                                              | `IEnumerable` (C#)                                            |
+|-------------------|-----------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------|
+| **Definition**    | Built-in function that returns an enumerate object        | Interface for iterating over a collection                       | Interface representing a collection that can be enumerated   |
+| **定义**           | 返回一个 `enumerate` 对象的内置函数                            | 用于遍历集合的接口                                               | 表示可以枚举的集合的接口                                      |
+| **Language**      | Python                                                    | C#                                                              | C#                                                           |
+| **语言**           | Python                                                    | C#                                                              | C#                                                           |
+| **Use Case**      | Iterating over elements with index                        | Implementing custom iteration logic                             | Defining collections that can be iterated                    |
+| **使用场景**        | 遍历带索引的元素                                             | 实现自定义迭代逻辑                                               | 定义可以迭代的集合                                            |
+| **Code Example**  | `for i, v in enumerate(nums):`                            | `public IEnumerator GetEnumerator() { ... }`                    | `public class MyCollection : IEnumerable { ... }`            |
+| **代码示例**        | `for i, v in enumerate(nums):`                            | `public IEnumerator GetEnumerator() { ... }`                    | `public class MyCollection : IEnumerable { ... }`            |
+| **Implementation**| Simple and concise                                        | Requires implementing `MoveNext`, `Current`, and `Reset`        | Requires implementing `GetEnumerator`                        |
+| **实现**           | 简单且简洁                                                  | 需要实现 `MoveNext`、`Current` 和 `Reset`                        | 需要实现 `GetEnumerator`                                     |
+| **Complexity**    | Low complexity                                            | Higher complexity due to manual implementation                  | Moderate complexity as it often works with `IEnumerator`     |
+| **复杂度**          | 低复杂度                                                    | 因手动实现而复杂度较高                                            | 中等复杂度，通常与 `IEnumerator` 一起使用                       |
+| **Common Usage**  | Looping with index in Python                              | Custom iteration over a collection in C#                        | Creating iterable collections in C#                          |
+| **常见用法**        | 在 Python 中带索引的循环                                     | 在 C# 中自定义集合迭代                                             | 在 C# 中创建可迭代集合                                          |
+
+### Detailed Explanation
+### 详细解释
+
+#### `enumerate` (Python)
+- **Usage:** Adds a counter to an iterable and returns it as an enumerate object.
+- **用法:** 为可迭代对象添加一个计数器，并将其作为一个 enumerate 对象返回。
+- **Code Example:**
+  ```python
+  nums = [10, 20, 30, 40]
+  for i, v in enumerate(nums):
+      print(i, v)
+  ```
+  - Outputs:
+    ```
+    0 10
+    1 20
+    2 30
+    3 40
+    ```
+  - 输出：
+    ```
+    0 10
+    1 20
+    2 30
+    3 40
+    ```
+
+#### `IEnumerator` (C#)
+- **Usage:** Interface for custom iteration logic, typically requires implementing `MoveNext()`, `Current`, and `Reset()`.
+- **用法:** 用于自定义迭代逻辑的接口，通常需要实现 `MoveNext()`、`Current` 和 `Reset()`。
+- **Code Example:**
+  ```csharp
+  public class MyEnumerator : IEnumerator
+  {
+      private int[] _numbers;
+      private int _position = -1;
+
+      public MyEnumerator(int[] numbers)
+      {
+          _numbers = numbers;
+      }
+
+      public bool MoveNext()
+      {
+          _position++;
+          return (_position < _numbers.Length);
+      }
+
+      public void Reset()
+      {
+          _position = -1;
+      }
+
+      public object Current
+      {
+          get
+          {
+              try
+              {
+                  return _numbers[_position];
+              }
+              catch (IndexOutOfRangeException)
+              {
+                  throw new InvalidOperationException();
+              }
+          }
+      }
+  }
+  ```
+
+#### `IEnumerable` (C#)
+- **Usage:** Interface for collections that can be iterated, typically works with `IEnumerator`.
+- **用法:** 可迭代集合的接口，通常与 `IEnumerator` 一起使用。
+- **Code Example:**
+  ```csharp
+  public class MyCollection : IEnumerable
+  {
+      private int[] _numbers;
+      
+      public MyCollection(int[] numbers)
+      {
+          _numbers = numbers;
+      }
+
+      public IEnumerator GetEnumerator()
+      {
+          return new MyEnumerator(_numbers);
+      }
+  }
+  ```
+
+By understanding these differences and use cases, you can choose the appropriate method or interface for your specific needs in Python or C#.
+通过了解这些差异和使用场景，你可以为你在 Python 或 C# 中的特定需求选择合适的方法或接口。
+
