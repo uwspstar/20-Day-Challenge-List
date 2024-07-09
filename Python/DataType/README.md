@@ -18,10 +18,10 @@ Here's a comparison table showing the main differences between List, Tuple, Set,
 
 | Type      | Ordered | Changeable | Indexed | Syntax   |
 |-----------|---------|------------|---------|----------|
-| List      | Yes     | Yes        | Yes     | [ ]      |
-| Tuple     | Yes     | No         | Yes     | ( )      |
-| Set       | No      | Items No*, Set Yes | No      | { }      |
-| Dictionary| Yes     | Yes        | Yes     | {key: value} |
+| List   [ ]   | Yes     | Yes        | Yes     | [ ]      |
+| Tuple  ( )   | Yes     | No         | Yes     | ( )      |
+| Set    { }   | No      | Items No*, Set Yes | No      | { }      |
+| Dictionary {key: value} | Yes     | Yes        | Yes     | {key: value} |
 
 ### 理解背后的原理
 
