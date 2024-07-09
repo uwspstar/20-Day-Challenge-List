@@ -19,7 +19,61 @@ The list is changeable, meaning that we can change, add, and remove items in a l
 | reverse()   | Reverses the order of the list                               |
 | sort()      | Sorts the list                                               |
 
+In Python, lists do not have an `add()` method. Instead, lists use the `append()` method to add elements to the end of the list. However, if you're referring to sets, the `add()` method is used to add elements to a set.
 
+Here’s a detailed explanation with examples to help understand the usage of `add()` for sets and `append()` for lists:
+
+### Using `append()` with Lists:
+
+**When to use `append()`:**
+- Use `append()` when you want to add an element to the end of a list.
+- Lists can contain duplicate elements and maintain the order of insertion.
+
+**Example:**
+
+```python
+# Using append() with a list
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+print(fruits)  # Output: ['apple', 'banana', 'cherry', 'orange']
+```
+
+### Using `add()` with Sets:
+
+**When to use `add()`:**
+- Use `add()` when you want to add an element to a set.
+- Sets do not allow duplicate elements and do not maintain any specific order.
+- `add()` will only add the element if it is not already present in the set.
+
+**Example:**
+
+```python
+# Using add() with a set
+fruit_set = {"apple", "banana", "cherry"}
+fruit_set.add("orange")
+print(fruit_set)  # Output: {'apple', 'banana', 'cherry', 'orange'}
+
+# Trying to add a duplicate element
+fruit_set.add("apple")
+print(fruit_set)  # Output: {'apple', 'banana', 'cherry', 'orange'}
+```
+
+### Key Differences:
+
+- **List (`append()`)**:
+  - Allows duplicate elements.
+  - Maintains insertion order.
+  - `append()` adds elements to the end of the list.
+
+- **Set (`add()`)**:
+  - Does not allow duplicate elements.
+  - Does not maintain any specific order.
+  - `add()` adds elements to the set only if they are not already present.
+
+### Summary:
+
+- Use `append()` when working with lists to add elements to the end.
+- Use `add()` when working with sets to add unique elements.
 ## how Python lists work behind the scenes:
 
 - https://neetcode.io/courses/dsa-for-beginners/3
