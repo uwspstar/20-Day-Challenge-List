@@ -1,4 +1,4 @@
-# List []
+# List [ ]
 - https://www.w3schools.com/python/python_lists.asp
 
 The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
