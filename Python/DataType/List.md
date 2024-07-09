@@ -3,7 +3,7 @@
 
 ## how Python lists work behind the scenes:
 
-
+- https://neetcode.io/courses/dsa-for-beginners/3
 - A Python list is a dynamic array.
 - Python lists are implemented as arrays of pointers to the objects.
 - The list object itself contains a pointer to an array of pointers, the current size of the array, and the allocated size.
