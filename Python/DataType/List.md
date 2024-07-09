@@ -5,20 +5,21 @@ The list is changeable, meaning that we can change, add, and remove items in a l
 
 ### Python List Methods
 
-| Method      | Description                                                  |
-|-------------|--------------------------------------------------------------|
-| append()    | Adds an element at the end of the list                       |
-| clear()     | Removes all the elements from the list                       |
-| copy()      | Returns a copy of the list                                   |
-| count()     | Returns the number of elements with the specified value      |
-| extend()    | Add the elements of a list (or any iterable) to the end of the current list |
-| index()     | Returns the index of the first element with the specified value |
-| insert()    | Adds an element at the specified position                    |
-| pop()       | Removes the element at the specified position                |
-| remove()    | Removes the item with the specified value                    |
-| reverse()   | Reverses the order of the list                               |
-| sort()      | Sorts the list                                               |
+| Method   | Description                                                  | Example                        |
+|----------|--------------------------------------------------------------|--------------------------------|
+| append() | Adds an element at the end of the list                       | `fruits.append('orange')`      |
+| clear()  | Removes all the elements from the list                       | `fruits.clear()`               |
+| copy()   | Returns a copy of the list                                   | `new_list = fruits.copy()`     |
+| count()  | Returns the number of elements with the specified value      | `count = fruits.count('apple')`|
+| extend() | Add the elements of a list (or any iterable) to the end of the current list | `fruits.extend(['mango', 'grape'])`|
+| index()  | Returns the index of the first element with the specified value | `index = fruits.index('banana')`|
+| insert() | Adds an element at the specified position                    | `fruits.insert(1, 'lemon')`    |
+| pop()    | Removes the element at the specified position                | `removed_item = fruits.pop(2)` |
+| remove() | Removes the item with the specified value                    | `fruits.remove('banana')`      |
+| reverse()| Reverses the order of the list                               | `fruits.reverse()`             |
+| sort()   | Sorts the list                                               | `fruits.sort()`                |
 
+If you have any further questions or need additional details, feel free to ask!
 In Python, lists do not have an `add()` method. Instead, lists use the `append()` method to add elements to the end of the list. However, if you're referring to sets, the `add()` method is used to add elements to a set.
 
 Here’s a detailed explanation with examples to help understand the usage of `add()` for sets and `append()` for lists:
