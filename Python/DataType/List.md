@@ -1,11 +1,8 @@
 # List
 - https://www.w3schools.com/python/python_lists.asp
 
-Sure! Here is an explanation of how Python lists work behind the scenes in both English and Chinese, line by line:
+## how Python lists work behind the scenes:
 
----
-
-**English:**
 
 - A Python list is a dynamic array.
 - Python lists are implemented as arrays of pointers to the objects.
@@ -16,8 +13,6 @@ Sure! Here is an explanation of how Python lists work behind the scenes in both 
 - Python lists can hold objects of different types because they store pointers to objects.
 - Memory allocation for Python lists follows a strategy called overallocation, which reduces the frequency of memory reallocation.
 
-**Chinese:**
-
 - Python 列表是一个动态数组。
 - Python 列表实现为对象指针的数组。
 - 列表对象本身包含一个指向指针数组的指针、当前数组的大小和已分配的大小。
@@ -27,20 +22,12 @@ Sure! Here is an explanation of how Python lists work behind the scenes in both 
 - Python 列表可以包含不同类型的对象，因为它们存储的是对象的指针。
 - Python 列表的内存分配采用一种称为过度分配的策略，这减少了内存重新分配的频率。
 
----
-
-Feel free to ask if you need more detailed explanations!
-
 In Python, a 动态数组 (dynamic array) refers to the implementation of lists, which can grow and shrink in size as needed. Unlike static arrays in some other languages, where the size is fixed at creation, Python lists are flexible in size. Here’s how dynamic arrays work in Python:
-
-### English:
 
 - **Dynamic Resizing:** Python lists can change size automatically. When elements are added and there isn’t enough space in the current array, Python allocates a larger array and copies the existing elements over.
 - **Array of Pointers:** Python lists are arrays of pointers to the actual objects. This allows lists to store elements of different types.
 - **Over-allocation:** To optimize performance, Python often allocates more space than needed, reducing the number of times the array needs to be resized.
 - **Time Complexity:** Appending an element to a list has an average time complexity of O(1) due to the over-allocation strategy.
-
-### Chinese:
 
 - **动态调整大小:** Python 列表可以自动改变大小。当添加元素且当前数组空间不足时，Python 会分配一个更大的数组并复制现有元素。
 - **指针数组:** Python 列表是指向实际对象的指针数组。这允许列表存储不同类型的元素。
