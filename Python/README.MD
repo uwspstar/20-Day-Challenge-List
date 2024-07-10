@@ -3,7 +3,7 @@
 - [Online Compiler, Visual Debugger, and AI Tutor for Python, Java, C, C++, and JavaScript](https://pythontutor.com/)
 - [Harvard CS50’s Introduction to Programming with Python – Full University Course](https://www.youtube.com/watch?v=nLRL_NcnK-4)
 - [w3schools Python 教程](https://www.w3schools.com/python/default.asp)
-
+- https://developers.google.com/edu/python
 
 以下是一个为期20天的Python学习计划，旨在帮助你快速掌握Python编程基础和一些高级概念。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
 
