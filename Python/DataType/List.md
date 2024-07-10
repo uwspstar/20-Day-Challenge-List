@@ -1,5 +1,8 @@
 # Python DataType: List [ ]
+- https://docs.python.org/3/tutorial/datastructures.html
 - https://www.w3schools.com/python/python_lists.asp
+- https://developers.google.com/edu/python/lists
+
 
 The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
 
