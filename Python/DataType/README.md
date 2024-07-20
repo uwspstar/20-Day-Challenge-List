@@ -53,6 +53,32 @@ Python provides a variety of collection data types that are suitable for differe
 - **Description**: A set is an unordered collection of items where each item is unique. Sets are ideal for membership testing and eliminating duplicate entries.
 - **描述**：集合是一个无序的元素集，每个元素都是唯一的。集合非常适合进行成员测试和消除重复条目。
 
+There are two primary ways to create a set in Python:
+- Using Curly Braces:
+You can create a set by placing all the elements inside curly braces {}, separated by commas. For example:
+
+```python
+my_set = {1, 2, 3, 4, 5}
+```
+
+- Using the set() Function:
+To create an empty set or convert an iterable (such as a list or tuple) to a set, you can use the set() function. For example:
+
+```python
+empty_set = set()
+set_from_list = set([1, 2, 3, 4, 5])
+```
+
+It's important to note that using empty curly braces {} to create a set will actually create an empty dictionary in Python, not a set. Therefore, the set() function should be used to create an empty set.
+These methods provide flexibility in creating sets and are essential for working with collections of unique elements in Python.
+
+When it comes to creating an empty set in Python, there are two common methods: `myset = {} and myset = set()`. Let's explore the differences between these two approaches.
+The expression `myset = {} does not create an empty set`; instead, it creates an empty dictionary. 
+
+On the other hand, myset = set() explicitly creates an empty set.
+
+- In Python, the {} syntax is used to create an empty dictionary, not a set. To create an empty set, the set() constructor should be used.
+
 ### Dictionary
 字典
 
@@ -62,6 +88,8 @@ Python provides a variety of collection data types that are suitable for differe
 ```memo = {} vs memo = dict()```
 - The choice between memo = {} and memo = dict() in Python can be seen as a matter of personal preference, as both achieve the same result. The {} syntax is a shorthand for creating an empty dictionary, while dict() is the explicit constructor for creating a dictionary. Both methods are commonly used, and the choice between them often comes down to readability and personal style. In terms of performance, there is no significant difference between the two methods for creating an empty dictionary. Both approaches result in the creation of an empty dictionary object, and the performance characteristics are essentially the same. Therefore, the decision between memo = {} and memo = dict() ultimately comes down to personal preference and coding style.
 - 在Python中，选择使用memo = {}和memo = dict()可以视为个人偏好的问题，因为两者都能实现相同的结果。{}语法是创建空字典的一种简写方式，而dict()是显式的构造函数，用于创建字典。这两种方法都很常用，选择使用哪种方法通常取决于可读性和个人风格。 就性能而言，对于创建空字典来说，memo = {}和memo = dict()之间没有显著的区别。这两种方法都会创建一个空的字典对象，性能特性基本相同。 因此，选择memo = {}和memo = dict()最终取决于个人偏好和编码风格。
+
+- In Python, the {} syntax is used to create an empty dictionary, not a set. To create an empty set, the set() constructor should be used.
   
 #### Here’s a comparison table summarizing the properties of each collection type:
 
