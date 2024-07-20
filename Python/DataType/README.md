@@ -43,6 +43,8 @@ Python provides a variety of collection data types that are suitable for differe
 
 ```memo = {} vs memo = dict()```
 - The choice between memo = {} and memo = dict() in Python can be seen as a matter of personal preference, as both achieve the same result. The {} syntax is a shorthand for creating an empty dictionary, while dict() is the explicit constructor for creating a dictionary. Both methods are commonly used, and the choice between them often comes down to readability and personal style. In terms of performance, there is no significant difference between the two methods for creating an empty dictionary. Both approaches result in the creation of an empty dictionary object, and the performance characteristics are essentially the same. Therefore, the decision between memo = {} and memo = dict() ultimately comes down to personal preference and coding style.
+- 在Python中，选择使用memo = {}和memo = dict()可以视为个人偏好的问题，因为两者都能实现相同的结果。{}语法是创建空字典的一种简写方式，而dict()是显式的构造函数，用于创建字典。这两种方法都很常用，选择使用哪种方法通常取决于可读性和个人风格。 就性能而言，对于创建空字典来说，memo = {}和memo = dict()之间没有显著的区别。这两种方法都会创建一个空的字典对象，性能特性基本相同。 因此，选择memo = {}和memo = dict()最终取决于个人偏好和编码风格。
+  
 
 ### Tuple
 元组
