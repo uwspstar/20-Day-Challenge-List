@@ -40,12 +40,7 @@ Python provides a variety of collection data types that are suitable for differe
 
 - **Description**: A list is an ordered collection that can be changed or modified. It allows duplicate elements, making it suitable for scenarios where items can repeat and order matters.
 - **描述**：列表是一种有序的集合，可以被修改或更改。它允许元素重复，适用于项目可能重复且顺序重要的场景。
-
-```memo = {} vs memo = dict()```
-- The choice between memo = {} and memo = dict() in Python can be seen as a matter of personal preference, as both achieve the same result. The {} syntax is a shorthand for creating an empty dictionary, while dict() is the explicit constructor for creating a dictionary. Both methods are commonly used, and the choice between them often comes down to readability and personal style. In terms of performance, there is no significant difference between the two methods for creating an empty dictionary. Both approaches result in the creation of an empty dictionary object, and the performance characteristics are essentially the same. Therefore, the decision between memo = {} and memo = dict() ultimately comes down to personal preference and coding style.
-- 在Python中，选择使用memo = {}和memo = dict()可以视为个人偏好的问题，因为两者都能实现相同的结果。{}语法是创建空字典的一种简写方式，而dict()是显式的构造函数，用于创建字典。这两种方法都很常用，选择使用哪种方法通常取决于可读性和个人风格。 就性能而言，对于创建空字典来说，memo = {}和memo = dict()之间没有显著的区别。这两种方法都会创建一个空的字典对象，性能特性基本相同。 因此，选择memo = {}和memo = dict()最终取决于个人偏好和编码风格。
   
-
 ### Tuple
 元组
 
@@ -64,7 +59,11 @@ Python provides a variety of collection data types that are suitable for differe
 - **Description**: A dictionary is a collection which is ordered (as of Python 3.7) and consists of a key-value pair. Each key-value pair maps the key to its associated value. Dictionaries are optimal for fast lookups and can be changed or updated.
 - **描述**：字典是一个有序的集合（从Python 3.7开始）并且由键值对组成。每个键值对将键映射到其关联的值。字典非常适合快速查找，并且可以更改或更新。
 
-Here’s a comparison table summarizing the properties of each collection type:
+```memo = {} vs memo = dict()```
+- The choice between memo = {} and memo = dict() in Python can be seen as a matter of personal preference, as both achieve the same result. The {} syntax is a shorthand for creating an empty dictionary, while dict() is the explicit constructor for creating a dictionary. Both methods are commonly used, and the choice between them often comes down to readability and personal style. In terms of performance, there is no significant difference between the two methods for creating an empty dictionary. Both approaches result in the creation of an empty dictionary object, and the performance characteristics are essentially the same. Therefore, the decision between memo = {} and memo = dict() ultimately comes down to personal preference and coding style.
+- 在Python中，选择使用memo = {}和memo = dict()可以视为个人偏好的问题，因为两者都能实现相同的结果。{}语法是创建空字典的一种简写方式，而dict()是显式的构造函数，用于创建字典。这两种方法都很常用，选择使用哪种方法通常取决于可读性和个人风格。 就性能而言，对于创建空字典来说，memo = {}和memo = dict()之间没有显著的区别。这两种方法都会创建一个空的字典对象，性能特性基本相同。 因此，选择memo = {}和memo = dict()最终取决于个人偏好和编码风格。
+  
+#### Here’s a comparison table summarizing the properties of each collection type:
 
 | Type       | Ordered | Changeable | Indexed | Allows Duplicates | Use-case Example                |
 |------------|---------|------------|---------|-------------------|---------------------------------|
