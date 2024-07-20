@@ -1,6 +1,7 @@
 # "immutable" and "mutable"
 - https://www.youtube.com/watch?v=5qQQ3yzbKp8
-In programming, "immutable" and "mutable" are terms used to describe whether the state of an object can be changed after it is created.
+
+- In programming, "immutable" and "mutable" are terms used to describe whether the state of an object can be changed after it is created.
 
 在编程中，“不可变”和“可变”是用来描述对象创建后其状态是否可以改变的术语。
 
@@ -186,3 +187,24 @@ The comparison of different list operations is shown in the table below:
 Understanding these differences is crucial when working with lists in Python to avoid unintended side effects.
 
 理解这些差异在使用Python处理列表时至关重要，以避免意外的副作用。
+
+#### Immutable and Mutable Objects in Python
+
+In Python, objects are categorized as either **mutable** or **immutable**. Understanding the distinction between these two types of objects is crucial for efficient programming and can profoundly influence your decision when choosing which data type to use in solving a given programming problem.
+
+**Immutable Objects:**
+- Immutable objects do not allow their value or data to be changed in place without affecting the object's identity.
+- When you modify an immutable object, a new object of the same type with different values is created.
+- Examples of immutable objects in Python include strings, tuples, and numbers.
+
+**Mutable Objects:**
+- Mutable objects allow you to change their value or data in place without affecting the object's identity.
+- They are easier to change but are slower to access and more expensive to change because it involves the creation of a copy.
+- Examples of mutable objects in Python include lists, dictionaries, and sets.
+
+#### Practical Implications
+Understanding the concepts of mutability and immutability is crucial, especially when working with Python. By comprehending the concepts of mutability and immutability, developers can write more efficient, reliable, and bug-free code. The choice between mutable and immutable objects can profoundly influence your decision when choosing which data type to use in solving a given programming problem.
+
+In summary, the distinction between mutable and immutable objects in Python is essential for crafting error-free code and can significantly impact your coding approach. It's important to use immutable objects for values that should not be modified and mutable objects for when you need to modify the object's state or contents.
+
+I hope this helps clarify the concepts of mutable and immutable objects in Python! If you have any more questions or need further clarification, feel free to ask.
