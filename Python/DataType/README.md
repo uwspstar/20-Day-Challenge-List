@@ -41,6 +41,9 @@ Python provides a variety of collection data types that are suitable for differe
 - **Description**: A list is an ordered collection that can be changed or modified. It allows duplicate elements, making it suitable for scenarios where items can repeat and order matters.
 - **描述**：列表是一种有序的集合，可以被修改或更改。它允许元素重复，适用于项目可能重复且顺序重要的场景。
 
+```memo = {} vs memo = dict()```
+- The choice between memo = {} and memo = dict() in Python can be seen as a matter of personal preference, as both achieve the same result. The {} syntax is a shorthand for creating an empty dictionary, while dict() is the explicit constructor for creating a dictionary. Both methods are commonly used, and the choice between them often comes down to readability and personal style. In terms of performance, there is no significant difference between the two methods for creating an empty dictionary. Both approaches result in the creation of an empty dictionary object, and the performance characteristics are essentially the same. Therefore, the decision between memo = {} and memo = dict() ultimately comes down to personal preference and coding style.
+
 ### Tuple
 元组
 
