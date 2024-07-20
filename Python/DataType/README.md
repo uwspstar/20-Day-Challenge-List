@@ -31,6 +31,10 @@ In Python sets, the unordered nature means there is no fixed order to the elemen
 
 Python provides a variety of collection data types that are suitable for different purposes. Here’s a detailed explanation of each type:
 
+- 无序性的集合
+
+无序性意味着集合中的元素没有固定的顺序。这意味着无法通过索引或位置来访问集合中的元素，因为它们没有特定的排列顺序。这与列表或元组等有序数据结构不同，其中元素的顺序是固定的。因此，集合中的元素是无序的，它们只是简单地存在于集合中，而不涉及特定的排列顺序
+
 ### List
 列表
 
