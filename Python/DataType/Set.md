@@ -61,4 +61,29 @@ my_list = [1, 2, 3, 4, 5]
 my_set = {1, 2, 3, 4, 5}
 print(3 in my_list)  # Output: True
 print(3 in my_set)  # Output: True
+
+# Creating sets
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+
+# Adding an element
+set_a.add(5)
+
+# Removing an element
+set_b.remove(6)
+
+# Union of two sets
+union_set = set_a | set_b  # or set_a.union(set_b)
+
+# Intersection of two sets
+intersection_set = set_a & set_b  # or set_a.intersection(set_b)
+
+# Difference of two sets
+difference_set = set_a - set_b  # or set_a.difference(set_b)
+
+print("Set A:", set_a)
+print("Set B:", set_b)
+print("Union:", union_set)
+print("Intersection:", intersection_set)
+print("Difference:", difference_set)
 ```
