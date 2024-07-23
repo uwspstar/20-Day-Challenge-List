@@ -2,7 +2,13 @@
 #### Python Sets
 - https://www.w3schools.com/python/python_sets.asp
 
-In Python, a set is a collection of unique elements, and it is an unordered and unindexed collection of items. Here's a breakdown of Python sets with code examples, tips, and a comparison to other data structures.
+- In Python, a set is a collection of unique elements, and it is an unordered and unindexed collection of items. 
+- `Set` is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.
+
+**A set is a collection which is unordered, unchangeable*, and unindexed.**
+- `Unordered` means that the items in a set do not have a defined order. Set items can appear in a different order every time you use them, and cannot be referred to by index or key.
+- Set items are `unchangeable`, meaning that we cannot change the items after the set has been created. Once a set is created, you cannot change its items, but you can remove items and add new items.
+- The values True and 1 are considered the same value in sets, and are treated as duplicates. The values False and 0 are considered the same value in sets, and are treated as duplicates.
 
 #### Definition and Creation
 **Definition:** 
@@ -87,3 +93,10 @@ print("Union:", union_set)
 print("Intersection:", intersection_set)
 print("Difference:", difference_set)
 ```
+#### Python Collections (Arrays)
+There are four collection data types in the Python programming language:
+
+- `List` is a collection which is ordered and changeable. Allows duplicate members.
+- `Tuple` is a collection which is ordered and unchangeable. Allows duplicate members.
+- `Set` is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+- `Dictionary` is a collection which is ordered** and changeable. No duplicate members.
