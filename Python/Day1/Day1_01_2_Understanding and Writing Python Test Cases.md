@@ -136,3 +136,9 @@ if __name__ == '__main__':
 ### Conclusion
 
 Using the AAA pattern helps structure your test cases in a clear and understandable way. By following the tips provided and practicing writing tests, you can ensure your code is robust, reliable, and maintainable.
+
+### Recommend Resources:
+
+[![Python Tutorial: Unit Testing Your Code with the unittest Module Corey Schafer](https://img.youtube.com/vi/6tNS--WetLI/maxresdefault.jpg)](https://youtu.be/6tNS--WetLI)
+
+
