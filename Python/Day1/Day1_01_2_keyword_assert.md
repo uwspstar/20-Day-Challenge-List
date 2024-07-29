@@ -179,3 +179,9 @@ if __name__ == '__main__':
 ### Conclusion
 
 By following the AAA pattern, you can write clear and maintainable unit tests that effectively verify the behavior of your code. Using `unittest` in Python, along with the tips provided, you can ensure your tests are well-structured, cover various scenarios, and help maintain the quality of your software.
+
+
+### Recommend Resources:
+## Watch the Video
+
+[![Pytest Tutorial – How to Test Python Code](https://img.youtube.com/vi/cHYq1MRoyI0/maxresdefault.jpg)](https://youtu.be/cHYq1MRoyI0)
