@@ -102,7 +102,7 @@ Understanding and using these keywords correctly is crucial for effective Python
 
 
 ### Recommend Resources:
-**All 39 Python Keywords Explained**
+**All 39 Python Keywords Explained Indently**
 [![All 39 Python Keywords Explained](https://img.youtube.com/vi/rKk8XPLysj8/maxresdefault.jpg)](https://youtu.be/rKk8XPLysj8)
 
 
