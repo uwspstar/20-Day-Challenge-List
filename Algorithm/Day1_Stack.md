@@ -264,3 +264,7 @@ print(subset_sum([3, 34, 4, 12, 5, 2], 30))  # Output: False
 ### Conclusion
 
 Stacks are a fundamental data structure with a variety of applications in computer science, from expression evaluation and syntax parsing to implementing undo/redo functionalities and performing depth-first searches. Understanding these use cases enhances your ability to solve complex problems effectively using stacks.
+
+### Recommend Resources:
+**Introduction to the Stack Data Structure Coderbyte**
+[![Introduction to the Stack Data Structure Coderbyte](https://img.youtube.com/vi/4F-BnR2XwqU/maxresdefault.jpg)](https://youtu.be/4F-BnR2XwqU)
