@@ -182,6 +182,6 @@ By following the AAA pattern, you can write clear and maintainable unit tests th
 
 
 ### Recommend Resources:
-## Watch the Video
+**Pytest Tutorial – How to Test Python Code**
 
 [![Pytest Tutorial – How to Test Python Code](https://img.youtube.com/vi/cHYq1MRoyI0/maxresdefault.jpg)](https://youtu.be/cHYq1MRoyI0)
