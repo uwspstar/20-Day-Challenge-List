@@ -99,3 +99,12 @@ Understanding and using these keywords correctly is crucial for effective Python
 | `while`       | Used to create a while loop.                                                                                                                         | `while x > 0: pass`                                                                                                                                              | Repeatedly executes a block of code as long as the condition is true.                                                                                                                  |
 | `with`        | Used to simplify exception handling.                                                                                                                 | `with open('file.txt') as f:`                                                                                                                                    | Ensures proper acquisition and release of resources.                                                                                                                                  |
 | `yield`       | Ends the execution of a function, returns a generator.                                                                                               | `def generator(): yield x`                                                                                                                                       | Used in functions to return an iterator instead of a single value.                                                                                                                     |
+
+
+### Recommend Resources:
+**All 39 Python Keywords Explained**
+[![All 39 Python Keywords Explained](https://img.youtube.com/vi/rKk8XPLysj8/maxresdefault.jpg)](https://youtu.be/rKk8XPLysj8)
+
+
+
+
