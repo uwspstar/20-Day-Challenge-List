@@ -168,3 +168,6 @@ Arrays are a fundamental data structure in computer science with numerous applic
 ### Recommend Resources:
 **Static Arrays vs. Dynamic Arrays CodeSignal**
 [![Static Arrays vs. Dynamic Arrays CodeSignal](https://img.youtube.com/vi/qTb1sZX74K0/maxresdefault.jpg)](https://youtu.be/qTb1sZX74K0)
+
+[neetcode Static Array](https://neetcode.io/courses/dsa-for-beginners/2)
+[neetcode Dynamic Array](https://neetcode.io/courses/dsa-for-beginners/3)
