@@ -206,5 +206,5 @@ Queues are a fundamental data structure in computer science with various applica
 
 ### Recommend Resources:
 **Introduction to the Queue Data Structure Coderbyte**
-[embed]https://www.youtube.com/watch?v=GRA_3Ppl2ZI[/embed]
+[![Introduction to the Queue Data Structure Coderbyte](https://img.youtube.com/vi/GRA_3Ppl2ZI/maxresdefault.jpg)](https://youtu.be/GRA_3Ppl2ZI)
 
