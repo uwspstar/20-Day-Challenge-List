@@ -164,3 +164,7 @@ print(fibonacci(10))  # Output: 55
 ### Conclusion
 
 Arrays are a fundamental data structure in computer science with numerous applications, from basic data storage to complex algorithm implementations. By understanding the basic operations and principles, you can effectively utilize arrays to solve a variety of computational problems. Whether you are using Python, JavaScript, or any other programming language, the concepts of array operations remain consistent and are essential tools for efficient problem-solving.
+
+### Recommend Resources:
+**Static Arrays vs. Dynamic Arrays CodeSignal**
+[![Static Arrays vs. Dynamic Arrays CodeSignal](https://img.youtube.com/vi/qTb1sZX74K0/maxresdefault.jpg)](https://youtu.be/qTb1sZX74K0)
