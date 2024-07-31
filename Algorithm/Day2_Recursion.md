@@ -122,3 +122,8 @@
   - **Call Stack Overflow Example:** Explanation of how deep recursion can lead to stack overflow errors, especially if the base case is not reached or recursion is too deep.
 
 This detailed breakdown with code examples and visual call stacks in markdown should help new programmers better understand how recursion works, how to implement it, and how to trace it effectively.
+
+### Recommend Resources:
+**Recursion Full course BY ABDUL BARI from RAKIB**
+[![Recursion Full course BY ABDUL BARI from RAKIB](https://img.youtube.com/vi/ETiZpSajasI/maxresdefault.jpg)](https://youtu.be/ETiZpSajasI)
+
