@@ -1,6 +1,25 @@
 # Built-in Data Types
 In Python, there are several built-in data types that you'll frequently encounter. These data types are fundamental to handling various kinds of data in Python programs. Here's an overview in both English and Chinese, along with a comparison table:
 
+### In summary, there are 15 built-in data types in Python:
+
+1. int
+2. float
+3. complex
+4. str
+5. list
+6. tuple
+7. range
+8. dict
+9. set
+10. frozenset
+11. bool
+12. bytes
+13. bytearray
+14. memoryview
+15. NoneType
+
+
 Python has several built-in data types that are used to handle various kinds of data. These data types can be broadly categorized as follows:
 
 ### Numeric Types
@@ -32,23 +51,7 @@ Python has several built-in data types that are used to handle various kinds of 
 ### None Type
 15. **NoneType**: Represents the absence of a value or a null value. The sole instance of this type is `None`.
 
-In summary, there are 15 built-in data types in Python:
 
-1. int
-2. float
-3. complex
-4. str
-5. list
-6. tuple
-7. range
-8. dict
-9. set
-10. frozenset
-11. bool
-12. bytes
-13. bytearray
-14. memoryview
-15. NoneType
 
 ------
 
