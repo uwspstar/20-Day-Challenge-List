@@ -1,5 +1,11 @@
-# Python 3.8 的 33 个 Python 关键字的表格
+# Python 3.8 的 35 个 Python 关键字的表格
 Python keywords are reserved words that cannot be used as identifiers (like variable names, function names, class names, etc.) because they are used to define the syntax and structure of the Python language. Here’s a table of the 33 Python keywords as of Python 3.8, along with a brief explanation and example for each. This table and the explanations will be presented in both English and Chinese.
+
+```python
+import keyword
+print(keyword.kwlist)  # Output: List of Python keywords
+print(len(keyword.kwlist))  # Output: List of Python keywords
+```
 
 Python 关键字是不能用作标识符（如变量名、函数名、类名等）的保留字，因为它们用于定义 Python 语言的语法和结构。以下是截至 Python 3.8 的 33 个 Python 关键字的表格，每个关键字都附有简短的解释和示例。这个表格和解释将以英文和中文呈现。
 
