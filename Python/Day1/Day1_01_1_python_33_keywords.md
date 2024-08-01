@@ -3,9 +3,10 @@ Python keywords are reserved words that cannot be used as identifiers (like vari
 
 ```python
 import keyword
-print(keyword.kwlist)  # Output: List of Python keywords # ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 
-print(len(keyword.kwlist))  # Output: List of Python keywords # 35
+print(keyword.kwlist)  # Output: List of Python keywords ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+print(len(keyword.kwlist))  # Output: List of Python keywords 35
 
 ```
 
