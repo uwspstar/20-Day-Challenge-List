@@ -51,3 +51,37 @@ The comparison of different usages of `print()` function is shown in the table b
 `print()` function is very flexible and is used extensively in both simple and complex Python applications.
 
 `print()`函数非常灵活，广泛用于简单和复杂的Python应用程序中。
+
+
+| Usage       | Description in English                                      | Description in Chinese                                   | Code Example                                 |
+|-------------|--------------------------------------------------------------|----------------------------------------------------------|----------------------------------------------|
+| Basic       | Prints strings and other objects to the console.            | 将字符串和其他对象打印到控制台。                         | `print('Hello, World!')`                     |
+| With `sep`  | Prints objects separated by a specified string.              | 打印由指定字符串分隔的对象。                             | `print('Hello', 'World', sep=', ')`          |
+| With `end`  | Prints objects with a specified string at the end.           | 打印在末尾有指定字符串的对象。                           | `print('Hello,', end=' '); print('World!')`  |
+| To a file   | Redirects the output to a file-like object instead of the console. | 将输出重定向到文件样对象，而不是控制台。                 | `with open('output.txt', 'w') as f:\n    print('Hello, World!', file=f)` |
+
+
+### 代码示例
+
+1. **Basic**:
+   ```python
+   print('Hello, World!')  # Output: Hello, World!
+   ```
+
+2. **With `sep`**:
+   ```python
+   print('Hello', 'World', sep=', ')  # Output: Hello, World
+   ```
+
+3. **With `end`**:
+   ```python
+   print('Hello,', end=' ')  # Output: Hello, (no newline at the end)
+   print('World!')  # Output: World! (on the same line as the previous print)
+   # Combined output: Hello, World!
+   ```
+
+4. **To a file**:
+   ```python
+   with open('output.txt', 'w') as f:
+       print('Hello, World!', file=f)
+   # The content of 'output.txt' will be: Hello, World!
