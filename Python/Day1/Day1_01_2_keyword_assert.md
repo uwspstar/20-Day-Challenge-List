@@ -221,6 +221,108 @@ if __name__ == '__main__':
 
 By following the AAA pattern, you can write clear and maintainable unit tests that effectively verify the behavior of your code. Using `unittest` in Python, along with the tips provided, you can ensure your tests are well-structured, cover various scenarios, and help maintain the quality of your software.
 
+#### 以下是关于在 Python 中使用 `assert` 语句的 5 个面试问题及其答案
+
+### 1. What is the purpose of the assert statement in Python? 在 Python 中，assert 语句的用途是什么？
+
+The `assert` statement in Python is used as a debugging aid that tests a condition. If the condition is True, the program continues to execute as normal. If the condition is False, an `AssertionError` is raised.
+
+```python
+x = 10
+assert x > 5  # No output, condition is True
+assert x < 5  # Raises AssertionError
+```
+
+在 Python 中，`assert` 语句被用作调试辅助工具，用于测试一个条件。如果条件为 True，程序将正常继续执行。如果条件为 False，将引发 `AssertionError`。
+
+```python
+x = 10
+assert x > 5  # 没有输出，条件为 True
+assert x < 5  # 引发 AssertionError
+```
+
+### 2. How does the assert statement help in debugging? assert 语句如何帮助调试？
+
+The `assert` statement helps in debugging by testing assumptions in the code. If an assumption is False, the `AssertionError` provides immediate feedback, indicating where the assumption fails.
+
+```python
+def calculate_area(radius):
+    assert radius > 0, "Radius must be positive"
+    return 3.14 * radius * radius
+
+calculate_area(-5)  # Raises AssertionError with message "Radius must be positive"
+```
+
+`assert` 语句通过测试代码中的假设来帮助调试。如果假设为 False，`AssertionError` 提供立即反馈，指示假设失败的地方。
+
+```python
+def calculate_area(radius):
+    assert radius > 0, "Radius must be positive"
+    return 3.14 * radius * radius
+
+calculate_area(-5)  # 引发 AssertionError，消息为 "Radius must be positive"
+```
+
+### 3. What happens when an assert statement fails? 当 assert 语句失败时会发生什么？
+
+When an `assert` statement fails (i.e., the condition is False), an `AssertionError` is raised. Optionally, an error message can be included to provide more context.
+
+```python
+x = 0
+assert x != 0, "x should not be zero"  # Raises AssertionError with message "x should not be zero"
+```
+
+当 `assert` 语句失败（即条件为 False）时，会引发 `AssertionError`。可以选择包含一条错误消息以提供更多上下文。
+
+```python
+x = 0
+assert x != 0, "x should not be zero"  # 引发 AssertionError，消息为 "x should not be zero"
+```
+
+### 4. How can you include an optional message with an assert statement? 如何在 assert 语句中包含一条可选消息？
+
+You can include an optional message with an `assert` statement by adding a comma followed by the message after the condition. This message is displayed if the assertion fails.
+
+```python
+age = -1
+assert age > 0, "Age must be positive"  # Raises AssertionError with message "Age must be positive"
+```
+
+可以在 `assert` 语句中包含一条可选消息，方法是将逗号和消息添加到条件之后。如果断言失败，此消息将显示。
+
+```python
+age = -1
+assert age > 0, "Age must be positive"  # 引发 AssertionError，消息为 "Age must be positive"
+```
+
+### 5. When should you avoid using the assert statement in production code? 什么时候应避免在生产代码中使用 assert 语句？
+
+You should avoid using the `assert` statement in production code for critical checks, as assertions can be globally disabled with the `-O` (optimize) switch when running Python. For critical checks, use exceptions like `ValueError`.
+
+```python
+# Instead of assert, use exceptions for critical checks
+def set_age(age):
+    if age <= 0:
+        raise ValueError("Age must be positive")
+    return age
+
+set_age(-1)  # Raises ValueError
+```
+
+应避免在生产代码中使用 `assert` 语句进行关键检查，因为在运行 Python 时可以使用 `-O`（优化）开关全局禁用断言。对于关键检查，请使用 `ValueError` 等异常。
+
+```python
+# 不使用 assert，而是使用异常进行关键检查
+def set_age(age):
+    if age <= 0:
+        raise ValueError("Age must be positive")
+    return age
+
+set_age(-1)  # 引发 ValueError
+```
+
+通过这些问题和答案，您可以更好地理解如何在 Python 中使用 `assert` 语句进行调试。
+
 
 ### Recommend Resources:
 **Pytest Tutorial – How to Test Python Code**
