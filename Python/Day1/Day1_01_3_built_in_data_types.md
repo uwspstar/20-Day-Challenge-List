@@ -3,26 +3,62 @@ In Python, there are several built-in data types that you'll frequently encounte
 
 1. **Integers (`int`)** - Used for representing whole numbers without a fractional component.
    **整数（`int`）** - 用于表示没有小数部分的整数。
+   
+   <details>
+  <summary>Click to expand!</summary>
 
-2. **Floating-point numbers (`float`)** - Used for representing real numbers, typically those with a fractional component.
+  In Python, there is no functional difference between using "Integers" and "int" because "int" is the actual data type used to represent integers in Python. The term "Integers" is more of a conceptual or descriptive term, whereas "int" is the actual type name used in Python code.
+
+Here are a few points to clarify:
+
+1. **Conceptual Term vs. Type Name**:
+    - **Integers**: This term generally refers to the set of whole numbers, including positive, negative numbers, and zero. It is used to describe the concept of these numbers.
+    - **int**: This is the actual built-in type in Python used to represent integer values.
+
+2. **Usage in Python Code**:
+    - You use `int` to create integer objects and to check for integer types.
+    ```python
+    a = 5  # a is an integer
+    print(type(a))  # Output: <class 'int'>
+
+    # Checking if a variable is an integer
+    print(isinstance(a, int))  # Output: True
+    ```
+
+3. **Type Annotation**:
+    - When you annotate types in Python (e.g., for function parameters and return values), you use `int`.
+    ```python
+    def add(x: int, y: int) -> int:
+        return x + y
+    ```
+
+4. **Documentation and Descriptions**:
+    - In documentation or explanations, you might see the term "integer" used to describe values of type `int`.
+
+In summary, "Integers" is a conceptual term, while `int` is the actual type you use in Python code to work with integer values.
+
+</details>
+
+
+3. **Floating-point numbers (`float`)** - Used for representing real numbers, typically those with a fractional component.
    **浮点数（`float`）** - 用于表示实数，通常是带有小数部分的数。
 
-3. **Strings (`str`)** - Used for representing sequences of characters, text data.
+4. **Strings (`str`)** - Used for representing sequences of characters, text data.
    **字符串（`str`）** - 用于表示字符序列，文本数据。
 
-4. **Booleans (`bool`)** - Used to represent two values: True and False.
+5. **Booleans (`bool`)** - Used to represent two values: True and False.
    **布尔值（`bool`）** - 用来表示两个值：True 和 False。
 
-5. **Lists (`list`)** - Used to store collections of items (elements can be of different data types).
+6. **Lists (`list`)** - Used to store collections of items (elements can be of different data types).
    **列表（`list`）** - 用来存储项目的集合（元素可以是不同的数据类型）。
 
-6. **Tuples (`tuple`)** - Similar to lists but immutable (cannot be changed after creation).
+7. **Tuples (`tuple`)** - Similar to lists but immutable (cannot be changed after creation).
    **元组（`tuple`）** - 类似于列表，但是不可变（创建后不能更改）。
 
-7. **Dictionaries (`dict`)** - Used to store key-value pairs.
+8. **Dictionaries (`dict`)** - Used to store key-value pairs.
    **字典（`dict`）** - 用于存储键值对。
 
-8. **Sets (`set`)** - Used to store unique items; they automatically remove duplicates.
+9. **Sets (`set`)** - Used to store unique items; they automatically remove duplicates.
    **集合（`set`）** - 用来存储唯一的项目；它们自动删除重复项。
 
 ### Comparison Table
