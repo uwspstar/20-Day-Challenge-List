@@ -18,7 +18,7 @@ This will simply print the string "Hello, world!" to the console.
 
 The `print()` function has several parameters that allow you to format the output more flexibly:
 
-`print()`函数有几个参数，允许你更灵活地格式化输出：
+**`print()`函数有几个参数，允许你更灵活地格式化输出:**
 
 - `sep`: Specifies the separator between the values. It defaults to a space.
 - `end`: Specifies what to append at the end of the output. It defaults to a newline.
