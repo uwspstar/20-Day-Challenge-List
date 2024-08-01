@@ -358,3 +358,6 @@ print(my_dict["age"])   # 输出: 25
 
 通过这些问题和答案，您可以更好地理解 Python 的 15 种内置数据类型及其使用方法。
 
+### Recommend Resources:
+**Data Types in Python | Python for Beginners Alex The Analyst**
+[![PData Types in Python | Python for Beginners Alex The Analyst](https://img.youtube.com/vi/ppsCxnNm-JI/maxresdefault.jpg)](https://youtu.be/ppsCxnNm-JI)
