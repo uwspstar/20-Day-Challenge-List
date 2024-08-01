@@ -221,3 +221,140 @@ In Python, there are several built-in data types that you'll frequently encounte
 These data types are essential for writing efficient Python code and are used in virtually every Python program. Understanding how and when to use them effectively can significantly impact the performance and scalability of your applications.
 
 这些数据类型对于编写高效的 Python 代码至关重要，并且几乎在每个 Python 程序中都有使用。理解如何以及何时有效使用它们可以显著影响您的应用程序的性能和可扩展性。
+
+#### 以下是关于 Python 15 种内置数据类型的 5 个面试问题及其答案
+
+### 1. How many built-in data types are there in Python? 在Python中有多少种内置数据类型？
+
+There are 15 built-in data types in Python.
+
+```python
+# List of Python built-in data types
+data_types = [
+    'int', 'float', 'complex', 'str', 'list', 'tuple',
+    'range', 'dict', 'set', 'frozenset', 'bool',
+    'bytes', 'bytearray', 'memoryview', 'NoneType'
+]
+print(len(data_types))  # Output: 15
+```
+
+在Python中有15种内置数据类型。
+
+```python
+# Python内置数据类型列表
+data_types = [
+    'int', 'float', 'complex', 'str', 'list', 'tuple',
+    'range', 'dict', 'set', 'frozenset', 'bool',
+    'bytes', 'bytearray', 'memoryview', 'NoneType'
+]
+print(len(data_types))  # 输出: 15
+```
+
+### 2. What are the numeric data types in Python? Python中的数值数据类型有哪些？
+
+The numeric data types in Python are `int`, `float`, and `complex`.
+
+```python
+x = 10         # int
+y = 3.14       # float
+z = 1 + 2j     # complex
+
+print(type(x))  # Output: <class 'int'>
+print(type(y))  # Output: <class 'float'>
+print(type(z))  # Output: <class 'complex'>
+```
+
+Python中的数值数据类型是`int`、`float`和`complex`。
+
+```python
+x = 10         # int
+y = 3.14       # float
+z = 1 + 2j     # complex
+
+print(type(x))  # 输出: <class 'int'>
+print(type(y))  # 输出: <class 'float'>
+print(type(z))  # 输出: <class 'complex'>
+```
+
+### 3. What is the difference between a list and a tuple in Python? Python中的列表和元组有什么区别？
+
+A list is mutable, meaning you can change its contents, while a tuple is immutable, meaning its contents cannot be changed once it is created.
+
+```python
+# List example
+my_list = [1, 2, 3]
+my_list[0] = 10
+print(my_list)  # Output: [10, 2, 3]
+
+# Tuple example
+my_tuple = (1, 2, 3)
+# my_tuple[0] = 10  # Raises TypeError: 'tuple' object does not support item assignment
+print(my_tuple)  # Output: (1, 2, 3)
+```
+
+列表是可变的，意味着你可以改变它的内容，而元组是不可变的，意味着它的内容一旦创建就不能更改。
+
+```python
+# 列表示例
+my_list = [1, 2, 3]
+my_list[0] = 10
+print(my_list)  # 输出: [10, 2, 3]
+
+# 元组示例
+my_tuple = (1, 2, 3)
+# my_tuple[0] = 10  # 引发 TypeError: 'tuple' object does not support item assignment
+print(my_tuple)  # 输出: (1, 2, 3)
+```
+
+### 4. How do you create a set in Python and what is its purpose? 如何在Python中创建一个集合及其用途是什么？
+
+You can create a set in Python using curly braces `{}` or the `set()` function. A set is an unordered collection of unique elements.
+
+```python
+# Creating a set using curly braces
+my_set = {1, 2, 3, 4, 5}
+print(my_set)  # Output: {1, 2, 3, 4, 5}
+
+# Creating a set using the set() function
+another_set = set([1, 2, 2, 3, 4])
+print(another_set)  # Output: {1, 2, 3, 4}
+```
+
+你可以使用花括号`{}`或`set()`函数在Python中创建一个集合。集合是一个无序的唯一元素的集合。
+
+```python
+# 使用花括号创建集合
+my_set = {1, 2, 3, 4, 5}
+print(my_set)  # 输出: {1, 2, 3, 4, 5}
+
+# 使用set()函数创建集合
+another_set = set([1, 2, 2, 3, 4])
+print(another_set)  # 输出: {1, 2, 3, 4}
+```
+
+### 5. What is a dictionary in Python and how do you access its values? Python中的字典是什么以及如何访问它的值？
+
+A dictionary in Python is a collection of key-value pairs. You can access its values using the keys.
+
+```python
+# Creating a dictionary
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+
+# Accessing values using keys
+print(my_dict["name"])  # Output: Alice
+print(my_dict["age"])   # Output: 25
+```
+
+Python中的字典是键值对的集合。你可以使用键来访问它的值。
+
+```python
+# 创建字典
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+
+# 使用键访问值
+print(my_dict["name"])  # 输出: Alice
+print(my_dict["age"])   # 输出: 25
+```
+
+通过这些问题和答案，您可以更好地理解 Python 的 15 种内置数据类型及其使用方法。
+
