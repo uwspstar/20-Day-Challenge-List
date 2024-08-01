@@ -94,3 +94,6 @@
 这个20天的学习计划旨在帮助你在短时间内掌握Python编程的核心技能和应用。如果有任何问题或需要进一步的指导，请随时告诉我。
 
 希望这些信息对你有帮助！
+
+### Recommend Resources:
+[![Watch the video](https://img.youtube.com/vi/nLRL_NcnK-4/maxresdefault.jpg)](https://youtu.be/nLRL_NcnK-4)
