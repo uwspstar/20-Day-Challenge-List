@@ -194,3 +194,8 @@ logging.info("此消息包含时间戳")
 **Python Logging: How to Write Logs Like a Pro! by ArjanCodes**
 [![Python Logging: How to Write Logs Like a Pro! ArjanCodes](https://img.youtube.com/vi/pxuXaaT1u3k/maxresdefault.jpg)](https://youtu.be/pxuXaaT1u3k)
 
+------
+
+### Recommend Resources:
+**Modern Python logging by mCoding**
+[![Modern Python logging mCoding](https://img.youtube.com/vi/9L77QExPmI0/maxresdefault.jpg)](https://youtu.be/9L77QExPmI0)
