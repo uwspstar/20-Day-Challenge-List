@@ -50,38 +50,45 @@ The comparison of different usages of `print()` function is shown in the table b
 
 `print()` function is very flexible and is used extensively in both simple and complex Python applications.
 
-`print()`函数非常灵活，广泛用于简单和复杂的Python应用程序中。
+#### 这里是 `print()` 函数使用中 `sep`、`end`、`file` 和 `flush` 参数的比较，中英文对照并附带代码示例：
 
-
-| Usage       | Description in English                                      | Description in Chinese                                   | Code Example                                 |
-|-------------|--------------------------------------------------------------|----------------------------------------------------------|----------------------------------------------|
-| Basic       | Prints strings and other objects to the console.            | 将字符串和其他对象打印到控制台。                         | `print('Hello, World!')`                     |
-| With `sep`  | Prints objects separated by a specified string.              | 打印由指定字符串分隔的对象。                             | `print('Hello', 'World', sep=', ')`          |
-| With `end`  | Prints objects with a specified string at the end.           | 打印在末尾有指定字符串的对象。                           | `print('Hello,', end=' '); print('World!')`  |
-| To a file   | Redirects the output to a file-like object instead of the console. | 将输出重定向到文件样对象，而不是控制台。                 | `with open('output.txt', 'w') as f:\n    print('Hello, World!', file=f)` |
-
+ 
+| Usage     | Description in English                                            | Description in Chinese                                       | Code Example                                                 |
+|-----------|--------------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
+| `sep`     | Specifies the separator between the values. Defaults to a space.  | 指定值之间的分隔符。默认为空格。                              | `print('Hello', 'World', sep=', ')`                          |
+| `end`     | Specifies what to append at the end of the output. Defaults to a newline. | 指定输出末尾添加的内容。默认为换行符。                      | `print('Hello,', end=' '); print('World!')`                  |
+| `file`    | Specifies the file-like object to which the output will be sent. Defaults to sys.stdout (the console). | 指定输出发送到的文件样对象。默认为 sys.stdout（控制台）。 | `with open('output.txt', 'w') as f: print('Hello, World!', file=f)` |
+| `flush`   | Determines whether to forcibly flush the stream.                  | 确定是否强制刷新流。                                         | `print('Hello, World!', flush=True)`                         |
+ 
 
 ### 代码示例
 
-1. **Basic**:
+1. **使用 `sep` 参数**:
    ```python
-   print('Hello, World!')  # Output: Hello, World!
+   # 指定值之间的分隔符
+   print('Hello', 'World', sep=', ')  # 输出: Hello, World
    ```
 
-2. **With `sep`**:
+2. **使用 `end` 参数**:
    ```python
-   print('Hello', 'World', sep=', ')  # Output: Hello, World
+   # 指定输出末尾添加的内容
+   print('Hello,', end=' ')  # 输出: Hello,（末尾没有换行符）
+   print('World!')  # 输出: World!（与前一行在同一行）
+   # 综合输出: Hello, World!
    ```
 
-3. **With `end`**:
+3. **使用 `file` 参数**:
    ```python
-   print('Hello,', end=' ')  # Output: Hello, (no newline at the end)
-   print('World!')  # Output: World! (on the same line as the previous print)
-   # Combined output: Hello, World!
-   ```
-
-4. **To a file**:
-   ```python
+   # 指定输出发送到的文件样对象
    with open('output.txt', 'w') as f:
        print('Hello, World!', file=f)
-   # The content of 'output.txt' will be: Hello, World!
+   # 'output.txt' 文件的内容将是: Hello, World!
+   ```
+
+4. **使用 `flush` 参数**:
+   ```python
+   # 确定是否强制刷新流
+   print('Hello, World!', flush=True)  # 输出: Hello, World!（立即刷新）
+   ```
+
+通过这些示例，你可以看到 `print()` 函数如何利用不同参数进行更灵活的输出格式化。
