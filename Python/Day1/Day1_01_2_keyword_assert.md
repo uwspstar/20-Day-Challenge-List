@@ -31,9 +31,10 @@ The `assert` statement is primarily used during development, often seen in test 
 
 ------
 
-是的，你的描述很准确。`assert` 语句在 Python 中主要用于开发和测试阶段，用来进行条件检查。如果条件为假，`assert` 语句会引发一个 `AssertionError` 异常。
+<details>
+    `assert` 语句在 Python 中主要用于开发和测试阶段，用来进行条件检查。如果条件为假，`assert` 语句会引发一个 `AssertionError` 异常。
 
-以下是使用 `assert` 的一些要点：
+    <summary>以下是使用 `assert` 的一些要点：
 
 1. **开发和测试环境**: `assert` 通常用于开发和测试阶段，帮助开发者捕获错误和验证程序的假设条件。
 
@@ -64,7 +65,8 @@ def divide(a, b):
 ```
 
 这样即使在优化模式下运行，检查条件也不会被跳过，确保代码在各种情况下的健壮性。
-
+    </summary>
+<details>
 ------
 ### Introduction to Python Unit Testing Using AAA
 
