@@ -1,6 +1,57 @@
 # Built-in Data Types
 In Python, there are several built-in data types that you'll frequently encounter. These data types are fundamental to handling various kinds of data in Python programs. Here's an overview in both English and Chinese, along with a comparison table:
 
+Python has several built-in data types that are used to handle various kinds of data. These data types can be broadly categorized as follows:
+
+### Numeric Types
+1. **int**: Integer type, represents whole numbers.
+2. **float**: Floating-point type, represents real numbers with a decimal point.
+3. **complex**: Complex number type, represents numbers with a real and imaginary part.
+
+### Sequence Types
+4. **str**: String type, represents text.
+5. **list**: List type, a mutable sequence of items.
+6. **tuple**: Tuple type, an immutable sequence of items.
+7. **range**: Range type, represents a sequence of numbers.
+
+### Mapping Type
+8. **dict**: Dictionary type, represents a collection of key-value pairs.
+
+### Set Types
+9. **set**: Set type, an unordered collection of unique items.
+10. **frozenset**: Frozenset type, an immutable version of a set.
+
+### Boolean Type
+11. **bool**: Boolean type, represents True or False values.
+
+### Binary Types
+12. **bytes**: Bytes type, represents binary data.
+13. **bytearray**: Bytearray type, a mutable sequence of bytes.
+14. **memoryview**: Memoryview type, provides a view of the memory of another binary object.
+
+### None Type
+15. **NoneType**: Represents the absence of a value or a null value. The sole instance of this type is `None`.
+
+In summary, there are 15 built-in data types in Python:
+
+1. int
+2. float
+3. complex
+4. str
+5. list
+6. tuple
+7. range
+8. dict
+9. set
+10. frozenset
+11. bool
+12. bytes
+13. bytearray
+14. memoryview
+15. NoneType
+
+------
+
 1. **Integers (`int`)** - Used for representing whole numbers without a fractional component.
    **整数（`int`）** - 用于表示没有小数部分的整数。
 <details>
