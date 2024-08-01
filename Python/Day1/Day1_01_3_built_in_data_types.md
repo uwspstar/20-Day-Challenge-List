@@ -3,11 +3,10 @@ In Python, there are several built-in data types that you'll frequently encounte
 
 1. **Integers (`int`)** - Used for representing whole numbers without a fractional component.
    **整数（`int`）** - 用于表示没有小数部分的整数。
-   
-   <details>
-  <summary>Click to expand!</summary>
+<details>
+<summary>Click to expand!</summary>
 
-  In Python, there is no functional difference between using "Integers" and "int" because "int" is the actual data type used to represent integers in Python. The term "Integers" is more of a conceptual or descriptive term, whereas "int" is the actual type name used in Python code.
+In Python, there is no functional difference between using "Integers" and "int" because "int" is the actual data type used to represent integers in Python. The term "Integers" is more of a conceptual or descriptive term, whereas "int" is the actual type name used in Python code.
 
 Here are a few points to clarify:
 
