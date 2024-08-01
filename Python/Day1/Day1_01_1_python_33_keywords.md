@@ -110,6 +110,56 @@ Understanding and using these keywords correctly is crucial for effective Python
 | `yield`       | Ends the execution of a function, returns a generator.                                                                                               | `def generator(): yield x`                                                                                                                                       | Used in functions to return an iterator instead of a single value.                                                                                                                     |
 
 
+#### 以下是关于 Python 关键字的 3 个面试问题及其答案
+
+### 1. What are Python keywords? 什么是Python关键字？
+
+Python keywords are reserved words that cannot be used as identifiers (like variable names, function names, class names, etc.) because they are used to define the syntax and structure of the Python language.
+
+```python
+import keyword
+print(keyword.kwlist)  # Output: List of Python keywords
+```
+
+Python 关键字是不能用作标识符（如变量名、函数名、类名等）的保留字，因为它们用于定义 Python 语言的语法和结构。
+
+```python
+import keyword
+print(keyword.kwlist)  # 输出: Python 关键字列表
+```
+
+### 2. Why can't Python keywords be used as identifiers? 为什么Python关键字不能用作标识符？
+
+Python keywords are reserved for specific functions within the language and using them as identifiers would cause syntax errors and ambiguity in the code.
+
+```python
+def = 5  # SyntaxError: invalid syntax
+```
+
+Python 关键字是保留用于语言中的特定功能的，使用它们作为标识符会导致语法错误和代码中的歧义。
+
+```python
+def = 5  # 语法错误: 语法无效
+```
+
+### 3. How can you get a list of all Python keywords programmatically? 如何以编程方式获取所有Python关键字的列表？
+
+You can use the `keyword` module in Python to get a list of all keywords.
+
+```python
+import keyword
+print(keyword.kwlist)  # Output: List of Python keywords
+```
+
+可以使用Python中的`keyword`模块获取所有关键字的列表。
+
+```python
+import keyword
+print(keyword.kwlist)  # 输出: Python 关键字列表
+```
+
+
+
 ### Recommend Resources:
 **All 39 Python Keywords Explained Indently**
 [![All 39 Python Keywords Explained](https://img.youtube.com/vi/rKk8XPLysj8/maxresdefault.jpg)](https://youtu.be/rKk8XPLysj8)
