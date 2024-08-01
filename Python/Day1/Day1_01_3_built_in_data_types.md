@@ -1,4 +1,4 @@
-# Built-in Data Types
+# Python 15 Built-in Data Types
 In Python, there are several built-in data types that you'll frequently encounter. These data types are fundamental to handling various kinds of data in Python programs. Here's an overview in both English and Chinese, along with a comparison table:
 
 ### In summary, there are 15 built-in data types in Python:
