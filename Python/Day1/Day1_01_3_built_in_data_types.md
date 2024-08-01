@@ -1,4 +1,4 @@
-# built-in data types
+# Built-in data types
 In Python, there are several built-in data types that you'll frequently encounter. These data types are fundamental to handling various kinds of data in Python programs. Here's an overview in both English and Chinese, along with a comparison table:
 
 1. **Integers (`int`)** - Used for representing whole numbers without a fractional component.
