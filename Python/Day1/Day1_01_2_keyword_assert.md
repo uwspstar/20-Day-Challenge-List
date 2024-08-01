@@ -32,39 +32,39 @@ The `assert` statement is primarily used during development, often seen in test 
 ------
 
 `assert` 语句在 Python 中主要用于开发和测试阶段，用来进行条件检查。如果条件为假，`assert` 语句会引发一个 `AssertionError` 异常.
-<details>    
-<summary>以下是使用 `assert` 的一些要点：
-
-1. **开发和测试环境**: `assert` 通常用于开发和测试阶段，帮助开发者捕获错误和验证程序的假设条件。
-
-2. **生产环境中的风险**: 在生产代码中使用 `assert` 进行关键功能检查是不建议的，因为可以通过运行 Python 解释器时使用 `-O`（优化）选项全局禁用断言，这将跳过所有 `assert` 检查。例如，运行以下命令将禁用断言：
-    ```bash
-    python -O your_script.py
-    ```
-    因此，关键功能的检查应使用异常处理或其他验证机制。
-
-3. **示例**: 以下是一个简单的 `assert` 使用示例：
+<details>以下是使用 `assert` 的一些要点：    
+    <summary>
+    
+    1. **开发和测试环境**: `assert` 通常用于开发和测试阶段，帮助开发者捕获错误和验证程序的假设条件。
+    
+    2. **生产环境中的风险**: 在生产代码中使用 `assert` 进行关键功能检查是不建议的，因为可以通过运行 Python 解释器时使用 `-O`（优化）选项全局禁用断言，这将跳过所有 `assert` 检查。例如，运行以下命令将禁用断言：
+        ```bash
+        python -O your_script.py
+        ```
+        因此，关键功能的检查应使用异常处理或其他验证机制。
+    
+    3. **示例**: 以下是一个简单的 `assert` 使用示例：
+        ```python
+        def divide(a, b):
+            assert b != 0, "The denominator cannot be zero."
+            return a / b
+    
+        # 测试
+        print(divide(10, 2))  # 正常工作，输出 5.0
+        print(divide(10, 0))  # 触发断言，抛出 AssertionError
+        ```
+    
+    在生产环境中，为了确保代码的可靠性，建议使用明确的异常处理来替代 `assert`，例如：
+    
     ```python
     def divide(a, b):
-        assert b != 0, "The denominator cannot be zero."
+        if b == 0:
+            raise ValueError("The denominator cannot be zero.")
         return a / b
-
-    # 测试
-    print(divide(10, 2))  # 正常工作，输出 5.0
-    print(divide(10, 0))  # 触发断言，抛出 AssertionError
     ```
-
-在生产环境中，为了确保代码的可靠性，建议使用明确的异常处理来替代 `assert`，例如：
-
-```python
-def divide(a, b):
-    if b == 0:
-        raise ValueError("The denominator cannot be zero.")
-    return a / b
-```
-
-这样即使在优化模式下运行，检查条件也不会被跳过，确保代码在各种情况下的健壮性。
-</summary>
+    
+    这样即使在优化模式下运行，检查条件也不会被跳过，确保代码在各种情况下的健壮性。
+    </summary>
 </details>
 
 ------
