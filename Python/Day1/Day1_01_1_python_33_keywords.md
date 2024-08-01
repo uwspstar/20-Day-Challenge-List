@@ -4,10 +4,14 @@ Python keywords are reserved words that cannot be used as identifiers (like vari
 ```python
 import keyword
 print(keyword.kwlist)  # Output: List of Python keywords
+# ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
 print(len(keyword.kwlist))  # Output: List of Python keywords
+# 35
+
 ```
 
-Python 关键字是不能用作标识符（如变量名、函数名、类名等）的保留字，因为它们用于定义 Python 语言的语法和结构。以下是截至 Python 3.8 的 33 个 Python 关键字的表格，每个关键字都附有简短的解释和示例。这个表格和解释将以英文和中文呈现。
+Python 关键字是不能用作标识符（如变量名、函数名、类名等）的保留字，因为它们用于定义 Python 语言的语法和结构。以下是截至 Python 3.8 的 35 个 Python 关键字的表格，每个关键字都附有简短的解释和示例。这个表格和解释将以英文和中文呈现。
 
 ### Python Keywords Table | Python 关键字表
 
