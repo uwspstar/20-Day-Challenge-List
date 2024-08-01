@@ -92,3 +92,86 @@ The comparison of different usages of `print()` function is shown in the table b
    ```
 
 通过这些示例，你可以看到 `print()` 函数如何利用不同参数进行更灵活的输出格式化。
+
+#### 以下是关于 Python `print()` 函数的 5 个面试问题及其答案
+
+### 1. What is the purpose of the `print()` function in Python? `print()`函数在Python中的用途是什么？
+
+ 
+The `print()` function in Python is used to output data to the standard output device, typically the console. It is often used for displaying information during debugging or when outputting results.
+
+```python
+print("Hello, World!")  # Output: Hello, World!
+```
+ 
+`print()`函数在Python中用于将数据输出到标准输出设备，通常是控制台。它常用于在调试时显示信息或输出结果。
+
+```python
+print("Hello, World!")  # 输出: Hello, World!
+```
+
+### 2. How can you use the `print()` function to display multiple values in a single call? 如何使用`print()`函数在一次调用中显示多个值？
+
+ 
+You can use the `print()` function to display multiple values by separating them with commas. By default, the values will be separated by a space.
+
+```python
+print("Hello", "World", 123)  # Output: Hello World 123
+```
+ 
+可以使用`print()`函数通过用逗号分隔多个值来显示多个值。默认情况下，这些值将由空格分隔。
+
+```python
+print("Hello", "World", 123)  # 输出: Hello World 123
+```
+
+### 3. What is the use of the `sep` parameter in the `print()` function? `print()`函数中的`sep`参数有什么用？
+
+ 
+The `sep` parameter in the `print()` function specifies the separator between the values. It defaults to a space.
+
+```python
+print("Hello", "World", 123, sep="-")  # Output: Hello-World-123
+```
+ 
+`print()`函数中的`sep`参数指定值之间的分隔符。默认是空格。
+
+```python
+print("Hello", "World", 123, sep="-")  # 输出: Hello-World-123
+```
+
+### 4. How can you prevent the `print()` function from adding a newline at the end of the output? 如何防止`print()`函数在输出末尾添加换行符？
+
+ 
+You can prevent the `print()` function from adding a newline at the end of the output by setting the `end` parameter to an empty string or any other character you prefer.
+
+```python
+print("Hello, ", end="")
+print("World!")  # Output: Hello, World!
+```
+ 
+可以通过将`end`参数设置为空字符串或任何其他首选字符来防止`print()`函数在输出末尾添加换行符。
+
+```python
+print("Hello, ", end="")
+print("World!")  # 输出: Hello, World!
+```
+
+### 5. How can you redirect the output of the `print()` function to a file? 如何将`print()`函数的输出重定向到文件？
+
+ 
+You can redirect the output of the `print()` function to a file by using the `file` parameter and specifying a file-like object.
+
+```python
+with open('output.txt', 'w') as f:
+    print("Hello, World!", file=f)
+# The content of 'output.txt' will be: Hello, World!
+```
+ 
+可以通过使用`file`参数并指定一个文件样对象将`print()`函数的输出重定向到文件。
+
+```python
+with open('output.txt', 'w') as f:
+    print("Hello, World!", file=f)
+# 'output.txt' 文件的内容将是: Hello, World!
+```
