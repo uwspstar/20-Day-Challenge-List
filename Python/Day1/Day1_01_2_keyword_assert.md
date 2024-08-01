@@ -32,6 +32,23 @@ The `assert` statement is primarily used during development, often seen in test 
 ------
 
 `assert` 语句在 Python 中主要用于开发和测试阶段，用来进行条件检查。如果条件为假，`assert` 语句会引发一个 `AssertionError` 异常.
+
+<details>
+  <summary>Click to expand!</summary>
+
+  ## This is the hidden content
+
+  Here you can include more detailed information that can be toggled to show or hide.
+
+  - List item 1
+  - List item 2
+  - List item 3
+
+  You can also include **bold text**, _italic text_, and other markdown elements.
+
+</details>
+
+
 <details>以下是使用 `assert` 的一些要点：    
     <summary>
     
