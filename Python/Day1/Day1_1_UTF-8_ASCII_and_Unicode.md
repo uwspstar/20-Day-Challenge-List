@@ -28,3 +28,21 @@ Understanding the differences between UTF-8, ASCII, and Unicode is essential for
 | **效率**               | 对于只包含基本 ASCII 集的文本最为高效。          | 由于某些编码（例如 UTF-32）的字符固定宽度，对于主要是英文的文本来说效率较低。 | 对于混合使用 ASCII 字符和其他全球脚本的文本非常高效。                 |
 
 **ASCII** 是基础而有限的，但对于仅英文文本非常高效。**Unicode** 是全面的，涵盖了全球语言所需的所有字符，但根据编码形式（UTF-16、UTF-32）可能需要更多存储空间。**UTF-8** 取得了平衡，有效编码 ASCII 的同时也能处理任何 Unicode 字符，使其成为互联网和全球应用的理想选择。
+
+
+### Unicode vs UTF-8
+
+Here is a comparison of Unicode and UTF-8 explained in a simple way, presented in a markdown table with code examples:
+
+
+| Concept  | English Explanation | Chinese Explanation | Code Example |
+|----------|----------------------|---------------------|--------------|
+| **Unicode** | Unicode is a standard for representing all the characters from all the writing systems in the world. | Unicode 是一种用于表示世界上所有书写系统中的所有字符的标准。 | `char = 'A'; code_point = ord(char); print(code_point)  # Output: 65` |
+|          | It assigns a unique number (code point) to every character. | 它为每个字符分配一个唯一的号码（码点）。 | `char = '€'; code_point = ord(char); print(code_point)  # Output: 8364` |
+|          | For example, the code point for 'A' is U+0041. | 例如，字母 'A' 的码点是 U+0041。 | `char = 'A'; code_point = ord(char); print(hex(code_point))  # Output: 0x41` |
+| **UTF-8** | UTF-8 is a way to encode Unicode characters into bytes. | UTF-8 是一种将 Unicode 字符编码成字节的方法。 | `char = 'A'; utf8_bytes = char.encode('utf-8'); print(utf8_bytes)  # Output: b'A'` |
+|          | It uses one to four bytes for each character, depending on the character. | 根据字符的不同，它使用一到四个字节来表示每个字符。 | `char = '€'; utf8_bytes = char.encode('utf-8'); print(utf8_bytes)  # Output: b'\xe2\x82\xac'` |
+|          | For example, the character 'A' is encoded as one byte (0x41), while '€' is encoded as three bytes (0xE2 0x82 0xAC). | 例如，字符 'A' 编码为一个字节 (0x41)，而字符 '€' 编码为三个字节 (0xE2 0x82 0xAC)。 | `char = '€'; utf8_bytes = char.encode('utf-8'); print(list(utf8_bytes))  # Output: [226, 130, 172]` |
+
+
+
