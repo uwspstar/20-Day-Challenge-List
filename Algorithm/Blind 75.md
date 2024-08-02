@@ -77,5 +77,3 @@
 |                      | Reverse Bits                                 | Easy       | [Link](https://leetcode.com/problems/reverse-bits) |
 |                      | Missing Number                               | Easy       | [Link](https://leetcode.com/problems/missing-number) |
 |                      | Sum of Two Integers                          | Easy       | [Link](https://leetcode.com/problems/sum-of-two-integers) |
-
-------
