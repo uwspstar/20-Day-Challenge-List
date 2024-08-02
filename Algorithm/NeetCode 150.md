@@ -5,7 +5,7 @@
 |----------------------|----------------------------------------------|------------|--------------------------------------------------------|
 | Arrays / Strings     | 217. Contains Duplicate                           | Easy       | [Link](https://leetcode.com/problems/contains-duplicate) |
 |                      | 242. Valid Anagram                                | Easy       | [Link](https://leetcode.com/problems/valid-anagram) |
-|                      | 1. Two Sum                                      | Easy       | [Link](https://leetcode.com/problems/two-sum) |
+|                      | [1. Two Sum](https://codebitwave.com/leetcode-1-two-sum/)                                      | Easy       | [Link](https://leetcode.com/problems/two-sum) |
 |                      | 49. Group Anagrams                               | Medium     | [Link](https://leetcode.com/problems/group-anagrams) |
 |                      | Top K Frequent Elements                      | Medium     | [Link](https://leetcode.com/problems/top-k-frequent-elements) |
 |                      | Encode and Decode Strings                    | Medium     | [Link](https://leetcode.com/problems/encode-and-decode-strings) |
