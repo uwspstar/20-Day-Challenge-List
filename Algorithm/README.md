@@ -104,9 +104,7 @@
 |                    | Koko Eating Bananas                                                     | Solution  | Medium     | [Link](https://leetcode.com/problems/koko-eating-bananas) |
 | Backtracking       | Letter Combinations of a Phone Number                                   | Solution  | Medium     | [Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number) |
 |                    | Combination Sum III                                                     | Solution  | Medium     | [Link](https://leetcode.com/problems/combination-sum-iii) |
-| DP - 1D            | N
-
--th Tribonacci Number                                                  | Solution  | Easy       | [Link](https://leetcode.com/problems/n-th-tribonacci-number) |
+| DP - 1D            | N-th Tribonacci Number                                                  | Solution  | Easy       | [Link](https://leetcode.com/problems/n-th-tribonacci-number) |
 |                    | Min Cost Climbing Stairs                                                | Solution  | Easy       | [Link](https://leetcode.com/problems/min-cost-climbing-stairs) |
 |                    | House Robber                                                            | Solution  | Medium     | [Link](https://leetcode.com/problems/house-robber) |
 |                    | Domino and Tromino Tiling                                               | Solution  | Medium     | [Link](https://leetcode.com/problems/domino-and-tromino-tiling) |
