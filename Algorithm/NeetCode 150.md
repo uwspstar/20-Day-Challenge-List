@@ -3,10 +3,10 @@
 
 | Category             | Problem                                      | Difficulty | Code                                                   |
 |----------------------|----------------------------------------------|------------|--------------------------------------------------------|
-| Arrays / Strings     | Contains Duplicate                           | Easy       | [Link](https://leetcode.com/problems/contains-duplicate) |
-|                      | Valid Anagram                                | Easy       | [Link](https://leetcode.com/problems/valid-anagram) |
-|                      | Two Sum                                      | Easy       | [Link](https://leetcode.com/problems/two-sum) |
-|                      | Group Anagrams                               | Medium     | [Link](https://leetcode.com/problems/group-anagrams) |
+| Arrays / Strings     | 217. Contains Duplicate                           | Easy       | [Link](https://leetcode.com/problems/contains-duplicate) |
+|                      | 242. Valid Anagram                                | Easy       | [Link](https://leetcode.com/problems/valid-anagram) |
+|                      | 1. Two Sum                                      | Easy       | [Link](https://leetcode.com/problems/two-sum) |
+|                      | 49. Group Anagrams                               | Medium     | [Link](https://leetcode.com/problems/group-anagrams) |
 |                      | Top K Frequent Elements                      | Medium     | [Link](https://leetcode.com/problems/top-k-frequent-elements) |
 |                      | Encode and Decode Strings                    | Medium     | [Link](https://leetcode.com/problems/encode-and-decode-strings) |
 |                      | Product of Array Except Self                 | Medium     | [Link](https://leetcode.com/problems/product-of-array-except-self) |
