@@ -3,7 +3,7 @@
 | Topic              | Question                                                                | Solution  | Difficulty | LeetCode Link |
 |--------------------|--------------------------------------------------------------------------|-----------|------------|---------------|
 | Array / String     | [1768. Merge Strings Alternately](https://codebitwave.com/leetcode-1768-merge-strings-alternately/)                                               | [Solution](https://codebitwave.com/leetcode-1768-merge-strings-alternately/)  | Easy       | [Link](https://leetcode.com/problems/merge-strings-alternately) |
-|                    | 1071. Greatest Common Divisor of Strings                                      | Solution  | Easy       | [Link](https://leetcode.com/problems/greatest-common-divisor-of-strings) |
+|                    | [1071. Greatest Common Divisor of Strings](https://codebitwave.com/leetcode-1071-greatest-common-divisor-of-strings/)                                      | [Solution](https://codebitwave.com/leetcode-1071-greatest-common-divisor-of-strings/)  | Easy       | [Link](https://leetcode.com/problems/greatest-common-divisor-of-strings) |
 |                    | Kids With the Greatest Number of Candies                                | Solution  | Easy       | [Link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies) |
 |                    | Can Place Flowers                                                       | Solution  | Easy       | [Link](https://leetcode.com/problems/can-place-flowers) |
 |                    | Reverse Vowels of a String                                              | Solution  | Easy       | [Link](https://leetcode.com/problems/reverse-vowels-of-a-string) |
