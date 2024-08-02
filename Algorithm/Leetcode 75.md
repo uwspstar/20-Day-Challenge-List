@@ -237,9 +237,7 @@
 |                      | Find Median From Data Stream                 | Hard       | [Link](https://leetcode.com/problems/find-median-from-data-stream) |
 | Backtracking         | Subsets                                      | Medium     | [Link](https://leetcode.com/problems/subsets) |
 |                      | Combination Sum                              | Medium     | [Link](https://leetcode.com/problems/combination-sum) |
-|                      | Permutations                                 | Medium     | [Link](https://leetcode.com/problems/permutations
-
-) |
+|                      | Permutations                                 | Medium     | [Link](https://leetcode.com/problems/permutations) |
 |                      | Subsets II                                   | Medium     | [Link](https://leetcode.com/problems/subsets-ii) |
 |                      | Combination Sum II                           | Medium     | [Link](https://leetcode.com/problems/combination-sum-ii) |
 |                      | Word Search                                  | Medium     | [Link](https://leetcode.com/problems/word-search) |
