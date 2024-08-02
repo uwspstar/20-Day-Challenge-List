@@ -208,6 +208,90 @@ In summary, the distinction between mutable and immutable objects in Python is e
 
 ---
 
+### 1. **What is the difference between immutable and mutable objects in programming?**
+
+**Answer:**
+- **Immutable Objects**: Once created, the state of an immutable object cannot be changed. Any operation that seems to modify the object actually creates a new object. Examples in Python include integers, floats, strings, and tuples.
+
+- **Mutable Objects**: The state of a mutable object can be changed after it is created. Operations like adding, removing, or modifying elements can affect the same object. Examples in Python include lists, dictionaries, and sets.
+
+**中文回答:**
+- **不可变对象**：一旦创建，不可变对象的状态无法改变。任何看似修改对象的操作实际上都会创建一个新对象。Python 中的示例包括整数、浮点数、字符串和元组。
+
+- **可变对象**：可变对象的状态可以在创建后改变。像添加、删除或修改元素等操作可以影响同一个对象。Python 中的示例包括列表、字典和集合。
+
+### 2. **Why might you choose an immutable type over a mutable type?**
+
+**Answer:**
+Choosing an immutable type over a mutable type can offer several benefits:
+- **Predictability**: Immutable objects provide a guarantee that their state cannot be changed, which can make code easier to reason about and debug.
+- **Hashability**: Immutable objects can be used as keys in dictionaries or elements in sets, as their hash values do not change.
+- **Thread Safety**: Immutable objects are inherently thread-safe, as their state cannot be modified by different threads.
+
+**中文回答:**
+选择不可变类型而非可变类型可以带来几个好处：
+- **可预测性**：不可变对象提供了其状态无法改变的保证，这可以使代码更易于理解和调试。
+- **可哈希性**：不可变对象可以作为字典中的键或集合中的元素，因为它们的哈希值不会改变。
+- **线程安全**：不可变对象本质上是线程安全的，因为它们的状态不能被不同线程修改。
+
+### 3. **How does immutability affect performance in Python?**
+
+**Answer:**
+- **Memory Efficiency**: Immutable objects can be more memory-efficient because they can be shared across different parts of a program. For example, small integers and strings are often cached and reused.
+- **Speed**: Operations on immutable objects can be faster in some cases because their state does not change, leading to fewer synchronization issues. However, operations that involve creating new immutable objects can involve additional overhead.
+
+**中文回答:**
+- **内存效率**：不可变对象可能具有更好的内存效率，因为它们可以在程序的不同部分之间共享。例如，小整数和字符串通常会被缓存和重用。
+- **速度**：在某些情况下，对不可变对象的操作可能会更快，因为其状态不会改变，导致较少的同步问题。然而，涉及创建新不可变对象的操作可能会带来额外的开销。
+
+### 4. **Can you modify an immutable object directly? What happens if you try?**
+
+**Answer:**
+You cannot modify an immutable object directly. Any attempt to alter the object will result in an error or create a new object. For example, trying to change a character in a string or an element in a tuple will raise a `TypeError`.
+
+For example:
+```python
+s = "hello"
+s[0] = "H"  # Raises TypeError: 'str' object does not support item assignment
+```
+
+**中文回答:**
+你不能直接修改不可变对象。任何试图改变对象的操作都会导致错误或创建一个新对象。例如，尝试更改字符串中的字符或元组中的元素将引发 `TypeError`。
+
+例如：
+```python
+s = "hello"
+s[0] = "H"  # 引发 TypeError: 'str' object does not support item assignment
+```
+
+### 5. **How does the immutability of tuples compare to the mutability of lists in Python?**
+
+**Answer:**
+- **Tuples**: Tuples are immutable sequences. Once a tuple is created, its contents cannot be changed. However, if a tuple contains mutable objects (e.g., lists), those objects can still be modified.
+  
+- **Lists**: Lists are mutable sequences. Their contents can be changed after creation, including adding, removing, or modifying elements.
+
+For example:
+```python
+t = (1, [2, 3])
+t[1][0] = 4  # This is allowed because the list inside the tuple is mutable
+# t[1] = [5, 6]  # This would raise a TypeError because the tuple is immutable
+```
+
+**中文回答:**
+- **元组**：元组是不可变的序列。一旦创建了元组，其内容无法改变。然而，如果元组包含可变对象（例如列表），这些对象仍然可以被修改。
+  
+- **列表**：列表是可变的序列。它们的内容可以在创建后改变，包括添加、删除或修改元素。
+
+例如：
+```python
+t = (1, [2, 3])
+t[1][0] = 4  # 这是允许的，因为元组中的列表是可变的
+# t[1] = [5, 6]  # 这将引发 TypeError，因为元组是不可变的
+```
+
+---
+
 ### Recommend Resources:
 **Programming Terms: Mutable vs Immutable  by Corey Schafer**
 [![Programming Terms: Mutable vs Immutable  by Corey Schafer](https://img.youtube.com/vi/5qQQ3yzbKp8/maxresdefault.jpg)](https://youtu.be/5qQQ3yzbKp8)
