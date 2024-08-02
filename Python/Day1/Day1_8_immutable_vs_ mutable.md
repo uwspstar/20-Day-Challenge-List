@@ -1,5 +1,4 @@
 # "immutable" and "mutable"
-- https://www.youtube.com/watch?v=5qQQ3yzbKp8
 
 - In programming, "immutable" and "mutable" are terms used to describe whether the state of an object can be changed after it is created.
 
@@ -206,3 +205,11 @@ In Python, objects are categorized as either **mutable** or **immutable**. Under
 Understanding the concepts of mutability and immutability is crucial, especially when working with Python. By comprehending the concepts of mutability and immutability, developers can write more efficient, reliable, and bug-free code. The choice between mutable and immutable objects can profoundly influence your decision when choosing which data type to use in solving a given programming problem.
 
 In summary, the distinction between mutable and immutable objects in Python is essential for crafting error-free code and can significantly impact your coding approach. It's important to use immutable objects for values that should not be modified and mutable objects for when you need to modify the object's state or contents.
+
+---
+
+### Recommend Resources:
+**Programming Terms: Mutable vs Immutable  by Corey Schafer**
+[![Programming Terms: Mutable vs Immutable  by Corey Schafer](https://img.youtube.com/vi/5qQQ3yzbKp8/maxresdefault.jpg)](https://youtu.be/5qQQ3yzbKp8)
+
+
