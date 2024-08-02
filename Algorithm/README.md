@@ -46,7 +46,7 @@
 
 | Topic              | Question                                                                | Solution  | Difficulty | LeetCode Link |
 |--------------------|--------------------------------------------------------------------------|-----------|------------|---------------|
-| Array / String     | Merge Strings Alternately                                               | Solution  | Easy       | [Link](https://leetcode.com/problems/merge-strings-alternately) |
+| Array / String     | 1768. Merge Strings Alternately                                               | Solution  | Easy       | [Link](https://leetcode.com/problems/merge-strings-alternately) |
 |                    | Greatest Common Divisor of Strings                                      | Solution  | Easy       | [Link](https://leetcode.com/problems/greatest-common-divisor-of-strings) |
 |                    | Kids With the Greatest Number of Candies                                | Solution  | Easy       | [Link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies) |
 |                    | Can Place Flowers                                                       | Solution  | Easy       | [Link](https://leetcode.com/problems/can-place-flowers) |
