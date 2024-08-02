@@ -42,4 +42,4 @@
    - Example problems include finding pairs or triplets that sum up to a specific target.
 
 
-### [LeetCode 75](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Leetcode%2075.md)
+- **[LeetCode 75](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Leetcode%2075.md)**
