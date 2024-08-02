@@ -6,6 +6,11 @@
 - [Introduction to Algorithms Abdul Bari](https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)
 - [LeetCode 2000+ by CodeBitWave](https://codebitwave.com/leetcode-2000/)
 
+------
+
+- **[LeetCode 75](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Leetcode%2075.md)**
+
+------
 
 ### Coming Soon
  
@@ -42,4 +47,3 @@
    - Example problems include finding pairs or triplets that sum up to a specific target.
 
 
-- **[LeetCode 75](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Leetcode%2075.md)**
