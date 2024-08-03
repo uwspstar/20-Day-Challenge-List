@@ -1,4 +1,6 @@
 # `range()` and `len()` vs `enumerate`
+- [Python 101: Exploring the Efficiency and Implementation of Python’s `enumerate()` Function](https://codebitwave.com/python-101-exploring-the-efficiency-and-implementation-of-pythons-enumerate-function/)
+  
 To iterate over a sequence by index, you can use a combination of `range()` and `len()` functions in Python. This method is particularly useful when you need access to the index during the iteration. However, a more Pythonic and convenient approach often used is the `enumerate()` function, which provides a counter as part of the iteration.
 
 要按索引迭代序列，您可以在Python中组合使用`range()`和`len()`函数。当您在迭代过程中需要访问索引时，这种方法特别有用。然而，更符合Python风格且常用的方法是使用`enumerate()`函数，它在迭代中提供了一个计数器。
