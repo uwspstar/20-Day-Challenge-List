@@ -182,41 +182,7 @@ This plan designed to provide a comprehensive introduction and hands-on experien
 - **Resources:**
   - [Kaggle Competitions](https://www.kaggle.com/competitions)
 
----
+------
 
-### Template for Each Day (For your blog)
-
-**Title:**
-- Machine Learning Day [X]: [Topic]
-
-**Objectives:**
-- What you aim to achieve today.
-
-**Concepts Covered:**
-- A brief overview of key concepts.
-
-**Detailed Explanation (English):**
-- In-depth explanation of the topic.
-
-**详细解释 (Chinese):**
-- 对主题的详细解释。
-
-**Programming Examples:**
-- Code snippets and examples.
-
-**Practical Applications:**
-- How these concepts are used in real-world scenarios.
-
-**Tips and Tricks:**
-- Helpful tips related to the day's topic.
-
-**Comparisons:**
-- Compare with other related techniques or methods.
-
-**Deep Understanding:**
-- Resources for further reading and deeper understanding.
-
-**LeetCode Problem Recommendations:**
-- Suggested LeetCode problems related to the day's topic.
 **The Complete Machine Learning Roadmap [2024] by Programming with Mosh**
 [![The Complete Machine Learning Roadmap [2024] by Programming with Mosh](https://img.youtube.com/vi/7IgVGSaQPaw/maxresdefault.jpg)](https://youtu.be/7IgVGSaQPaw)
