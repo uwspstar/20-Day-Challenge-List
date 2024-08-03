@@ -1,4 +1,6 @@
 # match 函数
+- [Python 101: Understanding the Implementation of Python’s `match` Function](https://codebitwave.com/python-101-understanding-the-implementation-of-pythons-match-function/)
+
 In Python, the `match` function is a feature introduced in Python 3.10 as part of the new structural pattern matching capabilities, similar to switch-case statements found in other programming languages. However, when talking specifically about matching patterns in strings, it's important to clarify that you might be referring to the `match` method from the `re` (regular expressions) module, which is used for pattern matching in strings. I'll cover both aspects here.
 
 在Python中，`match`函数是Python 3.10中引入的新功能，是新的结构模式匹配能力的一部分，类似于其他编程语言中的switch-case语句。然而，当具体讨论在字符串中匹配模式时，重要的是要澄清，你可能指的是`re`（正则表达式）模块中的`match`方法，用于字符串中的模式匹配。我将在这里涵盖这两个方面。
