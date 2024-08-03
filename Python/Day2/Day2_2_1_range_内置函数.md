@@ -1,4 +1,7 @@
-# `range()` function
+## `range()` function
+
+- [Understanding the Python `range()` Function](https://codebitwave.com/python-101-understanding-the-python-range-function/)
+
 The `range()` function in Python is a versatile built-in function used to generate sequences of numbers. It is particularly useful for looping a specific number of times in `for` loops.
 
 `range()`函数是Python中一个多功能的内置函数，用于生成数字序列。它特别适用于在`for`循环中循环特定次数。
