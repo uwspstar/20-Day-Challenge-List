@@ -100,9 +100,6 @@ The addition of pattern matching in Python enhances the language's capabilities 
 
 ------
 
-### match 函数
-In Python, the `match` function is a feature introduced in Python 3.10 as part of the new structural pattern matching capabilities, similar to switch-case statements found in other programming languages. However, when talking specifically about matching patterns in strings, it's important to clarify that you might be referring to the `match` method from the `re` (regular expressions) module, which is used for pattern matching in strings. I'll cover both aspects here.
-
 #### 1. Can you explain the `match` statement introduced in Python 3.10?
 [English]
 The `match` statement in Python 3.10 allows for pattern matching, making it possible to match values against patterns and execute code based on those matches. This feature is similar to switch-case statements in other languages but is more powerful and flexible.
