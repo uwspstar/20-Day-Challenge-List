@@ -330,8 +330,3 @@ print(large_range)
 - 将 `range()` 与 `len()` 结合使用以迭代列表索引。
 - 记住 `range()` 是从零开始的；如果未指定，起始值默认为 0。
 - 将 `range()` 与其他函数（如 `enumerate()`）结合使用以进行更复杂的迭代。
-
-#### LeetCode Problem Recommendations
-1. [Counting Bits](https://leetcode.com/problems/counting-bits/)
-2. [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)
-3. [Missing Number](https://leetcode.com/problems/missing-number/)
