@@ -90,6 +90,7 @@ The `range()` function is highly efficient because it generates the required num
 
 <details>
     <summary>为什么 `range()` 高效</summary>
+    
 ## The Efficiency of Python's `range()` Function
 
 The `range()` function is highly efficient because it generates the required numbers on the fly without storing the entire sequence in memory, making it suitable for large ranges.
