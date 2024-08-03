@@ -82,10 +82,125 @@ for i in range(10, 0, -2):
     print(i, end=' ')  # 输出：10 8 6 4 2
 ```
 
+------
+
 The `range()` function is highly efficient because it generates the required numbers on the fly without storing the entire sequence in memory, making it suitable for large ranges.
 
 `range()`函数非常高效，因为它即时生成所需的数字，而不是在内存中存储整个序列，这使它适用于大范围。
 
+<details>
+    <summary>为什么 `range()` 高效</summary>
+## The Efficiency of Python's `range()` Function
+
+The `range()` function is highly efficient because it generates the required numbers on the fly without storing the entire sequence in memory, making it suitable for large ranges.
+
+`range()`函数非常高效，因为它即时生成所需的数字，而不是在内存中存储整个序列，这使它适用于大范围。
+
+### How `range()` Works Efficiently
+
+### 为什么 `range()` 高效
+
+1. **Lazy Evaluation**: 
+    - `range()` generates numbers on demand using an iterator, which means it doesn't precompute and store all the values at once. This is known as lazy evaluation.
+
+    ```python
+    for i in range(1000000):
+        # do something with i
+    ```
+
+    - In the above example, `range(1000000)` does not create a list of one million numbers in memory. Instead, it creates an iterator that produces each number one by one as the loop iterates.
+
+    ```python
+    for i in range(1000000):
+        # 处理 i
+    ```
+
+    - 在上面的例子中，`range(1000000)` 不会在内存中创建一个一百万个数字的列表。相反，它创建了一个迭代器，当循环迭代时，该迭代器逐个生成每个数字。
+
+2. **Constant Memory Usage**: 
+    - Since `range()` does not store the entire sequence in memory, the memory usage remains constant regardless of the size of the range.
+
+    ```python
+    large_range = range(10**12)
+    ```
+
+    - The memory footprint of `large_range` is very small, even though it represents a sequence of a trillion numbers.
+
+    ```python
+    large_range = range(10**12)
+    ```
+
+    - 尽管 `large_range` 表示的是一万亿个数字的序列，但它的内存占用非常小。
+
+3. **Iterator Protocol**:
+    - The `range` object supports the iterator protocol, meaning it can be used directly in `for` loops and other contexts that expect an iterable.
+
+    ```python
+    iter_obj = iter(range(10))
+    print(next(iter_obj))  # Output: 0
+    print(next(iter_obj))  # Output: 1
+    ```
+
+    - This protocol allows `range` to efficiently provide values one at a time.
+
+    ```python
+    iter_obj = iter(range(10))
+    print(next(iter_obj))  # 输出: 0
+    print(next(iter_obj))  # 输出: 1
+    ```
+
+    - 这种协议允许 `range` 一次高效地提供一个值。
+
+### Practical Considerations
+
+### 实际考虑
+
+1. **Performance**:
+    - Using `range()` in loops is both time-efficient and memory-efficient, making it ideal for large loops.
+
+    ```python
+    for i in range(10**8):
+        pass  # This will execute efficiently
+    ```
+
+    - The above loop will run efficiently without causing high memory usage.
+
+    ```python
+    for i in range(10**8):
+        pass  # 这将高效执行
+    ```
+
+    - 上述循环将高效运行而不会导致高内存使用。
+
+2. **Compatibility**:
+    - The `range()` function behaves differently in Python 2 and Python 3. In Python 2, `range()` returns a list, while `xrange()` returns an iterator. In Python 3, `range()` returns an iterator-like object by default.
+
+    ```python
+    # Python 2
+    range_obj = xrange(10)  # Use xrange for large ranges
+    # Python 3
+    range_obj = range(10)   # range is efficient by default
+    ```
+
+    - This change in Python 3 ensures that `range()` is always memory efficient.
+
+    ```python
+    # Python 2
+    range_obj = xrange(10)  # 对大范围使用 xrange
+    # Python 3
+    range_obj = range(10)   # range 默认是高效的
+    ```
+
+    - Python 3 中的这一变化确保了 `range()` 始终是内存高效的。
+
+The `range()` function in Python is a powerful tool for generating sequences of numbers efficiently. Its implementation leverages lazy evaluation and the iterator protocol to ensure that memory usage remains low, even for very large ranges. Understanding the efficiency of `range()` helps in writing optimized and scalable code, especially when dealing with large data sets or extensive computations.
+
+Python 中的 `range()` 函数是一个高效生成数字序列的强大工具。其实现利用了惰性求值和迭代器协议，确保即使对于非常大的范围，内存使用也保持在低水平。理解 `range()` 的高效性有助于编写优化且可扩展的代码，特别是在处理大数据集或进行大量计算时。
+
+By using the `range()` function, you can iterate over large sequences without worrying about memory constraints, making it an indispensable tool in Python programming.
+
+通过使用 `range()` 函数，你可以在不担心内存限制的情况下迭代大范围序列，使其成为 Python 编程中的一个不可或缺的工具。
+</details>
 ------
 
 #### 1. How do you use the `range()` function in Python?
