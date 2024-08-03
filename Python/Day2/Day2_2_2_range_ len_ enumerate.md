@@ -178,8 +178,3 @@ for index, name in enumerate(names):
 - 使用 `enumerate()` 提高代码可读性并减少错误。
 - 将 `enumerate()` 与列表推导式结合使用，以实现强大的单行代码。
 - 需要跳过元素或以间隔执行操作时，使用具有特定步长的 `range()`。
-
-#### LeetCode Problem Recommendations
-1. [Number of Islands](https://leetcode.com/problems/number-of-islands/)
-2. [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
-3. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
