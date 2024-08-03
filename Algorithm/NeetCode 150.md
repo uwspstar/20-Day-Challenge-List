@@ -12,7 +12,7 @@
 |                      | Product of Array Except Self                 | Medium     | [Link](https://leetcode.com/problems/product-of-array-except-self) |
 |                      | Valid Sudoku                                 | Medium     | [Link](https://leetcode.com/problems/valid-sudoku) |
 |                      | Longest Consecutive Sequence                 | Medium     | [Link](https://leetcode.com/problems/longest-consecutive-sequence) |
-| Two Pointers         | Valid Palindrome                             | Easy       | [Link](https://leetcode.com/problems/valid-palindrome) |
+| Two Pointers         | [125. Valid Palindrome](https://codebitwave.com/leetcode-125-valid-palindrome/)                             | Easy       | [Link](https://leetcode.com/problems/valid-palindrome) |
 |                      | Two Sum II Input Array Is Sorted             | Medium     | [Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted) |
 |                      | 3Sum                                         | Medium     | [Link](https://leetcode.com/problems/3sum) |
 |                      | Container With Most Water                    | Medium     | [Link](https://leetcode.com/problems/container-with-most-water) |
