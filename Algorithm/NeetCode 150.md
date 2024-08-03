@@ -3,7 +3,7 @@
 
 | Category             | Problem                                      | Difficulty | Code                                                   |
 |----------------------|----------------------------------------------|------------|--------------------------------------------------------|
-| Arrays / Strings     | 217. Contains Duplicate                           | Easy       | [Link](https://leetcode.com/problems/contains-duplicate) |
+| Arrays / Strings     | [217. Contains Duplicate](https://codebitwave.com/leetcode-217-contains-duplicate/)                           | Easy       | [Link](https://leetcode.com/problems/contains-duplicate) |
 |                      | 242. Valid Anagram                                | Easy       | [Link](https://leetcode.com/problems/valid-anagram) |
 |                      | [1. Two Sum](https://codebitwave.com/leetcode-1-two-sum/)                                      | Easy       | [Link](https://leetcode.com/problems/two-sum) |
 |                      | 49. Group Anagrams                               | Medium     | [Link](https://leetcode.com/problems/group-anagrams) |
