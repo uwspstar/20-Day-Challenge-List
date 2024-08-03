@@ -338,8 +338,3 @@ print(describe(p))
 - 使用 `match` 语句简化复杂的分支逻辑。
 - 将 `match` 与解构结合使用以轻松提取值。
 - 记住 `match` 是区分大小写的。
-
-#### LeetCode Problem Recommendations
-1. [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
-2. [Design Browser History](https://leetcode.com/problems/design-browser-history/)
-3. [Decode String](https://leetcode.com/problems/decode-string/)
