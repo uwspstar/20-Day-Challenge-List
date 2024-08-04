@@ -77,3 +77,8 @@
 
 ### 总结
 这个20天的学习计划旨在帮助你在短时间内掌握AI和大模型的核心技术和应用。如果有任何问题或需要进一步的指导，请随时告诉我。
+
+
+------
+[![Harvard CS50’s Artificial Intelligence with Python – Full University Course by freeCodeCamp.org](https://img.youtube.com/vi/5NgNicANyqM/maxresdefault.jpg)](https://youtu.be/5NgNicANyqM)
+
