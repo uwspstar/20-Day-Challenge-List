@@ -48,7 +48,7 @@
 |                      | LRU Cache                                    | Medium     | [Link](https://leetcode.com/problems/lru-cache) |
 |                      | Merge K Sorted Lists                         | Hard       | [Link](https://leetcode.com/problems/merge-k-sorted-lists) |
 |                      | Reverse Nodes In K Group                     | Hard       | [Link](https://leetcode.com/problems/reverse-nodes-in-k-group) |
-| Binary Tree          | Invert Binary Tree                           | Easy       | [Link](https://leetcode.com/problems/invert-binary-tree) |
+| Binary Tree          | [226. Invert Binary Tree](https://codebitwave.com/leetcode-226-invert-binary-tree/)                           | Easy       | [Link](https://leetcode.com/problems/invert-binary-tree) |
 |                      | [104. Maximum Depth of Binary Tree](https://codebitwave.com/leetcode-104-maximum-depth-of-binary-tree/(                 | Easy       | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree) |
 |                      | Diameter of Binary Tree                      | Easy       | [Link](https://leetcode.com/problems/diameter-of-binary-tree) |
 |                      | [110. Balanced Binary Tree](https://codebitwave.com/leetcode-110-balanced-binary-tree/)                         | Easy       | [Link](https://leetcode.com/problems/balanced-binary-tree) |
