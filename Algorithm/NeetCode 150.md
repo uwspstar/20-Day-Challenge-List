@@ -30,7 +30,7 @@
 |                      | Daily Temperatures                           | Medium     | [Link](https://leetcode.com/problems/daily-temperatures) |
 |                      | Car Fleet                                    | Medium     | [Link](https://leetcode.com/problems/car-fleet) |
 |                      | Largest Rectangle In Histogram               | Hard       | [Link](https://leetcode.com/problems/largest-rectangle-in-histogram) |
-| Binary Search        | Binary Search                                | Easy       | [Link](https://leetcode.com/problems/binary-search) |
+| Binary Search        | [704. Binary Search](https://codebitwave.com/leetcode-704-binary-search/)                                | Easy       | [Link](https://leetcode.com/problems/binary-search) |
 |                      | Search a 2D Matrix                           | Medium     | [Link](https://leetcode.com/problems/search-a-2d-matrix) |
 |                      | Koko Eating Bananas                          | Medium     | [Link](https://leetcode.com/problems/koko-eating-bananas) |
 |                      | Find Minimum In Rotated Sorted Array         | Medium     | [Link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) |
