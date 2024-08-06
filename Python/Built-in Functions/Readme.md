@@ -73,3 +73,5 @@ Here is a table listing all 57 Python built-in functions along with code example
 | `zip()`    | Returns an iterator of tuples | `zip([1, 2, 3], ['a', 'b', 'c'])` |
 
 These examples demonstrate how to use each built-in function in Python. For more detailed information, you can refer to the [Python official documentation](https://docs.python.org/3/library/functions.html).
+
+- [Built-in Functions](https://docs.python.org/3/library/functions.html)
