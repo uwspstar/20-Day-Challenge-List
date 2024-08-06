@@ -92,14 +92,14 @@ Using iterables like `range` objects is efficient, especially in terms of memory
 
 ------
 
-#### What is an iterable in Python?
+#### 1. What is an iterable in Python?
 [English]
 In Python, an iterable is any object that can return its elements one at a time, allowing it to be looped over in a for-loop. This includes sequences like lists, tuples, and strings, as well as other objects like dictionaries, sets, and even file objects.
 
 [Chinese]
 在 Python 中，可迭代对象是任何可以一次返回其元素的对象，使其可以在 for 循环中进行迭代。这包括列表、元组和字符串等序列，以及字典、集合甚至文件对象等其他对象。
 
-#### How do you create an iterable object in Python?
+#### 2. How do you create an iterable object in Python?
 [English]
 To create an iterable object, you need to implement the `__iter__()` method in your class, which should return an iterator. Alternatively, you can implement the `__getitem__()` method to allow access to elements via indexing.
 
@@ -158,7 +158,7 @@ for item in my_iterable:
     print(item)
 ```
 
-#### What is the difference between an iterable and an iterator?
+#### 3. What is the difference between an iterable and an iterator?
 [English]
 An iterable is an object that can return an iterator, while an iterator is an object that represents a stream of data and returns the next item in the stream when `__next__()` is called. An iterable can be iterated multiple times, but an iterator is typically consumed once.
 
@@ -197,7 +197,7 @@ while True:
         break
 ```
 
-#### How can you make an object both an iterable and an iterator?
+#### 4. How can you make an object both an iterable and an iterator?
 [English]
 An object can be both an iterable and an iterator if it implements both the `__iter__()` and `__next__()` methods. In this case, the `__iter__()` method should return the object itself.
 
