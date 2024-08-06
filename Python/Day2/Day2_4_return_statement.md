@@ -138,7 +138,7 @@ result = greet("Alice")
 print(result)  # 输出: None
 ```
 
-#### How do you use the `return` statement to exit a function early?
+#### 4. How do you use the `return` statement to exit a function early?
 [English]
 You can use the `return` statement to exit a function early based on a condition. This is useful for stopping the function execution when a specific condition is met.
 
@@ -167,7 +167,7 @@ result = find_even([1, 3, 5, 7, 8, 10])
 print(result)  # 输出: 8
 ```
 
-#### 4. How do you use `return` with recursion?
+#### 5. How do you use `return` with recursion?
 [English]
 In recursive functions, the `return` statement is used to pass the result of a recursive call back to the previous level. This allows the function to build up the final result through multiple recursive calls.
 
