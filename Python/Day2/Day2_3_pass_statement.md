@@ -92,3 +92,149 @@ for item in my_list:
 These examples show how `pass` can be effectively used to create syntactically correct placeholders, allowing for uninterrupted development and later implementations.
 
 这些例子展示了如何有效地使用`pass`来创建语法正确的占位符，允许不中断的开发和稍后的实现。
+
+------
+
+#### What is the `pass` statement used for in Python?
+[English]
+The `pass` statement is used in situations where you need a statement syntactically but do not want to execute any code. It can be useful in defining empty functions, classes, or loops during the development phase, indicating that the implementation is incomplete or to be added later.
+
+```python
+def my_function():
+    pass  # Placeholder for future implementation
+
+class MyClass:
+    pass  # Placeholder for future implementation
+```
+
+[Chinese]
+`pass` 语句在语法上需要一个语句但不希望执行任何代码的情况下使用。在开发阶段定义空函数、类或循环时，它很有用，表示实现不完整或将在以后添加。
+
+```python
+def my_function():
+    pass  # 将来实现的占位符
+
+class MyClass:
+    pass  # 将来实现的占位符
+```
+
+#### How do you use the `pass` statement in loops?
+[English]
+The `pass` statement can be used in loops where you do not want to perform any action but need to have the loop structure in place. This can be helpful when you are planning to add code later or want to temporarily skip the loop body.
+
+```python
+for i in range(5):
+    pass  # Placeholder for future implementation
+
+while True:
+    pass  # Placeholder for future implementation
+```
+
+[Chinese]
+`pass` 语句可以在循环中使用，当您不想执行任何操作但需要保留循环结构时。这在您计划稍后添加代码或希望暂时跳过循环体时非常有用。
+
+```python
+for i in range(5):
+    pass  # 将来实现的占位符
+
+while True:
+    pass  # 将来实现的占位符
+```
+
+#### What are the practical applications of the `pass` statement?
+[English]
+1. **Minimal Class Definitions**: Define classes without any methods or attributes initially.
+2. **Stub Functions**: Create function stubs to outline the structure of your code.
+3. **Placeholder for Future Code**: Use in loops or conditional statements where code will be added later.
+
+```python
+# Minimal class definition
+class EmptyClass:
+    pass
+
+# Stub function
+def stub_function():
+    pass
+
+# Placeholder in a loop
+for i in range(10):
+    if i % 2 == 0:
+        pass  # Code to be added later
+```
+
+[Chinese]
+1. **最小类定义**：最初定义没有任何方法或属性的类。
+2. **函数桩**：创建函数桩以概述代码结构。
+3. **未来代码的占位符**：在循环或条件语句中使用，将来会添加代码。
+
+```python
+# 最小类定义
+class EmptyClass:
+    pass
+
+# 函数桩
+def stub_function():
+    pass
+
+# 循环中的占位符
+for i in range(10):
+    if i % 2 == 0:
+        pass  # 将来添加的代码
+```
+
+#### How does the `pass` statement compare with other statements like `continue` and `break`?
+[English]
+- **`pass`**: Does nothing and is used as a placeholder.
+- **`continue`**: Skips the rest of the code inside the current loop iteration and proceeds with the next iteration.
+- **`break`**: Exits the current loop entirely.
+
+```python
+for i in range(5):
+    if i == 2:
+        pass  # Do nothing
+    elif i == 3:
+        continue  # Skip iteration when i is 3
+    elif i == 4:
+        break  # Exit the loop when i is 4
+    print(i)
+```
+
+[Chinese]
+- **`pass`**：不执行任何操作，用作占位符。
+- **`continue`**：跳过当前循环迭代中的其余代码，继续下一次迭代。
+- **`break`**：完全退出当前循环。
+
+```python
+for i in range(5):
+    if i == 2:
+        pass  # 不执行任何操作
+    elif i == 3:
+        continue  # 当 i 为 3 时跳过迭代
+    elif i == 4:
+        break  # 当 i 为 4 时退出循环
+    print(i)
+```
+
+#### Practical Applications
+[English]
+1. **Code Skeletons**: Use `pass` to create the initial structure of classes and functions during the planning phase.
+2. **Debugging**: Temporarily replace code with `pass` to isolate and debug parts of a program.
+3. **Conditional Placeholders**: Implement `pass` in complex conditions where actions are defined later.
+
+[Chinese]
+1. **代码框架**：在规划阶段使用 `pass` 创建类和函数的初始结构。
+2. **调试**：临时用 `pass` 替换代码，以隔离和调试程序的一部分。
+3. **条件占位符**：在复杂条件中实现 `pass`，并在稍后定义操作。
+
+#### Tips and Tricks
+[English]
+- Use `pass` to maintain syntactically correct code while planning the logic.
+- Replace `pass` with meaningful code once the implementation is ready.
+- Combine `pass` with comments to indicate the intended future code.
+
+[Chinese]
+- 使用 `pass` 在规划逻辑时保持语法正确的代码。
+- 一旦实现准备就绪，用有意义的代码替换 `pass`。
+- 将 `pass` 与注释结合使用，以指示预期的未来代码。
+
+I hope this explanation helps in understanding the `pass` statement in Python!
