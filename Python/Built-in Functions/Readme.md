@@ -1,4 +1,4 @@
-# python 57 Built-in Functions
+# Python 57 Built-in Functions
 
 Here is a table listing all 57 Python built-in functions along with code examples.
 
