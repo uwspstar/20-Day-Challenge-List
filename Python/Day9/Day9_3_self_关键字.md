@@ -82,3 +82,237 @@ This distinction helps clarify how Python uses `self` to work within the context
 
 这种区分有助于阐明 Python 如何使用 `self` 在实例的上下文中工作，而 `class` 则构建和组织适用于多个实例的属性和方法。这种设置支持模块化、可维护的代码，体现了面向对象编程的原则。
 
+------
+
+#### 1. Why is using `self` important for maintainability in larger classes?
+[English]
+Using `self` ensures that the methods and properties are correctly associated with the instance of the class. This is crucial in larger classes where methods need to interact with many instance variables and other methods. It helps in keeping the code organized and reduces the risk of errors related to variable scope and reference.
+
+```python
+class Example:
+    def __init__(self, value):
+        self.value = value
+    
+    def display_value(self):
+        print(self.value)
+```
+
+**What Happens:**
+The `__init__` method initializes the instance variable `value`, and the `display_value` method accesses this instance variable using `self`.
+
+**Behind the Scenes:**
+`self` references the current instance of the class, allowing methods to access instance variables and other methods consistently.
+
+[Chinese]
+使用 `self` 确保方法和属性正确地与类的实例关联。这在需要与许多实例变量和其他方法交互的大型类中尤为重要。它有助于保持代码的组织性，并减少与变量范围和引用相关的错误风险。
+
+```python
+class Example:
+    def __init__(self, value):
+        self.value = value
+    
+    def display_value(self):
+        print(self.value)
+```
+
+**What Happens:**
+`__init__` 方法初始化实例变量 `value`，`display_value` 方法使用 `self` 访问这个实例变量。
+
+**Behind the Scenes:**
+`self` 引用类的当前实例，允许方法一致地访问实例变量和其他方法。
+
+#### 2. How does using `self` enhance flexibility in object-oriented programming?
+[English]
+Calling methods with `self` allows for polymorphism, where a subclass can override a method, and the calling method would automatically use the overridden version. This enhances flexibility by allowing different behaviors in subclasses without changing the base class code.
+
+```python
+class Base:
+    def greet(self):
+        return "Hello from Base"
+    
+    def call_greet(self):
+        return self.greet()
+
+class Derived(Base):
+    def greet(self):
+        return "Hello from Derived"
+
+base = Base()
+derived = Derived()
+print(base.call_greet())    # Output: Hello from Base
+print(derived.call_greet()) # Output: Hello from Derived
+```
+
+**What Happens:**
+The `Derived` class overrides the `greet` method. When `call_greet` is called on a `Derived` instance, it uses the overridden `greet` method.
+
+**Behind the Scenes:**
+`self.greet()` in `call_greet` dynamically resolves to the appropriate method based on the instance, enabling polymorphic behavior.
+
+[Chinese]
+使用 `self` 调用方法允许多态性，其中子类可以覆盖方法，调用方法会自动使用覆盖的版本。这通过允许子类中的不同行为而无需更改基类代码来增强灵活性。
+
+```python
+class Base:
+    def greet(self):
+        return "Hello from Base"
+    
+    def call_greet(self):
+        return self.greet()
+
+class Derived(Base):
+    def greet(self):
+        return "Hello from Derived"
+
+base = Base()
+derived = Derived()
+print(base.call_greet())    # 输出: Hello from Base
+print(derived.call_greet()) # 输出: Hello from Derived
+```
+
+**What Happens:**
+`Derived` 类覆盖了 `greet` 方法。当在 `Derived` 实例上调用 `call_greet` 时，它使用覆盖的 `greet` 方法。
+
+**Behind the Scenes:**
+`call_greet` 中的 `self.greet()` 动态解析为基于实例的适当方法，启用多态行为。
+
+#### 3. When should a method be declared as a static method instead of using `self`?
+[English]
+A method should be declared as a static method if it does not need to access any properties or methods on the instance (i.e., it doesn't use `self` inside the method). Static methods are defined using the `@staticmethod` decorator and are used for utility functions related to the class but not dependent on instance-specific data.
+
+```python
+class MathUtils:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+print(MathUtils.add(3, 4))  # Output: 7
+```
+
+**What Happens:**
+The `add` method is a static method and does not require an instance to be called.
+
+**Behind the Scenes:**
+Static methods do not have access to instance (`self`) or class (`cls`) variables. They can be called on the class itself without creating an instance.
+
+[Chinese]
+如果一个方法不需要访问实例上的任何属性或方法（即它在方法内部不使用 `self`），则应将其声明为静态方法。静态方法使用 `@staticmethod` 装饰器定义，用于与类相关但不依赖于实例特定数据的实用函数。
+
+```python
+class MathUtils:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+print(MathUtils.add(3, 4))  # 输出: 7
+```
+
+**What Happens:**
+`add` 方法是一个静态方法，不需要实例即可调用。
+
+**Behind the Scenes:**
+静态方法无法访问实例（`self`）或类（`cls`）变量。它们可以在类本身上调用，而无需创建实例。
+
+#### 4. How does `self` support method overriding in subclasses?
+[English]
+Using `self` in method calls within a class supports method overriding by ensuring that the instance's method is called, even if it's overridden in a subclass. This promotes code reuse and flexibility in object-oriented design.
+
+```python
+class Animal:
+    def sound(self):
+        return "Some sound"
+    
+    def make_sound(self):
+        return self.sound()
+
+class Dog(Animal):
+    def sound(self):
+        return "Bark"
+
+dog = Dog()
+print(dog.make_sound())  # Output: Bark
+```
+
+**What Happens:**
+The `Dog` class overrides the `sound` method. When `make_sound` is called on a `Dog` instance, it uses the overridden `sound` method from `Dog`.
+
+**Behind the Scenes:**
+The `self.sound()` call in `make_sound` is resolved at runtime to the `sound` method of the actual instance type, allowing for overridden behavior.
+
+[Chinese]
+在类中使用 `self` 进行方法调用支持方法重写，确保即使在子类中重写，实例的方法也会被调用。这促进了代码重用和面向对象设计中的灵活性。
+
+```python
+class Animal:
+    def sound(self):
+        return "Some sound"
+    
+    def make_sound(self):
+        return self.sound()
+
+class Dog(Animal):
+    def sound(self):
+        return "Bark"
+
+dog = Dog()
+print(dog.make_sound())  # 输出: Bark
+```
+
+**What Happens:**
+`Dog` 类覆盖了 `sound` 方法。当在 `Dog` 实例上调用 `make_sound` 时，它使用 `Dog` 中重写的 `sound` 方法。
+
+**Behind the Scenes:**
+`make_sound` 中的 `self.sound()` 调用在运行时解析为实际实例类型的 `sound` 方法，允许重写行为。
+
+#### 5. What are the benefits of using instance methods over static methods in certain contexts?
+[English]
+Instance methods, which use `self`, can access and modify the instance's state, making them suitable for operations that depend on the instance's data. They support inheritance and polymorphism, allowing subclasses to override methods to provide specialized behavior.
+
+```python
+class Counter:
+    def __init__(self):
+        self.count = 0
+
+    def increment(self):
+        self.count += 1
+
+class CustomCounter(Counter):
+    def increment(self):
+        self.count += 2
+
+counter = CustomCounter()
+counter.increment()
+print(counter.count)  # Output: 2
+```
+
+**What Happens:**
+The `CustomCounter` class overrides the `increment` method to increase the count by 2 instead of 1.
+
+**Behind the Scenes:**
+Using `self`, the `increment` method in `CustomCounter` modifies the instance's state differently from the base class, demonstrating polymorphism and the ability to customize behavior.
+
+[Chinese]
+实例方法使用 `self` 可以访问和修改实例的状态，适用于依赖实例数据的操作。它们支持继承和多态，允许子类重写方法以提供特定行为。
+
+```python
+class Counter:
+    def __init__(self):
+        self.count = 0
+
+    def increment(self):
+        self.count += 1
+
+class CustomCounter(Counter):
+    def increment(self):
+        self.count += 2
+
+counter = CustomCounter()
+counter.increment()
+print(counter.count)  # 输出: 2
+```
+
+**What Happens:**
+`CustomCounter` 类覆盖了 `increment` 方法，将计数增加 2 而不是 1。
+
+**Behind the Scenes:**
+使用 `self`，`CustomCounter` 中的 `increment` 方法以不同于基类的方式修改实例的状态，展示了多态和定制行为的能力。
