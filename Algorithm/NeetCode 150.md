@@ -146,7 +146,7 @@
 |                      | Pow(x, n)                                    | Medium     | [Link](https://leetcode.com/problems/powx-n) |
 |                      | Multiply Strings                             | Medium     | [Link](https://leetcode.com/problems/multiply-strings) |
 |                      | Detect Squares                               | Medium     | [Link](https://leetcode.com/problems/detect-squares) |
-| Bit Manipulation     | Single Number                                | Easy       | [Link](https://leetcode.com/problems/single-number) |
+| Bit Manipulation     | [136. Single Number](https://codebitwave.com/leetcode-136-single-number/)                                | Easy       | [Link](https://leetcode.com/problems/single-number) |
 |                      | Number of 1 Bits                             | Easy       | [Link](https://leetcode.com/problems/number-of-1-bits) |
 |                      | Counting Bits                                | Easy       | [Link](https://leetcode.com/problems/counting-bits) |
 |                      | Reverse Bits                                 | Easy       | [Link](https://leetcode.com/problems/reverse-bits) |
