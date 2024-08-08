@@ -12,7 +12,7 @@
 ### Recommend Start Here:
 
 - **[LeetCode 75](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Leetcode%2075.md)**
-- **[Bline 75](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Blind%2075.md)**
+- **[Blind 75](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Blind%2075.md)**
 - **[NeetCode 150](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/NeetCode%20150.md)**
 
 ------
