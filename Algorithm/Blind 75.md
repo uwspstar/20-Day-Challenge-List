@@ -13,7 +13,7 @@
 |                      | Valid Palindrome                             | Easy       | [Link](https://leetcode.com/problems/valid-palindrome) |
 |                      | 3Sum                                         | Medium     | [Link](https://leetcode.com/problems/3sum) |
 |                      | Container With Most Water                    | Medium     | [Link](https://leetcode.com/problems/container-with-most-water) |
-| Sliding Window       | Best Time to Buy And Sell Stock              | Easy       | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) |
+| Sliding Window       | [121. Best Time to Buy And Sell Stock](https://codebitwave.com/leetcode-121-best-time-to-buy-and-sell-stock/)              | Easy       | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) |
 |                      | Longest Substring Without Repeating Characters | Medium   | [Link](https://leetcode.com/problems/longest-substring-without-repeating-characters) |
 |                      | Longest Repeating Character Replacement      | Medium     | [Link](https://leetcode.com/problems/longest-repeating-character-replacement) |
 |                      | Minimum Window Substring                     | Hard       | [Link](https://leetcode.com/problems/minimum-window-substring) |
