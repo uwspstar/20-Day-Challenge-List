@@ -4,7 +4,7 @@
 |----------------------|----------------------------------------------|------------|--------------------------------------------------------|
 | Array / String       | [217. Contains Duplicate](https://codebitwave.com/leetcode-217-contains-duplicate/)                           | Easy       | [Link](https://leetcode.com/problems/contains-duplicate) |
 |                      | [242. Valid Anagram](https://codebitwave.com/leetcode-242-valid-anagram/)                                | Easy       | [Link](https://leetcode.com/problems/valid-anagram) |
-|                      | Two Sum                                      | Easy       | [Link](https://leetcode.com/problems/two-sum) |
+|                      | [1. Two Sum](https://codebitwave.com/leetcode-1-two-sum/)                                      | Easy       | [Link](https://leetcode.com/problems/two-sum) |
 |                      | Group Anagrams                               | Medium     | [Link](https://leetcode.com/problems/group-anagrams) |
 |                      | Top K Frequent Elements                      | Medium     | [Link](https://leetcode.com/problems/top-k-frequent-elements) |
 |                      | Encode and Decode Strings                    | Medium     | [Link](https://leetcode.com/problems/encode-and-decode-strings) |
