@@ -48,3 +48,13 @@ Python将`__name__`设置为`'mymodule'`。当导入`mymodule`时，它会打印
 The use of `if __name__ == '__main__':` allows you to create Python files that can be both used as reusable modules and run as standalone programs, depending on the context in which they are used.
 
 使用`if __name__ == '__main__':`允许您创建既可以作为可重用模块使用也可以作为独立程序运行的Python文件，具体取决于它们被使用的上下文。
+
+------
+
+### Recommend Resources:
+**Python Tutorial: if __name__ == '__main__' by Corey Schafer**
+[![Python Tutorial: if __name__ == '__main__'](https://img.youtube.com/vi/sugvnHA7ElY/maxresdefault.jpg)](https://youtu.be/sugvnHA7ElY)
+
+
+
+
