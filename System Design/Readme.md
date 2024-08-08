@@ -1,5 +1,12 @@
 ### 20-Day System Design Learning Plan
 
+#### Recommend Resources:
+- [System Design Interview Questions](https://codebitwave.com/system-design-interview-questions/)
+- [8 Must-Know Strategies to Scale Your System](https://codebitwave.com/system-design-101-8-must-know-strategies-to-scale-your-system/)
+- [From Zero to Hero](https://github.com/uwspstar/From-Zero-to-Hero/tree/main)
+
+------
+
 #### Day 1: Introduction to System Design
 - **Importance of System Design**
   - Understand why system design is crucial in building scalable and efficient systems.
@@ -92,8 +99,4 @@
 - **Days 19-20: Final Project**
   - Combine all knowledge to design a complex system (e.g., an e-commerce platform, social media application) from scratch, including requirement analysis, architecture design, database design, load balancing, caching, and security considerations.
 
-------
 
-#### Recommend Resources:
-- [System Design Interview Questions](https://codebitwave.com/system-design-interview-questions/)
-- [8 Must-Know Strategies to Scale Your System](https://codebitwave.com/system-design-101-8-must-know-strategies-to-scale-your-system/)
