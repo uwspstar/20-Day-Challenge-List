@@ -167,3 +167,8 @@ Argument 3: arg3
 The `sys.argv` feature is particularly useful for scripts that need to interact with command-line inputs, making them configurable at runtime without hardcoding values within the script.
 
 `sys.argv` 功能特别适用于需要与命令行输入交互的脚本，使它们在运行时可配置，无需在脚本中硬编码值。
+
+### Recommend Resources:
+**python sysPython Tutorial: OS Module - Use Underlying Operating System Functionality by Corey Schafer**
+[![All 39 Python Keywords Explained](https://img.youtube.com/vi/tJxcKyFMTGo/maxresdefault.jpg)](https://youtu.be/tJxcKyFMTGo)
+
