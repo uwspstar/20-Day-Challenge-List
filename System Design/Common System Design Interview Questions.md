@@ -1,7 +1,7 @@
 ## Common System Design Interview Questions
 常见的系统设计面试问题
 
-### 1. How would you design a URL shortening service like bit.ly?
+### [1. How would you design a URL shortening service like bit.ly?](https://codebitwave.com/system-design-interview-questions-how-would-you-design-a-url-shortening-service-like-bit-ly/)
 如何设计一个类似bit.ly的URL缩短服务？
 
 ### 2. How would you design a scalable chat application?
