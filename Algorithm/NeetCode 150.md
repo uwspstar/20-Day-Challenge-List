@@ -17,7 +17,7 @@
 |                      | [15. 3Sum](https://codebitwave.com/leetcode-15-3sum/)                                         | Medium     | [Link](https://leetcode.com/problems/3sum) |
 |                      | Container With Most Water                    | Medium     | [Link](https://leetcode.com/problems/container-with-most-water) |
 |                      | Trapping Rain Water                          | Hard       | [Link](https://leetcode.com/problems/trapping-rain-water) |
-| Sliding Window       | Best Time to Buy And Sell Stock              | Easy       | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) |
+| Sliding Window       | [121. Best Time to Buy And Sell Stock](https://codebitwave.com/leetcode-121-best-time-to-buy-and-sell-stock/)              | Easy       | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) |
 |                      | Longest Substring Without Repeating Characters | Medium   | [Link](https://leetcode.com/problems/longest-substring-without-repeating-characters) |
 |                      | Longest Repeating Character Replacement      | Medium     | [Link](https://leetcode.com/problems/longest-repeating-character-replacement) |
 |                      | Permutation In String                        | Medium     | [Link](https://leetcode.com/problems/permutation-in-string) |
