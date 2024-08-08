@@ -47,7 +47,7 @@
    - Explores nodes level by level, using a queue data structure.
    - Suitable for problems that require processing nodes level-wise, like level-order traversal or reversal.
 
-8. **Two-Pointer Technique**:
+8. **[Two-Pointer Technique](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Two-Pointer%20Technique.md)**:
    - Utilizes two pointers to iterate through a sorted array to solve problems efficiently.
    - Example problems include finding pairs or triplets that sum up to a specific target.
 
