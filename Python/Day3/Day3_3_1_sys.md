@@ -372,5 +372,5 @@ print(f"你好, {name}!")
 
 ### Recommend Resources:
 **python sysPython Tutorial: OS Module - Use Underlying Operating System Functionality by Corey Schafer**
-[![All 39 Python Keywords Explained](https://img.youtube.com/vi/tJxcKyFMTGo/maxresdefault.jpg)](https://youtu.be/tJxcKyFMTGo)
+[![python sysPython Tutorial: OS Module - Use Underlying Operating System Functionality by Corey Schafer](https://img.youtube.com/vi/tJxcKyFMTGo/maxresdefault.jpg)](https://youtu.be/tJxcKyFMTGo)
 
