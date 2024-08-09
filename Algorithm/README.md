@@ -21,7 +21,7 @@
 
 ### Coming Soon
  
-1. **Sliding Window Pattern**:
+1. **[Sliding Window Pattern](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Sliding%20Window%20Pattern.md)**:
    - Used for processing a series of data elements by examining a "window" of the data.
    - Ideal for problems involving finding subsets of elements, like the longest substring with K unique characters.
 
