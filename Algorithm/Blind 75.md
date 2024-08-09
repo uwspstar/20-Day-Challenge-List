@@ -8,7 +8,7 @@
 |                      | Group Anagrams                               | Medium     | [Link](https://leetcode.com/problems/group-anagrams) |
 |                      | Top K Frequent Elements                      | Medium     | [Link](https://leetcode.com/problems/top-k-frequent-elements) |
 |                      | Encode and Decode Strings                    | Medium     | [Link](https://leetcode.com/problems/encode-and-decode-strings) |
-|                      | Product of Array Except Self                 | Medium     | [Link](https://leetcode.com/problems/product-of-array-except-self) |
+| Prefix Sum           | [238. Product of Array Except Self](https://codebitwave.com/leetcode-238-product-of-array-except-self/)                 | Medium     | [Link](https://leetcode.com/problems/product-of-array-except-self) |
 |                      | Longest Consecutive Sequence                 | Medium     | [Link](https://leetcode.com/problems/longest-consecutive-sequence) |
 |                      | Valid Palindrome                             | Easy       | [Link](https://leetcode.com/problems/valid-palindrome) |
 |                      | 3Sum                                         | Medium     | [Link](https://leetcode.com/problems/3sum) |
