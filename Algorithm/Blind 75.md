@@ -11,7 +11,7 @@
 | Prefix Sum           | [238. Product of Array Except Self](https://codebitwave.com/leetcode-238-product-of-array-except-self/)                 | Medium     | [Link](https://leetcode.com/problems/product-of-array-except-self) |
 |                      | Longest Consecutive Sequence                 | Medium     | [Link](https://leetcode.com/problems/longest-consecutive-sequence) |
 |                      | Valid Palindrome                             | Easy       | [Link](https://leetcode.com/problems/valid-palindrome) |
-|                      | 3Sum                                         | Medium     | [Link](https://leetcode.com/problems/3sum) |
+|                      | [15. 3Sum](https://codebitwave.com/leetcode-15-3sum/)                                         | Medium     | [Link](https://leetcode.com/problems/3sum) |
 |                      | Container With Most Water                    | Medium     | [Link](https://leetcode.com/problems/container-with-most-water) |
 | Sliding Window       | [121. Best Time to Buy And Sell Stock](https://codebitwave.com/leetcode-121-best-time-to-buy-and-sell-stock/)              | Easy       | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) |
 |                      | Longest Substring Without Repeating Characters | Medium   | [Link](https://leetcode.com/problems/longest-substring-without-repeating-characters) |
