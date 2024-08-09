@@ -8,6 +8,7 @@
 - [JavaScript版数据结构与算法](https://www.youtube.com/playlist?list=PLwIrqQCQ5pQmjH6YyFvH2A9FYL6bBB4Ra)
 - [Grind 75](https://www.techinterviewhandbook.org/grind75)
 - [算法讲解 by 左程云](https://www.youtube.com/watch?v=KNLRjg4utQc&list=PLvKfL6GtwDxwuyrpAJfU3HTnPZl4WnraE)
+- https://github.com/algorithmzuo/algorithm-journey/tree/main/ppt
 
 ------
 
