@@ -57,6 +57,10 @@
 9. **[Prefix and Suffix](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Prefix%20and%20Suffix.md)**:
    - Prefix: A prefix of a sequence is a subsequence that starts from the beginning of the sequence and includes any number of leading elements up to the entire sequence.
    - Suffix: A suffix of a sequence is a subsequence that starts from any position in the sequence and continues to the end of the sequence.
-   
+
+10. **[Binary Operations and Bitwise Manipulation](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Binary%20Operations%20and%20Bitwise%20Manipulation.md)**:
+   - Utilizes two pointers to iterate through a sorted array to solve problems efficiently.
+   - Example problems include finding pairs or triplets that sum up to a specific target.
+
 
 
