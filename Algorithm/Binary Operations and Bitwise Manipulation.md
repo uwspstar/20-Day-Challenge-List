@@ -198,3 +198,7 @@ Binary operations and
 By following the concepts and examples outlined in this blog post, you'll gain a deeper understanding of how to use bitwise operations to your advantage in programming.
 
 通过遵循本文中概述的概念和示例，你将更深入地理解如何在编程中利用位操作。
+
+### Recommend Resources:
+[![算法讲解003【入门】二进制和位运算 by 左程云](https://img.youtube.com/vi/snb1cumIaKA/maxresdefault.jpg)](https://youtu.be/snb1cumIaKA)
+
