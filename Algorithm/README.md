@@ -37,7 +37,7 @@
    - Used to find the top K elements from a dataset.
    - Employs a heap data structure to efficiently manage and retrieve the K largest elements.
 
-5. **Binary Tree Depth-First Search (DFS)**:
+5. **[Binary Tree Depth-First Search (DFS)](https://codebitwave.com/algorithms-101-depth-first-search-and-breadth-first-search/)**:
    - Explores each branch of a binary tree deeply before backtracking.
    - Applied to problems like finding the maximum depth of a binary tree.
 
@@ -45,7 +45,7 @@
    - Arranges elements based on dependencies, especially in Directed Acyclic Graphs (DAGs).
    - Useful for scheduling tasks or course prerequisites, ensuring all dependencies are resolved before processing.
 
-7. **Binary Tree Breadth-First Search (BFS)**:
+7. **[Binary Tree Breadth-First Search (BFS)](https://codebitwave.com/algorithms-101-depth-first-search-and-breadth-first-search/)**:
    - Explores nodes level by level, using a queue data structure.
    - Suitable for problems that require processing nodes level-wise, like level-order traversal or reversal.
 
