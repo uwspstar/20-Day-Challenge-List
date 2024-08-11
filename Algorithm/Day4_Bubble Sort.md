@@ -1,7 +1,7 @@
 # Bubble Sort 冒泡排序
 
 - [Bubble Sort](https://codebitwave.com/algorithms-101-bubble-sort/)
-- 
+
 Bubble Sort is a simple comparison-based sorting algorithm. It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted. The algorithm gets its name because larger elements "bubble" to the top of the list as the sort progresses.  
 冒泡排序是一种简单的基于比较的排序算法。它通过反复遍历列表，比较相邻元素，如果顺序错误则交换它们。这一过程反复进行，直到列表排序完成。该算法之所以得名，是因为在排序过程中较大的元素会“冒泡”到列表的顶部。
 
