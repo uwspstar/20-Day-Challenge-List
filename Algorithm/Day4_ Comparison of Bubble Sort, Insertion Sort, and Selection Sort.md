@@ -156,13 +156,13 @@ def selection_sort(arr):
 |---------------|----------------------|-----------------------|-------------------------|------------------|------------|----------------------|
 | **Bubble Sort**   | O(n)                 | O(n²)                  | O(n²)                    | O(1)             | Stable     | Simple, educational  |
 | **Insertion Sort**| O(n)                 | O(n²)                  | O(n²)                    | O(1)             | Stable     | Small/near-sorted datasets |
-| **Selection Sort**| O(n²)                | O(n²)                  | O(n²)                    | O(1)             | Unstable   | Minimal swaps        |
+| **Selection Sort**| O(n²)                | O(n²)                  | O(n²)                    | O(1)             | [Unstable](https://codebitwave.com/algorithms-101-is-selection-sort-stable/)   | Minimal swaps        |
 
 | **算法**        | **最佳时间复杂度** | **最坏时间复杂度** | **平均时间复杂度**  | **空间复杂度** | **稳定性** | **使用场景**        |
 |---------------|------------------|-----------------|-------------------|--------------|------------|----------------------|
 | **冒泡排序**    | O(n)             | O(n²)            | O(n²)              | O(1)         | 稳定        | 简单，教育用途       |
 | **插入排序**    | O(n)             | O(n²)            | O(n²)              | O(1)         | 稳定        | 小型/几乎排序的数据集 |
-| **选择排序**    | O(n²)            | O(n²)            | O(n²)              | O(1)         | 不稳定       | 最小化交换操作        |
+| **选择排序**    | O(n²)            | O(n²)            | O(n²)              | O(1)         | [不稳定](https://codebitwave.com/algorithms-101-is-selection-sort-stable/)       | 最小化交换操作        |
 
 ## Conclusion
 
