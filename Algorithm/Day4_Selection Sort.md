@@ -1,6 +1,8 @@
 # Selection Sort 选择排序
 
 - [Selection Sort](https://codebitwave.com/algorithms-101-selection-sort/)
+- [Is Selection Sort Stable](https://codebitwave.com/algorithms-101-is-selection-sort-stable/)
+
 
 Selection Sort is a simple comparison-based sorting algorithm. It works by repeatedly finding the minimum element (considering ascending order) from the unsorted part of the list and putting it at the beginning.  
 选择排序是一种基于比较的简单排序算法。它通过反复从未排序部分中找到最小元素（考虑升序）并将其放在开头来工作。
