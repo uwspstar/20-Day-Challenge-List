@@ -17,7 +17,7 @@
 |                      | Longest Substring Without Repeating Characters | Medium   | [Link](https://leetcode.com/problems/longest-substring-without-repeating-characters) |
 |                      | Longest Repeating Character Replacement      | Medium     | [Link](https://leetcode.com/problems/longest-repeating-character-replacement) |
 |                      | Minimum Window Substring                     | Hard       | [Link](https://leetcode.com/problems/minimum-window-substring) |
-| Stack                | Valid Parentheses                            | Easy       | [Link](https://leetcode.com/problems/valid-parentheses) |
+| Stack                | [125. Valid Parentheses](https://codebitwave.com/leetcode-125-valid-palindrome/)                            | Easy       | [Link](https://leetcode.com/problems/valid-parentheses) |
 | Binary Search        | Find Minimum In Rotated Sorted Array         | Medium     | [Link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) |
 |                      | Search In Rotated Sorted Array               | Medium     | [Link](https://leetcode.com/problems/search-in-rotated-sorted-array) |
 | Linked List          | Reverse Linked List                          | Easy       | [Link](https://leetcode.com/problems/reverse-linked-list) |
