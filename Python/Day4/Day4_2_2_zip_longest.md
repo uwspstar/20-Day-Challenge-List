@@ -100,7 +100,8 @@ print(paired)
 
 ### Conclusion 结论
 
-`zip_longest` is a powerful tool for handling iterables of different lengths, ensuring that no data is lost by filling in missing values with a specified `fillvalue`. It offers more flexibility compared to the standard `zip` function, making it an ideal choice for scenarios where the iterables may not be of equal length. Understanding the differences between `zip` and `zip_longest` allows you to choose the most appropriate function for your needs, whether you prioritize simplicity or completeness.  
+`zip_longest` is a powerful tool for handling iterables of different lengths, ensuring that no data is lost by filling in missing values with a specified `fillvalue`. It offers more flexibility compared to the standard `zip` function, making it an ideal choice for scenarios where the iterables may not be of equal length. Understanding the differences between `zip` and `zip_longest` allows you to choose the most appropriate function for your needs, whether you prioritize simplicity or completeness.
+
 `zip_longest`是处理不同长度可迭代对象的强大工具，通过使用指定的`fillvalue`填充缺失值，确保不会丢失数据。与标准`zip`函数相比，它提供了更大的灵活性，使其成为处理可迭代对象长度不等场景的理想选择。了解`zip`和`zip_longest`之间的区别可以帮助您选择最适合您需求的函数，无论您是优先考虑简洁性还是完整性。
 
 This knowledge is essential for Python programmers working with data manipulation and ensures that all elements in your data sets are appropriately handled.  
