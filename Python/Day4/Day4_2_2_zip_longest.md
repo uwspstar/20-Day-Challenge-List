@@ -163,7 +163,7 @@ word2 = "defgh"
   ```
   ('a', 'd'), ('b', 'e'), ('c', 'f'), ('', 'g'), ('', 'h')
   ```
-- The list comprehension generates:
+- The list comprehension `a + b for a, b in zip_longest(word1, word2, fillvalue=''` generates:
   ```
   'ad', 'be', 'cf', 'g', 'h'
   ```
