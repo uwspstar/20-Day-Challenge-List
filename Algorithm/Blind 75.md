@@ -27,7 +27,7 @@
 |                      | [141. Linked List Cycle](https://codebitwave.com/leetcode-141-linked-list-cycle/)                            | Easy       | [Link](https://leetcode.com/problems/linked-list-cycle) |
 |                      | Merge K Sorted Lists                         | Hard       | [Link](https://leetcode.com/problems/merge-k-sorted-lists) |
 | Binary Tree          | [226. Invert Binary Tree](https://codebitwave.com/leetcode-226-invert-binary-tree/)                           | Easy       | [Link](https://leetcode.com/problems/invert-binary-tree) |
-|                      | Maximum Depth of Binary Tree                 | Easy       | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree) |
+|                      | [104. Maximum Depth of Binary Tree](https://codebitwave.com/leetcode-104-maximum-depth-of-binary-tree/)                 | Easy       | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree) |
 |                      | Same Tree                                    | Easy       | [Link](https://leetcode.com/problems/same-tree) |
 |                      | Subtree of Another Tree                      | Easy       | [Link](https://leetcode.com/problems/subtree-of-another-tree) |
 |                      | Lowest Common Ancestor of a Binary Search Tree | Medium   | [Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree) |
