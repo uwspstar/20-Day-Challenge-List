@@ -21,7 +21,7 @@
 | Binary Search        | Find Minimum In Rotated Sorted Array         | Medium     | [Link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) |
 |                      | Search In Rotated Sorted Array               | Medium     | [Link](https://leetcode.com/problems/search-in-rotated-sorted-array) |
 | Linked List          | [206. Reverse Linked List](https://codebitwave.com/leetcode-206-reverse-linked-list/)                          | Easy       | [Link](https://leetcode.com/problems/reverse-linked-list) |
-|                      | Merge Two Sorted Lists                       | Easy       | [Link](https://leetcode.com/problems/merge-two-sorted-lists) |
+|                      | [21. Merge Two Sorted Lists](https://codebitwave.com/leetcode-101-21-merge-two-sorted-lists/)                       | Easy       | [Link](https://leetcode.com/problems/merge-two-sorted-lists) |
 |                      | Reorder List                                 | Medium     | [Link](https://leetcode.com/problems/reorder-list) |
 |                      | Remove Nth Node From End of List             | Medium     | [Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list) |
 |                      | Linked List Cycle                            | Easy       | [Link](https://leetcode.com/problems/linked-list-cycle) |
