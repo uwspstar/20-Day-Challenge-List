@@ -1,5 +1,7 @@
 # `zip_longest` from `itertools` 模块中的`zip_longest`
 
+- [zip_longest Code Breakdown](https://codebitwave.com/python-101-zip_longest-code-breakdown/)
+
 The `zip_longest` function is imported from the `itertools` module, which is part of Python's standard library. This function allows you to zip two or more iterables together, filling in missing values with a specified `fillvalue` when the iterables have different lengths. Unlike the regular `zip` function, which stops when the shortest iterable is exhausted, `zip_longest` continues until the longest iterable is exhausted. This makes it particularly useful when you need to pair elements from iterables of unequal length.
 
 `zip_longest`函数从`itertools`模块导入，`itertools`是Python标准库的一部分。此函数允许将两个或多个可迭代对象组合在一起，当可迭代对象具有不同长度时，使用指定的`fillvalue`填充缺失值。与常规`zip`函数在最短的可迭代对象耗尽时停止不同，`zip_longest`会继续运行，直到最长的可迭代对象耗尽。当需要将来自不同长度的可迭代对象的元素配对时，它特别有用。
