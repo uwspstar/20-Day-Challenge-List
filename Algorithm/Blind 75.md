@@ -24,7 +24,7 @@
 |                      | [21. Merge Two Sorted Lists](https://codebitwave.com/leetcode-101-21-merge-two-sorted-lists/)                       | Easy       | [Link](https://leetcode.com/problems/merge-two-sorted-lists) |
 |                      | Reorder List                                 | Medium     | [Link](https://leetcode.com/problems/reorder-list) |
 |                      | Remove Nth Node From End of List             | Medium     | [Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list) |
-|                      | Linked List Cycle                            | Easy       | [Link](https://leetcode.com/problems/linked-list-cycle) |
+|                      | [141. Linked List Cycle](https://codebitwave.com/leetcode-141-linked-list-cycle/)                            | Easy       | [Link](https://leetcode.com/problems/linked-list-cycle) |
 |                      | Merge K Sorted Lists                         | Hard       | [Link](https://leetcode.com/problems/merge-k-sorted-lists) |
 | Binary Tree          | Invert Binary Tree                           | Easy       | [Link](https://leetcode.com/problems/invert-binary-tree) |
 |                      | Maximum Depth of Binary Tree                 | Easy       | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree) |
