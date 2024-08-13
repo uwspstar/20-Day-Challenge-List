@@ -4,7 +4,7 @@ The `zip_longest` function is imported from the `itertools` module, which is par
 
 `zip_longest`函数从`itertools`模块导入，`itertools`是Python标准库的一部分。此函数允许将两个或多个可迭代对象组合在一起，当可迭代对象具有不同长度时，使用指定的`fillvalue`填充缺失值。与常规`zip`函数在最短的可迭代对象耗尽时停止不同，`zip_longest`会继续运行，直到最长的可迭代对象耗尽。当需要将来自不同长度的可迭代对象的元素配对时，它特别有用。
 
-### How `zip_longest` Works `zip_longest`如何工作
+### How `zip_longest` Works
 
 1. **Using `zip_longest`**: The function takes multiple iterables and a `fillvalue` parameter. If the iterables are of different lengths, the shorter ones are padded with the `fillvalue` until all iterables reach the length of the longest one.  
    **使用`zip_longest`**：该函数接受多个可迭代对象和一个`fillvalue`参数。如果可迭代对象的长度不同，则较短的可迭代对象将用`fillvalue`填充，直到所有可迭代对象达到最长的长度。
