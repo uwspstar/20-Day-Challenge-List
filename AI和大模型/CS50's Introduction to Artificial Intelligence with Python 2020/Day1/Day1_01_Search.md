@@ -25,7 +25,7 @@ Consider finding the shortest path in a maze. Using BFS, you would explore all p
 考虑在迷宫中找到最短路径。使用BFS，您将逐层探索所有可能的移动，直到找到出口。
 
 **Practical Applications (实际应用):**
-- **Pathfinding (路径查找):** Navigation systems, robotics.
+- **[Pathfinding (路径查找)](https://codebitwave.com/artificial-intelligence-101-pathfinding/):** Navigation systems, robotics.
   导航系统，机器人。
 - **Game Playing (游戏):** AI in games like chess.
   像象棋这样的游戏中的AI。
