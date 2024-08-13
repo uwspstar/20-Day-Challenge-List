@@ -17,7 +17,7 @@ Search algorithms are used to find solutions by exploring different states or co
 2. **Informed Search (有信息搜索，启发式搜索):**
    - **Greedy Best-First Search (贪心最佳优先搜索):** Uses a heuristic to expand the most promising node.
      使用启发式方法扩展最有希望的节点。
-   - **A* Search (A*搜索):** Uses a combination of the cost to reach the node and a heuristic estimate of the cost to reach the goal.
+   - **A * Search (A * 搜索):** Uses a combination of the cost to reach the node and a heuristic estimate of the cost to reach the goal.
      使用到达节点的成本和到达目标的启发式估计成本的组合。
 
 **Example (例子):**
