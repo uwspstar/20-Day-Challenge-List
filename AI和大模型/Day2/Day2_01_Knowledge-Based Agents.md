@@ -1,6 +1,8 @@
 # Knowledge-Based Agents 知识驱动代理
-
+- [Knowledge - Lecture 1 - CS50's Introduction to Artificial Intelligence with Python 2020 by CS50](https://www.youtube.com/watch?v=HWQLez87vqM)
+  
 Knowledge-based agents are a type of intelligent agent that reason and make decisions by operating on internal representations of knowledge. These agents are equipped with a knowledge base—a structured repository of facts and rules about the world. By using logical inference, they can derive new information, make informed decisions, and solve complex problems. This reasoning capability allows knowledge-based agents to function effectively in dynamic and complex environments.  
+
 知识驱动代理是一种智能代理，它通过操作内部知识表示来进行推理和决策。这些代理配备了一个知识库——一个关于世界的结构化事实和规则存储库。通过使用逻辑推理，它们可以推导出新的信息，做出明智的决策，并解决复杂的问题。这种推理能力使得知识驱动代理能够在动态和复杂的环境中有效运作。
 
 ### How Knowledge-Based Agents Work 知识驱动代理如何工作
