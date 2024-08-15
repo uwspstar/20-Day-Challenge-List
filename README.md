@@ -13,7 +13,10 @@ Here is a markdown table outlining the different study plans:
 | 6    | [20天学Algorithm]()             | 20天     |
 | 7    | [7天学Docker]()                 | 7天      |
 | 8    | [7天学Git]()                    | 7天      |
+| 9    | [3天学Improving Accuracy of LLM Application](https://www.deeplearning.ai/short-courses/improving-accuracy-of-llm-applications/)                    | 3天      |
 
+
+ 
 
 要成为一个工具中高级专家，例如AI RAG（Retrieval-Augmented Generation），确实可能需要遵循“2000小时定律”。这条定律基于流行的“10000小时定律”，后者提出要在某个领域达到专家水平大约需要10000小时的练习 (格拉德威尔在《异类》一书中，明确地指出：...人们眼中的天才之所以卓越非凡，并非天资超人一等，而是付出了持续不断的努力。 1万小时的锤炼是任何人从平凡变成超凡的必要条件...)。2000小时可以被视为中高级水平的一种标准。
 
