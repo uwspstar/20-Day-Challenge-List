@@ -1,6 +1,8 @@
 
 # 7天的Bash学习计划
 
+- https://github.com/uwspstar/FullStack/tree/master/Bash
+
 ### 第1天：Bash基础
 - **学习目标：**
   - 了解Bash的基本概念和用途
