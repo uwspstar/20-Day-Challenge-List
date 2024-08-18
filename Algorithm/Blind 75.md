@@ -72,7 +72,7 @@
 | Matrix               | Rotate Image                                 | Medium     | [Link](https://leetcode.com/problems/rotate-image) |
 |                      | Spiral Matrix                                | Medium     | [Link](https://leetcode.com/problems/spiral-matrix) |
 |                      | Set Matrix Zeroes                            | Medium     | [Link](https://leetcode.com/problems/set-matrix-zeroes) |
-| Bit Manipulation     | Number of 1 Bits                             | Easy       | [Link](https://leetcode.com/problems/number-of-1-bits) |
+| Bit Manipulation     | [191. Number of 1 Bits](https://codebitwave.com/leetcode-191-number-of-1-bits/)                             | Easy       | [Link](https://leetcode.com/problems/number-of-1-bits) |
 |                      | Counting Bits                                | Easy       | [Link](https://leetcode.com/problems/counting-bits) |
 |                      | Reverse Bits                                 | Easy       | [Link](https://leetcode.com/problems/reverse-bits) |
 |                      | Missing Number                               | Easy       | [Link](https://leetcode.com/problems/missing-number) |
