@@ -76,4 +76,4 @@
 |                      | Counting Bits                                | Easy       | [Link](https://leetcode.com/problems/counting-bits) |
 |                      | Reverse Bits                                 | Easy       | [Link](https://leetcode.com/problems/reverse-bits) |
 |                      | [268. Missing Number](https://codebitwave.com/leetcode-268-missing-number/)                               | Easy       | [Link](https://leetcode.com/problems/missing-number) |
-|                      | Sum of Two Integers                          | Easy       | [Link](https://leetcode.com/problems/sum-of-two-integers) |
+|                      | [371. Sum of Two Integers](https://codebitwave.com/leetcode-371-sum-of-two-integers/)                          | Medium       | [Link](https://leetcode.com/problems/sum-of-two-integers) |
