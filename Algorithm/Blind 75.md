@@ -75,5 +75,5 @@
 | Bit Manipulation     | [191. Number of 1 Bits](https://codebitwave.com/leetcode-191-number-of-1-bits/)                             | Easy       | [Link](https://leetcode.com/problems/number-of-1-bits) |
 |                      | Counting Bits                                | Easy       | [Link](https://leetcode.com/problems/counting-bits) |
 |                      | Reverse Bits                                 | Easy       | [Link](https://leetcode.com/problems/reverse-bits) |
-|                      | Missing Number                               | Easy       | [Link](https://leetcode.com/problems/missing-number) |
+|                      | [268. Missing Number](https://codebitwave.com/leetcode-268-missing-number/)                               | Easy       | [Link](https://leetcode.com/problems/missing-number) |
 |                      | Sum of Two Integers                          | Easy       | [Link](https://leetcode.com/problems/sum-of-two-integers) |
