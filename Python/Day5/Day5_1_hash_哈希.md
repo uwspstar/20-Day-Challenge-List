@@ -124,3 +124,198 @@ except TypeError as e:
 Understanding hashability is crucial when working with hash-based data structures such as dictionaries and sets. Knowing whether an object is hashable helps in designing data structures that rely on fast access and uniqueness enforced by hashing mechanisms.
 
 了解可哈希性在使用基于哈希的数据结构（如字典和集合）时至关重要。知道一个对象是否可哈希有助于设计依赖于快速访问和哈希机制强制唯一性的数据结构。
+
+------
+
+### 1. **What is a Hash Function? (什么是哈希函数?)**
+
+[English] A hash function is a function that takes an input (or 'message') and returns a fixed-size string of bytes. The output, typically a 'digest', is a unique representation of the input data. Hash functions are designed to be fast, and they are used in various applications such as data retrieval, cryptography, and data structures like hash tables.
+
+**Example:**
+```python
+hash_value = hash("hello")
+print(hash_value)
+```
+
+**What Happens:** The `hash()` function generates an integer hash value for the input string `"hello"`. This value is used internally by Python in dictionaries and sets.
+
+**Behind the Scenes:** Python uses a built-in `hash()` function to generate a hash value based on the content of an object. This value helps in quickly comparing objects and retrieving data, especially in hash-based data structures like dictionaries and sets.
+
+**Chinese** 哈希函数是一种接受输入（或“消息”）并返回固定大小字节串的函数。输出通常是输入数据的唯一表示。哈希函数设计得很快，它们用于各种应用程序中，如数据检索、加密和数据结构（如哈希表）。
+
+**示例:**
+```python
+hash_value = hash("hello")
+print(hash_value)
+```
+
+**What Happens:** `hash()` 函数为输入字符串 `"hello"` 生成一个整数哈希值。Python 在字典和集合中内部使用此值。
+
+**Behind the Scenes:** Python 使用内置的 `hash()` 函数根据对象的内容生成哈希值。此值有助于快速比较对象和检索数据，尤其是在基于哈希的数据结构（如字典和集合）中。
+
+### 2. **How is Hashing Used in Dictionaries? (哈希在字典中如何使用?)**
+
+[English] In Python dictionaries, hash values are used to compare keys and determine the index where each key-value pair is stored. When you insert a key-value pair into a dictionary, Python computes the hash of the key and uses this hash value to decide where to store the data. This makes lookups in dictionaries very fast.
+
+**Example:**
+```python
+my_dict = {"name": "Alice", "age": 30}
+print(my_dict["name"])
+```
+
+**What Happens:** When accessing `"name"`, Python computes the hash value of the key `"name"` to quickly locate and return the corresponding value `"Alice"`.
+
+**Behind the Scenes:** The efficiency of dictionary operations like lookup, insert, and delete is due to the hash function. Python uses the hash value to map keys to a specific location in memory, making operations on large datasets efficient.
+
+**Chinese** 在 Python 字典中，哈希值用于比较键并确定存储每个键值对的索引。当你将一个键值对插入字典时，Python 会计算键的哈希值，并使用该哈希值决定存储数据的位置。这使得在字典中的查找非常快。
+
+**示例:**
+```python
+my_dict = {"name": "Alice", "age": 30}
+print(my_dict["name"])
+```
+
+**What Happens:** 在访问 `"name"` 时，Python 计算键 `"name"` 的哈希值，以快速定位并返回对应的值 `"Alice"`。
+
+**Behind the Scenes:** 字典操作（如查找、插入和删除）的效率归功于哈希函数。Python 使用哈希值将键映射到内存中的特定位置，从而使对大数据集的操作高效。
+
+### 3. **How is Hashing Used in Sets? (哈希在集合中如何使用?)**
+
+[English] In Python sets, hash values are used to determine the uniqueness of elements and to facilitate fast membership testing. When an element is added to a set, Python computes its hash value to check if it already exists in the set. If the hash value matches that of an existing element, the new element is not added.
+
+**Example:**
+```python
+my_set = {1, 2, 3}
+my_set.add(3)
+print(my_set)  # Output: {1, 2, 3}
+```
+
+**What Happens:** The element `3` is not added again because its hash value matches an existing element in the set.
+
+**Behind the Scenes:** Sets use hash values to ensure that all elements are unique and to enable efficient operations like union, intersection, and difference by leveraging the properties of hash tables.
+
+**Chinese** 在 Python 集合中，哈希值用于确定元素的唯一性并促进快速成员测试。当一个元素被添加到集合时，Python 计算其哈希值，以检查它是否已存在于集合中。如果哈希值与现有元素的哈希值匹配，则不添加新元素。
+
+**示例:**
+```python
+my_set = {1, 2, 3}
+my_set.add(3)
+print(my_set)  # 输出: {1, 2, 3}
+```
+
+**What Happens:** 元素 `3` 没有再次添加，因为其哈希值与集合中现有元素的哈希值匹配。
+
+**Behind the Scenes:** 集合使用哈希值来确保所有元素都是唯一的，并通过利用哈希表的属性来实现诸如并集、交集和差集等高效操作。
+
+### 4. **Hash Collisions (哈希冲突)**
+
+[English] A hash collision occurs when two different inputs produce the same hash value. While collisions are rare with well-designed hash functions, they are possible. Python handles collisions internally by storing collided items in a list or another data structure at the same hash location.
+
+**Example:**
+```python
+hash1 = hash("abc")
+hash2 = hash("xyz")
+print(hash1 == hash2)  # Output: False (most likely, but could be True in a rare collision)
+```
+
+**What Happens:** Although rare, different inputs can produce the same hash value, leading to a collision.
+
+**Behind the Scenes:** Python's dictionary and set implementations include mechanisms to handle hash collisions, ensuring that the data structure remains efficient even when collisions occur.
+
+**Chinese** 当两个不同的输入生成相同的哈希值时，会发生哈希冲突。虽然在设计良好的哈希函数中，冲突是罕见的，但它们是可能的。Python 内部通过在同一哈希位置存储冲突项的列表或其他数据结构来处理冲突。
+
+**示例:**
+```python
+hash1 = hash("abc")
+hash2 = hash("xyz")
+print(hash1 == hash2)  # 输出: False (大多数情况下为 False，但在罕见的冲突情况下可能为 True)
+```
+
+**What Happens:** 尽管很少见，不同的输入可能会生成相同的哈希值，导致冲突。
+
+**Behind the Scenes:** Python 的字典和集合实现包括处理哈希冲突的机制，确保即使发生冲突，数据结构仍然保持高效。
+
+### 5. **Custom Hash Functions (自定义哈希函数)**
+
+[English] In Python, you can define custom hash functions for your own objects by implementing the `__hash__()` method. This allows you to control how instances of your class are hashed and can be particularly useful for ensuring that instances are stored and compared correctly in hash-based collections.
+
+**Example:**
+```python
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+    
+    def __hash__(self):
+        return hash(self.value)
+
+my_obj = MyClass(10)
+print(hash(my_obj))
+```
+
+**What Happens:** The custom `__hash__()` method returns the hash of the object's value, ensuring that objects with the same value have the same hash.
+
+**Behind the Scenes:** Implementing a custom `__hash__()` method allows you to define how objects of your class should be treated in hash-based collections like dictionaries and sets.
+
+**Chinese** 在 Python 中，你可以通过实现 `__hash__()` 方法为自己的对象定义自定义哈希函数。这允许你控制类实例的哈希方式，对于确保实例在基于哈希的集合中正确存储和比较特别有用。
+
+**示例:**
+```python
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+    
+    def __hash__(self):
+        return hash(self.value)
+
+my_obj = MyClass(10)
+print(hash(my_obj))
+```
+
+**What Happens:** 自定义的 `__hash__()` 方法返回对象值的哈希，确保具有相同值的对象具有相同的哈希。
+
+**Behind the Scenes:** 实现自定义的 `__hash__()` 方法允许你定义类的对象在基于哈希的集合（如字典和集合）中的处理方式。
+
+### **When to Use Hashing (何时使用哈希)**
+
+[English] Hashing is essential in scenarios where fast data retrieval, efficient data storage, and uniqueness checks are required. You should use hashing when:
+
+-
+
+ **Implementing dictionaries and sets** where quick lookups and inserts are needed.
+- **Designing custom data structures** that rely on quick comparisons and retrievals.
+- **Ensuring data uniqueness** in collections like sets or as keys in dictionaries.
+- **Creating efficient algorithms** that require constant-time complexity for certain operations.
+
+**Example:**
+Using hashing to store and quickly retrieve values in a dictionary:
+
+```python
+user_data = {"Alice": 1001, "Bob": 1002, "Charlie": 1003}
+print(user_data["Alice"])  # Output: 1001
+```
+
+**What Happens:** The dictionary uses hashing to efficiently store and retrieve the user ID associated with `"Alice"`.
+
+**Behind the Scenes:** The hash of the key `"Alice"` determines where the value `1001` is stored in memory, enabling quick access.
+
+**Chinese** 哈希在需要快速数据检索、高效数据存储和唯一性检查的场景中至关重要。你应该在以下情况下使用哈希：
+
+- **实现字典和集合**，需要快速查找和插入。
+- **设计自定义数据结构**，依赖于快速比较和检索。
+- **确保数据唯一性**，如在集合中或作为字典中的键。
+- **创建高效算法**，需要常数时间复杂度来处理某些操作。
+
+**示例:**
+使用哈希存储并快速检索字典中的值：
+
+```python
+user_data = {"Alice": 1001, "Bob": 1002, "Charlie": 1003}
+print(user_data["Alice"])  # 输出: 1001
+```
+
+**What Happens:** 字典使用哈希有效地存储并检索与 `"Alice"` 关联的用户 ID。
+
+**Behind the Scenes:** 键 `"Alice"` 的哈希决定了值 `1001` 在内存中的存储位置，从而实现快速访问。
+
+In summary, hashing is a fundamental concept in Python, underlying many core data structures and algorithms. By understanding how hashing works and how to leverage it in your code, you can optimize data retrieval, ensure data integrity, and build efficient applications.
+
