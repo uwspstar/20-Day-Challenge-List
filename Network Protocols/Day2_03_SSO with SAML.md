@@ -1,6 +1,6 @@
 ### Understanding Single Sign-On (SSO) with SAML: A Step-by-Step Guide
 
-Single Sign-On (SSO) is a powerful authentication method that allows users to access multiple applications with one set of login credentials. The image illustrates the SSO process using Security Assertion Markup Language (SAML), which is widely used for enabling SSO, particularly in enterprise environments.
+Single Sign-On (SSO) is a powerful authentication method that allows users to access multiple applications with one set of login credentials. The SSO process using Security Assertion Markup Language (SAML), which is widely used for enabling SSO, particularly in enterprise environments.
 
 #### Step-by-Step Explanation
 
