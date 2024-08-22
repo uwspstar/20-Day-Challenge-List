@@ -1,5 +1,7 @@
 # Binary Search 二分搜索
 
+- [Binary Search Doesn’t Have to Occur in a Sorted Array](https://codebitwave.com/algorithms-101-binary-search-doesnt-have-to-occur-in-a-sorted-array/)
+
 Binary Search is a fundamental search algorithm used to find the position of a target value within a sorted array. The algorithm works by repeatedly dividing the search interval in half. If the target value is less than the value in the middle of the interval, the search continues in the lower half, otherwise in the upper half. This method is efficient, with a time complexity of O(log n), making it ideal for large datasets.  
 二分搜索是一种基本的搜索算法，用于在已排序的数组中查找目标值的位置。该算法通过反复将搜索区间减半来工作。如果目标值小于区间中间值，则继续在下半部分搜索，否则在上半部分搜索。此方法效率高，时间复杂度为 O(log n)，适合大数据集。
 
