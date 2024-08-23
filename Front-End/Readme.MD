@@ -1,1 +1,1 @@
-
+- [JavaScript Code Snippets]https://codebitwave.com/javascript-code-snippets-1000/
