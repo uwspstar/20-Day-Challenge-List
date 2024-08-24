@@ -197,6 +197,29 @@ curl -w "Time: %{time_total}s\n" -o /dev/null -s http://example.com
 - **`-s`**: Silent mode, suppress progress and error messages.
 - **`--limit-rate`**: Limit the download speed.
 
+Sure! Here’s a markdown table listing common `curl` options, along with code examples and simple explanations:
+
+| Option            | Code Example                                                                 | Explanation                                                                 |
+|-------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| `-X`              | `curl -X POST http://example.com`                                             | Specifies the request method (e.g., GET, POST, PUT, DELETE).                |
+| `-d`              | `curl -d "name=John&age=30" http://example.com/form`                          | Sends data in the request body.                                             |
+| `-H`              | `curl -H "Authorization: Bearer YOUR_TOKEN" http://example.com/api/data`      | Adds custom request headers.                                                |
+| `-o`              | `curl -o output.html http://example.com`                                      | Saves the response to a specified file.                                     |
+| `-O`              | `curl -O http://example.com/file.zip`                                         | Saves the downloaded file with its remote name.                             |
+| `-u`              | `curl -u username:password http://example.com/protected`                      | Specifies the username and password for basic HTTP authentication.          |
+| `-I`              | `curl -I http://example.com`                                                  | Sends a HEAD request to retrieve headers only.                              |
+| `-L`              | `curl -L http://example.com`                                                  | Follows redirects (e.g., 301 or 302 responses).                             |
+| `-F`              | `curl -F "file=@/path/to/file.txt" http://example.com/upload`                 | Specifies form data for file uploads.                                       |
+| `-s`              | `curl -s http://example.com`                                                  | Runs in silent mode, suppressing progress and error messages.               |
+| `--limit-rate`    | `curl --limit-rate 100k http://example.com/file.zip -O`                       | Limits the download speed (e.g., 100 KB per second).                        |
+| `-w`              | `curl -w "Time: %{time_total}s\n" -o /dev/null -s http://example.com`         | Formats the output with custom information (e.g., total response time).     |
+| `-v`              | `curl -v http://example.com`                                                  | Enables verbose mode to show detailed request and response information.     |
+| `-k`              | `curl -k https://insecure-example.com`                                        | Ignores SSL certificate validation (use with caution).                      |
+| `--compressed`    | `curl --compressed http://example.com`                                        | Requests a compressed response and automatically decompresses it.           |
+| `-G`              | `curl -G -d "query=example" http://example.com/search`                        | Converts the request data to a query string for GET requests.               |
+
+This table provides a quick reference for commonly used `curl` options, with examples and brief explanations to help you understand how to use them in your own Bash scripts and command-line tasks.
+
 ## 结论
 ## Conclusion
 
