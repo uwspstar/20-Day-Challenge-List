@@ -1,7 +1,8 @@
 # Bash `curl` Command
 
 - [`curl` Command](https://codebitwave.com/bash-101-curl-command/)
-- 
+
+
 ## 什么是 `curl`？What is `curl`?
 
 `curl` is a command-line tool used for transferring data from or to a server using various protocols such as HTTP, HTTPS, FTP, and more. The name stands for "Client URL," and it is widely used for making HTTP requests, interacting with APIs, downloading files, and testing server responses. `curl` is an essential tool in the toolkit of any developer or system administrator.
