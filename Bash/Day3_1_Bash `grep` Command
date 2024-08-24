@@ -1,5 +1,7 @@
 # Bash `grep` Command
 
+- [`grep` Command](https://codebitwave.com/bash-101-grep-command/)
+
 ## 什么是 `grep`？ What is `grep`?
 
 The `grep` command in Bash is a powerful tool used for searching text within files. It stands for "global regular expression print" and allows users to search for patterns in text using regular expressions. `grep` is widely used in Unix-like operating systems for filtering and searching through large amounts of text data.
