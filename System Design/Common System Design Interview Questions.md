@@ -58,7 +58,7 @@
 ### 19. How would you design a financial transaction system like PayPal?
 如何设计一个类似PayPal的金融交易系统？
 
-### 20. How would you design a collaborative document editing service like Google Docs?
+### [20. How would you design a collaborative document editing service like Google Docs?](https://codebitwave.com/system-design-interview-questions-how-would-you-design-google-docs-system/)
 如何设计一个类似Google Docs的协作文档编辑服务？
 
 ### 21. How would you design a news aggregation service like Google News?
