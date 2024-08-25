@@ -20,7 +20,7 @@
 - **学习内容：**
   - [克隆远程仓库：`git clone`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day2_1_Cloning%20a%20Remote%20Repository.md)
   - [查看历史记录：`git log`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day2_2_Viewing%20History.md)
-  - 取消操作：`git checkout`, `git revert`, `git reset`
+  - [取消操作：`git checkout`, `git revert`, `git reset`]()
 - **实践：**
   - 克隆一个远程仓库并查看历史记录
   - 练习取消操作，恢复到之前的提交
