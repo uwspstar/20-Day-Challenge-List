@@ -29,9 +29,9 @@
 - **学习目标：**
   - 了解分支的概念和操作
 - **学习内容：**
-  - 创建和删除分支：`git branch`
-  - 切换分支：`git checkout`
-  - 合并分支：`git merge`
+  - [创建和删除分支：`git branch`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day3_1_Creating%20and%20Deleting%20Branches.md)
+  - [切换分支：`git checkout`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day3_2_Switching%20Branches.md)
+  - [合并分支：`git merge`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day3_3_Merging%20Branches.md)
 - **实践：**
   - 创建新的分支并切换
   - 在不同分支上进行开发并合并
