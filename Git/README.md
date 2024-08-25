@@ -40,8 +40,8 @@
 - **学习目标：**
   - 掌握团队协作开发的基本操作
 - **学习内容：**
-  - 推送到远程仓库：`git push`
-  - 从远程仓库拉取更新：`git pull`
+  - [推送到远程仓库：`git push`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day4_1_Pushing%20to%20a%20Remote%20Repository.md)
+  - [从远程仓库拉取更新：`git pull`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day4_2_Pulling%20Updates%20from%20a%20Remote%20Repository.md)
   - 处理冲突
 - **实践：**
   - 推送本地分支到远程仓库
@@ -51,9 +51,9 @@
 - **学习目标：**
   - 了解Git的高级操作
 - **学习内容：**
-  - 交互式暂存：`git add -p`
-  - 暂存和恢复更改：`git stash`
-  - Rebasing：`git rebase`
+  - [交互式暂存：`git add -p`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day5_1_Interactive%20Staging.md)
+  - [暂存和恢复更改：`git stash`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day5_2_Stashing%20and%20Restoring%20Changes.md)
+  - [Rebasing：`git rebase`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day5_3_Rebasing.md)
 - **实践：**
   - 使用交互式暂存选择性地提交更改
   - 使用`git stash`暂存未完成的工作并恢复
