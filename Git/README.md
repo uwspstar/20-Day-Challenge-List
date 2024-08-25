@@ -2,6 +2,41 @@
 
 以下是一个为期7天的Git学习计划，旨在帮助你快速掌握Git的基础和一些高级概念。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
 
+---
+
+# Git Command Cheat Sheet
+
+| Command                                | Description in English                                           | Description in Chinese                                           | Code Example                           |
+|----------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|----------------------------------------|
+| `git init`                             | Initializes a new Git repository in the current directory        | 在当前目录中初始化一个新的Git仓库                                  | `git init`                             |
+| `git status`                           | Shows the status of changes in the working directory             | 显示工作目录中更改的状态                                          | `git status`                           |
+| `git add`                              | Stages files for the next commit                                 | 暂存文件以便进行下次提交                                          | `git add file.txt`                     |
+| `git commit`                           | Records changes to the repository                                | 记录对仓库的更改                                                  | `git commit -m "Commit message"`       |
+| `git clone`                            | Clones a repository into a new directory                         | 将仓库克隆到新目录中                                              | `git clone https://github.com/user/repo.git` |
+| `git log`                              | Shows the commit history of the current branch                   | 显示当前分支的提交历史                                            | `git log`                              |
+| `git checkout`                         | Switches branches or restores working tree files                 | 切换分支或恢复工作树文件                                          | `git checkout branch-name`             |
+| `git merge`                            | Merges changes from one branch into another                      | 将一个分支的更改合并到另一个分支                                   | `git merge feature-branch`             |
+| `git push`                             | Pushes local changes to a remote repository                      | 将本地更改推送到远程仓库                                          | `git push origin branch-name`          |
+| `git pull`                             | Fetches and merges changes from a remote repository              | 从远程仓库获取并合并更改                                          | `git pull origin branch-name`          |
+| `git add -p`                           | Interactively stages changes hunk by hunk                        | 以交互方式逐块暂存更改                                            | `git add -p`                           |
+| `git stash`                            | Temporarily saves changes for later retrieval                    | 暂时保存更改以供以后检索                                          | `git stash`                            |
+| `git stash pop`                        | Applies and removes the most recent stash                        | 应用并删除最近的存储                                              | `git stash pop`                        |
+| `git rebase`                           | Moves or "rebases" commits onto another branch                   | 将提交移到或“变基”到另一个分支                                     | `git rebase main`                      |
+| `git rebase -i`                        | Starts an interactive rebase for more control                    | 启动交互式变基以获得更多控制                                      | `git rebase -i HEAD~3`                 |
+| `git branch`                           | Lists, creates, or deletes branches                              | 列出、创建或删除分支                                              | `git branch` / `git branch new-branch` |
+| `git remote`                           | Manages set of tracked repositories                              | 管理已跟踪的仓库集                                                | `git remote -v`                        |
+| `git fetch`                            | Downloads objects and refs from another repository               | 从另一个仓库下载对象和引用                                        | `git fetch origin`                     |
+| `git reset`                            | Resets current HEAD to a specified state                         | 将当前HEAD重置为指定状态                                          | `git reset --hard HEAD~1`              |
+| `git revert`                           | Reverts a commit by creating a new commit                        | 通过创建新提交来还原提交                                          | `git revert commit-hash`               |
+| `git fork` (GitHub-specific)           | Creates a personal copy of another user's repository on GitHub   | 在GitHub上创建另一个用户仓库的个人副本                            | *Fork a repository via GitHub UI*      |
+| `git pull-request` (GitHub-specific)   | Creates a pull request to propose changes to a repository        | 创建Pull Request以提出对仓库的更改                                 | *Create via GitHub UI*                 |
+| `ssh-keygen`                           | Generates a new SSH key pair                                     | 生成新的SSH密钥对                                                 | `ssh-keygen -t ed25519 -C "your_email@example.com"` |
+| `ssh-add`                              | Adds an SSH private key to the SSH-agent                         | 将SSH私钥添加到SSH代理                                            | `ssh-add ~/.ssh/id_ed25519`            |
+| `git remote add`                       | Adds a new remote repository                                     | 添加新的远程仓库                                                  | `git remote add origin https://github.com/user/repo.git` |
+| `git mergetool`                        | Launches a merge tool to resolve conflicts                       | 启动合并工具以解决冲突                                            | `git mergetool`                        |
+| `git config`                           | Configures Git settings                                           | 配置Git设置                                                      | `git config --global user.name "Your Name"` |
+---
+
 ### 第1天：Git基础
 - **学习目标：**
   - 了解Git的基本概念和用途
