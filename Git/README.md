@@ -18,7 +18,7 @@
 - **学习目标：**
   - 掌握Git仓库的基本管理操作
 - **学习内容：**
-  - 克隆远程仓库：`git clone`
+  - [克隆远程仓库：`git clone`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day2_1_Cloning%20a%20Remote%20Repository.md)
   - 查看历史记录：`git log`
   - 取消操作：`git checkout`, `git revert`, `git reset`
 - **实践：**
