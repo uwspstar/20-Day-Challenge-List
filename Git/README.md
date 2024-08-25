@@ -9,7 +9,7 @@
 - **学习内容：**
   - 版本控制简介：Git的优势
   - [Git安装与配置](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day1_1_Git%20Installation%20and%20Configuration.md)
-  - Git基础命令：`git init`, `git status`, `git add`, `git commit`
+  - [Git基础命令：`git init`, `git status`, `git add`, `git commit`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day1_2_Git%20Basic%20Commands.md)
 - **实践：**
   - 安装Git并配置用户名和邮箱
   - 初始化一个Git仓库，添加文件并提交
