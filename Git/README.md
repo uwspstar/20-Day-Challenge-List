@@ -64,7 +64,7 @@
   - 了解如何使用GitHub和其他远程仓库
 - **学习内容：**
   - [GitHub基本操作：创建仓库、Fork、Pull Request](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day6_1_Creating%20a%20Repository%2C%20Forking%2C%20and%20Pull%20Requests.md)
-  - SSH配置和安全性
+  - [SSH配置和安全性](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day6_2_SSH%20Configuration%20and%20Security%20on%20GitHub.md)
 - **实践：**
   - 创建一个GitHub仓库并推送本地仓库
   - 发起和合并Pull Request
