@@ -8,7 +8,7 @@
   - 掌握Git的基本操作
 - **学习内容：**
   - 版本控制简介：Git的优势
-  - Git安装与配置
+  - [Git安装与配置](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Git/Day1_1_Git%20Installation%20and%20Configuration.md)
   - Git基础命令：`git init`, `git status`, `git add`, `git commit`
 - **实践：**
   - 安装Git并配置用户名和邮箱
