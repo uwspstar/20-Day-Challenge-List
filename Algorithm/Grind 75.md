@@ -4,7 +4,7 @@
 
 This table is organized by week, problem number, title, difficulty, estimated time, and direct LeetCode links for each problem.
 
-| Week | Problem # | Problem Title                                                       | Difficulty | Estimated Time | LeetCode Link                                                         |
+| Week | Note # | Problem Title                                                       | Difficulty | Estimated Time | LeetCode Link                                                         |
 |------|-----------|----------------------------------------------------------------------|------------|----------------|-----------------------------------------------------------------------|
 | 1    | hashmap         | [1 Two Sum](https://codebitwave.com/leetcode-1-two-sum/)                                                             | Easy       | 15 mins        | [Link](https://leetcode.com/problems/two-sum/)                        |
 | 1    | stack         | [20 Valid Parentheses](https://codebitwave.com/leetcode-20-valid-parentheses/)                                                   | Easy       | 20 mins        | [Link](https://leetcode.com/problems/valid-parentheses/)              |
