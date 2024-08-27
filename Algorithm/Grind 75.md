@@ -7,7 +7,7 @@ This table is organized by week, problem number, title, difficulty, estimated ti
 | Week | Problem # | Problem Title                                                       | Difficulty | Estimated Time | LeetCode Link                                                         |
 |------|-----------|----------------------------------------------------------------------|------------|----------------|-----------------------------------------------------------------------|
 | 1    | 1         | [1 Two Sum](https://codebitwave.com/leetcode-1-two-sum/)                                                             | Easy       | 15 mins        | [Link](https://leetcode.com/problems/two-sum/)                        |
-| 1    | 2         | Valid Parentheses                                                   | Easy       | 20 mins        | [Link](https://leetcode.com/problems/valid-parentheses/)              |
+| 1    | 2         | [20 Valid Parentheses](https://codebitwave.com/leetcode-20-valid-parentheses/)                                                   | Easy       | 20 mins        | [Link](https://leetcode.com/problems/valid-parentheses/)              |
 | 1    | 3         | Merge Two Sorted Lists                                              | Easy       | 20 mins        | [Link](https://leetcode.com/problems/merge-two-sorted-lists/)         |
 | 1    | 4         | Best Time to Buy and Sell Stock                                     | Easy       | 20 mins        | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|
 | 1    | 5         | Valid Palindrome                                                    | Easy       | 15 mins        | [Link](https://leetcode.com/problems/valid-palindrome/)               |
