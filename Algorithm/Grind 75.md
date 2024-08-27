@@ -1,4 +1,6 @@
 - [Grind 75](https://www.techinterviewhandbook.org/grind75)
+- 
+This table is organized by week, problem number, title, difficulty, estimated time, and direct LeetCode links for each problem.
 
 | Week | Problem # | Problem Title                                                       | Difficulty | Estimated Time | LeetCode Link                                                         |
 |------|-----------|----------------------------------------------------------------------|------------|----------------|-----------------------------------------------------------------------|
@@ -53,9 +55,7 @@
 | 5    | 8         | Sort Colors                                                         | Medium     | 25 mins        | [Link](https://leetcode.com/problems/sort-colors/)                    |
 | 6    | 1         | Word Break                                                          | Medium     | 30 mins        | [Link](https://leetcode.com/problems/word-break/)                     |
 | 6    | 2         | Partition Equal Subset Sum                                          | Medium     | 30 mins        | [Link](https://leetcode.com/problems/partition-equal-subset-sum/)     |
-| 6    | 3         | String to Integer (
-
-atoi)                                            | Medium     | 25 mins        | [Link](https://leetcode.com/problems/string-to-integer-atoi/)         |
+| 6    | 3         | String to Integer (atoi)                                            | Medium     | 25 mins        | [Link](https://leetcode.com/problems/string-to-integer-atoi/)         |
 | 6    | 4         | Spiral Matrix                                                       | Medium     | 25 mins        | [Link](https://leetcode.com/problems/spiral-matrix/)                  |
 | 6    | 5         | Subsets                                                             | Medium     | 30 mins        | [Link](https://leetcode.com/problems/subsets/)                        |
 | 6    | 6         | Binary Tree Right Side View                                         | Medium     | 20 mins        | [Link](https://leetcode.com/problems/binary-tree-right-side-view/)    |
@@ -80,4 +80,3 @@ atoi)                                            | Medium     | 25 mins        |
 | 8    | 9         | Merge k Sorted Lists                                                | Hard       | 30 mins        | [Link](https://leetcode.com/problems/merge-k-sorted-lists/)           |
 | 8    | 10        | Largest Rectangle in Histogram                                      | Hard       | 35 mins        | [Link](https://leetcode.com/problems/largest-rectangle-in-histogram/) |
 
-This table is organized by week, problem number, title, difficulty, estimated time, and direct LeetCode links for each problem.
