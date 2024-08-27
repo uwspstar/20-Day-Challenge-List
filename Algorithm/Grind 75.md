@@ -1,8 +1,5 @@
 - [Grind 75](https://www.techinterviewhandbook.org/grind75)
 
-Here's the Markdown table with LeetCode web links for the problems listed:
-
-```markdown
 | Week | Problem # | Problem Title                                                       | Difficulty | Estimated Time | LeetCode Link                                                         |
 |------|-----------|----------------------------------------------------------------------|------------|----------------|-----------------------------------------------------------------------|
 | 1    | 1         | Two Sum                                                             | Easy       | 15 mins        | [Link](https://leetcode.com/problems/two-sum/)                        |
@@ -82,6 +79,5 @@ atoi)                                            | Medium     | 25 mins        |
 | 8    | 8         | Maximum Profit in Job Scheduling                                    | Hard       | 45 mins        | [Link](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) |
 | 8    | 9         | Merge k Sorted Lists                                                | Hard       | 30 mins        | [Link](https://leetcode.com/problems/merge-k-sorted-lists/)           |
 | 8    | 10        | Largest Rectangle in Histogram                                      | Hard       | 35 mins        | [Link](https://leetcode.com/problems/largest-rectangle-in-histogram/) |
-```
 
 This table is organized by week, problem number, title, difficulty, estimated time, and direct LeetCode links for each problem.
