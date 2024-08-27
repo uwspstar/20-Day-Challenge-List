@@ -1,5 +1,7 @@
+# Grind 75 Leetcode Problems
+
 - [Grind 75](https://www.techinterviewhandbook.org/grind75)
-- 
+
 This table is organized by week, problem number, title, difficulty, estimated time, and direct LeetCode links for each problem.
 
 | Week | Problem # | Problem Title                                                       | Difficulty | Estimated Time | LeetCode Link                                                         |
