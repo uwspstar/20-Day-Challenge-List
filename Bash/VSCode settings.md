@@ -1,5 +1,5 @@
 # VSCode settings
-- [How to change VSCode settings](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Bash/how%20to%20change%20the%20default%20shell%20in%20VSCode.md)
+- [How to change the default shell in VSCode](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Bash/how%20to%20change%20the%20default%20shell%20in%20VSCode.md)
 
 The provided VSCode settings look mostly correct but there are a few points worth checking to ensure everything works as expected. Here’s a breakdown of the settings and any adjustments you might consider:
 
