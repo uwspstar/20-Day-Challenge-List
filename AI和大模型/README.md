@@ -5,10 +5,12 @@
 
 - [Deeplearning.ai](https://www.deeplearning.ai/courses/)
 
-这里是一个为期20天的学习计划，旨在帮助你快速掌握AI和大模型（如GPT、BERT等）的基本概念、技术和应用。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
-
 - https://codebitwave.com/artificial-intelligence/
   
+------
+
+这里是一个为期20天的学习计划，旨在帮助你快速掌握AI和大模型（如GPT、BERT等）的基本概念、技术和应用。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
+
 ### 第1-2天：了解基础概念
 - **学习目标：**
   - 了解人工智能（AI）的基本概念和历史
