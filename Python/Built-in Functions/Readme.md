@@ -1,76 +1,87 @@
-# Python 57 Built-in Functions
+# Python 71 Built-in Functions
 
-Here is a table listing all 57 Python built-in functions along with code examples.
+Here is a table listing all 71 Python built-in functions along with code examples.
 
-| Function   | Description | Code Example |
-|------------|-------------|--------------|
-| [`abs()`](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Python/Built-in%20Functions)    | Returns the absolute value of a number | `abs(-5)  # Output: 5` |
-| `all()`    | Returns True if all elements in an iterable are true | `all([True, True, False])  # Output: False` |
-| `any()`    | Returns True if any element in an iterable is true | `any([False, False, True])  # Output: True` |
-| `ascii()`  | Returns a readable version of an object. Replaces non-ASCII characters with escape characters | `ascii('æ')  # Output: '\\xe6'` |
-| `bin()`    | Returns the binary version of a number | `bin(5)  # Output: '0b101'` |
-| `bool()`   | Converts a value to a Boolean | `bool(0)  # Output: False` |
-| `bytearray()` | Returns an array of bytes | `bytearray(4)  # Output: bytearray(b'\x00\x00\x00\x00')` |
-| `bytes()`  | Returns a bytes object | `bytes(4)  # Output: b'\x00\x00\x00\x00'` |
-| `callable()` | Returns True if the specified object is callable | `callable(len)  # Output: True` |
-| `chr()`    | Returns a character from the specified Unicode code | `chr(97)  # Output: 'a'` |
-| `classmethod()` | Converts a method into a class method | `class C: @classmethod def method(cls): pass` |
-| `compile()` | Returns a Python code object from a source (string) | `compile('print(5)', '<string>', 'exec')` |
-| `complex()` | Returns a complex number | `complex(1, 2)  # Output: (1+2j)` |
-| `delattr()` | Deletes the specified attribute from an object | `class C: pass; c = C(); c.attr = 10; delattr(c, 'attr')` |
-| `dict()`   | Creates a dictionary | `dict(a=1, b=2)  # Output: {'a': 1, 'b': 2}` |
-| `dir()`    | Returns a list of the specified object's properties and methods | `dir([])  # Output: ['append', 'clear', ...]` |
-| `divmod()` | Returns a tuple containing the quotient and remainder | `divmod(5, 2)  # Output: (2, 1)` |
-| `enumerate()` | Takes a collection and returns it as an enumerate object | `enumerate(['a', 'b', 'c'])` |
-| `eval()`   | Evaluates and executes an expression | `eval('5 + 5')  # Output: 10` |
-| `exec()`   | Executes the specified code (or object) | `exec('print(5)')` |
-| `filter()` | Use a filter function to exclude items in an iterable object | `list(filter(lambda x: x > 0, [-1, 0, 1, 2]))  # Output: [1, 2]` |
-| `float()`  | Returns a floating-point number | `float('3.14')  # Output: 3.14` |
-| `format()` | Formats a specified value | `format(8, 'b')  # Output: '1000'` |
-| `frozenset()` | Returns a frozenset object | `frozenset([1, 2, 3])` |
-| `getattr()` | Returns the value of the specified attribute (property or method) | `class C: attr = 10; getattr(C, 'attr')  # Output: 10` |
-| `globals()` | Returns the current global symbol table as a dictionary | `globals()` |
-| `hasattr()` | Returns True if the specified object has the specified attribute (property/method) | `hasattr(object, 'attribute')` |
-| `hash()`   | Returns the hash value of a specified object | `hash('test')` |
-| `help()`   | Executes the built-in help system | `help(str)` |
-| `hex()`    | Converts a number into a hexadecimal string | `hex(255)  # Output: '0xff'` |
-| `id()`     | Returns the id of an object | `id(object)` |
-| `input()`  | Allows user input | `input('Enter: ')` |
-| `int()`    | Returns an integer number | `int('10')  # Output: 10` |
-| `isinstance()` | Returns True if a specified object is an instance of a specified object | `isinstance(5, int)  # Output: True` |
-| `issubclass()` | Returns True if a specified class is a subclass of a specified object | `issubclass(bool, int)  # Output: True` |
-| `iter()`   | Returns an iterator object | `iter([1, 2, 3])` |
-| `len()`    | Returns the length of an object | `len('abc')  # Output: 3` |
-| `list()`   | Returns a list | `list('abc')  # Output: ['a', 'b', 'c']` |
-| `locals()` | Updates and returns a dictionary of the current local symbol table | `locals()` |
-| `map()`    | Returns the specified iterator with the specified function applied to each item | `list(map(lambda x: x**2, [1, 2, 3]))  # Output: [1, 4, 9]` |
-| `max()`    | Returns the largest item in an iterable | `max([1, 2, 3])  # Output: 3` |
-| `memoryview()` | Returns a memory view object | `memoryview(b'abc')` |
-| `min()`    | Returns the smallest item in an iterable | `min([1, 2, 3])  # Output: 1` |
-| `next()`   | Returns the next item in an iterator | `next(iter([1, 2, 3]))  # Output: 1` |
-| `object()` | Returns a new object | `object()` |
-| `oct()`    | Converts a number into an octal | `oct(8)  # Output: '0o10'` |
-| `open()`   | Opens a file and returns a file object | `open('file.txt', 'r')` |
-| `ord()`    | Convert an integer representing the Unicode of the specified character | `ord('a')  # Output: 97` |
-| `pow()`    | Returns the value of x to the power of y | `pow(2, 3)  # Output: 8` |
-| `print()`  | Prints to the standard output device | `print('Hello, World!')` |
-| `property()` | Gets, sets, deletes a property | `class C: def __init__(self): self._x = None; def getx(self): return self._x; def setx(self, value): self._x = value; def delx(self): del self._x; x = property(getx, setx, delx)` |
-| `range()`  | Returns a sequence of numbers | `range(5)` |
-| `repr()`   | Returns a readable version of an object | `repr('Hello')  # Output: "'Hello'"` |
-| `reversed()` | Returns a reversed iterator | `reversed([1, 2, 3])` |
-| `round()`  | Rounds a numbers | `round(3.14159, 2)  # Output: 3.14` |
-| `set()`    | Returns a new set object | `set([1, 2, 3])  # Output: {1, 2, 3}` |
-| `setattr()` | Sets an attribute (property/method) | `class C: pass; c = C(); setattr(c, 'attr', 10)` |
-| `slice()`  | Returns a slice object | `slice(1, 5)` |
-| `sorted()` | Returns a sorted list | `sorted([3, 1, 2])  # Output: [1, 2, 3]` |
-| `staticmethod()` | Converts a method into a static method | `class C: @staticmethod def method(): pass` |
-| `str()`    | Returns a string object | `str(10)  # Output: '10'` |
-| `sum()`    | Sums the items of an iterable | `sum([1, 2, 3])  # Output: 6` |
-| `super()`  | Returns an object that represents the parent class | `class B: pass; class C(B): def method(self): super().method()` |
-| `tuple()`  | Returns a tuple | `tuple([1, 2, 3])  # Output: (1, 2, 3)` |
-| `type()`   | Returns the type of an object | `type(5)  # Output: <class 'int'>` |
-| `vars()`   | Returns the __dict__ attribute of an object | `class C: pass; c = C(); vars(c)` |
-| `zip()`    | Returns an iterator of tuples | `zip([1, 2, 3], ['a', 'b', 'c'])` |
+"内置函数" means "built-in functions" in Chinese. These are functions that are provided by Python and are available for use without needing to import any additional modules. They are integral parts of the Python language, offering a wide range of functionality for various tasks.
+
+| **内置函数**       | **示例代码**                                           | **描述**                                           |
+|-------------------|------------------------------------------------------|----------------------------------------------------|
+| abs()             | `abs(-5)` => `5`                                      | 返回数字的绝对值                                    |
+| aiter()           | `async for x in aiter(iterable):` => `Async iteration`| 返回异步迭代器                                      |
+| all()             | `all([True, False])` => `False`                       | 如果所有元素都为真，返回 `True`                      |
+| anext()           | `await anext(async_iterator)` => `Get next item`      | 异步地获取下一个元素                                |
+| any()             | `any([True, False])` => `True`                        | 如果任一元素为真，返回 `True`                        |
+| ascii()           | `ascii('ñ')` => `'\\xf1'`                             | 返回对象的可打印ASCII表示形式                         |
+| bin()             | `bin(10)` => `'0b1010'`                               | 将整数转换为二进制字符串                             |
+| bool()            | `bool(1)` => `True`                                   | 将值转换为布尔类型                                  |
+| breakpoint()      | `breakpoint()` => `Enter debugging mode`              | 进入调试模式                                        |
+| bytearray()       | `bytearray('abc', 'utf-8')` => `bytearray(b'abc')`    | 返回字节数组                                        |
+| bytes()           | `bytes('abc', 'utf-8')` => `b'abc'`                   | 返回字节对象                                        |
+| callable()        | `callable(abs)` => `True`                             | 检查对象是否可调用                                  |
+| chr()             | `chr(97)` => `'a'`                                    | 返回对应ASCII值的字符                                |
+| classmethod()     | `classmethod(func)` => `Class method wrapper`         | 将函数转换为类方法                                  |
+| compile()         | `compile('print(1)', '', 'exec')` => `Compile code`   | 编译代码并返回代码对象                              |
+| complex()         | `complex(1, 2)` => `(1+2j)`                           | 创建一个复数                                        |
+| delattr()         | `delattr(obj, 'attr')` => `Deletes attribute`         | 删除对象的属性                                      |
+| dict()            | `dict(a=1, b=2)` => `{'a': 1, 'b': 2}`                | 创建字典对象                                        |
+| dir()             | `dir()` => `['__class__', ...]`                       | 列出对象的属性和方法                                |
+| divmod()          | `divmod(9, 4)` => `(2, 1)`                            | 返回商和余数                                        |
+| enumerate()       | `enumerate(['a', 'b'])` => `[(0, 'a'), (1, 'b')]`     | 返回枚举对象                                        |
+| eval()            | `eval('1 + 2')` => `3`                                | 计算表达式并返回结果                                |
+| exec()            | `exec('print(1)')` => `Executes code`                 | 执行动态Python代码                                  |
+| filter()          | `filter(lambda x: x > 0, [-1, 1, 2])` => `[1, 2]`     | 过滤序列中的元素                                    |
+| float()           | `float(2)` => `2.0`                                   | 将值转换为浮点数                                    |
+| format()          | `format(2, '04d')` => `'0002'`                        | 格式化值为指定格式                                  |
+| frozenset()       | `frozenset([1, 2, 3])` => `frozenset({1, 2, 3})`      | 创建不可变集合                                      |
+| getattr()         | `getattr(obj, 'attr', 'default')` => `default`        | 获取对象的属性值                                    |
+| globals()         | `globals()` => `{'__name__': '__main__', ...}`        | 返回全局符号表                                      |
+| hasattr()         | `hasattr(obj, 'attr')` => `True`                      | 检查对象是否有指定属性                              |
+| hash()            | `hash('abc')` => `-1100007589`                        | 返回对象的哈希值                                    |
+| help()            | `help(print)` => `Displays help for print`            | 显示帮助信息                                        |
+| hex()             | `hex(255)` => `'0xff'`                                | 将整数转换为十六进制字符串                           |
+| id()              | `id(obj)` => `140152140012544`                        | 返回对象的唯一标识符                                |
+| input()           | `input('Enter: ')` => `User input`                    | 从用户获取输入                                      |
+| int()             | `int('10')` => `10`                                   | 将值转换为整数                                      |
+| isinstance()      | `isinstance(1, int)` => `True`                        | 检查对象是否为指定类型的实例                         |
+| issubclass()      | `issubclass(bool, int)` => `True`                     | 检查类是否为指定类的子类                             |
+| iter()            | `iter([1, 2, 3])` => `<list_iterator>`                | 返回对象的迭代器                                    |
+| len()             | `len('abc')` => `3`                                   | 返回对象的长度                                      |
+| list()            | `list(range(3))` => `[0, 1, 2]`                       | 创建列表对象                                        |
+| locals()          | `locals()` => `{'var': 'value', ...}`                 | 返回局部符号表                                      |
+| map()             | `map(str, [1, 2, 3])` => `['1', '2', '3']`            | 对序列中的每一项应用函数                            |
+| max()             | `max(1, 2)` => `2`                                    | 返回最大值                                          |
+| memoryview()      | `memoryview(b'abc')` => `<memory at 0x7f3d700fc100>`  | 返回内存视图对象                                    |
+| min()             | `min(1, 2)` => `1`                                    | 返回最小值                                          |
+| next()            | `next(iter([1, 2, 3]))` => `1`                        | 返回迭代器的下一个元素                              |
+| object()          | `object()` => `New object`                            | 创建一个新对象                                      |
+| oct()             | `oct(8)` => `'0o10'`                                  | 将整数转换为八进制字符串                             |
+| open()            | `open('file.txt')` => `<_io.TextIOWrapper ...>`       | 打开文件并返回文件对象                              |
+| ord()             | `ord('a')` => `97`                                    | 返回字符的ASCII值                                   |
+| pow()             | `pow(2, 3)` => `8`                                    | 返回x的y次幂                                        |
+| print()           | `print('Hello')` => `Hello`                           | 打印输出                                            |
+| property()        | `property(fget=None)` => `<property object>`          | 返回属性                                            |
+| range()           | `range(3)` => `range(0, 3)`                           | 返回不可变序列                                      |
+| repr()            | `repr(1.5)` => `'1.5'`                                | 返回对象的字符串表示                                |
+| reversed()        | `reversed([1, 2, 3])` => `[3, 2, 1]`                  | 返回序列的反向迭代器                                |
+| round()           | `round(1.2345, 2)` => `1.23`                          | 对浮点数进行四舍五入                                |
+| set()             | `set([1, 2, 3])` => `{1, 2, 3}`                       | 创建一个新的集合                                    |
+| setattr()         | `setattr(obj, 'attr', value)` => `Sets attribute`     | 设置对象的属性                                      |
+| slice()           | `slice(1, 5, 2)` => `slice(1, 5, 2)`                  | 返回一个切片对象                                    |
+| sorted()          | `sorted([3, 1, 2])` => `[1, 2, 3]`                    | 返回排序后的列表                                    |
+| staticmethod()    | `staticmethod(func)` => `Static method wrapper`       | 将函数转换为静态方法                                |
+| str()             | `str(123)` => `'123'`                                 | 将值转换为字符串                                    |
+| sum()             | `sum([1, 2, 3])` => `6`                               | 返回序列中元素的总和                                |
+| super()           | `super()` => `<super object>`                         | 返回父类对象                                        |
+| tuple()           | `tuple([1, 2, 3])` =>
+
+ `(1, 2, 3)`                     | 创建一个新的元组                                    |
+| type()            | `type(123)` => `<class 'int'>`                        | 返回对象的类型                                      |
+| vars()            | `vars()` => `{'var': 'value', ...}`                   | 返回对象的__dict__属性                              |
+| zip()             | `zip([1, 2], ['a', 'b'])` => `[(1, 'a'), (2, 'b')]`   | 将多个序列压缩成一个元组列表                        |
+| __import__()      | `__import__('math')` => `<module 'math' (built-in)>`  | 动态加载模块                                        |
+ 
+
+
 
 These examples demonstrate how to use each built-in function in Python. For more detailed information, you can refer to the [Python official documentation](https://docs.python.org/3/library/functions.html).
 
