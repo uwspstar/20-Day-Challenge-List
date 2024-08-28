@@ -1,4 +1,5 @@
 ### Detailed Explanation of `@property` in Python
+- [Python 解释器内置了很多函数和类型，任何时候都能使用](https://docs.python.org/zh-cn/3/library/functions.html#property)
 
 #### 1. What is `@property`?
 
