@@ -6,7 +6,8 @@ Here is a table listing all [71 Python built-in functions](https://docs.python.o
 
 | **内置函数**       | **示例代码**                                           | **描述**                                           |
 |-------------------|------------------------------------------------------|----------------------------------------------------|
-| [abs()](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/abs(x)_function.md)             | `abs(-5)` => `5`                                      | 返回数字的绝对值                                    |
+| <a href="https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/abs(x)_function.md" target="_blank">abs()</a>
+            | `abs(-5)` => `5`                                      | 返回数字的绝对值                                    |
 | aiter()           | `async for x in aiter(iterable):` => `Async iteration`| 返回异步迭代器                                      |
 | all()             | `all([True, False])` => `False`                       | 如果所有元素都为真，返回 `True`                      |
 | anext()           | `await anext(async_iterator)` => `Get next item`      | 异步地获取下一个元素                                |
