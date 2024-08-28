@@ -6,11 +6,11 @@ Here is a table listing all [71 Python built-in functions](https://docs.python.o
 
 | **内置函数**       | **示例代码**                                           | **描述**                                           |
 |-------------------|------------------------------------------------------|----------------------------------------------------|
-| [abs()](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/abs(x)_function.md)    | `abs(-5)` => `5`                                      | 返回数字的绝对值                                    |
+| [`abs()`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/abs(x)_function.md)    | `abs(-5)` => `5`                                      | 返回数字的绝对值                                    |
 | aiter()           | `async for x in aiter(iterable):` => `Async iteration`| 返回异步迭代器                                      |
-| [all()](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Python/Built-in%20Functions)             | `all([True, False])` => `False`                       | 如果所有元素都为真，返回 `True`  [Comparison: any([]) vs all([])](https://codebitwave.com/python-101-comparison-any-vs-all/)                     |
+| [`all()`](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Python/Built-in%20Functions)             | `all([True, False])` => `False`                       | 如果所有元素都为真，返回 `True`  [Comparison: any([]) vs all([])](https://codebitwave.com/python-101-comparison-any-vs-all/)                     |
 | anext()           | `await anext(async_iterator)` => `Get next item`      | 异步地获取下一个元素                                |
-| [any()](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/any(iterable)_function.md)             | `any([True, False])` => `True`                        | 如果任一元素为真，返回 `True` [Comparison: any([]) vs all([])](https://codebitwave.com/python-101-comparison-any-vs-all/)                       |
+| [`any()`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/any(iterable)_function.md)             | `any([True, False])` => `True`                        | 如果任一元素为真，返回 `True` [Comparison: any([]) vs all([])](https://codebitwave.com/python-101-comparison-any-vs-all/)                       |
 | ascii()           | `ascii('ñ')` => `'\\xf1'`                             | 返回对象的可打印ASCII表示形式                         |
 | bin()             | `bin(10)` => `'0b1010'`                               | 将整数转换为二进制字符串                             |
 | bool()            | `bool(1)` => `True`                                   | 将值转换为布尔类型                                  |
@@ -76,7 +76,7 @@ Here is a table listing all [71 Python built-in functions](https://docs.python.o
 | type()            | `type(123)` => `<class 'int'>`                        | 返回对象的类型                                      |
 | vars()            | `vars()` => `{'var': 'value', ...}`                   | 返回对象的__dict__属性                              |
 | zip()             | `zip([1, 2], ['a', 'b'])` => `[(1, 'a'), (2, 'b')]`   | 将多个序列压缩成一个元组列表                        |
-| `__import__()`      | `__import__('math')` => `<module 'math' (built-in)>`  | 动态加载模块                                        |
+| [`__import__()`](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/__import__()_function.md)      | `__import__('math')` => `<module 'math' (built-in)>`  | 动态加载模块                                        |
  
 
 
