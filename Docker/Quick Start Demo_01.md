@@ -1,4 +1,4 @@
-# Quick Start Demo: Using a Dockerfile to Containerize a Small Python Project
+# Quick Start Demo 01: Using a Dockerfile to Containerize a Small Python Project
 
 #### Project Overview
 - **English**: Let's create a simple Python project that generates a random joke using an external API. We will containerize this project using a Dockerfile and run it in a Docker container.
