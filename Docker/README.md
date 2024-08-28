@@ -5,7 +5,13 @@
 ### Docker Commands
 - [Common Docker Commands and Their Usage](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Common%20Docker%20Commands%20and%20Their%20Usage.md)
 -----
-### [Warning: Avoid Spaces in File or Folder Names in Paths When Using Docker Commands](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Avoid%20Spaces%20in%20File%20or%20Folder%20Names%20in%20Paths%20When%20Using%20Docker%20Commands.md)
+### Warning
+- [Warning: Avoid Spaces in File or Folder Names in Paths When Using Docker Commands](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Avoid%20Spaces%20in%20File%20or%20Folder%20Names%20in%20Paths%20When%20Using%20Docker%20Commands.md)
+
+### More
+- [How to Monitor and Auto-Restart Docker Containers](https://codebitwave.com/docker-101-how-to-monitor-and-auto-restart-docker-containers/)
+- [Detailed Explanation of the --restart Option in Docker](https://codebitwave.com/docker-101-restart-option-in-docker/)
+  
 -----
 
 下面是一个为期7天的Docker学习计划，旨在帮助你快速掌握Docker的基础和一些高级概念。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
