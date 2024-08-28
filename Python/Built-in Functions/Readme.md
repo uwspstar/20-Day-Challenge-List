@@ -72,9 +72,7 @@ Here is a table listing all [71 Python built-in functions](https://docs.python.o
 | str()             | `str(123)` => `'123'`                                 | 将值转换为字符串                                    |
 | sum()             | `sum([1, 2, 3])` => `6`                               | 返回序列中元素的总和                                |
 | super()           | `super()` => `<super object>`                         | 返回父类对象                                        |
-| tuple()           | `tuple([1, 2, 3])` =>
-
- `(1, 2, 3)`                     | 创建一个新的元组                                    |
+| tuple()           | `tuple([1, 2, 3])` => `(1, 2, 3)`                     | 创建一个新的元组                                    |
 | type()            | `type(123)` => `<class 'int'>`                        | 返回对象的类型                                      |
 | vars()            | `vars()` => `{'var': 'value', ...}`                   | 返回对象的__dict__属性                              |
 | zip()             | `zip([1, 2], ['a', 'b'])` => `[(1, 'a'), (2, 'b')]`   | 将多个序列压缩成一个元组列表                        |
