@@ -1,5 +1,7 @@
 # 7天学Git
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 以下是一个为期7天的Git学习计划，旨在帮助你快速掌握Git的基础和一些高级概念。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
 
 ---
