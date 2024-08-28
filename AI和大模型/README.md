@@ -1,4 +1,6 @@
 # 20天学AI和大模型
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 - [Harvard CS50’s Artificial Intelligence with Python – Full University Course](https://www.youtube.com/watch?v=5NgNicANyqM&t=2s)
 
 - [Deeplearning.ai](https://www.deeplearning.ai/courses/)
