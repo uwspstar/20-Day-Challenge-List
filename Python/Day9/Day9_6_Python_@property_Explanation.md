@@ -109,9 +109,6 @@ class Circle:
 | **Encapsulation**        | Good, hides implementation details             | Good, but less intuitive for simple access|
 | **Setter/Deleter**       | Possible using `@setter` and `@deleter`        | Managed through separate methods          |
 
-
----
-
 ### 6. Tips & Warnings
 
 **Tip:**  
@@ -125,8 +122,6 @@ Avoid overusing `@property` for complex logic or expensive operations, as this c
 
 **警告：**  
 避免对复杂逻辑或耗时操作过度使用 `@property`，因为这可能会使代码难以理解并导致性能问题。
-
----
 
 ### 7. 5Ws (Who, What, When, Where, Why)
 
@@ -159,8 +154,6 @@ Avoid overusing `@property` for complex logic or expensive operations, as this c
 
   **为什么：**  
   通过为属性访问提供干净的接口，同时封装逻辑来提高代码的可读性和可维护性。
-
----
 
 ### 8. Recommended Resources
 
