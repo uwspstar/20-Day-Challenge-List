@@ -24,6 +24,7 @@ cd fastapi-docker-demo
 ```python
 # main.py
 from fastapi import FastAPI
+import httpx
 
 app = FastAPI()
 
@@ -32,19 +33,24 @@ def read_root():
     return {"message": "Welcome to the FastAPI Docker Demo"}
 
 @app.get("/joke")
-def get_joke():
-    # In a real-world scenario, you'd fetch this from a database or external API.
-    return {"joke": "Why don't programmers like nature? It has too many bugs."}
-```
+async def get_joke():
+    # Define the URL of the external API that provides jokes
+    joke_api_url = "https://official-joke-api.appspot.com/random_joke"
 
-**Create `requirements.txt`:**
+    # Use httpx to fetch the joke from the external API
+    async with httpx.AsyncClient() as client:
+        response = await client.get(joke_api_url)
 
-**English**: This file lists the required Python packages for FastAPI.
-**Chinese**: 该文件列出了 FastAPI 所需的 Python 包。
-
+    # If the response is successful, return the joke
+    if response.status_code == 200:
+        joke_data = response.json()
+        return {"setup": joke_data['setup'], "punchline": joke_data['punchline']}
+    else:
+        return {"error": "Failed to fetch joke"}
 ```
 fastapi
 uvicorn
+httpx
 ```
 
 **Create `Dockerfile`:**
