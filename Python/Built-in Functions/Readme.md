@@ -76,7 +76,7 @@ Here is a table listing all [71 Python built-in functions](https://docs.python.o
 | type()            | `type(123)` => `<class 'int'>`                        | 返回对象的类型                                      |
 | vars()            | `vars()` => `{'var': 'value', ...}`                   | 返回对象的__dict__属性                              |
 | zip()             | `zip([1, 2], ['a', 'b'])` => `[(1, 'a'), (2, 'b')]`   | 将多个序列压缩成一个元组列表                        |
-| __import__()      | `__import__('math')` => `<module 'math' (built-in)>`  | 动态加载模块                                        |
+| `__import__()`      | `__import__('math')` => `<module 'math' (built-in)>`  | 动态加载模块                                        |
  
 
 
