@@ -4,7 +4,7 @@ Here is a table listing all 57 Python built-in functions along with code example
 
 | Function   | Description | Code Example |
 |------------|-------------|--------------|
-| `abs()`    | Returns the absolute value of a number | `abs(-5)  # Output: 5` |
+| [`abs()`](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Python/Built-in%20Functions)    | Returns the absolute value of a number | `abs(-5)  # Output: 5` |
 | `all()`    | Returns True if all elements in an iterable are true | `all([True, True, False])  # Output: False` |
 | `any()`    | Returns True if any element in an iterable is true | `any([False, False, True])  # Output: True` |
 | `ascii()`  | Returns a readable version of an object. Replaces non-ASCII characters with escape characters | `ascii('æ')  # Output: '\\xe6'` |
