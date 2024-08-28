@@ -1,3 +1,4 @@
+# How to change the default shell in VSCod
 In Visual Studio Code (VSCode), you can configure the default shell used in the integrated terminal. This is useful if you want to use a different shell, such as Bash, Zsh, or PowerShell, instead of the default one provided by your operating system.
 
 Here’s how to change the default shell in VSCode:
