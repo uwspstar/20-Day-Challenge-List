@@ -8,7 +8,7 @@ Here is a table listing all [71 Python built-in functions](https://docs.python.o
 |-------------------|------------------------------------------------------|----------------------------------------------------|
 | [abs()](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/abs(x)_function.md)    | `abs(-5)` => `5`                                      | 返回数字的绝对值                                    |
 | aiter()           | `async for x in aiter(iterable):` => `Async iteration`| 返回异步迭代器                                      |
-| all()             | `all([True, False])` => `False`                       | 如果所有元素都为真，返回 `True`                      |
+| [all()](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Python/Built-in%20Functions)             | `all([True, False])` => `False`                       | 如果所有元素都为真，返回 `True`                      |
 | anext()           | `await anext(async_iterator)` => `Get next item`      | 异步地获取下一个元素                                |
 | any()             | `any([True, False])` => `True`                        | 如果任一元素为真，返回 `True`                        |
 | ascii()           | `ascii('ñ')` => `'\\xf1'`                             | 返回对象的可打印ASCII表示形式                         |
