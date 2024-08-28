@@ -1,10 +1,7 @@
 # 7天学Docker 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
-### Quick Start Demo
-- [Quick Start Demo 01: Using a Dockerfile to Containerize a Small Python Project](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Quick%20Start%20Demo_01.md)
-- [Quick Start Demo 02: Writing Logs to a Folder](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Quick%20Start%20Demo%2002_Writing%20Logs%20to%20a%20Folder.md)
-
+### [Quick Start Demo](Quick Start Demo.md)
 ### Docker Commands
 - [Common Docker Commands and Their Usage](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Common%20Docker%20Commands%20and%20Their%20Usage.md)
 
