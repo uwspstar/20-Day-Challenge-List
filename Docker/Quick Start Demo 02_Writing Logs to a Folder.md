@@ -1,5 +1,7 @@
 ### Quick Start Demo 02: Writing Logs to a Folder
 
+[Back to Quick Start Demo Index](Quick Start Demo.md)
+
 #### Project Overview
 - **English**: We will update the previous Python project to write the fetched joke and other log information into a log file stored in a specific folder inside the container. This log file will be useful for monitoring and debugging.
 - **Chinese**: 我们将更新之前的 Python 项目，将获取的笑话和其他日志信息写入容器内特定文件夹中的日志文件。此日志文件对监控和调试非常有用。
