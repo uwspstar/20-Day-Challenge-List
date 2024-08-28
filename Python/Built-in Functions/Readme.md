@@ -37,7 +37,7 @@ Here is a table listing all [71 Python built-in functions](https://docs.python.o
 | globals()         | `globals()` => `{'__name__': '__main__', ...}`        | 返回全局符号表                                      |
 | hasattr()         | `hasattr(obj, 'attr')` => `True`                      | 检查对象是否有指定属性                              |
 | hash()            | `hash('abc')` => `-1100007589`                        | 返回对象的哈希值                                    |
-| help()            | `help(print)` => `Displays help for print`            | 显示帮助信息                                        |
+| [help()](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Python/Built-in%20Functions)            | `help(print)` => `Displays help for print`            | 显示帮助信息                                        |
 | hex()             | `hex(255)` => `'0xff'`                                | 将整数转换为十六进制字符串                           |
 | id()              | `id(obj)` => `140152140012544`                        | 返回对象的唯一标识符                                |
 | input()           | `input('Enter: ')` => `User input`                    | 从用户获取输入                                      |
