@@ -1,5 +1,7 @@
 # 20天学 Algorithm
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 ### Recommend Resources:
 
 - [neetcode](https://neetcode.io/courses/dsa-for-beginners/0)
