@@ -1,3 +1,5 @@
+# VSCode settings
+
 The provided VSCode settings look mostly correct but there are a few points worth checking to ensure everything works as expected. Here’s a breakdown of the settings and any adjustments you might consider:
 
 ### Configuration Breakdown
