@@ -1,9 +1,9 @@
-# 7天学Docker
+# 7天学Docker ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
 # Project Title
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 
 ## Description
 
