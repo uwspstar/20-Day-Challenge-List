@@ -1,12 +1,12 @@
 # Python 71 Built-in Functions
 
-Here is a table listing all 71 Python built-in functions along with code examples.
+Here is a table listing all [71 Python built-in functions](https://docs.python.org/zh-cn/3/library/functions.html) along with code example.
 
 "内置函数" means "built-in functions" in Chinese. These are functions that are provided by Python and are available for use without needing to import any additional modules. They are integral parts of the Python language, offering a wide range of functionality for various tasks.
 
 | **内置函数**       | **示例代码**                                           | **描述**                                           |
 |-------------------|------------------------------------------------------|----------------------------------------------------|
-| abs()             | `abs(-5)` => `5`                                      | 返回数字的绝对值                                    |
+| [abs()](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/abs(x)_function.md)             | `abs(-5)` => `5`                                      | 返回数字的绝对值                                    |
 | aiter()           | `async for x in aiter(iterable):` => `Async iteration`| 返回异步迭代器                                      |
 | all()             | `all([True, False])` => `False`                       | 如果所有元素都为真，返回 `True`                      |
 | anext()           | `await anext(async_iterator)` => `Get next item`      | 异步地获取下一个元素                                |
