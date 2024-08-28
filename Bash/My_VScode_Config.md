@@ -1,4 +1,4 @@
-'''json
+```js
 {
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
