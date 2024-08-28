@@ -1,6 +1,6 @@
 ### Quick Start Demo 02: Writing Logs to a Folder
 
-[Quick Start Demo.md](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Quick%20Start%20Demo.md)
+[Quick Start Demo](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Quick%20Start%20Demo.md)
 
 #### Project Overview
 - **English**: We will update the previous Python project to write the fetched joke and other log information into a log file stored in a specific folder inside the container. This log file will be useful for monitoring and debugging.
