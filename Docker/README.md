@@ -4,7 +4,7 @@
 ### [Quick Start Demo](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Quick%20Start%20Demo.md)
 ### Docker Commands
 - [Common Docker Commands and Their Usage](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Common%20Docker%20Commands%20and%20Their%20Usage.md)
-
+-----
 ### [Warning: Avoid Spaces in File or Folder Names in Paths When Using Docker Commands]()
 -----
 
