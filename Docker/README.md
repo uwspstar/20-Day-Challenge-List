@@ -1,15 +1,5 @@
-# 7天学Docker ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-
-# Project Title
-
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-
-
-## Description
-
-Your project description goes here.
-
-
+# 7天学Docker 
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
 ### Quick Start Demo
 - [Quick Start Demo 01: Using a Dockerfile to Containerize a Small Python Project](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Quick%20Start%20Demo_01.md)
