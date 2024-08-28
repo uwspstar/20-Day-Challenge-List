@@ -109,9 +109,79 @@ class Circle:
 | **Encapsulation**        | Good, hides implementation details             | Good, but less intuitive for simple access|
 | **Setter/Deleter**       | Possible using `@setter` and `@deleter`        | Managed through separate methods          |
 
-| 方面                     | 属性 (使用 `@property`)                         | 方法                                      |
-|--------------------------|------------------------------------------------|-------------------------------------------|
-| **访问方式**             | `object.attribute`                             | `object.method()`                         |
-| **可读性**               | 高，尤其是在封装逻辑时                          | 中等，因为括号表示方法                   |
-| **封装性**               | 好，隐藏实现细节                               | 好，但对于简单访问不太直观                |
-| **设置/删除器**          | 使用 `@
+
+---
+
+### 6. Tips & Warnings
+
+**Tip:**  
+Use `@property` when you want to make accessing a method appear like accessing a simple attribute. This is particularly useful when you want to compute a value on the fly but still want the interface to remain clean and intuitive.
+
+**提示：**  
+当您希望方法的访问看起来像访问一个简单的属性时，请使用 `@property`。这在您希望动态计算一个值但仍希望接口保持干净和直观时特别有用。
+
+**Warning:**  
+Avoid overusing `@property` for complex logic or expensive operations, as this can make the code harder to understand and can lead to performance issues.
+
+**警告：**  
+避免对复杂逻辑或耗时操作过度使用 `@property`，因为这可能会使代码难以理解并导致性能问题。
+
+---
+
+### 7. 5Ws (Who, What, When, Where, Why)
+
+- **Who:**  
+  Python developers who want to create a clean, user-friendly interface for their classes.
+
+  **谁：**  
+  希望为其类创建干净、用户友好接口的 Python 开发人员。
+
+- **What:**  
+  The `@property` decorator, which allows methods to be accessed as attributes.
+
+  **什么：**  
+  `@property` 装饰器，允许方法以属性的形式访问。
+
+- **When:**  
+  When you need to control access to an attribute while keeping the interface simple.
+
+  **何时：**  
+  当您需要控制对属性的访问，同时保持接口简洁时。
+
+- **Where:**  
+  In any Python class where encapsulation and simplicity of access are important.
+
+  **在哪里：**  
+  在任何需要封装和简便访问的 Python 类中。
+
+- **Why:**  
+  To improve code readability and maintainability by providing a clean interface for attribute access while encapsulating logic.
+
+  **为什么：**  
+  通过为属性访问提供干净的接口，同时封装逻辑来提高代码的可读性和可维护性。
+
+---
+
+### 8. Recommended Resources
+
+1. **[Python Documentation on `@property`](https://docs.python.org/3/library/functions.html#property)**  
+   A comprehensive guide on how to use the `@property` decorator in Python.
+
+   **[Python 官方文档中的 `@property`](https://docs.python.org/3/library/functions.html#property)**  
+   关于如何在 Python 中使用 `@property` 装饰器的全面指南。
+
+2. **[Real Python's Guide on `@property`](https://realpython.com/python-property/)**  
+   An in-depth tutorial on how and when to use `@property` in your Python classes.
+
+   **[Real Python 的 `@property` 指南](https://realpython.com/python-property/)**  
+   关于如何以及何时在 Python 类中使用 `@property` 的深入教程。
+
+3. **[Python OOP Tutorial](https://realpython.com/python3-object-oriented-programming/)**  
+   A broader tutorial that covers object-oriented programming in Python, including the use of `@property`.
+
+   **[Python 面向对象编程教程](https://realpython.com/python3-object-oriented-programming/)**  
+   涵盖 Python 中面向对象编程的更广泛教程，包括 `@property` 的使用。
+
+By understanding and effectively using `@property`, you can create Python classes that are both powerful and easy to use.
+
+通过理解和有效使用 `@property`，您可以创建既强大又易于使用的 Python 类。
