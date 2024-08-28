@@ -1,3 +1,4 @@
+'''json
 {
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -32,3 +33,4 @@
   "workbench.iconTheme": "vscode-icons",
   "vscode-edge-devtools.webhintInstallNotification": true
 }
+```
