@@ -1,6 +1,6 @@
 
 # 7天的Bash学习计划
-
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
 - https://github.com/uwspstar/FullStack/tree/master/Bash
 
 ### 第1天：Bash基础
