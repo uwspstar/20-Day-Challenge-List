@@ -1,5 +1,7 @@
 # 20-day machine learning plan 
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 This plan designed to provide a comprehensive introduction and hands-on experience with machine learning concepts and tools.
 
 ### Day 1: Introduction to Machine Learning
