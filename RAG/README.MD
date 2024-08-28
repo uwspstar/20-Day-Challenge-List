@@ -1,4 +1,6 @@
 # 20天学RAG
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 下面是一个为期20天的专治RAG（Retrieval-Augmented Generation）学习计划。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
 
 ### 第1-2天：了解基础概念
