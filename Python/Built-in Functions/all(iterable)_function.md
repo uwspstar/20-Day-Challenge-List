@@ -1,5 +1,7 @@
 ### Explanation of `all(iterable)`
 
+- [Python 71 Built-in Functions](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/Readme.md)
+  
 #### Introduction
 
 - **English:** The `all(iterable)` function in Python returns `True` if all elements in the iterable are true (or if the iterable is empty). It's commonly used to check if all conditions in a sequence are met.
