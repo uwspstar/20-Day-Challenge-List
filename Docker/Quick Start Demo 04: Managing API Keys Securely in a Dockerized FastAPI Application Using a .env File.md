@@ -3,6 +3,8 @@
 [Back to Quick Start Demo](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Quick%20Start%20Demo.md)
 
 To manage your API key outside the Dockerfile using a `.env` file, you'll need to make a few adjustments to your project. Here's how you can do it:
+
+### Project Structure
 ```
 fastapi-docker-demo/
 │
