@@ -4,6 +4,14 @@
 
 To manage your API key outside the Dockerfile using a `.env` file, you'll need to make a few adjustments to your project. Here's how you can do it:
 
+fastapi-docker-demo/
+│
+├── main.py
+├── Dockerfile
+├── requirements.txt
+└── .env
+
+
 ### 1. Create a `.env` File
 
 In your project directory, create a `.env` file. This file will store your API key:
