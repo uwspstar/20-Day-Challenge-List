@@ -124,9 +124,9 @@ This approach is particularly useful in development and staging environments whe
 
 ------
 
-The line `RUN pip install --no-cache-dir -r requirements.txt` in a Dockerfile is responsible for installing all the Python packages listed in the `requirements.txt` file into the Docker container. Let’s break down this command:
-
 ### Explanation of the Command
+
+The line `RUN pip install --no-cache-dir -r requirements.txt` in a Dockerfile is responsible for installing all the Python packages listed in the `requirements.txt` file into the Docker container. Let’s break down this command:
 
 - **`RUN`**: This is a Dockerfile instruction used to execute commands in a new layer on top of the current image and commit the results. It’s commonly used to install software packages within the Docker image.
 
