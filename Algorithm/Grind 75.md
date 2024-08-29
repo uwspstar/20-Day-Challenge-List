@@ -43,7 +43,7 @@ This table is organized by week, problem number, title, difficulty, estimated ti
 | 4    | 2         | Implement Trie (Prefix Tree)                                        | Medium     | 35 mins        | [Link](https://leetcode.com/problems/implement-trie-prefix-tree/)     |
 | 4    | 3         | Coin Change                                                         | Medium     | 25 mins        | [Link](https://leetcode.com/problems/coin-change/)                    |
 | 4    | 4         | Product of Array Except Self                                        | Medium     | 30 mins        | [Link](https://leetcode.com/problems/product-of-array-except-self/)   |
-| 4    | 5         | Min Stack                                                           | Medium     | 20 mins        | [Link](https://leetcode.com/problems/min-stack/)                      |
+| 4    | 当问题涉及在常数时间内维护动态最小值或最大值时，考虑使用额外的栈或元素对         | [155 Min Stack](https://codebitwave.com/leetcode-155-min-stack/)                                                           | Medium     | 20 mins        | [Link](https://leetcode.com/problems/min-stack/)                      |
 | 4    | 6         | Validate Binary Search Tree                                         | Medium     | 20 mins        | [Link](https://leetcode.com/problems/validate-binary-search-tree/)    |
 | 4    | 7         | Number of Islands                                                   | Medium     | 25 mins        | [Link](https://leetcode.com/problems/number-of-islands/)              |
 | 4    | 8         | Rotting Oranges                                                     | Medium     | 30 mins        | [Link](https://leetcode.com/problems/rotting-oranges/)                |
