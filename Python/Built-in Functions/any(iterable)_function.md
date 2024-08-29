@@ -1,5 +1,7 @@
 ### Explanation of `any(iterable)`
 
+- [Python 71 Built-in Functions](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/Readme.md)
+  
 #### Introduction
 
 - **English:** The `any(iterable)` function in Python returns `True` if at least one element in the iterable is true. If the iterable is empty or all elements are false, it returns `False`. This function is useful for checking if any condition in a sequence is met.
