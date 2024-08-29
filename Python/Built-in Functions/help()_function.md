@@ -1,5 +1,7 @@
 ### Explanation of `help()`
 
+- [Python 71 Built-in Functions](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/Readme.md)
+  
 #### Introduction
 
 - **English:** The `help()` function in Python is used to display the documentation of modules, classes, functions, keywords, or other objects. It is an extremely useful tool for understanding how to use different components of Python.
