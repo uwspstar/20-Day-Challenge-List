@@ -1,5 +1,7 @@
 ### Explanation of `__import__(name, globals=None, locals=None, fromlist=(), level=0)`
 
+- [Python 71 Built-in Functions](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Built-in%20Functions/Readme.md)
+  
 #### Introduction
 
 - **English:** The `__import__()` function is a built-in Python function that is used to import a module dynamically. Unlike the usual `import` statement, `__import__()` allows you to import modules based on a string name and provides more control over the import process. It’s considered an advanced function and is not typically used in everyday Python programming.
