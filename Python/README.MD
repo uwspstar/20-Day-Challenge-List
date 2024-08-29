@@ -9,6 +9,9 @@
 - [Python Tutorial for Beginners by Corey Schafer](https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
 - [Python 101](https://codebitwave.com/python-101/)
 - [Python 解释器内置了很多函数和类型，任何时候都能使用](https://docs.python.org/zh-cn/3/library/functions.html)
+- [for javascript developer](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/For%20javascript%20developer.md)
+
+------
 
 以下是一个为期20天的Python学习计划，旨在帮助你快速掌握Python编程基础和一些高级概念。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
 
