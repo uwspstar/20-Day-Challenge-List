@@ -1,7 +1,7 @@
 # Quick Start Demo 01: First FastAPI code
 
 - [Uvicorn](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Uvicorn%20in%20Python.md)
-- [](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/How%20to%20Handle%20Asynchronous%20HTTP%20Requests%20in%20Python%20FastAPI.md)
+- [How to Handle Asynchronous HTTP Requests in Python FastAPI](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/How%20to%20Handle%20Asynchronous%20HTTP%20Requests%20in%20Python%20FastAPI.md)
 
 #### 1. Introduction 简介
 
