@@ -43,7 +43,7 @@
 - **学习目标：**
   - 了解如何处理表单数据和文件上传
 - **学习内容：**
-  - 表单数据处理：使用`Form`类处理HTML表单数据
+  - [表单数据处理：使用`Form`类处理HTML表单数据](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Handling%20Form%20Data%20in%20FastAPI.md)
   - 文件上传：使用`File`类处理文件上传
   - 多文件上传与验证
 - **实践：**
