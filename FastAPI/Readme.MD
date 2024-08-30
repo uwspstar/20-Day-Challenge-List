@@ -81,7 +81,7 @@
 - **学习内容：**
   - [中间件：定义和应用自定义中间件](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Middleware%20in%20FastAPI.md)
   - [异步处理：理解异步任务的执行](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Asynchronous%20Processing%20in%20FastAPI.md)
-  - 后台任务：使用`BackgroundTasks`处理后台任务
+  - [后台任务：使用`BackgroundTasks`处理后台任务](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Background%20Tasks%20in%20FastAPI.md)
 - **实践：**
   - 创建一个自定义中间件来记录请求日志
   - 实现一个后台任务来异步处理长时间操作
