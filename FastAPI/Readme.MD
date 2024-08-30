@@ -4,7 +4,7 @@
 ### [Quick Start Demo](https://github.com/uwspstar/20-Day-Challenge-List/edit/main/FastAPI/Quick%20Start%20Demo.md)
 
 ### More
-- [How to Handle Asynchronous HTTP Requests in Python FastAPI]()
+- [How to Handle Asynchronous HTTP Requests in Python FastAPI](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/How%20to%20Handle%20Asynchronous%20HTTP%20Requests%20in%20Python%20FastAPI.md)
 
 ------
 下面是一个为期7天的FastAPI学习计划，旨在帮助你快速掌握FastAPI的基础和一些高级概念。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
