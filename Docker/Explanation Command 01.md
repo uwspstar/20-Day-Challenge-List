@@ -170,3 +170,134 @@ This example demonstrates how to securely and effectively install a Python packa
     - 将你的包上传到服务器，并按照上述示例配置 `pip` 使用此服务器。
 
 By setting up and using a custom PyPI server, you can better manage your Python packages, ensure security, and have more control over your development environment.
+------
+### 例子: 搭建一个简单的自定义 PyPI 服务器
+
+#### 使用 `pypiserver` 搭建自定义 PyPI 服务器
+
+`pypiserver` 是一个轻量级的 PyPI 服务器实现，它可以帮助你快速搭建一个自定义的 PyPI 服务器，用于托管和分发 Python 包。下面是一个详细的步骤示例，展示如何使用 `pypiserver` 搭建一个简单的自定义 PyPI 服务器。
+
+#### 1. 环境准备
+
+**English:**
+- Ensure you have Python installed on your system.
+- You may want to create a virtual environment to isolate your Python packages.
+
+**Chinese:**
+- 确保系统中已安装 Python。
+- 你可能需要创建一个虚拟环境来隔离你的 Python 包。
+
+```bash
+# 创建并激活虚拟环境 (可选)
+python -m venv myenv
+source myenv/bin/activate  # 在 Windows 上使用 myenv\Scripts\activate
+```
+
+#### 2. 安装 `pypiserver`
+
+**English:** Install the `pypiserver` package using `pip`.
+
+**Chinese:** 使用 `pip` 安装 `pypiserver` 包。
+
+```bash
+pip install pypiserver
+```
+
+#### 3. 创建存储包的目录
+
+**English:** Create a directory where your Python packages will be stored. This directory will be used by `pypiserver` to serve the packages.
+
+**Chinese:** 创建一个目录来存储你的 Python 包。这个目录将被 `pypiserver` 用于提供包服务。
+
+```bash
+mkdir -p /path/to/packages
+```
+
+#### 4. 启动 `pypiserver`
+
+**English:** Start the `pypiserver` on a specified port (e.g., 8080) and point it to the directory where your packages are stored.
+
+**Chinese:** 在指定端口（例如 8080）启动 `pypiserver` 并指向存储包的目录。
+
+```bash
+pypi-server -p 8080 /path/to/packages
+```
+
+**Explanation:**
+- **`-p 8080`**: Specifies the port on which the server will run.
+- **`/path/to/packages`**: The directory where your packages are stored.
+
+**解释:**
+- **`-p 8080`**: 指定服务器运行的端口。
+- **`/path/to/packages`**: 存储包的目录。
+
+#### 5. 上传包到自定义 PyPI 服务器
+
+**English:** To upload packages to your custom PyPI server, you need to first create a Python package. Here’s a simple example to create a package and upload it.
+
+**Chinese:** 要将包上传到自定义 PyPI 服务器，首先需要创建一个 Python 包。以下是创建和上传包的简单示例。
+
+```bash
+# 进入项目目录
+cd /path/to/your/project
+
+# 打包你的 Python 项目
+python setup.py sdist
+
+# 将包复制到 pypiserver 目录
+cp dist/your_package_name.tar.gz /path/to/packages
+```
+
+**Explanation:**
+- **`python setup.py sdist`**: This command creates a source distribution of your Python package.
+- **`cp dist/your_package_name.tar.gz /path/to/packages`**: Copy the generated package to the directory served by `pypiserver`.
+
+**解释:**
+- **`python setup.py sdist`**: 该命令创建你的 Python 包的源代码分发包。
+- **`cp dist/your_package_name.tar.gz /path/to/packages`**: 将生成的包复制到 `pypiserver` 服务的目录。
+
+#### 6. 使用自定义 PyPI 服务器安装包
+
+**English:** You can now install the package from your custom PyPI server using `pip`.
+
+**Chinese:** 现在你可以使用 `pip` 从自定义 PyPI 服务器安装包。
+
+```bash
+pip install --index-url http://localhost:8080/simple/ your_package_name --trusted-host localhost
+```
+
+**Explanation:**
+- **`--index-url`**: Specifies the custom PyPI server URL.
+- **`--trusted-host`**: Tells `pip` to trust the specified host, even if it does not have valid SSL certificates.
+
+**解释:**
+- **`--index-url`**: 指定自定义 PyPI 服务器的 URL。
+- **`--trusted-host`**: 告诉 `pip` 信任指定的主机，即使它没有有效的 SSL 证书。
+
+#### 7. 配置 `pip` 永久使用自定义 PyPI 服务器 (可选)
+
+**English:** To avoid specifying the custom PyPI server each time, you can configure `pip` to always use your custom server by editing the `pip.conf` or `pip.ini` file.
+
+**Chinese:** 为了避免每次都指定自定义 PyPI 服务器，你可以通过编辑 `pip.conf` 或 `pip.ini` 文件来配置 `pip` 始终使用你的自定义服务器。
+
+**Linux/MacOS:**
+```bash
+mkdir ~/.pip
+echo "[global]" >> ~/.pip/pip.conf
+echo "index-url = http://localhost:8080/simple/" >> ~/.pip/pip.conf
+echo "trusted-host = localhost" >> ~/.pip/pip.conf
+```
+
+**Windows:**
+```bash
+mkdir %APPDATA%\pip
+echo [global] >> %APPDATA%\pip\pip.ini
+echo index-url = http://localhost:8080/simple/ >> %APPDATA%\pip\pip.ini
+echo trusted-host = localhost >> %APPDATA%\pip\pip.ini
+```
+
+#### 总结
+
+**English:** By following these steps, you have successfully set up a simple custom PyPI server using `pypiserver`. This server allows you to host, distribute, and manage your Python packages internally, offering more control over your development environment.
+
+**Chinese:** 通过这些步骤，你已经成功地使用 `pypiserver` 搭建了一个简单的自定义 PyPI 服务器。此服务器允许你在内部托管、分发和管理 Python 包，从而为你的开发环境提供更多的控制权。
