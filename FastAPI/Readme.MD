@@ -31,7 +31,7 @@
 - **学习内容：**
   - [Swagger Documentation](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/FastAPI%20Swagger%20Documentation%20with%20Examples.md)
   - [请求处理：路径参数、查询参数、请求体](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Quick%20Start%20Demo%2002%3A%20FastAPI%20Request%20Handling%20Path%20Parameters%2C%20Query%20Parameters%2C%20and%20Request%20Body.md)
-  - Pydantic模型：定义和验证请求体数据
+  - [Pydantic模型：定义和验证请求体数据](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Pydantic%20Models.md)
   - 响应模型与状态码：自定义响应格式和状态码
 - **实践：**
   - 定义复杂的请求体模型，处理多个参数
