@@ -234,12 +234,7 @@ def read_item(item_id: int):
    - 了解不同 HTTP 状态码的含义和使用方法。
    - [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
-3. **YouTube - FastAPI Response Models:**
-   - A video tutorial on how to use response models and status codes in FastAPI.
-   - 一个关于如何在 FastAPI 中使用响应模型和状态码的视频教程。
-   - [FastAPI Response Models](https://www.youtube.com/watch?v=a5N-_fLymD4)
-
-4. **RealPython - FastAPI Guide:**
+3. **RealPython - FastAPI Guide:**
    - A guide on building APIs with FastAPI, including response handling.
    - 一份关于使用 FastAPI 构建 API 的指南，包括响应处理。
    - [RealPython FastAPI Guide](https://realpython.com/fastapi-python-web-apis/)
