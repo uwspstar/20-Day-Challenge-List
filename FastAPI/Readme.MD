@@ -55,7 +55,7 @@
   - 掌握FastAPI的依赖注入机制
   - 了解请求验证与安全性
 - **学习内容：**
-  - 依赖注入：定义和使用依赖项
+  - [依赖注入：定义和使用依赖项](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Dependency%20Injection%20in%20FastAPI.md)
   - 请求验证：使用依赖注入进行验证
   - 安全性：OAuth2、JWT认证基础
 - **实践：**
