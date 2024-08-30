@@ -25,9 +25,11 @@
 
 ### 第2天：请求与响应处理
 - **学习目标：**
+  - 了解 Swagger Documentation
   - 掌握请求体、查询参数、路径参数的处理
   - 了解响应模型与响应状态码
 - **学习内容：**
+  - [Swagger Documentation](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/FastAPI%20Swagger%20Documentation%20with%20Examples.md)
   - [请求处理：路径参数、查询参数、请求体](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Quick%20Start%20Demo%2002%3A%20FastAPI%20Request%20Handling%20Path%20Parameters%2C%20Query%20Parameters%2C%20and%20Request%20Body.md)
   - Pydantic模型：定义和验证请求体数据
   - 响应模型与状态码：自定义响应格式和状态码
