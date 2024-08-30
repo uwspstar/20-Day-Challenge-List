@@ -57,7 +57,7 @@
 - **学习内容：**
   - [依赖注入：定义和使用依赖项](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Dependency%20Injection%20in%20FastAPI.md)
   - [请求验证：使用依赖注入进行验证](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Request%20Validation%20in%20FastAPI.md)
-  - 安全性：OAuth2、JWT认证基础
+  - [安全性：OAuth2、JWT认证基础](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Security%20in%20FastAPI.md)
 - **实践：**
   - 创建一个依赖项并在多个端点中使用
   - 实现简单的认证机制
