@@ -95,7 +95,7 @@
   - 部署方法：使用Docker部署FastAPI应用
   - 性能优化与扩展
 - **实践：**
-  - 开发并部署一个完整的FastAPI项目
+  - [开发并部署一个完整的FastAPI项目](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Quick%20Start%20Demo.md)
   - [使用Docker容器化应用](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/README.md)
   - [署到云端]()
 
