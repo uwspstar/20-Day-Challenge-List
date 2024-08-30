@@ -77,3 +77,96 @@ RUN pip install --extra-index-url http://$PIPSERVERUSER:$PIPSERVERPWD@$PIPSERVER
 ```
 
 This example demonstrates how to securely and effectively install a Python package from a custom PyPI server within a Docker environment.
+
+------
+
+### 自定义 PyPI 服务器 (Custom PyPI Server)
+
+#### 什么是自定义 PyPI 服务器？
+
+- **English:** A custom PyPI server is a privately hosted Python Package Index (PyPI) server that allows you to host and distribute Python packages internally within an organization or among specific users. It provides the same functionality as the official PyPI but is tailored to your specific needs, such as distributing proprietary packages or managing package versions that are not available on the public PyPI.
+- **Chinese:** 自定义 PyPI 服务器是一个私有托管的 Python 包索引 (PyPI) 服务器，允许你在组织内部或特定用户之间托管和分发 Python 包。它提供与官方 PyPI 相同的功能，但根据你的特定需求进行定制，例如分发专有包或管理公共 PyPI 上不可用的包版本。
+
+#### 为什么使用自定义 PyPI 服务器？
+
+- **English:**
+  - **Private Package Distribution:** To distribute internal or proprietary Python packages securely within your organization.
+  - **Version Control:** To have more control over the versions of packages used in your projects, ensuring that specific versions are used across the organization.
+  - **Security and Compliance:** To meet security or compliance requirements by keeping package distribution within a private network, reducing the risk of relying on external repositories.
+  - **Availability:** To ensure package availability even if the public PyPI is down or inaccessible due to network issues.
+
+- **Chinese:**
+  - **私有包分发:** 安全地在组织内部分发内部或专有的 Python 包。
+  - **版本控制:** 更好地控制项目中使用的包版本，确保整个组织使用特定版本。
+  - **安全性与合规性:** 满足安全性或合规性要求，通过将包分发保持在私有网络内，降低依赖外部仓库的风险。
+  - **可用性:** 确保即使公共 PyPI 不可用或由于网络问题无法访问时，包仍然可用。
+
+#### 如何搭建自定义 PyPI 服务器？
+
+- **English:**
+  - **Use a PyPI Hosting Tool:** You can use tools like `pypiserver`, `devpi`, or `bandersnatch` to set up your own PyPI server. These tools allow you to host Python packages and manage your own package repository.
+  - **Docker-Based Setup:** Many PyPI server tools can be deployed using Docker, making it easier to set up and manage the server in different environments.
+  - **Security Considerations:** Implement access controls, such as user authentication and HTTPS, to secure your PyPI server.
+
+- **Chinese:**
+  - **使用 PyPI 托管工具:** 你可以使用 `pypiserver`、`devpi` 或 `bandersnatch` 等工具来搭建自己的 PyPI 服务器。这些工具允许你托管 Python 包并管理自己的包仓库。
+  - **基于 Docker 的设置:** 许多 PyPI 服务器工具可以使用 Docker 部署，使得在不同环境中设置和管理服务器变得更加容易。
+  - **安全考虑:** 实施访问控制，如用户身份验证和 HTTPS，以确保你的 PyPI 服务器的安全。
+
+#### 如何使用自定义 PyPI 服务器？
+
+- **English:** 
+  - **Configuring `pip`:** You can configure `pip` to use your custom PyPI server by specifying the `--extra-index-url` or `--index-url` options when installing packages.
+  - **Environment Variables:** Store sensitive information such as server URLs, usernames, and passwords in environment variables to avoid exposing them in your code or Dockerfiles.
+  - **Examples:**
+    ```bash
+    pip install --extra-index-url http://<username>:<password>@<server-ip>:<port>/simple/ <package-name> --trusted-host <server-ip>
+    ```
+
+- **Chinese:**
+  - **配置 `pip`:** 你可以通过在安装包时指定 `--extra-index-url` 或 `--index-url` 选项来配置 `pip` 使用自定义 PyPI 服务器。
+  - **环境变量:** 将服务器 URL、用户名和密码等敏感信息存储在环境变量中，以避免在代码或 Dockerfile 中暴露这些信息。
+  - **示例:**
+    ```bash
+    pip install --extra-index-url http://<用户名>:<密码>@<服务器 IP>:<端口>/simple/ <包名> --trusted-host <服务器 IP>
+    ```
+
+#### 安全性注意事项
+
+- **English:**
+  - **Use HTTPS:** Always use HTTPS for communication with your custom PyPI server to ensure that data is encrypted in transit.
+  - **Authentication:** Implement strong authentication mechanisms to protect access to your PyPI server, especially when distributing proprietary or sensitive packages.
+  - **Access Control:** Limit access to the PyPI server to trusted users and systems within your organization.
+
+- **Chinese:**
+  - **使用 HTTPS:** 始终使用 HTTPS 与自定义 PyPI 服务器进行通信，以确保数据在传输过程中被加密。
+  - **身份验证:** 实施强身份验证机制，以保护对 PyPI 服务器的访问，特别是在分发专有或敏感包时。
+  - **访问控制:** 将 PyPI 服务器的访问限制在组织内部的受信任用户和系统。
+
+#### 例子: 搭建一个简单的自定义 PyPI 服务器
+
+- **English:**
+  - **Using `pypiserver`:**
+    - Install `pypiserver`:
+      ```bash
+      pip install pypiserver
+      ```
+    - Start the server:
+      ```bash
+      pypi-server -p 8080 /path/to/packages
+      ```
+    - Upload your package to the server and configure `pip` to use this server as shown in the examples above.
+
+- **Chinese:**
+  - **使用 `pypiserver`:**
+    - 安装 `pypiserver`:
+      ```bash
+      pip install pypiserver
+      ```
+    - 启动服务器:
+      ```bash
+      pypi-server -p 8080 /path/to/packages
+      ```
+    - 将你的包上传到服务器，并按照上述示例配置 `pip` 使用此服务器。
+
+By setting up and using a custom PyPI server, you can better manage your Python packages, ensure security, and have more control over your development environment.
