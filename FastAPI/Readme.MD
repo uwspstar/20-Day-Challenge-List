@@ -96,7 +96,8 @@
   - 性能优化与扩展
 - **实践：**
   - 开发并部署一个完整的FastAPI项目
-  - 使用Docker容器化应用，并部署到云端
+  - [使用Docker容器化应用](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/README.md)
+  - [署到云端]()
 
 ### 每日安排
 - 每天4小时，分为学习（2小时）和实践（2小时）
