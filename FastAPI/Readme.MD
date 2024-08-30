@@ -1,7 +1,9 @@
 # 7天的FastAPI学习计划
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
+### [Quick Start Demo Index](https://github.com/uwspstar/20-Day-Challenge-List/edit/main/FastAPI/Quick%20Start%20Demo.md)
 
+------
 下面是一个为期7天的FastAPI学习计划，旨在帮助你快速掌握FastAPI的基础和一些高级概念。这个计划假设你每天可以投入大约4小时的时间进行学习和实践。
 
 ### 第1天：FastAPI基础
