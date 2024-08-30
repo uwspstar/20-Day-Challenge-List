@@ -216,12 +216,7 @@ def login(username: str = Form(...), password: str = Form(...)):
    - 了解更多关于 GET、POST、PUT、DELETE 等 HTTP 方法及其相关状态码的信息。
    - [HTTP Methods Documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 
-3. **YouTube - FastAPI Basics:**
-   - A video tutorial that covers the basics of routing and request handling in FastAPI.
-   - 一个涵盖 FastAPI 中路由和请求处理基础的视频教程。
-   - [FastAPI Basics](https://www.youtube.com/watch?v=DNJSI__oNO4)
-
-4. **RealPython - FastAPI Guide:**
+3. **RealPython - FastAPI Guide:**
    - A guide on building APIs with FastAPI, including routing and request handling.
    - 一份关于使用 FastAPI 构建 API 的指南，包括路由和请求处理。
    - [RealPython FastAPI Guide](https://realpython.com/fastapi-python-web-apis/)
