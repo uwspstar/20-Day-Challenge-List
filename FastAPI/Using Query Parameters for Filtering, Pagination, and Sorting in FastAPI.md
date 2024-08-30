@@ -176,12 +176,7 @@ def read_items(category: str = None, skip: int = 0, limit: int = 10, sort_by: st
    - 查看关于使用查询参数进行过滤、分页和排序的详细信息。
    - [FastAPI Documentation](https://fastapi.tiangolo.com/tutorial/query-params/)
 
-2. **YouTube - FastAPI Query Parameters:**
-   - A video tutorial on how to effectively use query parameters in FastAPI.
-   - 一个关于如何在 FastAPI 中有效使用查询参数的视频教程。
-   - [FastAPI Query Parameters](https://www.youtube.com/watch?v=DNJSI__oNO4)
-
-3. **RealPython - FastAPI Guide:**
+2. **RealPython - FastAPI Guide:**
    - A guide on building APIs with FastAPI, including advanced usage of query parameters.
    - 一份关于使用 FastAPI 构建 API 的指南，包括查询参数的高级用法。
    - [RealPython FastAPI Guide](https://realpython.com/fastapi-python-web-apis/)
