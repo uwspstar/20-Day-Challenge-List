@@ -79,7 +79,7 @@
   - 了解中间件的概念与使用
   - 学习如何处理异步任务与后台任务
 - **学习内容：**
-  - 中间件：定义和应用自定义中间件
+  - [中间件：定义和应用自定义中间件](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Middleware%20in%20FastAPI.md)
   - 异步处理：理解异步任务的执行
   - 后台任务：使用`BackgroundTasks`处理后台任务
 - **实践：**
