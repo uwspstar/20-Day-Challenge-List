@@ -173,12 +173,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
    - 了解 ASGI 规范。
    - [ASGI Documentation](https://asgi.readthedocs.io/en/latest/)
 
-4. **YouTube - Deploying FastAPI with Uvicorn:**
-   - A tutorial on deploying FastAPI applications with Uvicorn.
-   - 一个关于使用 Uvicorn 部署 FastAPI 应用程序的教程。
-   - [Deploying FastAPI with Uvicorn](https://www.youtube.com/watch?v=2UN0k-OvZ5A)
-
-5. **RealPython - Web APIs with FastAPI and Uvicorn:**
+4. **RealPython - Web APIs with FastAPI and Uvicorn:**
    - A tutorial on building and deploying web APIs with FastAPI and Uvicorn.
    - 一个关于使用 FastAPI 和 Uvicorn 构建和部署 Web API 的教程。
    - [RealPython Tutorial](https://realpython.com/fastapi-python-web-apis/)
