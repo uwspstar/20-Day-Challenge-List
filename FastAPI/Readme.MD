@@ -1,7 +1,9 @@
 # 7天的FastAPI学习计划
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
-### [Quick Start Demo](https://github.com/uwspstar/20-Day-Challenge-List/edit/main/FastAPI/Quick%20Start%20Demo.md)
+### Quick Start
+- [Quick Start Demo](https://github.com/uwspstar/20-Day-Challenge-List/edit/main/FastAPI/Quick%20Start%20Demo.md)
+- [https://realpython.com/fastapi-python-web-apis/](https://realpython.com/fastapi-python-web-apis/)
 
 ### More
 - [How to Handle Asynchronous HTTP Requests in Python FastAPI](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/How%20to%20Handle%20Asynchronous%20HTTP%20Requests%20in%20Python%20FastAPI.md)
