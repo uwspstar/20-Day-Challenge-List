@@ -20,7 +20,7 @@
   - FastAPI简介：什么是FastAPI，FastAPI的优势
   - 安装与配置：Python环境、FastAPI、[Uvicorn](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Uvicorn%20in%20Python.md), [Event Loop](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Event%20Loop.md)
   - 创建[第一个FastAPI应用](https://github.com/uwspstar/20-Day-Challenge-List/edit/main/FastAPI/Quick%20Start%20Demo%2001%3A%20First%20FastAPI%20code.md)
-  - 基本路由与请求处理
+  - [基本路由与请求处理](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Basic%20Routing%20and%20Request%20Handling.md)
 - **实践：**
   - 安装FastAPI和Uvicorn
   - 创建并运行第一个FastAPI应用，定义简单的GET和POST请求
