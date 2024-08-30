@@ -170,7 +170,9 @@ This example demonstrates how to securely and effectively install a Python packa
     - 将你的包上传到服务器，并按照上述示例配置 `pip` 使用此服务器。
 
 By setting up and using a custom PyPI server, you can better manage your Python packages, ensure security, and have more control over your development environment.
+
 ------
+
 ### 例子: 搭建一个简单的自定义 PyPI 服务器
 
 #### 使用 `pypiserver` 搭建自定义 PyPI 服务器
