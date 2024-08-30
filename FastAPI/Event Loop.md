@@ -172,12 +172,7 @@ The event loop is a core concept in asynchronous programming, especially when wo
    - 一份关于理解事件循环及其在异步编程中重要性的教程。
    - [RealPython Event Loops](https://realpython.com/async-io-python/)
 
-4. **YouTube - Introduction to uvloop:**
-   - A video guide on how to use `uvloop` in Python for better performance.
-   - 一个关于如何在 Python 中使用 `uvloop` 提高性能的视频指南。
-   - [Introduction to uvloop](https://www.youtube.com/watch?v=2BpU9ZXQI2U)
-
-5. **High Performance Python by O'Reilly:**
+4. **High Performance Python by O'Reilly:**
    - A book that covers various techniques for optimizing Python code, including the use of `uvloop`.
    - 一本涵盖优化 Python 代码的各种技术的书籍，包括使用 `uvloop`。
    - [High Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781492055020/)
