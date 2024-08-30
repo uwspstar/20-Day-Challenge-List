@@ -1,5 +1,8 @@
 # Quick Start Demo 01: First FastAPI code
 
+- [Uvicorn](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Uvicorn%20in%20Python.md)
+- 
+
 #### 1. Introduction 简介
 
 ```python
