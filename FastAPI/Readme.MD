@@ -15,7 +15,7 @@
   - 搭建FastAPI的开发环境
 - **学习内容：**
   - FastAPI简介：什么是FastAPI，FastAPI的优势
-  - 安装与配置：Python环境、FastAPI、Uvicorn
+  - 安装与配置：Python环境、FastAPI、[Uvicorn](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Uvicorn%20in%20Python.md)
   - 创建[第一个FastAPI应用](https://github.com/uwspstar/20-Day-Challenge-List/edit/main/FastAPI/Quick%20Start%20Demo%2001%3A%20First%20FastAPI%20code.md)
   - 基本路由与请求处理
 - **实践：**
