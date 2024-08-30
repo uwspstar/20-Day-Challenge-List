@@ -1,4 +1,4 @@
-### Using Query Parameters for Filtering, Pagination, and Sorting in FastAPI
+# Using Query Parameters for Filtering, Pagination, and Sorting in FastAPI
 
 [Back to 7天的FastAPI学习计划](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Readme.MD)
 
