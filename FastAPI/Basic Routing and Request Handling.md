@@ -2,6 +2,9 @@
 
 [Back to 7天的FastAPI学习计划](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Readme.MD)
 
+
+[Using Query Parameters for Filtering, Pagination, and Sorting in FastAPI](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/Using%20Query%20Parameters%20for%20Filtering%2C%20Pagination%2C%20and%20Sorting%20in%20FastAPI.md)
+
 #### 1. Introduction 简介
 
 **English:**
