@@ -161,7 +161,7 @@ logging.basicConfig(filename='/logs/app.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 def get_joke():
-    response = requests.get("http://localhost:8000/joke")
+    response = requests.get("http://localhost:8000/joke") # localhost is this docker container
     if response.status_code != 200:
         raise Exception("Failed to fetch joke from FastAPI service")
     joke = response.json()
