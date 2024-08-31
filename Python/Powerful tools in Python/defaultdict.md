@@ -1,5 +1,7 @@
 ### Introduction to `defaultdict` in Python
 
+[Back to Powerful tools in Python](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Python/Powerful%20tools%20in%20Python)
+
 #### What is `defaultdict`?
 
 - **English:** `defaultdict` is a subclass of Python's built-in `dict` (dictionary) class. It overrides one method and adds one writable instance variable. Essentially, it simplifies working with dictionaries that require default values, especially when working with collections of data.
