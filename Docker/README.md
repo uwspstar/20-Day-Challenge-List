@@ -12,6 +12,7 @@
 - [Understanding the `localhost` Issue in Docker Containers](https://codebitwave.com/docker-101-understanding-the-localhost-issue-in-docker-containers/)
 - [How to Monitor and Auto-Restart Docker Containers](https://codebitwave.com/docker-101-how-to-monitor-and-auto-restart-docker-containers/)
 - [Detailed Explanation of the --restart Option in Docker](https://codebitwave.com/docker-101-restart-option-in-docker/)
+- [When to Use Docker Networking](https://codebitwave.com/docker-101-when-to-use-docker-networking/)
   
 -----
 
