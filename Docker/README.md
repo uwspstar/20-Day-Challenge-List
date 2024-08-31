@@ -9,6 +9,7 @@
 - [Warning: Avoid Spaces in File or Folder Names in Paths When Using Docker Commands](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Avoid%20Spaces%20in%20File%20or%20Folder%20Names%20in%20Paths%20When%20Using%20Docker%20Commands.md)
 
 ### More
+- [Health Checks](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Docker/Health%20Checks.md)
 - [Understanding the `localhost` Issue in Docker Containers](https://codebitwave.com/docker-101-understanding-the-localhost-issue-in-docker-containers/)
 - [How to Monitor and Auto-Restart Docker Containers](https://codebitwave.com/docker-101-how-to-monitor-and-auto-restart-docker-containers/)
 - [Detailed Explanation of the --restart Option in Docker](https://codebitwave.com/docker-101-restart-option-in-docker/)
