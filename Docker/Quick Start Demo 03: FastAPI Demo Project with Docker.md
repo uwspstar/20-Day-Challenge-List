@@ -48,6 +48,8 @@ async def get_joke():
     else:
         return {"error": "Failed to fetch joke"}
 ```
+**requirements.txt**
+```
 fastapi
 uvicorn
 httpx
