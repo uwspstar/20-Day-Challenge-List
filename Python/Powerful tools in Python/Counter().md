@@ -1,5 +1,7 @@
 ### Introduction to `Counter` in Python
 
+[Back to Powerful tools in Python](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Python/Powerful%20tools%20in%20Python)
+
 #### What is `Counter`?
 
 - **English:** `Counter` is a subclass of Python's `dict` that is specifically designed to count the occurrences of elements in a collection, such as a list, tuple, or string. It is part of the `collections` module and provides useful methods for counting, tallying, and manipulating the counts of elements.
