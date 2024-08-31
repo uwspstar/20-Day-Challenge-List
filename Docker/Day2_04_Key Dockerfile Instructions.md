@@ -132,3 +132,38 @@ CMD ["node", "server.js"]
    - **中文答案**: 当你只需要将文件或目录从主机复制到容器时，`COPY` 是更好的选择，因为它更简单且更可预测。只有在你需要 `ADD` 的附加功能时（如解压归档文件或从 URL 下载文件），才应该使用它。
 
 This detailed breakdown of Dockerfile instructions provides a solid foundation for understanding how to build Docker images efficiently, along with practical tips, comparisons, and interview questions to deepen your knowledge.
+
+------
+
+### Dockerfile Instructions Comparison Table
+
+Below is a comparison table that provides an overview of key Dockerfile instructions, their descriptions, code examples, and corresponding explanations in Chinese.
+
+| **Instruction / 指令** | **Description / 描述**                                           | **Code Example / 代码示例**                                                                                  | **Chinese Code Explanation / 中文代码解释**                                                                                   |
+|-------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| **ADD**                 | Add local or remote files and directories.                      | `ADD https://example.com/file.tar.gz /app`                                                                    | 将远程文件 `file.tar.gz` 下载并解压到容器内的 `/app` 目录。                                                                        |
+| **ARG**                 | Use build-time variables.                                       | `ARG VERSION=latest`                                                                                         | 定义一个名为 `VERSION` 的构建时变量，默认值为 `latest`。                                                                            |
+| **CMD**                 | Specify default commands.                                       | `CMD ["python", "app.py"]`                                                                                   | 设置默认命令为运行 `app.py`，如果在 `docker run` 中未指定其他命令，将执行此命令。                                                       |
+| **COPY**                | Copy files and directories.                                     | `COPY . /app`                                                                                                | 将当前目录的所有文件复制到容器内的 `/app` 目录中。                                                                                    |
+| **ENTRYPOINT**          | Specify default executable.                                     | `ENTRYPOINT ["gunicorn", "app:app"]`                                                                         | 设置容器启动时运行 `gunicorn` 作为默认可执行文件，并运行 `app:app` 应用程序。                                                         |
+| **ENV**                 | Set environment variables.                                      | `ENV APP_ENV=production`                                                                                     | 设置环境变量 `APP_ENV` 为 `production`，在应用程序中可以使用此环境变量来控制配置。                                                      |
+| **EXPOSE**              | Describe which ports your application is listening on.          | `EXPOSE 8000`                                                                                                | 指定容器将监听 8000 端口，这个端口将在容器外部暴露。                                                                                  |
+| **FROM**                | Create a new build stage from a base image.                     | `FROM python:3.9-slim`                                                                                       | 使用 `python:3.9-slim` 作为基础镜像创建新的构建阶段。                                                                                |
+| **HEALTHCHECK**         | Check a container's health on startup.                          | `HEALTHCHECK CMD curl --fail http://localhost:8000 || exit 1`                                                | 在容器启动时，使用 `curl` 检查应用程序是否可以在 8000 端口正常响应，如果失败则返回状态码 1。                                           |
+| **LABEL**               | Add metadata to an image.                                       | `LABEL maintainer="dev@example.com"`                                                                         | 为镜像添加元数据，指定维护者的联系信息为 `dev@example.com`。                                                                           |
+| **MAINTAINER**          | Specify the author of an image.                                 | `MAINTAINER John Doe <john@example.com>`                                                                     | 指定镜像的作者信息为 `John Doe <john@example.com>`。                                                                                 |
+| **ONBUILD**             | Specify instructions for when the image is used in a build.     | `ONBUILD RUN apt-get update && apt-get install -y build-essential`                                           | 指定当镜像被用作基础镜像时，自动运行 `apt-get update` 和 `apt-get install` 安装基本构建工具。                                              |
+| **RUN**                 | Execute build commands.                                         | `RUN apt-get update && apt-get install -y python3-pip`                                                       | 运行命令更新软件包列表并安装 `python3-pip`。                                                                                           |
+| **SHELL**               | Set the default shell of an image.                              | `SHELL ["/bin/bash", "-c"]`                                                                                  | 设置镜像默认的 shell 为 Bash，并使用 `-c` 选项来执行命令。                                                                               |
+| **STOPSIGNAL**          | Specify the system call signal for exiting a container.         | `STOPSIGNAL SIGTERM`                                                                                         | 指定容器停止时使用的系统调用信号为 `SIGTERM`，这通常用于优雅地停止应用程序。                                                                |
+| **USER**                | Set user and group ID.                                          | `USER appuser`                                                                                               | 设置容器内运行应用程序的用户为 `appuser`。                                                                                              |
+| **VOLUME**              | Create volume mounts.                                           | `VOLUME /app/data`                                                                                           | 在 `/app/data` 目录创建一个卷挂载点，用于持久化存储。                                                                                     |
+| **WORKDIR**             | Change working directory.                                       | `WORKDIR /app`                                                                                               | 设置工作目录为 `/app`，后续的指令将在该目录下执行。                                                                                      |
+
+---
+
+### Explanation of the Comparison Table / 对比表的解释
+
+This table provides a comprehensive overview of the Dockerfile instructions, including examples of how they are used in a Dockerfile and corresponding explanations in Chinese. This can help developers understand both the practical usage of each instruction and its purpose in Dockerfile configuration.
+
+此对比表提供了 Dockerfile 指令的全面概述，包括如何在 Dockerfile 中使用它们的示例以及对应的中文解释。这可以帮助开发人员理解每个指令的实际用法及其在 Dockerfile 配置中的作用。
