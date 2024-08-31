@@ -13,6 +13,7 @@
 - [How to Monitor and Auto-Restart Docker Containers](https://codebitwave.com/docker-101-how-to-monitor-and-auto-restart-docker-containers/)
 - [Detailed Explanation of the --restart Option in Docker](https://codebitwave.com/docker-101-restart-option-in-docker/)
 - [When to Use Docker Networking](https://codebitwave.com/docker-101-when-to-use-docker-networking/)
+- [Microservices Architecture with Docker Networking](https://codebitwave.com/docker-101-microservices-architecture-with-docker-networking/)
   
 -----
 
