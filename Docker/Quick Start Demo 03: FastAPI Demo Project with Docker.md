@@ -280,3 +280,102 @@ cat logs/app.log
 - **Chinese**: 这些步骤确保两个容器都在同一个网络上，使它们能够解析对方的主机名并有效通信。现在可以从 `python-joke-app-quickstart` 容器使用 `http://fastapi-container:8000` 访问 FastAPI 服务。
 
 This approach resolves the issue caused by the incorrect use of `localhost` in a Docker container context, enabling proper inter-container communication.
+
+------
+
+### Running Multiple Services in Docker Containers: Understanding the Pitfalls of `localhost`
+
+#### Introduction
+When running multiple services within Docker containers, they often need to communicate with each other over the network. However, a common pitfall when referencing services using `localhost` is that it can lead to connectivity issues between containers.
+
+当在 Docker 容器中运行多个服务时，它们通常需要通过网络相互通信。然而，当使用 `localhost` 引用服务时，一个常见的陷阱是这可能导致容器之间的连接问题。
+
+#### 5Ws (Who, What, When, Where, Why)
+
+- **Who:** Anyone running multiple services within Docker containers.
+  **谁:** 在 Docker 容器中运行多个服务的任何人。
+
+- **What:** The issue of containers failing to communicate when using `localhost`.
+  **什么:** 使用 `localhost` 时，容器之间通信失败的问题。
+
+- **When:** This problem arises when you attempt to have containers talk to each other using `localhost`.
+  **何时:** 当你尝试让容器使用 `localhost` 互相通信时会出现这个问题。
+
+- **Where:** This issue occurs within the Docker network, particularly when using bridge networking.
+  **哪里:** 这个问题发生在 Docker 网络中，特别是在使用桥接网络时。
+
+- **Why:** Each Docker container has its own network namespace, meaning `localhost` refers to the container itself, not other containers.
+  **为什么:** 每个 Docker 容器都有自己的网络命名空间，这意味着 `localhost` 指的是容器自身，而不是其他容器。
+
+#### Detailed Explanation
+
+When you run services in separate Docker containers, each container operates in its own isolated environment. This includes its own network namespace. As a result, `localhost` inside a container refers to the loopback interface of that container. If you try to use `localhost` to communicate with another container, the connection will fail because the `localhost` in one container does not point to the other container.
+
+当你在不同的 Docker 容器中运行服务时，每个容器都在其自己的隔离环境中运行。这包括它自己的网络命名空间。因此，容器内部的 `localhost` 指的是该容器的回环接口。如果你尝试使用 `localhost` 与另一个容器通信，连接将会失败，因为一个容器中的 `localhost` 不会指向另一个容器。
+
+Instead, Docker provides an internal DNS that allows you to reference other containers by their names or network aliases. This method ensures that containers can properly communicate with each other over the Docker network.
+
+相反，Docker 提供了一个内部 DNS，允许你通过容器的名称或网络别名来引用其他容器。这种方法确保容器可以通过 Docker 网络正确地相互通信。
+
+#### Python Code Example
+
+Here’s a simple example of two services, one running a Python Flask app and another running a Redis server. Instead of using `localhost`, the Flask app will reference the Redis container by its service name.
+
+以下是两个服务的简单示例，一个运行 Python Flask 应用程序，另一个运行 Redis 服务器。Flask 应用程序将通过服务名称引用 Redis 容器，而不是使用 `localhost`。
+
+```python
+from flask import Flask
+import redis
+
+app = Flask(__name__)
+
+# Connect to Redis service by name
+r = redis.Redis(host='redis_service', port=6379, db=0)
+
+@app.route('/')
+def index():
+    r.incr('hits')
+    return f'This page has been viewed {r.get("hits").decode()} times.'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
+```
+
+In this example, `redis_service` should be the name of the Redis container or the network alias you've assigned to it.
+
+在此示例中，`redis_service` 应该是 Redis 容器的名称或你分配给它的网络别名。
+
+#### Tips
+- **Tip:** Use Docker Compose to easily manage and network multiple services. Each service can be referenced by its name defined in the `docker-compose.yml` file.
+  
+  **提示:** 使用 Docker Compose 来轻松管理和网络多个服务。每个服务都可以通过 `docker-compose.yml` 文件中定义的名称进行引用。
+
+#### Warnings
+- **Warning:** Avoid hardcoding `localhost` when trying to connect services within Docker containers. Always use container names or network aliases.
+  
+  **警告:** 在尝试连接 Docker 容器中的服务时，避免硬编码 `localhost`。始终使用容器名称或网络别名。
+
+#### Comparison Table
+
+| Method          | Description                                                     | Pros                                                | Cons                                |
+|-----------------|-----------------------------------------------------------------|-----------------------------------------------------|-------------------------------------|
+| `localhost`     | Refers to the container's own loopback interface                | Simple for single-container applications            | Does not work for inter-container communication |
+| Container Name  | Use the container's name to reference it                        | Easy to set up, works across multiple containers     | Requires consistent naming          |
+| Network Alias   | Assign an alias to the container and use it for communication   | Flexible, allows for renaming without changing code  | Additional configuration needed     |
+
+#### Conclusion
+In Docker, when running multiple services, it's crucial to avoid using `localhost` for inter-container communication. Instead, rely on Docker's internal DNS system to reference containers by name or alias. This ensures smooth and reliable communication between services.
+
+在 Docker 中运行多个服务时，避免使用 `localhost` 进行容器间通信至关重要。相反，依赖 Docker 的内部 DNS 系统通过名称或别名引用容器。这可以确保服务之间的通信顺畅且可靠。
+
+#### Recommended Resources
+
+1. **Docker Documentation:** Official Docker docs on networking [Docker Documentation](https://docs.docker.com/network/).
+2. **Docker Networking Best Practices:** Detailed guide on best practices for Docker networking.
+3. **Flask and Redis with Docker Compose:** Example tutorial on setting up Flask and Redis with Docker Compose.
+
+**推荐资源**
+
+1. **Docker 文档:** 官方 Docker 网络文档 [Docker 文档](https://docs.docker.com/network/).
+2. **Docker 网络最佳实践:** Docker 网络最佳实践的详细指南。
+3. **使用 Docker Compose 的 Flask 和 Redis:** 设置 Flask 和 Redis 的 Docker Compose 示例教程。
