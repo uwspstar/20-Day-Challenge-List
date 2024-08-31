@@ -211,7 +211,7 @@ docker run -d --restart on-failure:5 -v $(pwd)/logs:/logs python-joke-app-quicks
 cat logs/app.log
 ```
 
-**Expected Log Output**:
+**Expected Log Output**: (NO logs See Understanding the `localhost` Issue in Docker Containers)
 ```
 2024-08-28 10:00:00,000 - INFO - Starting the application
 2024-08-28 10:00:00,500 - INFO - Fetched joke: Why don't programmers like nature? It has too many bugs.
