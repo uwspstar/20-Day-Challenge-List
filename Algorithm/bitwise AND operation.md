@@ -1,6 +1,6 @@
 ## bitwise AND operation Concept Explanation
 
-[20天学 Algorithm](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/README.md)
+[Back to 20天学 Algorithm](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/README.md)
 
 - [Algorithms 101: Using Bitwise AND to Check the Least Significant Bit](https://codebitwave.com/algorithms-101-using-bitwise-and-to-check-the-least-significant-bit/)
 
