@@ -1,6 +1,6 @@
 ### Binary Operations and Bitwise Manipulation in Programming
 
-[BACK to 20天学 Algorithm](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/README.md)
+[Back to 20天学 Algorithm](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/README.md)
 
 ## MORE
 
