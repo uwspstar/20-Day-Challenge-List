@@ -1,5 +1,7 @@
 # 位操作 XOR: 高效找到缺失的数字
 
+[Back to 20天学 Algorithm](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/README.md)
+
 在许多算法问题中，我们需要找到一个缺失的数字，而最简单的方法通常涉及排序或使用额外的空间存储。但是，有一种更高效的方法可以通过位操作（XOR）来实现。这种方法利用了 XOR 的特性，即相同的数字异或后会被抵消，从而可以在 O(n) 时间复杂度和 O(1) 空间复杂度下找到缺失的数字。
 
 ## 什么是 XOR?
