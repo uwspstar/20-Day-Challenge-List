@@ -373,7 +373,7 @@ Decorators allow you to inject or modify code before and after a function runs, 
 </details>
 
 <details>
-  <summary>9.</summary>
+  <summary>9. [What are Python Decorators and How Do They Work?]()</summary>
 </details>
 
 <details>
