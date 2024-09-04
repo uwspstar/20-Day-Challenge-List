@@ -374,7 +374,7 @@ Decorators allow you to inject or modify code before and after a function runs, 
 
 <details>
   <summary>9. What are Python Decorators and How Do They Work?</summary>
-  **[What are Python Decorators and How Do They Work?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/Python%20Interview%20Questions/What%20are%20Python%20Decorators%20and%20How%20Do%20They%20Work.md)**
+  **[What are Python Decorators and How Do They Work?](https://github.com/uwspstar/20-Day-ChallengeList/blob/main/Python/Python%20Interview%20Questions/What%20are%20Python%20Decorators%20and%20How%20Do%20They%20Work.md)**
 </details>
 
 <details>
