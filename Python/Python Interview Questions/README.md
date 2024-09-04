@@ -1,4 +1,4 @@
-# Python Interview Questions 1 - 10
+# Python Interview Questions
 
 <details>
   <summary>1. What is __init__?</summary>
