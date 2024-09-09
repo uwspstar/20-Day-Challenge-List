@@ -2,7 +2,7 @@
 
 | #   | Note    | Title                                                        | Difficulty | Solution                                                   |
 |-----|---------|---------------------------------------------------------------|------------|------------------------------------------------------------|
-| 1   |         | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products) | Easy       | [Solution]()                                                |
+| 1   |         | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products) | Easy       | [Solution](https://codebitwave.com/leetcode-sql-1757-recyclable-and-low-fat-products/)                                                |
 | 2   |         | [Find Customer Referee](https://leetcode.com/problems/find-customer-referee) | Easy       | [Solution]()                                                |
 | 3   |         | [Big Countries](https://leetcode.com/problems/big-countries) | Easy       | [Solution]()                                                |
 | 4   |         | [Article Views I](https://leetcode.com/problems/article-views-i) | Easy       | [Solution]()                                                |
