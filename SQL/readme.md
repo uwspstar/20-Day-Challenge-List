@@ -1,3 +1,5 @@
+# SQL Interview in 50 Qs
+
 | #   | Note    | Title                                                        | Difficulty | Solution                                                   |
 |-----|---------|---------------------------------------------------------------|------------|------------------------------------------------------------|
 | 1   |         | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products) | Easy       | [Solution]()                                                |
