@@ -1,3 +1,22 @@
+# 函数
+| 函数名称 | 功能 | 示例代码 | 说明 |
+| --- | --- | --- | --- |
+| `AVG` | 计算某列的平均值 | `SELECT AVG(Salary) FROM Employees;` | 计算员工的平均工资 |
+| `COUNT` | 统计行数 | `SELECT COUNT(*) FROM Orders;` | 计算订单总数 |
+| `SUM` | 计算某列的总和 | `SELECT SUM(Salary) FROM Employees;` | 计算所有员工的工资总和 |
+| `MAX` | 返回某列的最大值 | `SELECT MAX(Salary) FROM Employees;` | 查找员工中的最高工资 |
+| `MIN` | 返回某列的最小值 | `SELECT MIN(Salary) FROM Employees;` | 查找员工中的最低工资 |
+| `ROUND` | 对数值进行四舍五入 | `SELECT ROUND(Price, 2) FROM Products;` | 将商品价格四舍五入到两位小数 |
+| `DATEADD` | 添加日期或时间间隔 | `SELECT DATEADD(day, 7, '2024-01-01');` | 将日期加上 7 天 |
+| `DATEDIFF` | 计算两个日期之间的差异 | `SELECT DATEDIFF(day, '2024-01-01', '2024-01-10');` | 计算两个日期之间的天数差 |
+| `GETDATE()` | 获取当前日期和时间 | `SELECT GETDATE();` | 获取当前系统日期和时间 |
+| `LEN` | 返回字符串的长度 | `SELECT LEN('Hello');` | 计算字符串的长度 |
+| `UPPER` | 将字符串转换为大写 | `SELECT UPPER('hello');` | 将字符串转为大写 |
+| `LOWER` | 将字符串转换为小写 | `SELECT LOWER('HELLO');` | 将字符串转为小写 |
+| `CASE` | 条件表达式 | `SELECT CASE WHEN Salary > 50000 THEN 'High' ELSE 'Low' END FROM Employees;` | 基于员工工资分类 |
+
+
+
 # SQL Interview in 50 Qs
 
 | #   | Note    | Title                                                        | Difficulty | Solution                                                   |
