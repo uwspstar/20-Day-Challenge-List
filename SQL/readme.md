@@ -33,7 +33,7 @@
 | 10  |         | [1661 Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine) | Easy       | [Solution]()                                                |
 | 11  |         | [577 Employee Bonus](https://leetcode.com/problems/employee-bonus) | Easy       | [Solution]()                                                |
 | 12  |         | [1280 Students and Examinations](https://leetcode.com/problems/students-and-examinations) | Easy       | [Solution]()                                                |
-| 13  |         | [Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports) | Medium     | [Solution]()                                                |
+| 13  |         | [570 Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports) | Medium     | [Solution]()                                                |
 | 14  |         | [Confirmation Rate](https://leetcode.com/problems/confirmation-rate) | Medium     | [Solution]()                                                |
 | 15  |         | [Not Boring Movies](https://leetcode.com/problems/not-boring-movies) | Easy       | [Solution]()                                                |
 | 16  |         | [Average Selling Price](https://leetcode.com/problems/average-selling-price) | Easy       | [Solution]()                                                |
