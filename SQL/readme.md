@@ -2,16 +2,16 @@
 
 | #   | Note    | Title                                                        | Difficulty | Solution                                                   |
 |-----|---------|---------------------------------------------------------------|------------|------------------------------------------------------------|
-| 1   |         | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products) | Easy       | [Solution](https://codebitwave.com/leetcode-sql-1757-recyclable-and-low-fat-products/)                                                |
-| 2   |         | [Find Customer Referee](https://leetcode.com/problems/find-customer-referee) | Easy       | [Solution]()                                                |
-| 3   |         | [Big Countries](https://leetcode.com/problems/big-countries) | Easy       | [Solution]()                                                |
-| 4   |         | [Article Views I](https://leetcode.com/problems/article-views-i) | Easy       | [Solution]()                                                |
+| 1   |         | [1757 Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products) | Easy       | [Solution](https://codebitwave.com/leetcode-sql-1757-recyclable-and-low-fat-products/)                                                |
+| 2   |         | [584 Find Customer Referee](https://leetcode.com/problems/find-customer-referee) | Easy       | [Solution]()                                                |
+| 3   |         | [595 Big Countries](https://leetcode.com/problems/big-countries) | Easy       | [Solution]()                                                |
+| 4   |         | [1148 Article Views I](https://leetcode.com/problems/article-views-i) | Easy       | [Solution]()                                                |
 | 5   |         | [Invalid Tweets](https://leetcode.com/problems/invalid-tweets) | Easy       | [Solution]()                                                |
 | 6   |         | [Basic Joins: Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier) | Easy       | [Solution]()                                                |
 | 7   |         | [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i) | Easy       | [Solution]()                                                |
-| 8   |         | [Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions) | Easy       | [Solution]()                                                |
-| 9   |         | [Rising Temperature](https://leetcode.com/problems/rising-temperature) | Easy       | [Solution]()                                                |
-| 10  |         | [Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine) | Easy       | [Solution]()                                                |
+| 8   |         | [1581 Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions) | Easy       | [Solution]()                                                |
+| 9   |         | [197 Rising Temperature](https://leetcode.com/problems/rising-temperature) | Easy       | [Solution]()                                                |
+| 10  |         | [1661 Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine) | Easy       | [Solution]()                                                |
 | 11  |         | [Employee Bonus](https://leetcode.com/problems/employee-bonus) | Easy       | [Solution]()                                                |
 | 12  |         | [Students and Examinations](https://leetcode.com/problems/students-and-examinations) | Easy       | [Solution]()                                                |
 | 13  |         | [Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports) | Medium     | [Solution]()                                                |
