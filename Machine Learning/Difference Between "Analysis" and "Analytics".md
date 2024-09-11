@@ -1,4 +1,6 @@
 ### Difference Between "Analysis" and "Analytics":
+- Which of the following is associated with the meaning of the term "analytics"?
+Analytics is essentially the application of logical and computational reasoning to the component parts obtained in an analysis: This definition is the most accurate as it captures the essence of what analytics is about. Analytics involves breaking down complex data into smaller parts and using logical and computational methods to analyze those parts in order to gain insights, identify patterns, and make informed decisions.
 
 **1. Definition:**
    - **Analysis (分析):**
