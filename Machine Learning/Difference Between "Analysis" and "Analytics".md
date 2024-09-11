@@ -1,7 +1,8 @@
 ### Difference Between "Analysis" and "Analytics":
 - Which of the following is associated with the meaning of the term "analytics"?
 Analytics is essentially the application of logical and computational reasoning to the component parts obtained in an analysis: This definition is the most accurate as it captures the essence of what analytics is about. Analytics involves breaking down complex data into smaller parts and using logical and computational methods to analyze those parts in order to gain insights, identify patterns, and make informed decisions.
-
+- Dashboards are primarily used for data visualization, which involves presenting data in a clear and easily understandable format, often through graphs, charts, and other visual aids. The main goal is to enable stakeholders to monitor key metrics and make informed decisions based on the displayed data. In contrast, the other options, such as sales forecasting, fraud prevention, and client retention, often involve the use of machine learning algorithms to analyze historical data, identify patterns, and make predictions.
+- 
 **1. Definition:**
    - **Analysis (分析):**
      Refers to the process of breaking down complex data or information into smaller parts to understand it better. It is usually a one-time process aimed at interpreting data, discovering patterns, and drawing conclusions.
