@@ -1,5 +1,7 @@
 ### 3-Day GraphQL Learning Plan
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 #### Day 1: Introduction to GraphQL and Basic Concepts
 - **Overview of GraphQL**
   - Understand the core idea of GraphQL and how it differs from REST.
