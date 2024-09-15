@@ -1,5 +1,7 @@
 # 7-day learning plan to take you from a beginner to an expert in Apache Kafka.
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 ---
 
 ### Day 1: Introduction to Kafka and Core Concepts
