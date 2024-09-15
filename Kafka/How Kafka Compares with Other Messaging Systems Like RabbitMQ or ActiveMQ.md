@@ -1,5 +1,7 @@
 ### How Kafka Compares with Other Messaging Systems Like RabbitMQ or ActiveMQ
 
+[7-day learning plan](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Kafka/readme.md)
+
 #### English:
 Kafka is often compared to other messaging systems like RabbitMQ and ActiveMQ because they all serve similar purposes: facilitating communication between applications through message passing. However, Kafka differs significantly from these systems in terms of architecture, scalability, throughput, and use cases. Below, we’ll compare Kafka with RabbitMQ and ActiveMQ across several key aspects.
 
