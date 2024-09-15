@@ -18,7 +18,7 @@
    - 了解系统设计在构建可扩展、效率高的系统中的关键作用。
 - **[系统设计的关键原则](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Day1_basic/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%B3%E9%94%AE%E5%8E%9F%E5%88%99.md)**  
    - 学习模块化、抽象、关注点分离等基本设计原则。
-- **常见的系统设计面试问题**  
+- **[常见的系统设计面试问题](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Day1_basic/%E5%B8%B8%E8%A7%81%E7%9A%84%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98.md)**  
    - 回顾常见的系统设计面试问题，了解面试官的期望。
 
 **Day 2: 理解需求与计算机架构**  
