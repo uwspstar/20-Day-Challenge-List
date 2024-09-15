@@ -2,6 +2,8 @@
 
 Kafka 已成为处理大规模实时数据流的领先解决方案。在本博文中，我们将详细介绍 Kafka 的核心功能，并通过实用的代码示例来帮助您轻松将 Kafka 集成到您的应用中。
 
+- [Mastering Apache Kafka: The Ultimate Guide to Efficient Data Streaming](https://codebitwave.com/mastering-apache-kafka-the-ultimate-guide-to-efficient-data-streaming/)
+
 ---
 
 #### 1. 如何使用 Kafka 发送消息
