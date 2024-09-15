@@ -14,7 +14,7 @@
 #### 第一周：系统设计基础与关键技术概念
 
 **Day 1: 系统设计介绍**  
-- **系统设计的重要性**  
+- **[系统设计的重要性](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Day1_basic/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7.md)**  
    - 了解系统设计在构建可扩展、效率高的系统中的关键作用。
 - **系统设计的关键原则**  
    - 学习模块化、抽象、关注点分离等基本设计原则。
