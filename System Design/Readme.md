@@ -9,96 +9,100 @@
 
 ------
 
-#### Day 1: Introduction to System Design
-- **Importance of System Design**
-  - Understand why system design is crucial in building scalable and efficient systems.
-- **Key Principles of System Design**
-  - Explore fundamental principles like modularity, abstraction, and separation of concerns.
-- **Common System Design Interview Questions**
-  - Review typical questions and what interviewers are looking for in answers.
+### 系统设计面试学习计划（四周）
 
-#### Day 2: Understanding Requirements
-- **Functional vs. Non-Functional Requirements**
-  - Differentiate between functional requirements (what the system should do) and non-functional requirements (system qualities).
-- **Gathering and Analyzing Requirements**
-  - Learn techniques for requirement gathering and analysis.
-- **Prioritizing Requirements**
-  - Practice prioritizing requirements based on business value and feasibility.
+#### 第一周：系统设计基础与关键技术概念
 
-#### Day 3: System Design Basics
-- **Client-Server Model**
-  - Understand the basic client-server architecture and its components.
-- **Microservices vs. Monolithic Architecture**
-  - Compare microservices and monolithic architectures, their benefits, and trade-offs.
-- **Scalability and Performance Considerations**
-  - Explore strategies for scaling systems and enhancing performance.
+**Day 1: 系统设计介绍**  
+- **系统设计的重要性**  
+   - 了解系统设计在构建可扩展、效率高的系统中的关键作用。
+- **系统设计的关键原则**  
+   - 学习模块化、抽象、关注点分离等基本设计原则。
+- **常见的系统设计面试问题**  
+   - 回顾常见的系统设计面试问题，了解面试官的期望。
 
-#### Day 4: Database Design
-- **Relational vs. NoSQL Databases**
-  - Learn the differences between relational and NoSQL databases.
-- **Database Normalization and Denormalization**
-  - Understand normalization for reducing redundancy and denormalization for performance.
-- **Database Sharding and Partitioning**
-  - Explore techniques for distributing data across multiple servers.
+**Day 2: 理解需求与计算机架构**  
+- **功能需求 vs 非功能需求**  
+   - 区分功能需求（系统应做什么）和非功能需求（系统的特性）。
+- **计算机架构**  
+   - 了解CPU、内存、硬盘的工作原理及其对系统设计的影响。
 
-#### Day 5: Caching Strategies
-- **Importance of Caching**
-  - Learn why caching is critical for performance.
-- **Types of Caching (Client-side, Server-side, CDN)**
-  - Understand different caching types and their use cases.
-- **Cache Invalidation Strategies**
-  - Explore strategies for keeping cache data consistent with the source of truth.
+**Day 3: 网络基础与TCP/UDP**  
+- **网络基础**  
+   - 学习IP地址、路由、子网掩码等基本网络概念。
+- **TCP和UDP协议**  
+   - 了解TCP和UDP的区别及在不同场景下的应用。
 
-#### Day 6: Load Balancing
-- **Concepts of Load Balancing**
-  - Understand the role of load balancers in distributing traffic.
-- **Types of Load Balancers (Hardware vs. Software)**
-  - Compare hardware and software load balancers.
-- **Load Balancing Algorithms**
-  - Learn common algorithms like round-robin, least connections, and IP hash.
+**Day 4: DNS、HTTP与WebSockets**  
+- **DNS的工作原理**  
+   - 探讨DNS如何解析域名为IP地址。
+- **HTTP协议**  
+   - 学习HTTP请求和响应的详细过程。
+- **WebSockets在实时通信中的应用**  
+   - 理解WebSockets与HTTP的区别，以及其在实时消息系统中的应用。
 
-#### Day 7: Data Consistency and Availability
-- **CAP Theorem**
-  - Explore the CAP theorem and its implications for system design.
-- **Trade-offs Between Consistency, Availability, and Partition Tolerance**
-  - Understand the trade-offs and how to make decisions based on requirements.
-- **Implementing Data Replication**
-  - Learn techniques for replicating data to ensure availability and consistency.
+**Day 5: 应用架构与API设计**  
+- **应用架构（单体架构 vs 微服务架构）**  
+   - 探讨单体和微服务架构的优缺点及适用场景。
+- **API设计范式**  
+   - 学习RESTful API、GraphQL的区别与API设计的最佳实践。
 
-#### Day 8: Designing for Failure
-- **Fault Tolerance and High Availability**
-  - Understand strategies for building fault-tolerant and highly available systems.
-- **Designing Redundant Systems**
-  - Explore redundancy at different levels (hardware, software, network).
-- **Handling Network Partitions and Failures**
-  - Learn how to design systems that can handle network partitions gracefully.
+**Day 6: 缓存策略、CDN与负载均衡**  
+- **缓存的作用**  
+   - 学习缓存机制与不同类型的缓存（如客户端缓存、服务器缓存、CDN）的应用场景。
+- **负载均衡**  
+   - 了解负载均衡器在分配流量中的作用，学习硬件与软件负载均衡的区别。
+- **一致性哈希**  
+   - 了解一致性哈希在分布式系统中的应用。
 
-#### Day 9: Security Considerations
-- **Basic Security Principles**
-  - Learn about confidentiality, integrity, and availability (CIA triad).
-- **Common Security Threats and Mitigation Strategies**
-  - Understand common threats like SQL injection, XSS, and how to mitigate them.
-- **Implementing Secure Authentication and Authorization**
-  - Explore techniques for secure authentication (e.g., OAuth, JWT) and authorization.
+**Day 7: 数据库设计与CAP定理**  
+- **SQL vs NoSQL**  
+   - 了解关系型数据库和NoSQL数据库的区别及应用场景。
+- **数据库分片与复制**  
+   - 探讨数据库的分片设计和复制策略。
+- **CAP定理**  
+   - 学习CAP定理及其在分布式系统设计中的重要性。
 
-#### Day 10: Case Studies and Examples
-- **Real-world System Design Examples**
-  - Analyze successful system designs from industry leaders.
-- **Analyzing Successful System Architectures**
-  - Break down what makes these architectures effective.
-- **Lessons Learned from System Failures**
-  - Study failures to understand what went wrong and how to avoid similar issues.
+**Day 8: 消息队列、对象存储与MapReduce**  
+- **消息队列**  
+   - 学习Kafka、RabbitMQ等常见消息队列系统及其应用场景。
+- **对象存储**  
+   - 了解对象存储的基本概念及应用，如Amazon S3。
+- **MapReduce**  
+   - 探讨MapReduce如何处理海量数据及其在大数据系统中的应用。
 
-#### Day 11-20: Practical Application and Deep Dives
-- **Days 11-12: Building a Scalable Web Application**
-  - Apply principles learned to design and build a scalable web application.
-- **Days 13-14: Designing a Real-time Messaging System**
-  - Design a system capable of real-time messaging with considerations for latency and throughput.
-- **Days 15-16: Implementing a Distributed Database**
-  - Design and implement a distributed database, exploring sharding, replication, and consistency models.
-- **Days 17-18: Creating a Caching Strategy for a Large-scale System**
-  - Develop a comprehensive caching strategy for a large-scale application.
-- **Days 19-20: Final Project**
-  - Combine all knowledge to design a complex system (e.g., an e-commerce platform, social media application) from scratch, including requirement analysis, architecture design, database design, load balancing, caching, and security considerations.
+---
+
+#### 第二周：核心架构模式与实践
+
+**Day 9-10: 实践设计问题**  
+- **设计Rate Limiter（限流器）**  
+   - 探讨如何设计一个能够处理高并发的限流器。
+- **设计TinyUrl（短链接服务）**  
+   - 学习如何设计一个类似bit.ly的短链接服务。
+
+**Day 11-12: 实践设计问题**  
+- **设计Twitter（社交平台）**  
+   - 探讨如何设计一个能够支持用户动态流的社交平台。
+- **设计Discord（实时聊天应用）**  
+   - 学习如何设计一个支持实时通信和群组聊天的应用。
+
+**Day 13-14: 实践设计问题**  
+- **设计YouTube（视频分享平台）**  
+   - 探讨如何设计一个支持大规模视频上传和分发的平台。
+- **设计Google Drive（文件存储服务）**  
+   - 学习如何设计一个支持大规模文件存储和版本控制的服务。
+
+**Day 15-16: 实践设计问题**  
+- **设计Google Maps（地图服务）**  
+   - 探讨如何设计一个具备实时路况和路线规划功能的地图服务。
+- **设计Key-Value存储系统**  
+   - 学习如何设计一个分布式键值对存储系统。
+
+**Day 17-18: 实践设计问题**  
+- **设计分布式消息队列**  
+   - 学习如何设计一个高可用、高吞吐量的分布式消息队列系统。
+
+通过本计划的逐步学习，你将全面掌握系统设计面试中涉及的核心概念和实践技巧。
 
 
