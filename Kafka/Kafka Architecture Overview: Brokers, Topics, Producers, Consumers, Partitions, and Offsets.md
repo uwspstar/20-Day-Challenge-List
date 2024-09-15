@@ -1,6 +1,8 @@
 
 ### Kafka Architecture Overview: Brokers, Topics, Producers, Consumers, Partitions, and Offsets
 
+[7-day learning plan](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Kafka/readme.md)
+
 #### English:
 Kafka’s architecture is designed to handle high-throughput, real-time data streams in a distributed environment. The key components of Kafka architecture include **Brokers**, **Topics**, **Producers**, **Consumers**, **Partitions**, and **Offsets**. Understanding these components is essential for effectively using Kafka.
 
