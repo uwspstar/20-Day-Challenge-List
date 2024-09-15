@@ -9,7 +9,7 @@
 
 **Key Topics:**
 - [What is Kafka? Why use it?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Kafka/What%20is%20Kafka%3F%20Why%20use%20it.md)
-- Kafka architecture overview: Brokers, Topics, Producers, Consumers, Partitions, and Offsets.
+- [Kafka architecture overview: Brokers, Topics, Producers, Consumers, Partitions, and Offsets.](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Kafka/Kafka%20Architecture%20Overview%3A%20Brokers%2C%20Topics%2C%20Producers%2C%20Consumers%2C%20Partitions%2C%20and%20Offsets.md)
 - How Kafka compares with other messaging systems like RabbitMQ or ActiveMQ.
   
 **Hands-on Task:**
