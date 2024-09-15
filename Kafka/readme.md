@@ -8,7 +8,7 @@
 **Goal:** Understand the basic concepts and architecture of Kafka.
 
 **Key Topics:**
-- What is Kafka? Why use it?
+- [What is Kafka? Why use it?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Kafka/What%20is%20Kafka%3F%20Why%20use%20it.md)
 - Kafka architecture overview: Brokers, Topics, Producers, Consumers, Partitions, and Offsets.
 - How Kafka compares with other messaging systems like RabbitMQ or ActiveMQ.
   
