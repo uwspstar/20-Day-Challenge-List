@@ -1,5 +1,7 @@
 ### What is Kafka? Why use it?
 
+[7-day learning plan](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Kafka/readme.md)
+
 #### English:
 Kafka is an open-source, distributed event streaming platform primarily used for building real-time data pipelines and streaming applications. It was originally developed by LinkedIn and later became an Apache project. Kafka’s key feature is its ability to handle a large volume of data in real time, making it an ideal choice for event-driven architectures, data integration, and real-time analytics.
 
