@@ -24,7 +24,7 @@
 **Day 2: 理解需求与计算机架构**  
 - **[功能需求 vs 非功能需求](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Day2/%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82%20vs%20%E9%9D%9E%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82.md)**  
    - 区分功能需求（系统应做什么）和非功能需求（系统的特性）。
-- **计算机架构**  
+- **[计算机架构](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Day2/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9E%B6%E6%9E%84.md)**  
    - 了解CPU、内存、硬盘的工作原理及其对系统设计的影响。
 
 **Day 3: 网络基础与TCP/UDP**  
