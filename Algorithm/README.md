@@ -11,7 +11,7 @@
 - [Grind 75](https://www.techinterviewhandbook.org/grind75)
 - [算法讲解 by 左程云](https://www.youtube.com/watch?v=KNLRjg4utQc&list=PLvKfL6GtwDxwuyrpAJfU3HTnPZl4WnraE)
 - https://github.com/algorithmzuo/algorithm-journey/tree/main/ppt
-
+- [NeetCode路线图](https://neetcode.io/roadmap)
 ------
 
 ### Recommend Start Here:
@@ -21,48 +21,82 @@
 - **[NeetCode 150](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/NeetCode%20150.md)**
 
 ------
-
-### Coming Soon
  
-1. **[Sliding Window Pattern](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Sliding%20Window%20Pattern.md)**:
-   - Used for processing a series of data elements by examining a "window" of the data.
-   - Ideal for problems involving finding subsets of elements, like the longest substring with K unique characters.
+大多数开发者都非常讨厌编程面试。一个主要的原因是，大多数开发者认为他们必须解决数百个问题才能准备好。他们不知道从哪里开始，所以通常随机地解决问题，没有任何计划。  
 
-2. **Subset Pattern**:
-   - Focuses on generating all possible combinations of elements from a set.
-   - Useful for problems requiring permutations or combinations, similar to breadth-first search (BFS).
+一个月后，他们什么都不记得了。他们尝试解决之前已经解决过的问题。你猜怎么着？他们解决不了。  
 
-3. **Modified Binary Search**:
-   - Adjusts the classic binary search algorithm for specific conditions, such as searching in a rotated sorted array.
-   - Understanding core binary search principles is essential for this pattern.
+### 这里有一些建议：  
 
-4. **Top K Elements**:
-   - Used to find the top K elements from a dataset.
-   - Employs a heap data structure to efficiently manage and retrieve the K largest elements.
+- 专注于学习模式，而不是解决大量的问题。  
+- 按照直观的顺序学习新的主题和模式。  
+- 反复练习——回顾并重新解决问题。  
 
-5. **[Binary Tree Depth-First Search (DFS)](https://codebitwave.com/algorithms-101-depth-first-search-and-breadth-first-search/)**:
-   - Explores each branch of a binary tree deeply before backtracking.
-   - Applied to problems like finding the maximum depth of a binary tree.
+### 编程面试学习计划
+**步骤 1**  
+熟悉如何使用大O时间和空间复杂度来评估算法性能。你应该了解以下表示的含义：  
 
-6. **Topological Sort**:
-   - Arranges elements based on dependencies, especially in Directed Acyclic Graphs (DAGs).
-   - Useful for scheduling tasks or course prerequisites, ensuring all dependencies are resolved before processing.
+- 常数时间 - O(1)  
+- 对数时间 - O(log n)  
+- 线性时间 - O(n)  
+- 线性对数时间 - O(n log n)  
+- 多项式时间 - O(n^k)，其中k是常数  
+- 指数时间 - O(k^n)，其中k是常数  
+- 阶乘时间 - O(n!)  
+你还应该对时间复杂度的比较有直观的理解。对于某些问题，最好的解法是指数级的。对于其他问题，我们可以将它们优化为多项式时间。  
 
-7. **[Binary Tree Breadth-First Search (BFS)](https://codebitwave.com/algorithms-101-depth-first-search-and-breadth-first-search/)**:
-   - Explores nodes level by level, using a queue data structure.
-   - Suitable for problems that require processing nodes level-wise, like level-order traversal or reversal.
+**步骤 2**  
+接下来的步骤是学习基础的数据结构和算法。  
+你应该涵盖的一些主题包括：  
 
-8. **[Two-Pointer Technique](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Two-Pointer%20Technique.md)**:
-   - Utilizes two pointers to iterate through a sorted array to solve problems efficiently.
-   - Example problems include finding pairs or triplets that sum up to a specific target.
+#### 数据结构  
+- 数组  
+- 链表  
+- 栈  
+- 队列  
+- 哈希表  
+- 树  
+- 图  
+- 堆  
+- 并查集  
+- 字典树  
 
-9. **[Prefix and Suffix](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Prefix%20and%20Suffix.md)**:
-   - Prefix: A prefix of a sequence is a subsequence that starts from the beginning of the sequence and includes any number of leading elements up to the entire sequence.
-   - Suffix: A suffix of a sequence is a subsequence that starts from any position in the sequence and continues to the end of the sequence.
+#### 算法和技术  
+- 二分查找  
+- 深度优先搜索  
+- 广度优先搜索  
+- 动态规划  
+- 快速排序  
+- 归并排序  
+- 桶排序  
+- 拓扑排序  
+- 回溯法  
+- 位运算
+- 
+**步骤 3**  
+在熟悉了基础知识之后，你应该开始掌握在编码面试中最常见的模式。  
 
-10. **[Binary Operations and Bitwise Manipulation](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Binary%20Operations%20and%20Bitwise%20Manipulation.md)**:
-   - Utilizes two pointers to iterate through a sorted array to solve problems efficiently.
-   - Example problems include finding pairs or triplets that sum up to a specific target.
+下面是一些常见的面试模式（非详尽列表）：  
+
+#### 编程面试模式
+- 滑动窗口  
+- 贪心算法  
+- 双指针  
+- 二分查找  
+- 前缀和  
+- 深度优先搜索  
+- 堆  
+- 广度优先搜索  
+- 动态规划  
+- 栈  
+- 回溯法  
+- 单调栈  
+- 位操作  
+- 多源广搜  
+- 环检测  
+- 最小生成树  
+- 区间问题  
+- 字典树
 
 
 
