@@ -50,7 +50,7 @@
 你应该涵盖的一些主题包括：  
 
 #### 数据结构  
-- 数组  
+- [数组](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Day2_Array.md)  
 - 链表  
 - 栈  
 - 队列  
