@@ -1,8 +1,8 @@
 | Category           | Problem | Difficulty |
 |--------------------|---------|------------|
-| **Arrays**          | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy |
-|                    | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy |
-|                    | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy |
+| **Arrays**          | [1. Two Sum](https://leetcode.com/problems/two-sum/) | Easy |
+|                    | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy |
+|                    | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy |
 |                    | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium |
 |                    | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium |
 |                    | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Medium |
@@ -11,7 +11,7 @@
 |                    | [3Sum](https://leetcode.com/problems/3sum/) | Medium |
 |                    | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium |
 | **Binary**          | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | Medium |
-|                    | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy |
+|                    | [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy |
 |                    | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy |
 |                    | [Missing Number](https://leetcode.com/problems/missing-number/) | Easy |
 |                    | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Easy |
