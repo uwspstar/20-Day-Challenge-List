@@ -10,13 +10,11 @@
 |                    | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium |
 |                    | [3Sum](https://leetcode.com/problems/3sum/) | Medium |
 |                    | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium |
-
 | **Binary**          | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | Medium |
 |                    | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy |
 |                    | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy |
 |                    | [Missing Number](https://leetcode.com/problems/missing-number/) | Easy |
 |                    | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Easy |
-
 | **Dynamic Programming** | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy |
 |                        | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium |
 |                        | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium |
@@ -28,7 +26,6 @@
 |                        | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Medium |
 |                        | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium |
 |                        | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium |
-
 | **Graphs**          | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Medium |
 |                    | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Medium |
 |                    | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | Medium |
@@ -37,25 +34,21 @@
 |                    | [Alien Dictionary (Topological Sorting)](https://leetcode.com/problems/alien-dictionary/) | Hard |
 |                    | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | Medium |
 |                    | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard |
-
 | **Intervals**       | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Hard |
 |                    | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium |
 |                    | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Medium |
 |                    | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | Easy |
 |                    | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Medium |
-
 | **Linked List**     | [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy |
 |                    | [Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/) | Easy |
 |                    | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy |
 |                    | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard |
 |                    | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium |
 |                    | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium |
-
 | **Matrix**          | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Medium |
 |                    | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Medium |
 |                    | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Medium |
 |                    | [Word Search](https://leetcode.com/problems/word-search/) | Medium |
-
 | **String**          | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium |
 |                    | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Medium |
 |                    | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard |
@@ -65,7 +58,6 @@
 |                    | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium |
 |                    | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Medium |
 |                    | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | Medium |
-
 | **Tree**            | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy |
 |                    | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy |
 |                    | [Invert/Flip Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy |
@@ -79,10 +71,8 @@
 |                    | [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
 |                    | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium |
 |                    | [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/) | Medium |
-
 | **Heap**            | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard |
 |                    | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium |
 |                    | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard |
-
 | **Miscellaneous**   | [Number of Connected Components in Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | Medium |
 
