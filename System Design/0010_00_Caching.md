@@ -10,12 +10,12 @@
 
 缓存不仅应用于单机系统中，还广泛用于分布式系统。在浏览器、内容分发网络（CDN）和服务器端，缓存都可以显著提高性能，减少重复的网络请求。
 
-### **实际用例：Neetcode.io 的缓存机制**
+### **实际用例：codebitwave 的缓存机制**
 
 在 Neetcode.io 上，浏览器通过缓存静态文件（如 JavaScript、图片）来避免每次加载页面时都发起网络请求。这种缓存机制显著减少了网页的加载时间，提高了用户体验。
 
 ```bash
-GET https://neetcode.io/main.cf2a0447c0ac9f9e.js
+GET https://codebitwave.com/main.7c004ac49cf2af9e.js
 ```
 
 **缓存命中与缓存未命中**:
