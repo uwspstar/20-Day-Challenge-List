@@ -1,5 +1,61 @@
 # Commonly Used Design Patterns in Software Development
 
+Design patterns are common solutions to recurring software design problems. They provide a reusable blueprint to solve issues efficiently and improve code structure. Here are some of the most commonly used design patterns:
+
+### 1. **Creational Patterns**
+   These patterns deal with object creation mechanisms, aiming to create objects in a manner suitable for specific situations.
+   - **Singleton**: Ensures that a class has only one instance and provides a global access point to it.
+     - Example: Managing a single database connection throughout the application.
+   - **Factory Method**: Provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created.
+     - Example: ShapeFactory in graphics programs to create different shapes like circle or rectangle.
+   - **Builder**: Helps construct complex objects step by step, separating the construction process from the final object.
+     - Example: Building a house object with various options (foundation, walls, roof).
+
+### 2. **Structural Patterns**
+   These patterns focus on composing classes or objects to form larger structures.
+   - **Adapter**: Allows incompatible interfaces to work together by wrapping one class with another.
+     - Example: Wrapping a legacy system's interface so that it can work with modern systems.
+   - **Decorator**: Dynamically adds behavior to an object without altering its structure.
+     - Example: Adding scrolling functionality to a window in a graphical user interface.
+   - **Facade**: Provides a simplified interface to a complex system of classes.
+     - Example: Simplifying interaction with a library by exposing a more readable interface.
+
+### 3. **Behavioral Patterns**
+   These patterns focus on communication and interaction between objects.
+   - **Observer**: Defines a dependency between objects, where one object (subject) notifies others (observers) of state changes.
+     - Example: A news agency (subject) notifying subscribers (observers) of new articles.
+   - **Strategy**: Allows selecting an algorithm or behavior at runtime by defining a family of interchangeable algorithms.
+     - Example: Different sorting algorithms that can be chosen based on the data type and size.
+   - **Command**: Encapsulates a request as an object, thereby allowing users to parameterize clients with queues, requests, and operations.
+     - Example: Undo/redo functionality in text editors.
+
+### 4. **Concurrency Patterns**
+   These patterns deal with multi-threading and concurrent programming issues.
+   - **Thread Pool**: Manages a pool of threads, reusing them for tasks rather than creating new threads for each task.
+   - **Producer-Consumer**: Separates the work of producing data from consuming it, typically using a queue.
+
+### Summary of Common Patterns:
+| Pattern      | Type         | Purpose                                          |
+|--------------|--------------|--------------------------------------------------|
+| Singleton    | Creational   | Ensures a single instance across the system      |
+| Factory      | Creational   | Creates objects without specifying exact classes |
+| Adapter      | Structural   | Bridges two incompatible interfaces              |
+| Observer     | Behavioral   | Allows communication of state changes            |
+| Strategy     | Behavioral   | Changes algorithms/strategies dynamically        |
+| Command      | Behavioral   | Encapsulates requests as objects                 |
+
+### Tips:
+- **Use Singleton** when you need only one instance of a class, but be mindful of overuse as it can introduce global state.
+- **Factory** is excellent when the exact type of object needs to be decided at runtime.
+- **Observer** is perfect for scenarios like event handling or notifications.
+
+### Interview Questions:
+1. **What problem does the Singleton pattern solve, and when should you avoid using it?**
+   - Answer: Singleton ensures that a class has only one instance, often used for resource management. It should be avoided when the global state could lead to tight coupling.
+
+2. **Can you explain the differences between the Factory Method and Abstract Factory patterns?**
+   - Answer: Factory Method creates objects through inheritance, while Abstract Factory creates families of related objects without specifying concrete classes.
+
 ### 软件开发中的常用设计模式
 
 In software development, design patterns provide standardized solutions to commonly occurring problems. They improve code reusability, clarity, and maintainability. Here, we’ll go over some of the most commonly used design patterns, categorized into **Creational**, **Structural**, and **Behavioral** patterns.
