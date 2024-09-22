@@ -1320,4 +1320,613 @@ In the context of **DIP**, higher-level modules should depend on abstractions ra
 
 ---
 
+### Question 91: How does Dependency Inversion benefit, show with an example?
+
+#### English Explanation:
+
+The **Dependency Inversion Principle (DIP)** helps in creating flexible and decoupled systems by ensuring that high-level modules depend on abstractions rather than on concrete implementations. This reduces the impact of changes in low-level modules on high-level modules, making the system more maintainable and testable.
+
+#### Code Example:
+
+Without DIP:
+
+```csharp
+public class FileLogger
+{
+    public void Log(string message)
+    {
+        Console.WriteLine("Logging to file: " + message);
+    }
+}
+
+public class UserService
+{
+    private FileLogger logger = new FileLogger();
+
+    public void RegisterUser(string username)
+    {
+        // Register user logic
+        logger.Log("User registered: " + username);
+    }
+}
+```
+
+With DIP:
+
+```csharp
+public interface ILogger
+{
+    void Log(string message);
+}
+
+public class FileLogger : ILogger
+{
+    public void Log(string message)
+    {
+        Console.WriteLine("Logging to file: " + message);
+    }
+}
+
+public class UserService
+{
+    private ILogger logger;
+
+    public UserService(ILogger logger)
+    {
+        this.logger = logger;
+    }
+
+    public void RegisterUser(string username)
+    {
+        // Register user logic
+        logger.Log("User registered: " + username);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ILogger logger = new FileLogger();
+        UserService service = new UserService(logger);
+        service.RegisterUser("JohnDoe");
+    }
+}
+```
+
+In the second example, `UserService` depends on the `ILogger` abstraction, making it easier to swap out the logging mechanism without changing the `UserService` class.
+
+#### Chinese Explanation:
+
+**依赖倒置原则（DIP）** 通过确保高层模块依赖于抽象而不是具体实现，帮助创建灵活且解耦的系统。这减少了低层模块的更改对高层模块的影响，使系统更易维护和测试。
+
+#### 代码示例：
+
+不使用 DIP：
+
+```csharp
+public class FileLogger
+{
+    public void Log(string message)
+    {
+        Console.WriteLine("记录到文件：" + message);
+    }
+}
+
+public class UserService
+{
+    private FileLogger logger = new FileLogger();
+
+    public void RegisterUser(string username)
+    {
+        // 注册用户逻辑
+        logger.Log("用户已注册：" + username);
+    }
+}
+```
+
+使用 DIP：
+
+```csharp
+public interface ILogger
+{
+    void Log(string message);
+}
+
+public class FileLogger : ILogger
+{
+    public void Log(string message)
+    {
+        Console.WriteLine("记录到文件：" + message);
+    }
+}
+
+public class UserService
+{
+    private ILogger logger;
+
+    public UserService(ILogger logger)
+    {
+        this.logger = logger;
+    }
+
+    public void RegisterUser(string username)
+    {
+        // 注册用户逻辑
+        logger.Log("用户已注册：" + username);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ILogger logger = new FileLogger();
+        UserService service = new UserService(logger);
+        service.RegisterUser("JohnDoe");
+    }
+}
+```
+
+---
+
+### Question 92: Will only Dependency Inversion solve decoupling problems?
+
+#### English Explanation:
+
+No, **Dependency Inversion** alone cannot solve all decoupling problems. While it encourages high-level modules to depend on abstractions rather than concrete implementations, true decoupling requires a combination of principles like **Interface Segregation**, **Single Responsibility**, and **Open/Closed** principles. These principles work together to reduce dependencies and make the system more flexible.
+
+#### Chinese Explanation：
+
+不，**依赖倒置** 本身不能解决所有的解耦问题。虽然它鼓励高层模块依赖抽象而不是具体实现，但真正的解耦需要结合**接口隔离**、**单一职责** 和 **开闭原则** 等原则共同作用，减少依赖性并使系统更灵活。
+
+---
+
+### Question 93: Why do developers move object creation outside high-level modules?
+
+#### English Explanation:
+
+Developers move **object creation** outside high-level modules to adhere to the **Dependency Inversion Principle (DIP)** and reduce coupling. By outsourcing object creation to a **factory** or **dependency injection** mechanism, high-level modules depend on abstractions rather than concrete implementations. This allows for easier testing, maintenance, and flexibility in changing dependencies without modifying high-level logic.
+
+#### Chinese Explanation：
+
+开发人员将**对象创建**移到高层模块之外，以遵循**依赖倒置原则（DIP）** 并减少耦合。通过将对象创建委托给**工厂**或**依赖注入**机制，高层模块依赖于抽象而不是具体实现。这使得测试、维护更容易，并且在不修改高层逻辑的情况下可以灵活更改依赖关系。
+
+---
+
+### Question 94: Explain IOC (Inversion of Control)?
+
+#### English Explanation:
+
+**Inversion of Control (IOC)** is a design principle where the control of object creation and dependency management is transferred from the object itself to a **container** or **framework**. This is commonly achieved through **dependency injection** or **service locators**. It allows for better decoupling and more flexible code.
+
+#### Code Example:
+
+Using Dependency Injection (DI) in IOC:
+
+```csharp
+public interface IMessageService
+{
+    void SendMessage(string message);
+}
+
+public class EmailService : IMessageService
+{
+    public void SendMessage(string message)
+    {
+        Console.WriteLine("Email sent: " + message);
+    }
+}
+
+public class Notification
+{
+    private IMessageService messageService;
+
+    // Dependency Injection via constructor
+    public Notification(IMessageService messageService)
+    {
+        this.messageService = messageService;
+    }
+
+    public void NotifyUser()
+    {
+        messageService.SendMessage("Hello User!");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        IMessageService service = new EmailService();
+        Notification notification = new Notification(service);
+        notification.NotifyUser();
+    }
+}
+```
+
+Here, **IOC** is applied by injecting `EmailService` into `Notification`, decoupling the `Notification` class from a specific implementation of the message service.
+
+#### Chinese Explanation：
+
+**控制反转（IOC）** 是一种设计原则，其中对象的创建和依赖管理的控制权从对象本身转移到**容器**或**框架**。通常通过**依赖注入**或**服务定位器**来实现。这种方式使代码更解耦且更灵活。
+
+#### 代码示例：
+
+使用依赖注入实现 IOC：
+
+```csharp
+public interface IMessageService
+{
+    void SendMessage(string message);
+}
+
+public class EmailService : IMessageService
+{
+    public void SendMessage(string message)
+    {
+        Console.WriteLine("发送邮件：" + message);
+    }
+}
+
+public class Notification
+{
+    private IMessageService messageService;
+
+    // 通过构造函数进行依赖注入
+    public Notification(IMessageService messageService)
+    {
+        this.messageService = messageService;
+    }
+
+    public void NotifyUser()
+    {
+        messageService.SendMessage("你好，用户！");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        IMessageService service = new EmailService();
+        Notification notification = new Notification(service);
+        notification.NotifyUser();
+    }
+}
+```
+
+---
+
+### Question 95: Explain Dependency Injection with an example?
+
+#### English Explanation:
+
+**Dependency Injection (DI)** is a design pattern where the dependencies of an object are injected into it rather than being created inside the object. This allows for better decoupling, making code easier to test and maintain. DI can be done via **constructor injection**, **property injection**, or **method injection**.
+
+#### Code Example:
+
+```csharp
+public interface IDatabase
+{
+    void SaveData(string data);
+}
+
+public class SqlDatabase : IDatabase
+{
+    public void SaveData(string data)
+    {
+        Console.WriteLine("Saving data to SQL Database: " + data);
+    }
+}
+
+public class DataService
+{
+    private IDatabase database;
+
+    // Constructor Injection
+    public DataService(IDatabase database)
+    {
+        this.database = database;
+    }
+
+    public void Save(string data)
+    {
+        database.SaveData(data);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        IDatabase db = new SqlDatabase();
+        DataService dataService = new DataService(db);
+        dataService.Save("Sample Data");
+    }
+}
+```
+
+Here, `DataService` doesn't create its dependency (`IDatabase`) directly. Instead, the dependency is injected through the constructor.
+
+#### Chinese Explanation：
+
+**依赖注入（DI）** 是一种设计模式，其中对象的依赖项被注入到对象中，而不是在对象内部创建。这种方式提高了解耦性，使代码更易于测试和维护。DI 可以通过**构造函数注入**、**属性注入**或**方法注入**来实现。
+
+#### 代码示例：
+
+```csharp
+public interface IDatabase
+{
+    void SaveData(string data);
+}
+
+public class SqlDatabase : IDatabase
+{
+    public void SaveData(string data)
+    {
+        Console.WriteLine("将数据保存到 SQL 数据库：" + data);
+    }
+}
+
+public class DataService
+{
+    private IDatabase database;
+
+    // 构造函数注入
+    public DataService(IDatabase database)
+    {
+        this.database = database;
+    }
+
+    public void Save(string data)
+    {
+        database.SaveData(data);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+   
+
+
+
+ {
+        IDatabase db = new SqlDatabase();
+        DataService dataService = new DataService(db);
+        dataService.Save("示例数据");
+    }
+}
+```
+
+---
+
+### Question 96: Is SOLID, IOC, and DI design pattern or principle?
+
+#### English Explanation:
+
+- **SOLID**: These are **design principles** that guide how to design software systems for better maintainability and flexibility.
+- **IOC (Inversion of Control)**: This is a **principle** that describes how control of object creation should be inverted.
+- **DI (Dependency Injection)**: This is a **design pattern** used to implement IOC by injecting dependencies into objects.
+
+In summary:
+- **SOLID** = Design principles.
+- **IOC** = Principle.
+- **DI** = Design pattern.
+
+#### Chinese Explanation：
+
+- **SOLID**：这些是**设计原则**，指导如何设计软件系统以提高可维护性和灵活性。
+- **IOC（控制反转）**：这是一种**原则**，描述了如何将对象创建的控制权反转。
+- **DI（依赖注入）**：这是一种**设计模式**，用于通过将依赖项注入对象来实现 IOC。
+
+总结：
+- **SOLID** = 设计原则。
+- **IOC** = 原则。
+- **DI** = 设计模式。
+
+---
+
+### Question 97: Is only SOLID enough for good code/architecture?
+
+#### English Explanation:
+
+No, while **SOLID principles** are a great foundation for creating maintainable and flexible code, they are not sufficient on their own for a robust architecture. Other principles, patterns, and practices such as **DRY (Don't Repeat Yourself)**, **KISS (Keep It Simple, Stupid)**, **YAGNI (You Aren't Gonna Need It)**, and **Design Patterns** are also essential to creating well-structured and scalable systems.
+
+#### Chinese Explanation：
+
+不，尽管 **SOLID 原则** 是创建可维护和灵活代码的良好基础，但它们本身不足以构建健壮的架构。其他原则、模式和实践，如 **DRY（不要重复自己）**、**KISS（保持简单，愚蠢）**、**YAGNI（你不需要它）** 和 **设计模式** 对于创建结构良好且可扩展的系统也至关重要。
+
+---
+
+### Question 98: What are the different types of "HAS-A" relationships?
+
+#### English Explanation:
+
+A **HAS-A relationship** (also known as **composition**) describes how one class contains or is composed of another class. It is different from inheritance and can be expressed in the following ways:
+1. **Composition**: One class owns another class's object. If the container object is destroyed, the contained object is also destroyed.
+2. **Aggregation**: A weak relationship where one class contains another, but the contained object can exist independently of the container.
+
+#### Chinese Explanation：
+
+**HAS-A 关系**（也称为**组合关系**）描述了一个类包含或由另一个类组成的方式。它不同于继承，并可以通过以下方式表达：
+1. **组合（Composition）**：一个类拥有另一个类的对象。如果容器对象被销毁，包含的对象也会被销毁。
+2. **聚合（Aggregation）**：一种弱关系，一个类包含另一个类，但包含的对象可以独立于容器存在。
+
+---
+
+### Question 99: What is a composition relationship?
+
+#### English Explanation:
+
+**Composition** is a **strong HAS-A relationship** where one class contains another class as a part of itself. If the containing (parent) class is destroyed, the composed (child) object is also destroyed. Composition implies ownership, and the lifetime of the contained object is tightly coupled with the container class.
+
+#### Code Example:
+
+```csharp
+public class Engine
+{
+    public void Start()
+    {
+        Console.WriteLine("Engine started");
+    }
+}
+
+public class Car
+{
+    private Engine engine;
+
+    public Car()
+    {
+        engine = new Engine(); // Composition: Car owns the engine
+    }
+
+    public void StartCar()
+    {
+        engine.Start();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Car car = new Car();
+        car.StartCar();
+    }
+}
+```
+
+In this example, `Car` has a composition relationship with `Engine`. If the `Car` object is destroyed, the `Engine` object is also destroyed.
+
+#### Chinese Explanation：
+
+**组合（Composition）** 是一种**强 HAS-A 关系**，其中一个类将另一个类作为自身的一部分。如果包含（父）类被销毁，组合的（子）对象也会被销毁。组合意味着所有权，包含对象的生命周期与容器类紧密耦合。
+
+#### 代码示例：
+
+```csharp
+public class Engine
+{
+    public void Start()
+    {
+        Console.WriteLine("引擎启动");
+    }
+}
+
+public class Car
+{
+    private Engine engine;
+
+    public Car()
+    {
+        engine = new Engine(); // 组合关系：汽车拥有引擎
+    }
+
+    public void StartCar()
+    {
+        engine.Start();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Car car = new Car();
+        car.StartCar();
+    }
+}
+```
+
+---
+
+### Question 100: Explain Aggregation?
+
+#### English Explanation:
+
+**Aggregation** is a **weak HAS-A relationship** where one class contains another class, but the contained object can exist independently of the container. If the container object is destroyed, the contained object can still exist.
+
+#### Code Example:
+
+```csharp
+public class Engine
+{
+    public void Start()
+    {
+        Console.WriteLine("Engine started");
+    }
+}
+
+public class Car
+{
+    private Engine engine;
+
+    public Car(Engine engine)
+    {
+        this.engine = engine; // Aggregation: Car uses an existing engine
+    }
+
+    public void StartCar()
+    {
+        engine.Start();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Engine myEngine = new Engine();
+        Car car = new Car(myEngine);
+        car.StartCar();
+    }
+}
+```
+
+In this example, the `Engine` exists independently of `Car`, demonstrating aggregation.
+
+#### Chinese Explanation：
+
+**聚合（Aggregation）** 是一种**弱 HAS-A 关系**，其中一个类包含另一个类，但包含的对象可以独立于容器存在。如果容器对象被销毁，包含的对象仍然可以存在。
+
+#### 代码示例：
+
+```csharp
+public class Engine
+{
+    public void Start()
+    {
+        Console.WriteLine("引擎启动");
+    }
+}
+
+public class Car
+{
+    private Engine engine;
+
+    public Car(Engine engine)
+    {
+        this.engine = engine; // 聚合关系：汽车使用现有的引擎
+    }
+
+    public void StartCar()
+    {
+        engine.Start();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Engine myEngine = new Engine();
+        Car car = new Car(myEngine);
+        car.StartCar();
+    }
+}
+```
+
+---
 
