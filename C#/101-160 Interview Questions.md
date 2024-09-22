@@ -373,3 +373,390 @@ class Program
 ```
 
 ---
+### Question 111: Explain value types and reference types?
+
+#### English Explanation:
+
+In C#, types are divided into **value types** and **reference types**:
+- **Value types**: Store data directly in the memory location where the variable is declared. Common value types include `int`, `float`, `bool`, and `struct`. Value types are stored on the **stack**.
+- **Reference types**: Store a reference to the memory location where the actual data is stored. Common reference types include `class`, `interface`, `delegate`, and `array`. Reference types are stored on the **heap**, and the reference itself is stored on the **stack**.
+
+#### Code Example:
+
+```csharp
+public class MyClass
+{
+    public int Value;  // Reference type, object stored in heap
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int a = 10;  // Value type, stored on the stack
+        MyClass myObject = new MyClass();  // Reference type, reference stored on the stack, object on heap
+        myObject.Value = 20;
+    }
+}
+```
+
+#### Chinese Explanation:
+
+在 C# 中，类型分为**值类型**和**引用类型**：
+- **值类型**：直接存储数据在变量声明的内存位置。常见的值类型包括 `int`、`float`、`bool` 和 `struct`。值类型存储在**栈**中。
+- **引用类型**：存储对实际数据存储位置的引用。常见的引用类型包括 `class`、`interface`、`delegate` 和 `array`。引用类型存储在**堆**中，而引用本身存储在**栈**中。
+
+#### 代码示例：
+
+```csharp
+public class MyClass
+{
+    public int Value;  // 引用类型，对象存储在堆中
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int a = 10;  // 值类型，存储在栈上
+        MyClass myObject = new MyClass();  // 引用类型，引用存储在栈上，对象存储在堆中
+        myObject.Value = 20;
+    }
+}
+```
+
+---
+
+### Question 112: Explain byval and byref?
+
+#### English Explanation:
+
+- **By Value (byval)**: When a value type is passed to a method **by value**, a copy of the actual data is passed. Changes made to the parameter inside the method do not affect the original value outside the method.
+  
+- **By Reference (byref)**: When a value type is passed to a method **by reference**, the reference to the actual data is passed. Changes made to the parameter inside the method affect the original value outside the method.
+
+#### Code Example:
+
+```csharp
+public class Program
+{
+    static void ModifyByValue(int a)
+    {
+        a = 20;  // This change won't affect the original value
+    }
+
+    static void ModifyByReference(ref int a)
+    {
+        a = 20;  // This change will affect the original value
+    }
+
+    static void Main(string[] args)
+    {
+        int x = 10;
+
+        // Passing by value
+        ModifyByValue(x);
+        Console.WriteLine(x);  // Output: 10
+
+        // Passing by reference
+        ModifyByReference(ref x);
+        Console.WriteLine(x);  // Output: 20
+    }
+}
+```
+
+#### Chinese Explanation:
+
+- **按值传递（byval）**：当值类型按值传递到方法时，会传递数据的副本。方法内部对参数的更改不会影响方法外部的原始值。
+  
+- **按引用传递（byref）**：当值类型按引用传递到方法时，会传递对实际数据的引用。方法内部对参数的更改会影响方法外部的原始值。
+
+#### 代码示例：
+
+```csharp
+public class Program
+{
+    static void ModifyByValue(int a)
+    {
+        a = 20;  // 此更改不会影响原始值
+    }
+
+    static void ModifyByReference(ref int a)
+    {
+        a = 20;  // 此更改将影响原始值
+    }
+
+    static void Main(string[] args)
+    {
+        int x = 10;
+
+        // 按值传递
+        ModifyByValue(x);
+        Console.WriteLine(x);  // 输出：10
+
+        // 按引用传递
+        ModifyByReference(ref x);
+        Console.WriteLine(x);  // 输出：20
+    }
+}
+```
+
+---
+
+### Question 113: Differentiate between copy by value and copy by reference?
+
+#### English Explanation:
+
+- **Copy by Value**: When a value type is copied, only the value itself is copied. Modifications to the copied value do not affect the original value.
+  
+- **Copy by Reference**: When a reference type is copied, only the reference (or pointer) is copied, not the actual data. Changes made to the copied reference affect the original object, as both references point to the same object in memory.
+
+#### Code Example:
+
+```csharp
+public class MyClass
+{
+    public int Value;
+}
+
+class Program
+{
+    static void ModifyValue(MyClass obj)
+    {
+        obj.Value = 20;  // Modifies the original object, as reference is passed
+    }
+
+    static void Main(string[] args)
+    {
+        MyClass obj1 = new MyClass();
+        obj1.Value = 10;
+
+        MyClass obj2 = obj1;  // Copy by reference, both point to the same object
+
+        ModifyValue(obj2);
+        Console.WriteLine(obj1.Value);  // Output: 20 (as both obj1 and obj2 reference the same object)
+    }
+}
+```
+
+#### Chinese Explanation：
+
+- **按值复制**：当值类型被复制时，只复制值本身。对复制值的修改不会影响原始值。
+  
+- **按引用复制**：当引用类型被复制时，只复制引用（或指针），而不是实际数据。对复制引用的更改会影响原始对象，因为两个引用都指向内存中的同一个对象。
+
+#### 代码示例：
+
+```csharp
+public class MyClass
+{
+    public int Value;
+}
+
+class Program
+{
+    static void ModifyValue(MyClass obj)
+    {
+        obj.Value = 20;  // 修改原始对象，因为传递的是引用
+    }
+
+    static void Main(string[] args)
+    {
+        MyClass obj1 = new MyClass();
+        obj1.Value = 10;
+
+        MyClass obj2 = obj1;  // 按引用复制，两个引用指向同一个对象
+
+        ModifyValue(obj2);
+        Console.WriteLine(obj1.Value);  // 输出：20（因为 obj1 和 obj2 都引用相同的对象）
+    }
+}
+```
+
+---
+
+### Question 114: What is boxing and unboxing?
+
+#### English Explanation:
+
+- **Boxing**: The process of converting a value type (like `int`) into a reference type (like `object`). The value type is stored in a new object on the heap.
+  
+- **Unboxing**: The process of converting a reference type back to a value type. The value is extracted from the object and placed back into a value type variable.
+
+#### Code Example:
+
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Boxing
+        int a = 10;
+        object obj = a;  // Value type a is boxed into a reference type obj
+
+        // Unboxing
+        int b = (int)obj;  // Reference type obj is unboxed back into a value type b
+
+        Console.WriteLine(b);  // Output: 10
+    }
+}
+```
+
+#### Chinese Explanation：
+
+- **装箱（Boxing）**：将值类型（如 `int`）转换为引用类型（如 `object`）的过程。值类型存储在堆上的新对象中。
+  
+- **拆箱（Unboxing）**：将引用类型转换回值类型的过程。值从对象中提取并放回值类型变量中。
+
+#### 代码示例：
+
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        // 装箱
+        int a = 10;
+        object obj = a;  // 值类型 a 装箱为引用类型 obj
+
+        // 拆箱
+        int b = (int)obj;  // 引用类型 obj 拆箱回值类型 b
+
+        Console.WriteLine(b);  // 输出：10
+    }
+}
+```
+
+---
+
+### Question 115: Is boxing/unboxing good or bad?
+
+#### English Explanation:
+
+Boxing and unboxing are generally considered **bad practices** in performance-critical applications because:
+1. **Performance overhead**: Boxing and unboxing involve additional memory allocation on the heap and memory copying, which can slow down the application.
+2. **Increased garbage collection**: Frequent boxing leads to more objects on the heap, which can increase the workload of the garbage collector.
+
+#### Chinese Explanation：
+
+在性能关键的应用中，装箱和拆箱通常被认为是**不好的做法**，原因是：
+1. **性能开销**：装箱和拆箱涉及堆上的额外内存分配和内存复制，这会降低应用程序的性能。
+2. **增加垃圾回收**：频繁的装箱会导致堆上有更多对象，这会增加垃圾回收器的工作
+
+量。
+
+---
+
+### Question 116: Can we avoid boxing and unboxing?
+
+#### English Explanation:
+
+Yes, boxing and unboxing can be avoided by:
+1. Using **generics**: Generics allow you to work with types without boxing/unboxing by maintaining the actual type instead of converting it to `object`.
+2. Avoiding operations that require boxing, like passing value types to methods that expect `object`.
+
+#### Code Example:
+
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Without boxing, using generics
+        List<int> numbers = new List<int>();
+        numbers.Add(10);  // No boxing involved
+
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);  // No unboxing needed
+        }
+    }
+}
+```
+
+#### Chinese Explanation：
+
+是的，可以通过以下方式避免装箱和拆箱：
+1. 使用**泛型**：泛型允许你在不进行装箱/拆箱的情况下处理类型，因为它保留了实际类型而不是将其转换为 `object`。
+2. 避免需要装箱的操作，例如将值类型传递给期望 `object` 类型的方法。
+
+#### 代码示例：
+
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        // 无装箱，使用泛型
+        List<int> numbers = new List<int>();
+        numbers.Add(10);  // 不涉及装箱
+
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);  // 不需要拆箱
+        }
+    }
+}
+```
+
+---
+
+### Question 117: What effect does boxing and unboxing have on performance?
+
+#### English Explanation:
+
+Boxing and unboxing negatively affect performance because:
+1. **Memory allocation**: Boxing allocates memory on the heap for the value type, which is slower than stack allocation.
+2. **Garbage collection**: More heap allocations lead to more frequent garbage collections, which can slow down the application.
+3. **Memory copying**: Boxing involves copying the value type's data into a heap-allocated object, and unboxing requires copying it back to the stack.
+
+#### Chinese Explanation：
+
+装箱和拆箱对性能有负面影响，原因包括：
+1. **内存分配**：装箱在堆上为值类型分配内存，这比栈分配更慢。
+2. **垃圾回收**：更多的堆分配会导致更频繁的垃圾回收，从而降低应用程序的速度。
+3. **内存复制**：装箱涉及将值类型的数据复制到堆分配的对象中，拆箱需要将其复制回栈中。
+
+---
+
+### Question 118: Are strings allocated on the stack or heap?
+
+#### English Explanation:
+
+In C#, **strings** are **reference types**, so they are allocated on the **heap**. However, string literals are **interned** by the .NET runtime, meaning they are stored in a special memory pool to avoid duplication and save memory.
+
+#### Chinese Explanation：
+
+在 C# 中，**字符串**是**引用类型**，因此它们分配在**堆**上。然而，字符串字面量由 .NET 运行时**驻留**，这意味着它们存储在一个特殊的内存池中，以避免重复并节省内存。
+
+---
+
+### Question 119: How many stack and heaps are created for an application?
+
+#### English Explanation:
+
+In a typical C# application:
+- **Stack**: Each thread has its own **stack**, so for every thread in your application, there is a separate stack.
+- **Heap**: There is only **one heap** for the entire application, shared by all threads. Objects created on the heap are managed by the garbage collector.
+
+#### Chinese Explanation：
+
+在典型的 C# 应用程序中：
+- **栈**：每个线程都有自己的**栈**，因此在应用程序中的每个线程都有一个单独的栈。
+- **堆**：整个应用程序只有一个**堆**，由所有线程共享。堆上的对象由垃圾回收器管理。
+
+---
+
+### Question 120: How are stack and heap memory deallocated?
+
+#### English Explanation:
+
+- **Stack**: Stack memory is deallocated automatically when a function call or method returns, following a **LIFO (Last In, First Out)** order.
+- **Heap**: Heap memory is deallocated by the **garbage collector**, which automatically identifies and frees objects that are no longer in use.
+
+#### Chinese Explanation：
+
+- **栈**：栈内存在函数调用或方法返回时自动释放，遵循**LIFO（后进先出）**顺序。
+- **堆**：堆内存由**垃圾回收器**释放，垃圾回收器会自动识别并释放不再使用的对象。
+
+---
