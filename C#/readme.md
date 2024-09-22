@@ -1,4 +1,14 @@
 # C# interview questions
+---
+As of September 2024, the current versions of C#, .NET Core, and .NET are as follows:
+
+1. **C# Version**: C# 12 is the latest stable release. It introduces several new features, including primary constructors for classes and structs, collection expressions, `ref readonly` parameters, and more. C# 12 is compatible with .NET 8【8†source】.
+
+2. **.NET Core Version**: .NET Core has evolved into the broader .NET ecosystem, with the current version being **.NET 8 (LTS)**. The latest release for .NET 8 is version 8.0.8, with long-term support ending in November 2026【9†source】【10†source】.
+
+3. **.NET Version**: The latest .NET release is **.NET 9**, currently available as a **release candidate (9.0.0-rc.1)**. The official release is expected in November 2024【8†source】【9†source】.
+
+---
 
 1. Explain the difference between .NET and C#?
 2. .NET Framework vs .NET Core vs .NET 5.0
