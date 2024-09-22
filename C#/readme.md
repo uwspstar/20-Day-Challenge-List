@@ -10,6 +10,10 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 
 ---
 
+### [Question 1 - 50[(https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/1-50%20Interview%20Questions.md)
+### [Question 51 - 100[(https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/51-100%20Interview%20Questions.md)
+### [Question 101 - 160[()
+
 1. Explain the difference between .NET and C#?
 2. .NET Framework vs .NET Core vs .NET 5.0
 3. What is IL (Intermediate Language) Code?
