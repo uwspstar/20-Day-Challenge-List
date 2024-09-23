@@ -55,26 +55,6 @@ In the **Token Bucket** algorithm, tokens are added to a bucket at a fixed rate.
 ```python
 class TokenBucketRateLimiter:
     def __init__(self, rate, capacity):
-        self.rate = rate  # Token replenishment rate
-        self.capacity = capacity  # Max bucket capacity
-        self.tokens = capacity
-        self.last_refill_timestamp = time.time()
-
-    def allow_request(self):
-        current_time = time.time()
-        elapsed_time = current_time - self.last_refill_timestamp
-        self.tokens = min(self.capacity, self.tokens + elapsed_time * self.rate)
-        self.last_refill_timestamp = current_time
-
-        if self.tokens >= 1:
-            self.tokens -= 1
-            return True
-        return False
-```
-
-```python
-class TokenBucketRateLimiter:
-    def __init__(self, rate, capacity):
         self.rate = rate  # 令牌补充速率
         self.capacity = capacity  # 桶的最大容量
         self.tokens = capacity
@@ -187,30 +167,6 @@ class RedisRateLimiter:
         return False
 ```
 
-```python
-import redis
-import time
-
-class RedisRateLimiter:
-    def __init__(self, client_id, limit, window_size):
-        self.redis_client = redis.StrictRedis(host='localhost', port=6379, db=0)
-        self.client_id = client_id
-        self.limit = limit
-        self.window_size = window_size
-
-    def allow_request(self):
-        current_time = int(time.time())
-        pipeline = self.redis_client.pipeline()
-        pipeline.zadd(self.client_id, {current_time: current_time})
-        pipeline.zremrangebyscore(self.client_id, 0, current_time - self.window_size)
-        pipeline.zcard(self.client_id)
-        result = pipeline.execute()
-
-        if result[2] < self.limit:
-            return True
-        return False
-```
-
 This implementation uses Redis's sorted set (zset) to track requests with timestamps. The window size represents the time frame, and the limit represents the maximum number of requests allowed.
 
 这个实现使用Redis的有序集合（zset）来跟踪带有时间戳的请求。窗口大小表示时间范围，限制表示允许的最大请求数。
@@ -239,4 +195,71 @@ Designing a rate limiter is crucial for protecting system resources, ensuring fa
 
 ---
 
-Let me know if you'd like further details or another topic!
+Here's a simple **ASCII flow diagram** to illustrate the design of a **rate limiter**. This diagram represents the flow of how a rate limiter can be implemented using the **Token Bucket** or **Sliding Window** approach, along with the logic for handling user requests.
+
+```
++--------------------------------------+
+|        Start Request Handling        |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+|  Is User Allowed to Make Request?    |
++--------------------------------------+
+                |
+        +-------+-------+
+        |               |
+        v               v
++----------------+   +-----------------+
+|  Yes, Allow    |   |   No, Reject     |
+|  the Request   |   |   the Request    |
++----------------+   +-----------------+
+        |               |
+        v               v
++--------------------------------------+
+|  Check Rate Limiting Algorithm:      |
+|  - Token Bucket                     |
+|  - Sliding Window                   |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+|  Redis (Distributed System) or Local |
+|  Storage for Tracking Requests       |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+|    Update Token Bucket / Sliding     |
+|    Window Counters & Timers          |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+|      Log Request and Response        |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+|           End Request Handling       |
++--------------------------------------+
+```
+
+### Explanation:
+1. **Start Request Handling**: A user sends a request to the system, and the rate limiter checks whether the user is allowed to make the request.
+  
+2. **Check if User is Allowed**: The system checks whether the user has exceeded the rate limit using one of the chosen rate-limiting algorithms (e.g., **Token Bucket** or **Sliding Window**).
+    - **Yes, Allow**: If the user hasn't exceeded the limit, the request is processed.
+    - **No, Reject**: If the user has exceeded the limit, the request is rejected or delayed.
+
+3. **Rate Limiting Algorithm**: Depending on the chosen algorithm:
+    - **Token Bucket**: Tokens are added at a fixed rate, and a token is consumed for each request.
+    - **Sliding Window**: The system tracks requests within a time window to limit the rate.
+
+4. **Redis or Local Storage**: In a distributed system, the request counts or tokens can be stored in **Redis** to ensure consistency across multiple servers. For a single-server setup, local storage might be sufficient.
+
+5. **Update Counters and Timers**: After processing or rejecting the request, the system updates the counters or timers that track how many requests the user has made within the time window or how many tokens are left in the bucket.
+
+6. **Log the Request and Response**: Log the request for monitoring and debugging purposes.
+
+7. **End Request Handling**: The process concludes after handling the request, either by allowing or rejecting it.
