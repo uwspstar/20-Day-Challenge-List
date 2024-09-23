@@ -1,6 +1,7 @@
 # System Design Interview
 
 - [Daily Active Users (DAU) (每日活跃用户)]()
+- [数据库选择 (Database Selection)](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/System%20Design%20Interview/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E6%8B%A9.md
 ---
 
 | **#** | **Interview Question**               | **Description**                        |
