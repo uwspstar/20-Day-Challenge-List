@@ -3,7 +3,7 @@
 
 | **#** | **Interview Question**               | **Description**                        |
 |-------|--------------------------------------|----------------------------------------|
-| 0     | How to Approach              | General guidance on approaching system design questions. |
+| 0     | [How to Approach](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/System%20Design%20Interview/How%20to%20Approach.md)              | General guidance on approaching system design questions. |
 | 1     | Design a Rate Limiter                | Designing a system that limits the rate of requests from users or systems. |
 | 2     | Design TinyURL                       | Creating a URL shortening service like bit.ly. |
 | 3     | Design Twitter             | Building a simplified version of Twitter, including key components like feed generation. |
