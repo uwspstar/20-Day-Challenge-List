@@ -1,5 +1,8 @@
 ### **Design a Rate Limiter** (设计速率限制器)
 
+[Back to System Design List](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/System%20Design%20Interview/readme.md)
+
+
 A **rate limiter** is used to control the number of requests a user can make to a system within a given period. This is especially important for preventing abuse, managing traffic, and ensuring that system resources are fairly allocated among users.
 
 **速率限制器** 用于控制用户在特定时间内向系统发出的请求数量。这对于防止滥用、管理流量和确保系统资源在用户之间公平分配非常重要。
