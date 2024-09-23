@@ -1,5 +1,7 @@
 # How to Approach
 
+[Back to System Design List](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/System%20Design%20Interview/readme.md)
+
 ### 1. **Functional Requirements** (功能需求)
 
 Functional requirements describe what the system should do. In a system design interview, you must thoroughly understand the system's core features and how users will interact with it.
