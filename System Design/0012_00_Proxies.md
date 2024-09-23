@@ -155,13 +155,9 @@ These examples demonstrate how forward and reverse proxies are implemented. The 
 
 ### Interview Questions (面试问题)
 
-1. What are the differences between a
-
-
-
- forward proxy and a reverse proxy?
+1. What are the differences between a `forward proxy` and a `reverse proxy`?
    - 正向代理和反向代理之间有什么区别？
-2. How does a reverse proxy improve the security and performance of a web application?
+2. How does a `reverse proxy` improve the security and performance of a web application?
    - 反向代理如何提高Web应用程序的安全性和性能？
 3. In which scenarios would you use a forward proxy instead of a reverse proxy?
    - 在什么情况下你会使用正向代理而不是反向代理？
@@ -173,15 +169,3 @@ These examples demonstrate how forward and reverse proxies are implemented. The 
 Proxies play a critical role in enhancing both privacy and security in network communications. A forward proxy protects the client’s identity and controls access, while a reverse proxy improves the scalability and security of backend servers. Understanding when and why to use each type of proxy is essential for designing scalable and secure systems in modern distributed architectures.
 
 代理在增强网络通信中的隐私性和安全性方面发挥着关键作用。正向代理保护客户端的身份并控制访问，而反向代理则提高了后端服务器的可扩展性和安全性。了解何时以及为何使用每种类型的代理对于设计现代分布式架构中的可扩展和安全的系统至关重要。
-
----
-
-### Would you like to explore further? (您想进一步探索吗？)
-
-Consider diving deeper into topics like SSL termination with reverse proxies, load balancing algorithms used by reverse proxies, or the role of forward proxies in bypassing geo-blocked content.
-
-可以进一步探讨反向代理的SSL终止、反向代理使用的负载均衡算法或正向代理在绕过地理封锁内容中的作用。
-
---- 
-
-This completes the explanation of **Proxies** using the template!
