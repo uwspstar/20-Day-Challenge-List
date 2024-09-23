@@ -1,6 +1,6 @@
 # Daily Active Users (DAU) (每日活跃用户)
 
-Let's continue with the explanation on **Daily Active Users (DAU)**, covering how to approach the **DAU** aspect in **System Design Interviews** with both English and Chinese explanations line by line:
+[Back to System Design List](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/System%20Design%20Interview/readme.md)
 
 ---
 
