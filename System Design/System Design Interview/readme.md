@@ -1,6 +1,6 @@
 # System Design Interview
 
-[Daily Active Users (DAU) (每日活跃用户)]()
+- [Daily Active Users (DAU) (每日活跃用户)]()
 ---
 
 | **#** | **Interview Question**               | **Description**                        |
