@@ -398,7 +398,7 @@ A constructor is used for class instantiation in Angular and is called when the 
 
 ---
 
-### 38. **What are Asynchronous operations?**
+### [38. **What are Asynchronous operations?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/Asynchronous%20Operations.md)
 Asynchronous operations run separately from the main program flow and are typically used for tasks like HTTP requests.
 
 ```typescript
