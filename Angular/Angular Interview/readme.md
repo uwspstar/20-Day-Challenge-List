@@ -262,7 +262,7 @@ Directives are special markers that Angular uses to apply behavior to elements.
 
 ---
 
-### 23. **What is Decorator?**
+### [23. **What is Decorator?**](https://github.com/uwspstar/20-Day-Challenge-List/edit/main/Angular/Angular%20Interview/What%20is%20a%20Decorator%20in%20Angular.md)
 A decorator is a special type of declaration that modifies classes or properties.
 
 ```typescript
