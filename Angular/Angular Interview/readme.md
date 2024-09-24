@@ -409,7 +409,7 @@ this.http.get('https://api.example.com/data').subscribe(data => {
 
 ---
 
-### 39. **What is the difference between Promise and Observable?**
+### [39. **What is the difference between Promise and Observable?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/Promise%20vs%20Observable.md)
 - **Promise**: Handles a single asynchronous event.
 - **Observable**: Handles multiple asynchronous events over time.
 
@@ -420,12 +420,12 @@ this.dataService.getData().subscribe(data => console.log(data));
 
 ---
 
-### 40. **What is RxJS?**
+### [40. **What is RxJS?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/RxJS.md)
 RxJS is a library for composing asynchronous and event-based programs using Observables.
 
 ---
 
-### 41. **What is Observable? How to implement Observable?**
+### [41. **What is Observable? How to implement Observable?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/Observable.md)
 An observable is a stream of data that can emit multiple values over time.
 
 ```typescript
@@ -437,7 +437,7 @@ const observable = new Observable(observer => {
 
 ---
 
-### 42. **What is the role of HttpClient in Angular?**
+### [42. **What is the role of HttpClient in Angular?**]()
 `HttpClient` is used to make HTTP requests and return Observables.
 
 ```typescript
