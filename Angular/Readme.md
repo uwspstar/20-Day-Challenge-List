@@ -1,6 +1,6 @@
 # comparison Angular versions 15 through 18:
 
-```markdown
+ 
 | Feature/Update                          | Angular v15                           | Angular v16                           | Angular v17                           | Angular v18 (Upcoming)                |
 |-----------------------------------------|---------------------------------------|---------------------------------------|---------------------------------------|---------------------------------------|
 | **Release Date**                        | November 2022                         | May 2023                             | Late 2023                             | 2024 (Expected)                       |
@@ -21,7 +21,7 @@
 | **Tree-Shaking Improvements**           | Stable improvements                   | Enhanced with better optimizations    | Further optimizations                 | Expected to improve further           |
 | **Deprecations**                        | Older libraries and APIs deprecated   | More deprecations, focusing on modern features | Continued phasing out of old APIs    | Further deprecations                  |
 | **SSR (Server-Side Rendering)**         | Improved SSR support                  | Improved with better hydration support | Further optimizations                 | Expected to improve hydration support |
-```
+ 
 
 ### Highlights:
 - **Standalone Components**: Angular v15 made standalone components stable, while v16 and v17 improved and optimized their usage. Angular v18 is expected to continue this trend.
