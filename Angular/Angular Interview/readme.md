@@ -473,7 +473,7 @@ let name: string = 'John';
 
 ---
 
-### 46. **What are Built-in/Primitive and User-Defined/Non-primitive Types in Typescript?**
+### [46. **What are Built-in/Primitive and User-Defined/Non-primitive Types in Typescript?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/HttpClient.md)
 - **Primitive types**: `string`, `number`, `boolean`, `null`, `undefined`.
 - **User-defined types**: Interfaces, classes, and types defined by the user.
 
