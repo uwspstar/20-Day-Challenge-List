@@ -528,4 +528,11 @@ const add = (a: number, b: number): number => a + b;
 
 ---
 
+### [51. **What is SSR (Server-Side Rendering)?**]()
+
+---
+
+### [52. **What is Zone.js?**]()
+
+
 This list provides detailed answers and code examples for each question. You can modify or expand each example as needed.
