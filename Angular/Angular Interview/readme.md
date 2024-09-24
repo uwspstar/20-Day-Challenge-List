@@ -392,7 +392,7 @@ A constructor is used for class instantiation in Angular and is called when the 
 
 ---
 
-### 37. **What is the difference between constructor and ngOnInit?**
+### [37. **What is the difference between constructor and ngOnInit?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/Constructor%20vs%20ngOnInit.md)
 - **Constructor**: Used to initialize the class.
 - **ngOnInit**: Used to handle additional initialization logic after the component’s properties are set.
 
@@ -528,11 +528,11 @@ const add = (a: number, b: number): number => a + b;
 
 ---
 
-### [51. **What is SSR (Server-Side Rendering)?**]()
+### [51. **What is SSR (Server-Side Rendering)?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/SSR(Server-Side%20Rendering).md)
 
 ---
 
-### [52. **What is Zone.js?**]()
+### [52. **What is Zone.js?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/Zone.js.md)
 
 
 This list provides detailed answers and code examples for each question. You can modify or expand each example as needed.
