@@ -197,7 +197,7 @@ Two-way binding allows the synchronization of data between the view and the comp
 
 ---
 
-### 16. **What are Directives? What are the types of directives?**
+### [16. **What are Directives? What are the types of directives?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/What%20are%20Directives%3F%20What%20are%20the%20types%20of%20directives.md)
 Directives are special markers that Angular uses to apply behavior to elements.
 - **Structural Directives**: Modify the DOM (e.g., `*ngIf`, `*ngFor`).
 - **Attribute Directives**: Modify the appearance or behavior of elements (e.g., `[ngStyle]`, `[ngClass]`).
