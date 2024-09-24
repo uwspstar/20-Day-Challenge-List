@@ -2,73 +2,247 @@
 
 ---
 
-### 1. What are Python decorators and how do they work?
-**English:** Python decorators are a way to modify or extend the behavior of functions or methods. They are often used for logging, access control, instrumentation, caching, etc. A decorator is a function that takes another function as an argument, adds some functionality, and returns another function.
+Here is the continuation of the Python interview questions with code examples for each question to help understand the concepts:
 
-**Chinese:** Python装饰器是一种修改或扩展函数或方法行为的方法。它们通常用于日志记录、访问控制、检测、缓存等。装饰器是一个函数，它接受另一个函数作为参数，添加一些功能，并返回另一个函数。
+---
+
+### 1. What are Python decorators and how do they work?
+**English:** Python decorators are functions that modify the behavior of other functions or methods. A decorator takes a function, adds some functionality, and returns another function.
+
+**Chinese:** Python 装饰器是修改其他函数或方法行为的函数。装饰器接受一个函数，添加一些功能，并返回另一个函数。
+
+**Code Example:**
+```python
+def my_decorator(func):
+    def wrapper():
+        print("Something before the function")
+        func()
+        print("Something after the function")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+# Output:
+# Something before the function
+# Hello!
+# Something after the function
+```
 
 ---
 
 ### 2. Explain the difference between `@staticmethod` and `@classmethod`.
-**English:** `@staticmethod` is used to define a method that does not operate on an instance of the class and doesn’t modify the class state. `@classmethod`, on the other hand, is a method that receives the class as the first argument (`cls`) and can modify the class state that applies across all instances.
+**English:** `@staticmethod` defines a method that does not access class or instance variables, whereas `@classmethod` takes the class (`cls`) as the first argument and can modify class variables.
 
-**Chinese:** `@staticmethod`用于定义不操作类实例且不修改类状态的方法。另一方面，`@classmethod`是一个方法，它接收类作为第一个参数(`cls`)，并且可以修改适用于所有实例的类状态。
+**Chinese:** `@staticmethod` 定义一个不访问类或实例变量的方法，而 `@classmethod` 接收类 (`cls`) 作为第一个参数，并且可以修改类变量。
+
+**Code Example:**
+```python
+class MyClass:
+    class_variable = "Hello"
+    
+    @staticmethod
+    def static_method():
+        print("I am a static method.")
+
+    @classmethod
+    def class_method(cls):
+        print(f"Class method can access {cls.class_variable}.")
+
+MyClass.static_method()
+MyClass.class_method()
+# Output:
+# I am a static method.
+# Class method can access Hello.
+```
 
 ---
 
 ### 3. How can you achieve thread safety in Python?
-**English:** Thread safety in Python can be achieved by using synchronization primitives like `threading.Lock`, `threading.RLock`, `queue.Queue`, or higher-level libraries like `concurrent.futures`. Using these tools ensures that only one thread can execute a piece of code at a time.
+**English:** Thread safety can be achieved using synchronization mechanisms like `threading.Lock`, `threading.RLock`, or `queue.Queue`.
 
-**Chinese:** 在Python中可以通过使用同步原语如`threading.Lock`、`threading.RLock`、`queue.Queue`或更高级的库如`concurrent.futures`来实现线程安全。使用这些工具可以确保一次只有一个线程可以执行一段代码。
+**Chinese:** 可以通过使用 `threading.Lock`、`threading.RLock` 或 `queue.Queue` 等同步机制实现线程安全。
+
+**Code Example:**
+```python
+import threading
+
+lock = threading.Lock()
+
+def thread_safe_function():
+    with lock:
+        # critical section
+        print("This is thread-safe.")
+
+thread1 = threading.Thread(target=thread_safe_function)
+thread2 = threading.Thread(target=thread_safe_function)
+
+thread1.start()
+thread2.start()
+thread1.join()
+thread2.join()
+```
 
 ---
 
 ### 4. What is the Global Interpreter Lock (GIL) in Python?
-**English:** The Global Interpreter Lock (GIL) is a mutex that protects access to Python objects, preventing multiple native threads from executing Python bytecodes simultaneously in CPython. This means that even in a multi-threaded Python program, only one thread executes Python code at a time.
+**English:** The Global Interpreter Lock (GIL) ensures that only one thread executes Python bytecode at a time, preventing multiple threads from executing Python code simultaneously.
 
-**Chinese:** 全局解释器锁（GIL）是一种互斥锁，它保护对Python对象的访问，防止多个本地线程在CPython中同时执行Python字节码。这意味着即使在多线程的Python程序中，也只有一个线程同时执行Python代码。
+**Chinese:** 全局解释器锁 (GIL) 确保每次只有一个线程执行 Python 字节码，防止多个线程同时执行 Python 代码。
+
+**Code Example:**
+```python
+import threading
+
+def count():
+    global x
+    x = 0
+    for _ in range(1000000):
+        x += 1
+
+x = 0
+t1 = threading.Thread(target=count)
+t2 = threading.Thread(target=count)
+
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+
+print(x)  # Due to GIL, only one thread modifies x at a time
+```
 
 ---
 
 ### 5. How do you manage memory in Python?
-**English:** Python uses automatic memory management, which is handled by Python’s built-in garbage collector. Memory is allocated when objects are created and is automatically freed when objects are no longer in use, typically when they go out of scope or when their reference count drops to zero.
+**English:** Python uses automatic memory management through garbage collection, primarily using reference counting and cyclic garbage collection.
 
-**Chinese:** Python使用自动内存管理，由Python内置的垃圾回收器处理。内存在对象创建时分配，当对象不再使用时自动释放，通常是在它们超出作用域或它们的引用计数降为零时。
+**Chinese:** Python 使用垃圾回收自动管理内存，主要通过引用计数和循环垃圾回收机制。
+
+**Code Example:**
+```python
+import gc
+
+class MyObject:
+    pass
+
+obj1 = MyObject()
+obj2 = MyObject()
+
+# Circular reference
+obj1.ref = obj2
+obj2.ref = obj1
+
+del obj1
+del obj2
+
+# Force garbage collection
+gc.collect()
+```
 
 ---
 
 ### 6. What is the difference between `deepcopy` and `shallow copy` in Python?
-**English:** A shallow copy creates a new object but doesn’t create copies of nested objects; instead, it copies references to them. A deep copy, on the other hand, creates a new object and recursively copies all nested objects, resulting in a fully independent copy.
+**English:** A shallow copy creates a new object but references the nested objects, while a deep copy recursively copies all nested objects, creating a fully independent object.
 
-**Chinese:** 浅拷贝创建一个新对象，但不创建嵌套对象的副本；相反，它复制对它们的引用。另一方面，深拷贝创建一个新对象，并递归地复制所有嵌套对象，从而产生一个完全独立的副本。
+**Chinese:** 浅拷贝创建一个新对象，但引用嵌套对象；深拷贝则递归地复制所有嵌套对象，创建一个完全独立的对象。
+
+**Code Example:**
+```python
+import copy
+
+original_list = [[1, 2, 3], [4, 5, 6]]
+shallow_copy = copy.copy(original_list)
+deep_copy = copy.deepcopy(original_list)
+
+original_list[0][0] = 999
+
+print(shallow_copy)  # [[999, 2, 3], [4, 5, 6]]
+print(deep_copy)     # [[1, 2, 3], [4, 5, 6]]
+```
 
 ---
 
 ### 7. How does Python’s garbage collector work?
-**English:** Python’s garbage collector works by reference counting and cyclic garbage collection. Objects in memory have a reference count, and when it drops to zero, the object is immediately destroyed. The cyclic garbage collector is used to identify and clean up circular references that reference counting alone cannot handle.
+**English:** Python’s garbage collector works by reference counting and detecting cyclic references. It frees objects when their reference count drops to zero or when cyclic references are detected.
 
-**Chinese:** Python的垃圾回收器通过引用计数和循环垃圾回收工作。内存中的对象有一个引用计数，当它降为零时，对象会立即被销毁。循环垃圾回收器用于识别和清理引用计数无法处理的循环引用。
+**Chinese:** Python 的垃圾回收器通过引用计数和检测循环引用来工作。当对象的引用计数降为零或检测到循环引用时，垃圾回收器释放对象。
+
+**Code Example:**
+```python
+import gc
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+node1 = Node(1)
+node2 = Node(2)
+
+# Creating a reference cycle
+node1.next = node2
+node2.next = node1
+
+del node1
+del node2
+
+gc.collect()  # Forces the garbage collector to clean up the cycle
+```
 
 ---
 
 ### 8. Explain the difference between `is` and `==` in Python.
-**English:** `is` checks for object identity, meaning it returns `True` if two references point to the same object in memory. `==` checks for value equality, meaning it returns `True` if two objects have the same value.
+**English:** `is` checks for object identity (if two references point to the same object), while `==` checks for value equality (if two objects have the same value).
 
-**Chinese:** `is`检查对象身份，意思是如果两个引用指向内存中的同一个对象，它返回`True`。`==`检查值相等，意思是如果两个对象具有相同的值，它返回`True`。
+**Chinese:** `is` 检查对象的身份（即两个引用是否指向同一个对象），而 `==` 检查值是否相等（即两个对象是否有相同的值）。
+
+**Code Example:**
+```python
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a == c)  # True (value equality)
+print(a is c)  # False (different objects)
+print(a is b)  # True (same object)
+```
 
 ---
 
 ### 9. What are Python’s built-in types and functions?
-**English:** Python has several built-in types, such as `int`, `float`, `str`, `list`, `tuple`, `set`, `dict`, etc. It also has built-in functions like `len()`, `range()`, `print()`, `type()`, `isinstance()`, `id()`, `sorted()`, and many more.
+**English:** Python has built-in types like `int`, `float`, `str`, `list`, `tuple`, `dict`, and `set`. It also includes built-in functions like `len()`, `print()`, `type()`, `sorted()`, etc.
 
-**Chinese:** Python有几种内置类型，如`int`、`float`、`str`、`list`、`tuple`、`set`、`dict`等。它还有内置函数如`len()`、`range()`、`print()`、`type()`、`isinstance()`、`id()`、`sorted()`等。
+**Chinese:** Python 有内置类型，如 `int`、`float`、`str`、`list`、`tuple`、`dict` 和 `set`。它还包括内置函数，如 `len()`、`print()`、`type()`、`sorted()` 等。
+
+**Code Example:**
+```python
+x = [3, 1, 2]
+print(len(x))  # 3
+print(sorted(x))  # [1, 2, 3]
+```
 
 ---
 
 ### 10. What are metaclasses in Python?
-**English:** Metaclasses in Python are classes of classes that define how classes behave. A class is an instance of a metaclass. They allow for modifying class creation and can be used for creating APIs, enforcing coding standards, or implementing singletons.
+**English:** Metaclasses are the “classes of classes” that define how classes behave. A class is an instance of a metaclass, and metaclasses allow customization of class creation.
 
-**Chinese:** Python中的元类是定义类行为的类的类。一个类是元类的实例。它们允许修改类的创建，可以用于创建API、强制执行编码标准或实现单例模式。
+**Chinese:** 元类是定义类行为的“类的类”。类是元类的实例，元类允许自定义类的创建。
+
+**Code Example:**
+```python
+class Meta(type):
+    def __new__(cls, name, bases, attrs):
+        print(f"Creating class {name}")
+        return super(Meta, cls).__new__(cls, name, bases, attrs)
+
+class MyClass(metaclass=Meta):
+    pass
+
+# Output: Creating class MyClass
+```
 
 ---
 
