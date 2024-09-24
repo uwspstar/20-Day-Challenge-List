@@ -281,7 +281,7 @@ export class AppComponent {}
 
 ---
 
-### 25. **What are Pipes? What are the types of Pipes & Parameterized Pipes?**
+### [25. **What are Pipes? What are the types of Pipes & Parameterized Pipes?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/What%20are%20Pipe.md)
 Pipes transform output in the template. Parameterized pipes take arguments for transformation.
 
 ```html
