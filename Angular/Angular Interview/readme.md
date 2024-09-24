@@ -255,7 +255,7 @@ Directives are special markers that Angular uses to apply behavior to elements.
 
 ---
 
-### 22. **What is the difference between Component, Attribute, and Structural Directives?**
+### [22. **What is the difference between Component, Attribute, and Structural Directives?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/What%20is%20the%20difference%20between%20Component%2C%20Attribute%2C%20and%20Structural%20Directives.md)
 - **Component Directives**: Define a template with a selector (e.g., `<app-component>`).
 - **Attribute Directives**: Modify the appearance or behavior of elements (e.g., `[ngClass]`).
 - **Structural Directives**: Modify the structure of the DOM (e.g., `*ngIf`, `*ngFor`).
