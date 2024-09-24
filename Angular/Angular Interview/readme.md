@@ -371,7 +371,7 @@ Parent-child components are components that have a hierarchical relationship, wh
 
 ---
 
-### 34. **What are Lifecycle Hooks in Angular?**
+### [34. **What are Lifecycle Hooks in Angular?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/Lifecycle%20Hooks.md)
 Lifecycle hooks are methods that allow you to hook into key events in a component's life cycle.
 
 ```typescript
