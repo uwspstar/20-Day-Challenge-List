@@ -146,7 +146,7 @@ export class AppModule {}
 
 ---
 
-### 11. **What is Data Binding in Angular?**
+### [11. **What is Data Binding in Angular?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/What%20is%20Data%20Binding%20in%20Angular.md)
 Data Binding refers to the synchronization between the model and the view in Angular.
 
 ```html
