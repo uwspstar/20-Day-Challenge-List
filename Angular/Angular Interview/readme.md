@@ -325,9 +325,7 @@ ng generate service data
 
 ---
 
-### 29. **How to use Dependency Injector with Services
-
- in Angular?**
+### [29. **How to use Dependency Injector with Services in Angular?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Angular/Angular%20Interview/Dependency%20Injector%20with%20Services.md) 
 Inject services via the component constructor.
 
 ```typescript
