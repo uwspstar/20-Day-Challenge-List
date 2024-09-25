@@ -293,3 +293,297 @@ WHERE N = (SELECT COUNT(DISTINCT salary) FROM employees e2 WHERE e2.salary > e1.
 ### 27. **(Bonus) What are Magic Tables in SQL Server?**
 
 **Magic Tables** are the special tables (`INSERTED`, `DELETED`) used within triggers to store pre and post change data during `INSERT`, `UPDATE`, and `DELETE` operations.
+
+---
+
+Here’s a detailed answer to each question with MSSQL code examples:
+
+---
+
+### 1. **Explain normalization?**
+
+**Normalization** is the process of organizing data to minimize redundancy.
+
+- **1NF**: Eliminate duplicate columns.
+- **2NF**: Ensure that non-key columns depend on the entire primary key.
+- **3NF**: Ensure non-key columns depend only on the primary key.
+
+---
+
+### 2. **How to implement normalization?**
+
+**Example:**
+
+Before Normalization:
+
+```sql
+CREATE TABLE Orders (
+    OrderID INT, 
+    CustomerName NVARCHAR(50),
+    ProductName NVARCHAR(50),
+    Price DECIMAL(10, 2)
+);
+```
+
+After 3NF:
+
+```sql
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    CustomerName NVARCHAR(50)
+);
+
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName NVARCHAR(50),
+    Price DECIMAL(10, 2)
+);
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT FOREIGN KEY REFERENCES Customers(CustomerID),
+    ProductID INT FOREIGN KEY REFERENCES Products(ProductID)
+);
+```
+
+---
+
+### 3. **What is denormalization?**
+
+**Denormalization** is the process of adding redundancy to improve read performance at the cost of increased write operations.
+
+**Example**:
+
+```sql
+CREATE TABLE OrdersWithCustomerInfo (
+    OrderID INT, 
+    CustomerName NVARCHAR(50),
+    ProductID INT,
+    Price DECIMAL(10, 2)
+);
+```
+
+---
+
+### 4. **Explain OLTP vs OLAP?**
+
+- **OLTP (Online Transaction Processing)**: Focuses on managing transaction-oriented applications (e.g., banking systems).
+- **OLAP (Online Analytical Processing)**: Focuses on complex queries for data analysis (e.g., business reporting).
+
+---
+
+### 5. **Explain 1st, 2nd, and 3rd Normal form?**
+
+- **1NF**: Remove repeating groups.
+- **2NF**: Remove partial dependency (i.e., each column should depend on the whole primary key).
+- **3NF**: Remove transitive dependency (i.e., each non-primary column should depend only on the primary key).
+
+---
+
+### 6. **Primary Key vs Unique Key?**
+
+| Feature            | Primary Key                     | Unique Key                      |
+|--------------------|----------------------------------|----------------------------------|
+| Uniqueness         | Must be unique                   | Must be unique                  |
+| Nullability        | Cannot contain NULL              | Can contain one NULL            |
+
+---
+
+### 7. **Differentiate between Char vs Varchar?**
+
+| Feature            | Char                             | Varchar                         |
+|--------------------|----------------------------------|----------------------------------|
+| Fixed/Variable     | Fixed-length                     | Variable-length                 |
+| Storage Size       | Always uses defined length       | Uses actual data size           |
+
+---
+
+### 8. **Differentiate between Char vs NChar?**
+
+| Feature            | Char                             | NChar                           |
+|--------------------|----------------------------------|----------------------------------|
+| Character Set      | ASCII                            | Unicode                         |
+| Storage Size       | 1 byte per character             | 2 bytes per character           |
+
+---
+
+### 9. **What’s the size of Char vs NChar?**
+
+- **Char**: 1 byte per character.
+- **NChar**: 2 bytes per character.
+
+---
+
+### 10. **What is the use of Index?**
+
+Indexes are used to improve query performance by allowing faster retrieval of data.
+
+---
+
+### 11. **How does it make search faster?**
+
+Indexes use B-trees or similar structures, allowing quick search, insertion, and deletion of records.
+
+**Example**:
+
+```sql
+CREATE INDEX idx_Name ON Employees(Name);
+```
+
+---
+
+### 12. **What are the two types of Indexes?**
+
+- **Clustered Index**
+- **Non-Clustered Index**
+
+---
+
+### 13. **Clustered vs Non-Clustered index?**
+
+| Feature            | Clustered Index                   | Non-Clustered Index               |
+|--------------------|------------------------------------|-----------------------------------|
+| Data organization  | Reorganizes the actual table data  | Stores separately from data       |
+| Number per table   | Only one allowed                   | Multiple allowed                  |
+
+---
+
+### 14. **Function vs Stored Procedures?**
+
+| Feature              | Function                           | Stored Procedure                  |
+|----------------------|-------------------------------------|-----------------------------------|
+| Return type          | Returns a single value              | Can return multiple values        |
+| Can use in SELECT    | Yes                                 | No                                |
+
+---
+
+### 15. **What are triggers and why do you need it?**
+
+A **trigger** is a stored procedure that automatically runs when certain events occur on a table.
+
+**Example**:
+
+```sql
+CREATE TRIGGER trgAfterInsert 
+ON Employees
+AFTER INSERT 
+AS 
+BEGIN 
+    PRINT 'New row inserted';
+END;
+```
+
+---
+
+### 16. **What are types of triggers?**
+
+- **AFTER Trigger**
+- **INSTEAD OF Trigger**
+
+---
+
+### 17. **Differentiate between After trigger vs Instead Of?**
+
+- **AFTER**: Executes after the triggering event.
+- **INSTEAD OF**: Executes instead of the triggering event.
+
+---
+
+### 18. **What is need of Identity?**
+
+An **identity** column generates unique numbers automatically.
+
+**Example**:
+
+```sql
+CREATE TABLE Orders (
+    OrderID INT IDENTITY(1,1),
+    ProductName NVARCHAR(50)
+);
+```
+
+---
+
+### 19. **Explain transactions and how to implement it?**
+
+A **transaction** is a unit of work that is either fully completed or fully rolled back.
+
+**Example**:
+
+```sql
+BEGIN TRANSACTION;
+    INSERT INTO Orders (ProductName) VALUES ('Product A');
+COMMIT TRANSACTION;
+```
+
+---
+
+### 20. **What are inner joins?**
+
+An **inner join** returns rows that have matching values in both tables.
+
+**Example**:
+
+```sql
+SELECT e.Name, d.DepartmentName
+FROM Employees e
+INNER JOIN Departments d ON e.DepartmentID = d.DepartmentID;
+```
+
+---
+
+### 21. **Explain Left join?**
+
+A **left join** returns all rows from the left table and matching rows from the right table.
+
+**Example**:
+
+```sql
+SELECT e.Name, d.DepartmentName
+FROM Employees e
+LEFT JOIN Departments d ON e.DepartmentID = d.DepartmentID;
+```
+
+---
+
+### 22. **Explain Right join?**
+
+A **right join** returns all rows from the right table and matching rows from the left table.
+
+**Example**:
+
+```sql
+SELECT e.Name, d.DepartmentName
+FROM Employees e
+RIGHT JOIN Departments d ON e.DepartmentID = d.DepartmentID;
+```
+
+---
+
+### 23. **Explain Full outer joins?**
+
+A **full outer join** returns all rows when there is a match in either table.
+
+**Example**:
+
+```sql
+SELECT e.Name, d.DepartmentName
+FROM Employees e
+FULL OUTER JOIN Departments d ON e.DepartmentID = d.DepartmentID;
+```
+
+---
+
+### 24. **Explain Cross joins?**
+
+A **cross join** returns the Cartesian product of the two tables.
+
+**Example**:
+
+```sql
+SELECT e.Name, d.DepartmentName
+FROM Employees e
+CROSS JOIN Departments d;
+```
+
+---
