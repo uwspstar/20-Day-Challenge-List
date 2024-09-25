@@ -221,4 +221,126 @@ Event handled: Button was clicked!
 ### Warning:
 - If you don’t unsubscribe from events in long-lived objects, you could encounter memory leaks, as the event publisher may hold a reference to the subscriber.
 
-This explanation should give you a solid foundation on event handling in C#. Let me know if you'd like further examples or more in-depth topics!
+---
+
+### Explanation of `+=` in `button.OnClick += subscriber.HandleButtonClick;`
+
+In C#, the `+=` operator is used to **subscribe a method (event handler)** to an **event**. When you write:
+
+```csharp
+button.OnClick += subscriber.HandleButtonClick;
+```
+
+You are telling the program that whenever the `OnClick` event is triggered, the method `HandleButtonClick` from the `subscriber` instance should be called. This is how events and event handlers are connected in C#.
+
+### What Happens with `+=` in Events:
+
+1. **Event Subscription**:  
+   The `+=` operator **adds** the event handler (`subscriber.HandleButtonClick`) to the list of methods that are called when the event (`OnClick`) is raised.
+   
+2. **Multicast Delegates**:  
+   Events in C# are based on **multicast delegates**, which allow multiple methods to be executed when the event is triggered. The `+=` operator adds your handler to the list of subscribers (event handlers). Multiple event handlers can be attached to a single event using `+=`.
+
+3. **Event Invocation**:  
+   When the event (`OnClick`) is raised, all the subscribed methods (event handlers) are executed in the order they were added.
+
+#### Breakdown of the Syntax:
+- **`button.OnClick`**: This is the **event** defined in the `Button` class.
+- **`+=`**: This operator is used to **add** or **subscribe** an event handler to the event.
+- **`subscriber.HandleButtonClick`**: This is the **event handler** method that will be executed when the `OnClick` event is triggered.
+
+### Example to Clarify:
+
+Let’s expand the previous example to illustrate how multiple event handlers can be added with `+=`.
+
+#### Button Class:
+
+```csharp
+public class Button
+{
+    public event EventHandler OnClick;
+
+    public void Click()
+    {
+        // Trigger the event, calling all subscribed handlers
+        OnClick?.Invoke(this, EventArgs.Empty);
+    }
+}
+```
+
+#### EventSubscriber Class:
+
+```csharp
+public class EventSubscriber
+{
+    public void HandleButtonClick(object sender, EventArgs e)
+    {
+        Console.WriteLine("EventSubscriber: Button clicked.");
+    }
+}
+
+public class AnotherSubscriber
+{
+    public void AnotherHandleButtonClick(object sender, EventArgs e)
+    {
+        Console.WriteLine("AnotherSubscriber: Button clicked.");
+    }
+}
+```
+
+#### Main Method:
+
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        Button button = new Button();
+        EventSubscriber subscriber = new EventSubscriber();
+        AnotherSubscriber anotherSubscriber = new AnotherSubscriber();
+
+        // Subscribe both event handlers to the button's OnClick event
+        button.OnClick += subscriber.HandleButtonClick;
+        button.OnClick += anotherSubscriber.AnotherHandleButtonClick;
+
+        // Trigger the event
+        button.Click();
+    }
+}
+```
+
+### Output:
+
+```
+EventSubscriber: Button clicked.
+AnotherSubscriber: Button clicked.
+```
+
+In this example:
+- **Two event handlers** are subscribed to the `OnClick` event using the `+=` operator.
+- When the `Click()` method is called, it triggers the `OnClick` event, and both `HandleButtonClick` and `AnotherHandleButtonClick` are executed, because both were subscribed using `+=`.
+
+### Removing an Event Handler (`-=`)
+
+You can also **unsubscribe** an event handler from an event using the `-=` operator. This removes the method from the event’s list of subscribers:
+
+```csharp
+button.OnClick -= subscriber.HandleButtonClick;
+```
+
+### Summary:
+
+- **What**: The `+=` operator in `button.OnClick += subscriber.HandleButtonClick;` is used to subscribe an event handler (`HandleButtonClick`) to the `OnClick` event.
+- **Why**: This allows the `HandleButtonClick` method to be invoked when the `OnClick` event is raised.
+- **When**: The event handler is subscribed when the `+=` statement is executed, and it will be triggered every time the event occurs.
+- **Where**: The `+=` operator is used wherever you need to add an event handler to an event, typically in the constructor or initialization code.
+- **Who**: The event publisher (the button in this case) triggers the event, and the event subscriber (the handler) responds to the event.
+
+### Key Points:
+- The `+=` operator is used to **subscribe** a method (event handler) to an event.
+- Multiple methods can be subscribed to the same event, forming a **multicast delegate**.
+- The `-=` operator is used to **unsubscribe** from an event.
+
+### Tips:
+- Always **unsubscribe** from events when no longer needed (e.g., in `Dispose` or finalizer) to avoid memory leaks in long-running applications.
+- Ensure the event handler signature matches the event delegate type.
