@@ -942,7 +942,7 @@ Console.WriteLine($"和：{x}, 乘积：{y}");
 
 ---
 
-### Question 28: What is the need for Delegates?
+### Question [28: What is the need for Delegates?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Delegates.md)
 
 #### English Explanation:
 
@@ -951,6 +951,30 @@ Console.WriteLine($"和：{x}, 乘积：{y}");
 #### Chinese Explanation:
 
 C# 中的 **委托（Delegates）** 是类型安全的函数指针，允许将方法作为参数传递。它们使得动态方法调用、事件处理和回调机制成为可能。委托在实现事件驱动程序时特别有用，并且可以用来封装一个可以在稍后或不同位置调用的方法。
+
+#### 代码示例：
+
+```csharp
+// 定义一个委托
+public delegate int Operation(int x, int y);
+
+// 定义两个不同的方法
+public static int Add(int a, int b) => a + b;
+public static int Subtract(int a, int b) => a - b;
+
+// 使用委托传递不同的方法
+public static void PerformOperation(int a, int b, Operation operation)
+{
+    Console.WriteLine($"Result: {operation(a, b)}");
+}
+
+public static void Main()
+{
+    // 动态调用不同的方法
+    PerformOperation(10, 5, Add);        // 输出: Result: 15
+    PerformOperation(10, 5, Subtract);   // 输出: Result: 5
+}
+```
 
 ---
 
