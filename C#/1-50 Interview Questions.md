@@ -946,7 +946,7 @@ Console.WriteLine($"和：{x}, 乘积：{y}");
 
 #### English Explanation:
 
-**Delegates** in C# are `type-safe function pointers` that `allow methods to be passed as parameters`. They enable dynamic method invocation, event handling, and callback mechanisms. Delegates are particularly useful for implementing event-driven programs and can be used to encapsulate a method that can be called at a later time or place.
+**Delegates** in C# are `type-safe function pointers` that `allow methods to be passed as parameters`. They `enable dynamic method invocation, event handling, and callback mechanisms`. Delegates are particularly useful for implementing `event-driven` programs and can be used to encapsulate a method that can be called at a later time or place.
 
 #### Chinese Explanation:
 
@@ -958,7 +958,7 @@ C# 中的 **委托（Delegates）** 是类型安全的函数指针，允许将�
 
 #### English Explanation:
 
-**Events** in C# are a mechanism for communication between objects. They enable a class or object to notify other classes or objects when something of interest occurs. Events are based on **delegates** and are typically used in implementing the **Observer pattern**, where one object (the publisher) raises an event, and
+**Events** in C# are a mechanism for communication between objects. They `enable a class or object to notify other classes or objects when something of interest occurs`. Events are based on **delegates** and are typically used in implementing the [**Observer pattern**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Observer%20Patter.md), where one object (the publisher) raises an event, and
 
  other objects (the subscribers) respond to it.
 
