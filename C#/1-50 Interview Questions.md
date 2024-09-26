@@ -169,7 +169,7 @@ namespace ConsoleApp
 **Key Points:**
 - IL is platform-independent.
 - It is an intermediate step between high-level code (e.g., C#) and machine code.
-- The .NET runtime (CLR) uses the IL code to manage memory, handle exceptions, and perform other runtime tasks.
+- `The .NET runtime (CLR) uses the IL code to manage memory, handle exceptions, and perform other runtime tasks.`
 - IL is essential for cross-language support in the .NET ecosystem.
 
 #### Code Example:
@@ -207,6 +207,50 @@ Once you compile this C# code, it is translated into IL code. You can view the I
   IL_000b:  ret
 }
 ```
+The .NET runtime (CLR) uses the IL code to manage memory, handle exceptions, and perform other runtime tasks.  
+.NET运行时（CLR）使用IL代码来管理内存、处理异常并执行其他运行时任务。
+
+### Key Points:
+- **Memory Management**: The CLR automatically manages memory through garbage collection, releasing unused objects from memory. The IL code helps the runtime know when objects are no longer needed.
+  
+  **内存管理**：CLR通过垃圾回收自动管理内存，释放未使用的对象。IL代码帮助运行时确定何时不再需要对象。
+
+- **Exception Handling**: IL code contains instructions for handling exceptions. The CLR uses these instructions to manage exceptions efficiently, ensuring that errors are caught and handled properly.
+  
+  **异常处理**：IL代码包含处理异常的指令。CLR使用这些指令有效管理异常，确保错误被正确捕获和处理。
+
+- **Security and Type Safety**: The CLR enforces type safety and verifies that the IL code is safe before execution. This helps prevent unauthorized access to memory and improves overall security.
+  
+  **安全性和类型安全**：CLR在执行之前强制类型安全并验证IL代码是否安全。这有助于防止未授权的内存访问，并提高整体安全性。
+
+- **Just-In-Time Compilation (JIT)**: Before executing the IL code, the CLR compiles it into machine code specific to the hardware architecture, ensuring optimized performance.
+  
+  **即时编译（JIT）**：在执行IL代码之前，CLR将其编译为与硬件架构相关的机器代码，以确保优化的性能。
+
+### Code Example:
+```
+// C# example showing memory management and exception handling
+public class Example
+{
+    public static void Main()
+    {
+        try
+        {
+            // Allocate memory for an array
+            int[] numbers = new int[5];
+            numbers[5] = 10; // This will cause an exception (out of bounds)
+        }
+        catch (IndexOutOfRangeException ex)
+        {
+            System.Console.WriteLine("Exception caught: " + ex.Message);
+        }
+    }
+}
+```
+
+In this example, the CLR uses IL code to handle memory allocation for the array and exception handling when an out-of-bounds error occurs.
+
+在此示例中，CLR使用IL代码处理数组的内存分配以及发生越界错误时的异常处理。
 
 #### Chinese Explanation:
 
