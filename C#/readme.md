@@ -21,7 +21,7 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 - [What is Entity Framework?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Entity%20Framework.md)
 - [What is LINQ?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/LINQ.md)
 - [Task vs Thread vs Process vs Parallelism](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Task%2C%20Thread%2C%20Process%2C%20and%20Parallelis.md)
-
+- [Difference Between Process and Thread](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Difference%20Between%20Process%20and%20Thread.md)
 
 
 ----
