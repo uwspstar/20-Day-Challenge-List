@@ -18,6 +18,13 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 - [How Does Garbage Collection Work in C#?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/How%20Does%20Garbage%20Collection%20Work%20in%20C%23.md)
 
 ----
+
+- [What is Entity Framework?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Entity%20Framework.md)
+- [What is LINQ?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/LINQ.md)
+
+
+
+----
 1. [Explain the difference between .NET and C#?]()
 2. .NET Framework vs .NET Core vs .NET 5.0
 3. What is IL (Intermediate Language) Code?
