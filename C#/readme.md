@@ -50,7 +50,7 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 21. Whose performance is better, Array or ArrayList?
 22. [What are generic collections?]()
 23. [What are threads (Multithreading)?]
-24. [How are threads different from TPL (Task Parallel Library)?]()
+24. [How are threads different from TPL (Task Parallel Library)?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Threads%20and%20TPL.md)
 25. How do we handle exceptions in C# (try/catch)?
 26. What is the need for the 'finally' block?
 27. Why do we need the 'out' keyword?
