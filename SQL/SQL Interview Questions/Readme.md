@@ -261,7 +261,7 @@ SELECT * FROM EmployeeCTE;
 
 ---
 
-### 24. **What is the difference between Delete, Truncate and Drop commands?**
+### [24. **What is the difference between Delete, Truncate and Drop commands?**]()
 
 | Command   | Action                                   | Rollback | Affects Structure |
 |-----------|------------------------------------------|----------|-------------------|
@@ -281,7 +281,7 @@ WHERE N = (SELECT COUNT(DISTINCT salary) FROM employees e2 WHERE e2.salary > e1.
 
 ---
 
-### 26. **(Bonus) What are ACID properties?**
+### [26. **(Bonus) What are ACID properties?**]()
 
 - **Atomicity**: Transaction is all or nothing.
 - **Consistency**: Data must remain consistent.
@@ -365,7 +365,7 @@ CREATE TABLE OrdersWithCustomerInfo (
 
 ---
 
-### 4. **Explain OLTP vs OLAP?**
+### [4. **Explain OLTP vs OLAP?**]()
 
 - **OLTP (Online Transaction Processing)**: Focuses on managing transaction-oriented applications (e.g., banking systems).
 - **OLAP (Online Analytical Processing)**: Focuses on complex queries for data analysis (e.g., business reporting).
