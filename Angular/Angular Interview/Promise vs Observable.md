@@ -197,7 +197,7 @@
 1. **What is the key difference between a Promise and an Observable?**
    - **Answer**: A promise handles a single asynchronous event and resolves once, while an observable can emit multiple values over time and allows for more flexible data handling.
 
-2. [**Can you cancel a Promise? How about an Observable?**](**1. Can You Cancel a Promise?**)
+2. [**Can you cancel a Promise? How about an Observable?**](#Introduction Cancel)
    - **Answer**: A promise cannot be canceled once it has started, but an observable can be canceled by calling `unsubscribe()` on its subscription.
 
 3. **How do Observables allow for multiple subscribers compared to Promises?**
@@ -218,6 +218,9 @@ In JavaScript and reactive programming (e.g., RxJS), handling asynchronous opera
 在JavaScript和响应式编程（如RxJS）中，高效处理异步操作尤其重要，尤其是在处理用户操作或网络请求时。**Promise**和**Observable**在取消操作方面的行为截然不同。
 
 ---
+
+## Introduction Cancel
+
 ### **1. Can You Cancel a Promise?**
 ### **你能取消一个Promise吗？**
 
