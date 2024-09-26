@@ -240,7 +240,7 @@ A **Cursor** is used to iterate over rows in a result set. Cursors should be avo
 
 ---
 
-### 22. **What is the difference between `scope_identity` and `@@identity`?**
+### [22. **What is the difference between `scope_identity` and `@@identity`?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/SQL/SQL%20Interview%20Questions/SCOPE_IDENTITY()%20vs%20%40%40IDENTITY.md)
 
 - **`@@identity`**: Returns the last inserted identity value, regardless of the scope.
 - **`scope_identity`**: Returns the last inserted identity value within the current scope.
