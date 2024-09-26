@@ -780,7 +780,7 @@ During **explicit casting**, data can be lost or the conversion may result in a 
 
 ---
 
-### Question 22: What are generic collections?
+### Question [22: What are generic collections?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Generic%20Collections%20vs%20Non-Generic%20Collections.md)
 
 #### English Explanation:
 
@@ -894,7 +894,7 @@ finally
 
 #### English Explanation:
 
-The **`finally`** block in C# is used to execute code regardless of whether an exception is thrown or caught. It is often used for cleanup operations, such as releasing resources, closing file handles, or disposing of objects. The code in the `finally` block is guaranteed to execute after the `try/catch` block completes, even if an exception is thrown.
+The **`finally`** block in C# is used to `execute code regardless of whether an exception is thrown or caught`. It is often used for `cleanup operations`, such as releasing resources, closing file handles, or disposing of objects. The code in the `finally` block is guaranteed to execute after the `try/catch` block completes, even if an exception is thrown.
 
 #### Chinese Explanation:
 
@@ -906,7 +906,7 @@ C# 中的 **`finally`** 块用于执行无论是否抛出或捕获异常的代�
 
 #### English Explanation:
 
-The **`out`** keyword in C# is used to pass arguments to methods by reference, allowing the method to return multiple values. When a parameter is passed using the `out` keyword, the called method can modify the value of the argument, and it must assign a value to it before the method returns.
+The **`out`** keyword in C# is used to pass arguments to methods by reference, allowing the method to `return multiple values`. When a parameter is passed using the `out` keyword, the called method can modify the value of the argument, and it `must assign a value to it before the method returns`.
 
 #### Code Example:
 
@@ -946,7 +946,7 @@ Console.WriteLine($"和：{x}, 乘积：{y}");
 
 #### English Explanation:
 
-**Delegates** in C# are type-safe function pointers that allow methods to be passed as parameters. They enable dynamic method invocation, event handling, and callback mechanisms. Delegates are particularly useful for implementing event-driven programs and can be used to encapsulate a method that can be called at a later time or place.
+**Delegates** in C# are `type-safe function pointers` that `allow methods to be passed as parameters`. They enable dynamic method invocation, event handling, and callback mechanisms. Delegates are particularly useful for implementing event-driven programs and can be used to encapsulate a method that can be called at a later time or place.
 
 #### Chinese Explanation:
 
