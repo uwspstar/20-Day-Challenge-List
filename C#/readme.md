@@ -18,7 +18,7 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 - [How Does Garbage Collection Work in C#?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/How%20Does%20Garbage%20Collection%20Work%20in%20C%23.md)
 
 ----
-1. Explain the difference between .NET and C#?
+1. [Explain the difference between .NET and C#?]()
 2. .NET Framework vs .NET Core vs .NET 5.0
 3. What is IL (Intermediate Language) Code?
 4. What is the use of JIT (Just In Time compiler)?
@@ -26,8 +26,8 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 6. What is the benefit of compiling into IL code?
 7. Does .NET support multiple programming languages?
 8. What is CLR (Common Language Runtime)?
-9. What is managed and unmanaged code?
-10. Explain the importance of the Garbage Collector?
+9. [What is managed and unmanaged code?]()
+10. [Explain the importance of the Garbage Collector?]()
 11. Can the garbage collector claim unmanaged objects?
 12. What is the importance of CTS?
 13. Explain CLS (Common Language Specification)?
@@ -39,9 +39,9 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 19. What can happen during explicit casting?
 20. Differentiate between Array and ArrayList?
 21. Whose performance is better, Array or ArrayList?
-22. What are generic collections?
-23. What are threads (Multithreading)?
-24. How are threads different from TPL (Task Parallel Library)?
+22. [What are generic collections?]()
+23. [What are threads (Multithreading)?]
+24. [How are threads different from TPL (Task Parallel Library)?]()
 25. How do we handle exceptions in C# (try/catch)?
 26. What is the need for the 'finally' block?
 27. Why do we need the 'out' keyword?
@@ -57,7 +57,7 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 37. Why do we need OOP (Object-Oriented Programming)?
 38. What are the important pillars of OOPs?
 39. What is a class and object?
-40. Abstraction vs Encapsulation?
+40. [Abstraction vs Encapsulation?]()
 41. Explain Inheritance?
 42. Explain the 'virtual' keyword?
 43. What is overriding?
@@ -65,20 +65,20 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 45. Overloading vs Overriding?
 46. Explain static vs dynamic polymorphism?
 47. Explain operator overloading?
-48. Why do we need Abstract classes?
+48. [Why do we need Abstract classes?]
 49. Are Abstract methods virtual?
 50. Can we create an instance of Abstract classes?
 51. Is it compulsory to implement Abstract methods?
 52. Why simple base class can replace an Abstract class?
 53. Explain interfaces and why do we need them?
-54. Can we write logic in an interface?
+54. [Can we write logic in an interface?]
 55. Can we define methods as private in an interface?
 56. If I want to change an interface, what's the best practice?
 57. Explain multiple inheritance in Interface?
 58. Explain Interface Segregation Principle (ISP)?
 59. Can we create an instance of an interface?
 60. Can we do multiple inheritance with Abstract classes?
-61. Abstract Class vs Interface?
+61. [Abstract Class vs Interface?]
 62. Why do we need constructors?
 63. In parent-child inheritance, which constructor fires first?
 64. How are initializers executed?
@@ -95,7 +95,7 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 75. Can we have public/protected access modifiers in nested classes?
 76. Explain Partial classes?
 77. In what scenarios do we use partial classes?
-78. What is SOLID?
+78. [What is SOLID?]
 79. What is the full form of SOLID?
 80. What is the goal of SOLID?
 81. Explain SRP (Single Responsibility Principle) with an example?
@@ -106,13 +106,13 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 86. How can we fix Liskov Substitution Principle violation?
 87. Explain Dependency Injection with an example?
 88. Explain IoC (Inversion of Control)?
-89. What are design patterns?
+89. [What are design patterns?]
 90. What are the different types of design patterns?
 91. Explain Structural, Behavioral, and Creational design patterns?
 92. Explain the Singleton Pattern and its use?
-93. How did you implement the Singleton pattern?
+93. [How did you implement the Singleton pattern?]
 94. Can we use a static class instead of using a private constructor in a Singleton?
-95. Static vs Singleton pattern?
+95. [Static vs Singleton pattern?]
 96. How did you implement thread safety in Singleton?
 97. What is double-null check in Singleton?
 98. Can the Singleton pattern code be made easy with the Lazy keyword?
@@ -150,21 +150,21 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 130. Managed vs Unmanaged code/objects/resources?
 131. Can the Garbage Collector clean unmanaged code?
 132. Explain Generations in the Garbage Collector.
-133. What is GC0, GC1, and GC2?
+133. [What is GC0, GC1, and GC2?]
 134. Why do we need Generations in the Garbage Collector?
 135. Which is the best place to clean unmanaged objects?
 136. How does the Garbage Collector behave when we have a destructor?
 137. What do you think about an empty destructor?
-138. Explain the Dispose Pattern.
+138. [Explain the Dispose Pattern.]
 139. Finalize vs Destructor.
-140. What is the use of the 'using' keyword?
+140. [What is the use of the 'using' keyword?]
 141. Can you force Garbage Collection?
 142. Is it a good practice to force Garbage Collection?
 143. How can we detect memory issues?
 144. How can we know the exact source of memory issues?
-145. What is a memory leak?
-146. Can a .NET application have memory leaks even with the Garbage Collector?
-147. How to detect memory leaks in .NET applications?
+145. [What is a memory leak?]
+146. [Can a .NET application have memory leaks even with the Garbage Collector?]
+147. [How to detect memory leaks in .NET applications?]
 148. Explain weak and strong references.
 149. When will you use weak references?
 150. What are design patterns?
