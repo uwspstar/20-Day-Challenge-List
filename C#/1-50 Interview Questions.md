@@ -498,9 +498,9 @@ These languages can interoperate within the same .NET environment because they a
 
 #### English Explanation:
 
-- **Managed Code**: This is the code that runs under the supervision of the **CLR (Common Language Runtime)**. It means that the CLR manages things like memory, security, and exception handling for this code. C# code running on .NET is an example of managed code.
+- **Managed Code**: This is the code that runs under the supervision of the **CLR (Common Language Runtime)**. `It means that the CLR manages things like memory, security, and exception handling for this code. C# code running on .NET is an example of managed code.`
   
-- **Unmanaged Code**: This is the code that is executed directly by the operating system, outside the control of the CLR. Languages like C and C++ produce unmanaged code. Unmanaged code requires manual memory management and lacks the built-in security features of managed code.
+- **Unmanaged Code**: This is the code that is `executed directly by the operating system, outside the control of the CLR`. Languages like C and C++ produce unmanaged code. Unmanaged code requires manual memory management and lacks the built-in security features of managed code.
 
 #### Chinese Explanation:
 
@@ -510,7 +510,7 @@ These languages can interoperate within the same .NET environment because they a
 
 ---
 
-### Question 10: Explain the importance of Garbage Collector?
+### Question [10: Explain the importance of Garbage Collector?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/How%20Does%20Garbage%20Collection%20Work%20in%20C%23.md)
 
 #### English Explanation:
 
@@ -536,7 +536,7 @@ The **Garbage Collector (GC)** is a core component of the **CLR (Common Language
 
 #### English Explanation:
 
-No, the **Garbage Collector (GC)** cannot claim unmanaged objects directly. Unmanaged objects, such as file handles or database connections, are not tracked by the GC because they exist outside the CLR’s control. For these types of objects, developers must explicitly release them using mechanisms like the `Dispose()` method or the `using` statement in C#.
+No, the **Garbage Collector (GC)** `cannot claim unmanaged objects directly`. Unmanaged objects, `such as file handles or database connections, are not tracked by the GC because they exist outside the CLR’s control`. For these types of objects, developers must explicitly release them using mechanisms like the `Dispose()` method or the `using` statement in C#.
 
 To handle unmanaged resources properly, .NET provides the **`IDisposable`** interface. Classes that work with unmanaged resources implement this interface to allow manual resource cleanup by calling `Dispose()`.
 
@@ -552,7 +552,9 @@ To handle unmanaged resources properly, .NET provides the **`IDisposable`** inte
 
 #### English Explanation:
 
-The **Common Type System (CTS)** defines the data types and programming constructs supported by the **CLR (Common Language Runtime)**, ensuring that objects written in different languages can interact seamlessly. CTS guarantees that the data types used in different .NET languages (like C#, VB.NET, F#, etc.) are compatible when interacting with each other.
+The **Common Type System (CTS)** defines the data types and programming constructs supported by the **CLR (Common Language Runtime)**, ensuring that objects written in different languages can interact seamlessly. 
+
+**CTS guarantees that the data types used in different .NET languages (like C#, VB.NET, F#, etc.) are compatible when interacting with each other.**
 
 **Key Functions of CTS:**
 - **Type Safety**: Ensures that types are used consistently across different languages.
@@ -598,7 +600,7 @@ The **Common Language Specification (CLS)** is a set of rules and guidelines tha
 
 - **Stack**: The Stack is a special memory region used for storing value types (e.g., integers, structs) and local variables. Stack memory is managed using a **Last-In-First-Out (LIFO)** model, which makes it efficient. When a method call is made, local variables are stored on the stack and removed when the method ends.
   
-- **Heap**: The Heap is used for storing reference types (e.g., objects, arrays). Memory on the Heap is dynamically allocated and managed by the **Garbage Collector**. Unlike the Stack, memory in the Heap does not follow a strict LIFO model and can become fragmented.
+- **Heap**: The Heap is used for storing reference types (e.g., objects, arrays). `Memory on the Heap is dynamically allocated and managed by the **Garbage Collector**.` Unlike the Stack, memory in the Heap does not follow a strict LIFO model and can become fragmented.
 
 **Key Differences:**
 - **Storage**: Stack stores value types; Heap stores reference types.
@@ -618,7 +620,7 @@ The **Common Language Specification (CLS)** is a set of rules and guidelines tha
 
 ---
 
-### Question 15: What are Value types & Reference types?
+### Question [15: What are Value types & Reference types?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Difference%20Between%20Stack%20vs%20Heap.md)
 
 #### English Explanation:
 
@@ -646,7 +648,7 @@ The **Common Language Specification (CLS)** is a set of rules and guidelines tha
 
 #### English Explanation:
 
-- **Boxing**: The process of converting a **value type** to a **reference type** by wrapping the value inside a heap-allocated object. This happens implicitly when a value type is assigned to an object type or passed to a method that expects a reference type.
+- **Boxing**: The process of converting a **value type** to a **reference type** by wrapping the value inside a heap-allocated object. `This happens implicitly when a value type is assigned to an object type or passed to a method that expects a reference type`. `boxing involves moving a value type from the stack to the heap, it introduces additional memory allocation`.
 
 - **Unboxing**: The process of converting a **reference type** back to a **value type** by extracting the value from the heap. Unboxing must be explicit, using a cast to the correct value type.
 
@@ -676,7 +678,7 @@ int unboxed = (int)obj;    // 拆箱
 
 #### English Explanation:
 
-The primary consequence of **boxing** and **unboxing** is performance overhead. Since boxing involves moving a value type from the stack to the heap, it introduces additional memory allocation. Unboxing, similarly, requires a cast and memory access from the heap. These operations can slow down an application if done frequently.
+The primary consequence of **boxing** and **unboxing** is performance overhead. Since `boxing involves moving a value type from the stack to the heap, it introduces additional memory allocation`. Unboxing, similarly, requires a cast and memory access from the heap. These operations can `slow down` an application if done frequently.
 
 **Key Consequences:**
 - Increased memory usage
@@ -748,9 +750,9 @@ During **explicit casting**, data can be lost or the conversion may result in a 
 
 #### English Explanation:
 
-- **Array**: Arrays in C# have a fixed size and can store elements of a single data type. Arrays offer better performance due to the lack of resizing during runtime.
+- **Array**: Arrays in C# have a `fixed size` and can store elements of a `single data type`. Arrays offer `better performance` due to the lack of resizing during runtime.
   
-- **ArrayList**: **ArrayList** is a non-generic collection that can store elements of any type, but this comes with a performance cost because it uses **boxing/unboxing** for value types and is less type-safe. **ArrayList** is dynamic and can resize automatically.
+- **ArrayList**: **ArrayList** is a `non-generic collection` that can store elements of `any type`, but this comes with a `performance cost` because it uses **boxing/unboxing** for value types and is less type-safe. **ArrayList** is dynamic and can resize automatically.
 
 #### Chinese Explanation:
 
@@ -764,7 +766,7 @@ During **explicit casting**, data can be lost or the conversion may result in a 
 
 #### English Explanation:
 
-**Array** performs better than **ArrayList** in most scenarios because:
+**Array** performs better than **ArrayList** in `most scenarios` because:
 1. **Memory Management**: Arrays are strongly typed and do not require boxing/unboxing for value types, while **ArrayList** stores items as `object`, leading to boxing/unboxing when dealing with value types.
 2. **Type Safety**: Arrays provide compile-time type safety, which ensures better optimization and performance.
 3. **Resizing**: Arrays have a fixed size, which avoids the overhead of resizing that occurs with an **ArrayList**.
@@ -789,7 +791,7 @@ During **explicit casting**, data can be lost or the conversion may result in a 
 
 #### Chinese Explanation:
 
-C# 中的 **泛型集合** 是可以存储特定数据类型的集合。它们允许在编译时提供类型安全，并避免了像 `ArrayList` 这样非泛型集合中的装箱/拆箱开销。C# 中的泛型集合示例包括：
+C# 中的 **泛型集合** 是可以存储特定数据类型的集合。它们允许在编译时提供类型安全，并`避免了像 `ArrayList` 这样非泛型集合中`的装箱/拆箱开销。C# 中的泛型集合示例包括：
 - `List<T>`：一个可以存储任意类型 `T` 的泛型列表。
 - `Dictionary<TKey, TValue>`：一个泛型键值对集合。
 - `HashSet<T>`：一个存储唯一元素的集合。
