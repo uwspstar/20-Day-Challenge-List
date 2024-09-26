@@ -264,6 +264,8 @@ namespace HelloWorld
 - 它允许在 .NET 框架内实现 **跨平台** 和 **跨语言** 的兼容性。
 - IL 代码在运行时通过 **JIT 编译** 转换为本地机器码。
 
+------
+
 ### Question 4: What is the use of JIT (Just-In-Time Compiler)?
 
 #### English Explanation:
@@ -320,7 +322,7 @@ In this example, the IL code is converted to machine code by the JIT compiler wh
 
 #### 代码示例：
 
-当你编写并编译 C# 代码时，它首先被编译为 IL 代码。然后 JIT 编译器在运行时将 IL 代码转换为机器码。
+`当你编写并编译 C# 代码时，它首先被编译为 IL 代码。然后 JIT 编译器在运行时将 IL 代码转换为机器码。`
 
 ```csharp
 using System;
@@ -349,6 +351,8 @@ namespace JITExample
 - JIT 在运行时将 **IL 代码** 编译为 **本地机器码**。
 - 它允许 .NET 应用程序在开发时实现跨平台，但在运行时针对平台进行优化。
 - JIT 通过 **运行时优化** 提高性能，并与垃圾回收器一起管理内存。
+
+---
 
 ### Question 5: Is it possible to view IL code?
 
