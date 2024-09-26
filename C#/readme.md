@@ -22,6 +22,7 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 - [What is LINQ?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/LINQ.md)
 - [Task vs Thread vs Process vs Parallelism](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Task%2C%20Thread%2C%20Process%2C%20and%20Parallelis.md)
 - [Difference Between Process and Thread](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Difference%20Between%20Process%20and%20Thread.md)
+- [Difference Between Task and Thread in .NET](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/C%23)
 - [Various Techniques to Save Configuration Settings](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Various%20Techniques%20to%20Save%20Configuration%20Settings.md)
 
 
