@@ -65,7 +65,7 @@ END;
 
 ---
 
-### 5. **What is a View?**
+### [5. **What is a View?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/SQL/SQL%20Interview%20Questions/View.md)
 
 A **view** is a virtual table based on the result set of an SQL query. It allows for abstracting complex queries into simpler structures.
 
@@ -78,7 +78,7 @@ WHERE salary > 5000;
 
 ---
 
-### 6. **What is the difference between Having clause and Where clause?**
+### [6. **What is the difference between Having clause and Where clause?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/SQL/SQL%20Interview%20Questions/HAVING%20vs%20WHERE.md)
 - **WHERE**: Filters records before grouping (used with SELECT statements).
 - **HAVING**: Filters records after grouping (used with GROUP BY).
 
@@ -183,7 +183,7 @@ ON employees(name);
 
 ---
 
-### 16. **What is the difference between Clustered and Non-Clustered index?**
+### [16. **What is the difference between Clustered and Non-Clustered index?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/SQL/SQL%20Interview%20Questions/Clustered%20vs.%20Non-Clustered%20Index.md)
 
 | Clustered Index           | Non-Clustered Index             |
 |---------------------------|---------------------------------|
