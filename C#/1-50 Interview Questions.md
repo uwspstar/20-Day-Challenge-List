@@ -1052,7 +1052,7 @@ class Subscriber
 
 #### English Explanation:
 
-- **Abstract Class**: An abstract class can have both implemented and unimplemented methods (abstract methods). It allows code reuse through inheritance and can contain fields and constructors.
+- **Abstract Class**: An abstract class can have both `implemented and unimplemented methods` (abstract methods). It allows code reuse through inheritance and `can contain fields and constructors`.
   
 - **Interface**: An interface can only have method signatures (no implementation), and it cannot contain fields or constructors. A class can implement multiple interfaces but can inherit only from a single abstract class.
 
@@ -1069,6 +1069,38 @@ class Subscriber
 **主要区别：**
 - **实现**：抽象类可以有抽象和具体方法，而接口不能有方法实现（直到 C# 8.0 引入了默认接口方法）。
 - **多继承**：一个类可以实现多个接口，但只能继承一个抽象类。
+
+---
+
+Yes, the statement is **correct with a small clarification**. Here's a more precise explanation:
+
+- **Before C# 8.0**:
+  - **Abstract classes** could have both **abstract methods** (methods without implementation) and **concrete methods** (methods with implementation).
+  - **Interfaces** could **only** have method declarations (abstract methods) and could not provide any method implementations.
+
+- **After C# 8.0**:
+  - **Abstract classes** still follow the same rules—they can have both abstract and concrete methods.
+  - **Interfaces** were enhanced in **C# 8.0** to allow **default method implementations**, meaning they can now have concrete methods, as long as the method provides a default implementation.
+
+### Corrected Statement:
+**Before C# 8.0**, abstract classes could have both abstract and concrete methods, whereas interfaces could not have method implementations. **From C# 8.0 onward**, interfaces can also have default method implementations, while abstract classes continue to support both abstract and concrete methods.
+
+### Key Differences Now:
+| Feature                         | Abstract Classes                          | Interfaces (After C# 8.0)               |
+|----------------------------------|-------------------------------------------|-----------------------------------------|
+| Can have abstract methods        | Yes                                       | Yes                                     |
+| Can have concrete methods        | Yes                                       | Yes (with default implementations)      |
+| Can have fields                  | Yes                                       | No                                      |
+| Can have constructors            | Yes                                       | No                                      |
+| Multiple inheritance support     | No (Single class inheritance)             | Yes (multiple interface inheritance)    |
+| Can implement other interfaces   | Yes                                       | Yes                                     |
+
+### Conclusion:
+- Prior to C# 8.0, **interfaces did not support method implementations**.
+- After C# 8.0, **interfaces can have default method implementations**, similar to concrete methods in abstract classes.
+
+Let me know if you need further clarification!
+
 
 ---
 
