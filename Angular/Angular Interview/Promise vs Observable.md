@@ -197,7 +197,7 @@
 1. **What is the key difference between a Promise and an Observable?**
    - **Answer**: A promise handles a single asynchronous event and resolves once, while an observable can emit multiple values over time and allows for more flexible data handling.
 
-2. **Can you cancel a Promise? How about an Observable?**
+2. [**Can you cancel a Promise? How about an Observable?**]()
    - **Answer**: A promise cannot be canceled once it has started, but an observable can be canceled by calling `unsubscribe()` on its subscription.
 
 3. **How do Observables allow for multiple subscribers compared to Promises?**
@@ -208,3 +208,146 @@
 
 5. **When would you prefer to use a Promise over an Observable?**
    - **Answer**: Promises are preferred when handling single, non-cancelable asynchronous events like HTTP requests, where you expect only one result and don’t need the advanced operators provided by observables.
+
+---
+
+### **Can You Cancel a Promise? How About an Observable?**
+
+In JavaScript and reactive programming (e.g., RxJS), handling asynchronous operations efficiently is important, especially when dealing with user actions or network requests. The behavior of **Promise** and **Observable** in terms of cancellation is quite different.
+
+在JavaScript和响应式编程（如RxJS）中，高效处理异步操作尤其重要，尤其是在处理用户操作或网络请求时。**Promise**和**Observable**在取消操作方面的行为截然不同。
+
+---
+
+### **1. Can You Cancel a Promise?**
+### **你能取消一个Promise吗？**
+
+**No, you cannot directly cancel a Promise.**
+
+**不，不能直接取消Promise。**
+
+#### **Explanation**:
+Once a `Promise` has been created and initiated, there is no built-in mechanism in JavaScript to cancel it. A `Promise` represents a single asynchronous operation, and once that operation has started, it will either resolve or reject. The operation will continue running in the background even if the result is no longer needed.
+
+一旦`Promise`被创建和启动，JavaScript中没有内置机制可以取消它。`Promise`代表一个单一的异步操作，一旦该操作开始，它将继续进行直到完成（resolve）或失败（reject）。即使不再需要结果，操作也会在后台继续执行。
+
+#### **Workaround**:
+You can simulate the "cancellation" of a `Promise` by introducing logic in the `Promise` executor or the function that returns the `Promise`, but it won't actually stop the underlying process.
+
+可以通过在`Promise`的执行器或返回`Promise`的函数中引入逻辑来模拟"取消"，但它实际上不会停止底层的操作。
+
+#### **Example (Chinese only)**:
+```javascript
+function cancellablePromise() {
+    let canceled = false;
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (!canceled) {
+                resolve("操作完成");
+            } else {
+                reject("操作被取消");
+            }
+        }, 3000);
+    });
+
+    return {
+        promise,
+        cancel() {
+            canceled = true;
+        }
+    };
+}
+
+const asyncTask = cancellablePromise();
+asyncTask.promise
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
+
+// 在2秒内取消操作
+setTimeout(() => {
+    asyncTask.cancel();
+}, 2000);
+```
+- In this example, the `Promise` cannot be directly canceled, but the result is ignored by setting a `canceled` flag. The underlying `setTimeout` still runs.
+
+  在这个例子中，`Promise`无法直接取消，但通过设置`canceled`标志来忽略结果。底层的`setTimeout`仍然会运行。
+
+---
+
+### **2. Can You Cancel an Observable?**
+### **你能取消一个Observable吗？**
+
+**Yes, you can cancel an Observable.**
+
+**是的，可以取消Observable。**
+
+#### **Explanation**:
+In contrast to `Promise`, **Observable** (from libraries like RxJS) supports cancellation natively. You can cancel an `Observable` by unsubscribing from it. When you unsubscribe from an `Observable`, it stops emitting values and performing any ongoing asynchronous operations.
+
+与`Promise`不同，**Observable**（来自如RxJS的库）原生支持取消。你可以通过取消订阅（unsubscribe）来取消`Observable`。当你取消订阅`Observable`时，它将停止发送值并终止任何正在进行的异步操作。
+
+#### **Example (Chinese only)**:
+```javascript
+const { Observable } = rxjs;
+
+// 创建一个每秒发送一次值的Observable
+const observable = new Observable(subscriber => {
+    let count = 0;
+    const intervalId = setInterval(() => {
+        subscriber.next(count++);
+    }, 1000);
+
+    // 清理函数，当订阅被取消时调用
+    return () => {
+        clearInterval(intervalId);
+        console.log("Observable已取消");
+    };
+});
+
+// 订阅Observable
+const subscription = observable.subscribe(value => {
+    console.log("接收到值: " + value);
+});
+
+// 3秒后取消订阅
+setTimeout(() => {
+    subscription.unsubscribe();  // 取消订阅，停止接收值
+}, 3000);
+```
+- In this example, the `Observable` emits a value every second. After 3 seconds, we unsubscribe from it, which stops the interval and cancels the `Observable`.
+
+  在这个例子中，`Observable`每秒发送一个值。3秒后，我们取消订阅，这会停止计时器并取消`Observable`。
+
+#### **How It Works**:
+- **Unsubscribe**: When you call `.unsubscribe()`, the observable stops producing values, and the cleanup function (like `clearInterval`) is invoked to stop any ongoing operations.
+  
+  **取消订阅**：当你调用`.unsubscribe()`时，observable会停止产生值，清理函数（如`clearInterval`）被调用以停止任何正在进行的操作。
+
+---
+
+### **3. Key Differences**
+### **关键区别**
+
+| **Aspect**            | **Promise (Promise)**                         | **Observable (Observable)**                      |
+|-----------------------|-----------------------------------------------|-------------------------------------------------|
+| **Cancellation**       | Cannot be canceled once started.              | Can be canceled by unsubscribing.                |
+| **Result**             | Represents a single asynchronous operation.   | Represents a stream of values over time.         |
+| **Lazy Execution**     | Executes immediately when created.            | Executes only when subscribed to.                |
+| **Cleanup Mechanism**  | No built-in cleanup after completion.         | Provides cleanup logic through unsubscribing.    |
+| **Multiple Values**    | Resolves or rejects once with a single value. | Can emit multiple values over time.              |
+
+---
+
+### **Summary**
+
+- **Promise**: You cannot cancel a `Promise` once it has started executing. You can only work around this by ignoring the result through custom logic.
+  
+  **Promise**：一旦`Promise`开始执行，你无法取消它。你只能通过自定义逻辑忽略结果。
+
+- **Observable**: You can cancel an `Observable` at any time by unsubscribing. This stops it from emitting further values and performs any necessary cleanup.
+
+  **Observable**：你可以随时通过取消订阅来取消`Observable`。这会阻止它发送进一步的值，并执行任何必要的清理操作。
+
+If you need a cancellable asynchronous operation with more flexibility, `Observable` is a better option compared to `Promise`.
+
+如果你需要更灵活的可取消异步操作，`Observable`比`Promise`更合适。
