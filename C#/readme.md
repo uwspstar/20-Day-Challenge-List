@@ -15,12 +15,12 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 - **[Question 101 - 149](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/101-149%20Interview%20Questions.md)**
 - **[Question 150 - 164](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/150-164%20Interview%20Questions.md)**
 
-- [How Does Garbage Collection Work in C#?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/How%20Does%20Garbage%20Collection%20Work%20in%20C%23.md)
-
 ----
 
+- [How Does Garbage Collection Work in C#?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/How%20Does%20Garbage%20Collection%20Work%20in%20C%23.md)
 - [What is Entity Framework?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Entity%20Framework.md)
 - [What is LINQ?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/LINQ.md)
+- [Task vs Thread vs Process vs Parallelism](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Task%2C%20Thread%2C%20Process%2C%20and%20Parallelis.md)
 
 
 
