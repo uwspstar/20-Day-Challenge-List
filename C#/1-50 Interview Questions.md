@@ -61,6 +61,9 @@ namespace HelloWorldApp
 - **.NET** 是一个支持多种语言的 **框架**，提供用于运行应用程序的类库和运行时。
 - **C#** 是专为 .NET 框架设计的 **编程语言**，用于构建应用程序。
 
+---
+
+
 ### Question 2: .NET Framework vs .NET Core vs .NET 5.0
 
 #### English Explanation:
