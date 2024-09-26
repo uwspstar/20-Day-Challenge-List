@@ -1388,7 +1388,7 @@ class Program
 
 - **Delegates**: Delegates are type-safe function pointers that hold references to methods. They are used to invoke methods dynamically. Delegates are a more general concept that can be used anywhere in the code.
   
-- **Events**: Events are built on top of delegates and are typically used in scenarios where an object needs to notify other objects about state changes or significant actions. Events offer an additional layer of encapsulation, restricting direct invocation of the delegate outside the class where the event is defined.
+- **Events**: Events are `built on top of delegates` and are typically used in scenarios where an object needs to notify other objects about state changes or significant actions. Events offer an additional layer of encapsulation, restricting direct invocation of the delegate outside the class where the event is defined.
 
 **Key Difference**: 
 - A delegate can be invoked by any object holding the reference, whereas events can only be raised within the class or struct that defines them.
@@ -1454,9 +1454,9 @@ The four important pillars of **Object-Oriented Programming (OOP)** are:
 
 #### English Explanation:
 
-- **Class**: A class is a blueprint or template that defines the properties (fields) and methods (functions) that an object can have.
+- **Class**: A class is a blueprint or template that `defines the properties (fields) and methods (functions)` that an object can have.
   
-- **Object**: An object is an instance of a class. It represents a concrete occurrence of the class, with specific values for the class properties.
+- **Object**: An object is `an instance of a class`. It represents a concrete occurrence of the class, with specific values for the class properties.
 
 #### Chinese Explanation:
 
@@ -1470,9 +1470,9 @@ The four important pillars of **Object-Oriented Programming (OOP)** are:
 
 #### English Explanation:
 
-- **Abstraction**: The process of hiding the implementation details and exposing only the functionality to the user. It focuses on **what** an object does rather than **how** it does it.
+- **Abstraction**: The process of `hiding the implementation details` and exposing only the functionality to the user. It focuses on **what** an object does rather than **how** it does it.
   
-- **Encapsulation**: The process of bundling the data (fields) and methods that operate on the data into a single unit (class), and restricting access to certain details of the object.
+- **Encapsulation**: The process of `bundling the data (fields) and methods that operate on the data into a single unit (class)`, and restricting access to certain details of the object.
 
 **Key Difference**: 
 - Abstraction focuses on hiding complexity by showing only the relevant features, while encapsulation protects the object's data by controlling access.
