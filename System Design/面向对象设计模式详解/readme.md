@@ -29,7 +29,7 @@
 3. **行为型模式 (Behavioral Patterns)** - **11 种**  
    行为型模式侧重于对象和类之间的通信方式和职责分配，帮助对象有效地协作。
    - **策略模式 (Strategy Pattern)**：定义一组算法，将每个算法封装起来，并使它们可以相互替换。
-   - **观察者模式 (Observer Pattern)**：定义对象之间一对多的依赖关系，当一个对象的状态发生变化时，所有依赖它的对象都会被通知。
+   - [**观察者模式 (Observer Pattern)**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/Observer%20Pattern.md)：定义对象之间一对多的依赖关系，当一个对象的状态发生变化时，所有依赖它的对象都会被通知。
    - **命令模式 (Command Pattern)**：将请求封装成对象，从而使得可以用不同的请求对客户进行参数化。
    - **责任链模式 (Chain of Responsibility Pattern)**：将多个处理器连接成一条链，沿着链传递请求，直到某个处理器处理请求。
    - **模板方法模式 (Template Method Pattern)**：定义一个算法的框架，而将一些步骤的实现延迟到子类。
