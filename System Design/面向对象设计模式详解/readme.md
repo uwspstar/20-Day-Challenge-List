@@ -10,7 +10,7 @@
 
 1. **创建型模式 (Creational Patterns)** - **5 种**  
    创建型模式主要用于对象的创建，能够使系统更灵活地控制对象的实例化过程，避免直接使用 `new` 操作符。
-   - **单例模式 (Singleton Pattern)**：确保一个类只有一个实例，并提供全局访问点。
+   - [**单例模式 (Singleton Pattern)**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/Singleton%20Pattern.md)：确保一个类只有一个实例，并提供全局访问点。
    - **工厂方法模式 (Factory Method Pattern)**：定义创建对象的接口，让子类决定实例化哪一个类。
    - **抽象工厂模式 (Abstract Factory Pattern)**：提供一个接口创建相关对象家族，而不指定具体类。
    - **建造者模式 (Builder Pattern)**：将对象的构建过程与其表示分离，使得同样的构建过程可以创建不同的表示。
