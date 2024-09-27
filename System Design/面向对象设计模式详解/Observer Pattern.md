@@ -1,3 +1,5 @@
+# Observer Pattern
+
 ### 观察者模式 (Observer Pattern) - 详解
 
 #### 1. 定义 (Definition)
