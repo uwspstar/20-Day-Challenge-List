@@ -68,7 +68,9 @@ public class Singleton
 }
 ```
 
-This version of Singleton is thread-unsafe, meaning that if two threads try to create the instance at the same time, it may create multiple instances. A **thread-safe** version can be implemented like this:
+This version of Singleton is thread-unsafe, meaning that if two threads try to create the instance at the same time, it may create multiple instances. 
+
+A **thread-safe** version can be implemented like this:
 
 ```csharp
 public class Singleton
