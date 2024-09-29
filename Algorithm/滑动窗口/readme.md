@@ -247,3 +247,6 @@ def findAnagrams(s, p):
 ### Conclusion  
 滑动窗口是一种非常有效的技术，特别适合处理子数组和子串的问题。通过调整窗口的大小，可以在不增加复杂度的情况下，找到符合条件的结果。掌握滑动窗口可以显著提高算法效率，尤其是涉及到字符串匹配、子数组求和等问题时。
 
+[![滑动窗口技巧与相关题目](https://img.youtube.com/vi/Rk1mEiEuNqs/0.jpg)](https://www.youtube.com/watch?v=Rk1mEiEuNqs)
+
+https://www.youtube.com/watch?v=Rk1mEiEuNqs&t=605s
