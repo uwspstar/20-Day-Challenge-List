@@ -1,70 +1,67 @@
-What is Angular?
-What is Single Page Application?
-What is Angular CLI?
-What is Angular Component?
-How does Angular load components inside the browser?
-What are Templates & Styles component properties?
-What is a better approach for Templates & Styles?
-What is NgOnInit() Lifecycle Hook?
-What is Data Binding?
-How to share data between components?
-What is Parent-Child relationship in Angular?
-What is @Input Decorator?
-What is @ViewChild Decorator?
-What is @Output & Event Emitter?
-What is String Interpolation?
-What is Property Binding?
-What is Class Binding?
-What is Style Binding?
-What is Event Binding?
-What is Event Filtering?
-What is Template Variable?
-What is Two-Way Data Binding?
-What is the difference between One-Way and Two-Way Data Binding?
-What is Angular Directive?
-What is NgFor Directive?
-What is Angular Change Detection?
-What is NgIf Directive?
-What is NgTemplate Directive?
-What is NgSwitchCase Directive?
-What is NgStyle Directive?
-What is NgClass Directive?
-What is the difference between Structural Directive and Attribute Directives?
-What are Angular Pipes & types of Pipes?
-What is Uppercase Lowercase Pipes?
-What is Number Pipes?
-What is Currency Pipes?
-What is Date Pipes?
-What is JSON Pipe?
-What is Percent Pipe?
-What is Slice Pipe?
-What is Custom Pipe?
-What are Reactive Form Basic Validations?
-How to add multiple validations in Reactive Form?
-How to submit Reactive Form and get form values?
-What are Nested Form Groups?
-What is Reactive Form Array?
-What is Reactive Form Builder?
-How to add custom validations in Reactive Forms?
-What is Angular Router Outlet?
-What is Angular Router Link?
-What is Angular Base URL?
-What is Angular Base Router?
-What is the difference between Router and Href?
-What is Angular RouterLinkActive?
-What are Router Parameter Variables?
-How to get Router Parameters?
-What is an Observable?
-What is Observable Subscribe?
-What is Observable Next?
-What is the difference between RXJS Observable and Functions?
-What is the difference between Synchronous and Asynchronous Programming?
-What is Observable Subscribe & Unsubscribe?
-What are multiple Router Parameters?
-What are Query Parameters?
-What is a separate module for Angular Routing?
-How to navigate programmatically in Angular?
-What are Wild Card Routers?
+### List of Angular Questions
+
+1. **What is Angular?**
+2. **What is Data Binding?**
+3. **How to share data between components?**
+4. **What is Parent-Child relationship in Angular?**
+5. **What is @Input Decorator?**
+6. **What is @ViewChild Decorator?**
+7. **What is @Output & Event Emitter?**
+8. **What is String Interpolation?**
+9. **What is Property Binding?**
+10. **What is Class Binding?**
+11. **What is Style Binding?**
+12. **What is Event Binding?**
+13. **What is Event Filtering?**
+14. **What is Template Variable?**
+15. **What is Two-Way Data Binding?**
+16. **What is the difference between One-Way and Two-Way Data Binding?**
+17. **What is Angular Directive?**
+18. **What is NgFor Directive?**
+19. **What is Angular Change Detection?**
+20. **What is NgIf Directive?**
+21. **What is NgTemplate Directive?**
+22. **What is NgSwitchCase Directive?**
+23. **What is NgStyle Directive?**
+24. **What is NgClass Directive?**
+25. **What is the difference between Structural Directive and Attribute Directives?**
+26. **What are Angular Pipes & types of Pipes?**
+27. **What is Uppercase Lowercase Pipes?**
+28. **What is Number Pipes?**
+29. **What is Currency Pipes?**
+30. **What is Date Pipes?**
+31. **What is JSON Pipe?**
+32. **What is Percent Pipe?**
+33. **What is Slice Pipe?**
+34. **What is Custom Pipe?**
+35. **What are Reactive Form Basic Validations?**
+36. **How to add multiple validations in Reactive Form?**
+37. **How to submit Reactive Form and get form values?**
+38. **What are Nested Form Groups?**
+39. **What is Reactive Form Array?**
+40. **What is Reactive Form Builder?**
+41. **How to add custom validations in Reactive Forms?**
+42. **What is Angular Router Outlet?**
+43. **What is Angular Router Link?**
+44. **What is Angular Base URL?**
+45. **What is Angular Base Router?**
+46. **What is the difference between Router and Href?**
+47. **What is Angular RouterLinkActive?**
+48. **What are Router Parameter Variables?**
+49. **How to get Router Parameters?**
+50. **What is an Observable?**
+51. **What is Observable Subscribe?**
+52. **What is Observable Next?**
+53. **What is the difference between RXJS Observable and Functions?**
+54. **What is the difference between Synchronous and Asynchronous Programming?**
+55. **What is Observable Subscribe & Unsubscribe?**
+56. **What are multiple Router Parameters?**
+57. **What are Query Parameters?**
+58. **What is a separate module for Angular Routing?**
+59. **How to navigate programmatically in Angular?**
+60. **What are Wild Card Routers?**
+
+Let me know if you would like me to expand on any of these questions or provide detailed answers for them!
 
 ### 1. What is Angular?  
 **English Explanation:**  
