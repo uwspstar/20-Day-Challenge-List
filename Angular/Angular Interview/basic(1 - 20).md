@@ -1,69 +1,110 @@
-### List of Angular Questions
+### List of Questions Based on the Provided Content
 
 1. **What is Angular?**
-2. **What is Data Binding?**
-3. **How to share data between components?**
-4. **What is Parent-Child relationship in Angular?**
-5. **What is @Input Decorator?**
-6. **What is @ViewChild Decorator?**
-7. **What is @Output & Event Emitter?**
-8. **What is String Interpolation?**
-9. **What is Property Binding?**
-10. **What is Class Binding?**
-11. **What is Style Binding?**
-12. **What is Event Binding?**
-13. **What is Event Filtering?**
-14. **What is Template Variable?**
-15. **What is Two-Way Data Binding?**
-16. **What is the difference between One-Way and Two-Way Data Binding?**
-17. **What is Angular Directive?**
-18. **What is NgFor Directive?**
-19. **What is Angular Change Detection?**
-20. **What is NgIf Directive?**
-21. **What is NgTemplate Directive?**
-22. **What is NgSwitchCase Directive?**
-23. **What is NgStyle Directive?**
-24. **What is NgClass Directive?**
-25. **What is the difference between Structural Directive and Attribute Directives?**
-26. **What are Angular Pipes & types of Pipes?**
-27. **What is Uppercase Lowercase Pipes?**
-28. **What is Number Pipes?**
-29. **What is Currency Pipes?**
-30. **What is Date Pipes?**
-31. **What is JSON Pipe?**
-32. **What is Percent Pipe?**
-33. **What is Slice Pipe?**
-34. **What is Custom Pipe?**
-35. **What are Reactive Form Basic Validations?**
-36. **How to add multiple validations in Reactive Form?**
-37. **How to submit Reactive Form and get form values?**
-38. **What are Nested Form Groups?**
-39. **What is Reactive Form Array?**
-40. **What is Reactive Form Builder?**
-41. **How to add custom validations in Reactive Forms?**
-42. **What is Angular Router Outlet?**
-43. **What is Angular Router Link?**
-44. **What is Angular Base URL?**
-45. **What is Angular Base Router?**
-46. **What is the difference between Router and Href?**
-47. **What is Angular RouterLinkActive?**
-48. **What are Router Parameter Variables?**
-49. **How to get Router Parameters?**
-50. **What is an Observable?**
-51. **What is Observable Subscribe?**
-52. **What is Observable Next?**
-53. **What is the difference between RXJS Observable and Functions?**
-54. **What is the difference between Synchronous and Asynchronous Programming?**
-55. **What is Observable Subscribe & Unsubscribe?**
-56. **What are multiple Router Parameters?**
-57. **What are Query Parameters?**
-58. **What is a separate module for Angular Routing?**
-59. **How to navigate programmatically in Angular?**
-60. **What are Wild Card Routers?**
+2. **What is Single Page Application?**
+3. **What is Angular CLI?**
+4. **How to set up Angular CLI?**
+5. **How to create the first Angular App?**
+6. **What is the Angular File Structure (Part I)?**
+7. **What is the Angular File Structure (Part II)?**
+8. **What is the Angular File Structure (Part III)?**
+9. **What is Angular Component?**
+10. **How does Angular load components inside the browser?**
+11. **What are Templates & Styles component properties?**
+12. **What is a better approach for Templates & Styles?**
+13. **How to generate Angular Components using Angular CLI?**
+14. **What is NgOnInit() Lifecycle Hook?**
+15. **What is Data Binding?**
+16. **How to share data between components?**
+17. **What is Parent-Child relationship in Angular?**
+18. **What is @Input Decorator?**
+19. **What is @ViewChild Decorator?**
+20. **What is @Output & Event Emitter?**
+21. **What is String Interpolation?**
+22. **What is Property Binding?**
+23. **What is Class Binding?**
+24. **What is Style Binding?**
+25. **What is Event Binding?**
+26. **What is Event Filtering?**
+27. **What is Template Variable?**
+28. **What is Two-Way Data Binding?**
+29. **What is the difference between One-Way and Two-Way Data Binding?**
+30. **What is Angular Directive?**
+31. **What is NgFor Directive?**
+32. **How to Fetch Object Array using NgFor?**
+33. **What is Angular Change Detection?**
+34. **How to use Array Index in Angular?**
+35. **What is NgIf Directive?**
+36. **What is NgTemplate Directive?**
+37. **What is NgSwitchCase Directive?**
+38. **What is NgStyle Directive?**
+39. **What is NgClass Directive?**
+40. **What is the difference between Structural Directive and Attribute Directives?**
+41. **What are Angular Pipes & types of Pipes?**
+42. **What is Uppercase Lowercase Pipes?**
+43. **What is Number Pipes?**
+44. **What is Currency Pipes?**
+45. **What is Date Pipes?**
+46. **What is JSON Pipe?**
+47. **What is Percent Pipe?**
+48. **What is Slice Pipe?**
+49. **What is Custom Pipe?**
+50. **How to create a Custom Pipe using Angular CLI?**
+51. **How to create Custom Pipes with Arguments?**
+52. **What is Angular Service?**
+53. **How to create Angular Service manually?**
+54. **What is Dependency Injection (DI)?**
+55. **What are DI Providers and `@Injectable` Decorator?**
+56. **How to generate Angular Service using Angular CLI?**
+57. **How to use Angular Service?**
+58. **What is Angular Interface?**
+59. **What are Angular Form Types?**
+60. **How to create Bootstrap Forms?**
+61. **What is NgForm Directive?**
+62. **What is the difference between NgForm and FormGroup Class?**
+63. **What is NgModel and FormControl Class?**
+64. **What is Form Validation?**
+65. **How to style Invalid Inputs?**
+66. **What are the types of Form Validation?**
+67. **How to validate Email Input Field?**
+68. **How to validate Text Area?**
+69. **How to fix Validation Errors?**
+70. **How to style all invalid input fields for Validation Errors?**
+71. **What is Form Submission?**
+72. **How to disable Submit Button?**
+73. **What is Reactive Form Setup?**
+74. **How to create Reactive Form Controls Programmatically?**
+75. **What are Reactive Form Basic Validations?**
+76. **How to add multiple validations in Reactive Forms?**
+77. **How to submit Reactive Forms and get form values?**
+78. **What are Nested Form Groups?**
+79. **What is Reactive Form Array?**
+80. **What is Reactive Form Builder?**
+81. **How to add custom validations in Reactive Forms?**
+82. **What is Angular Router Outlet?**
+83. **What is Angular Router Link?**
+84. **What is Angular Base URL?**
+85. **What is Angular Base Router?**
+86. **What is the difference between Router and Href?**
+87. **What is Angular RouterLinkActive?**
+88. **What are Router Parameter Variables?**
+89. **How to get Router Parameters?**
+90. **What is an Observable?**
+91. **What is Observable Subscribe?**
+92. **What is Observable Next?**
+93. **What is the difference between RXJS Observable and Functions?**
+94. **What is the difference between Synchronous and Asynchronous Programming?**
+95. **What is Observable Subscribe & Unsubscribe?**
+96. **What are multiple Router Parameters?**
+97. **What are Query Parameters?**
+98. **What is a separate module for Angular Routing?**
+99. **How to navigate programmatically in Angular?**
+100. **What are Wild Card Routers?**
 
-Let me know if you would like me to expand on any of these questions or provide detailed answers for them!
+---
 
-### 1. What is Angular?  
+
+### [1. What is Angular?]() 
 **English Explanation:**  
 Angular is a platform and framework for building single-page client applications using HTML and TypeScript. It is maintained by Google and provides a way to build large-scale, efficient, and maintainable web applications. Angular uses a component-based architecture and is known for its dependency injection and powerful templating capabilities.  
 
@@ -145,7 +186,7 @@ export class AppComponent {
 
 ---
 
-### 2. What is Single Page Application (SPA)?
+### [2. What is Single Page Application (SPA)?]()
 **English:**  
 A Single Page Application (SPA) is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the app. SPAs use AJAX and JavaScript frameworks such as Angular to retrieve data and update the view without reloading the page, resulting in faster and more fluid user experiences.
 
@@ -307,7 +348,7 @@ ng serve
 
 ---
 
-### 4. What is Angular Component?  
+### [4. What is Angular Component?]()  
 **English:**  
 An Angular component is the basic building block of an Angular application. It controls a portion of the view and defines the structure, behavior, and presentation logic using HTML, CSS, and TypeScript. A component is defined using the `@Component` decorator and consists of three main parts: the template, styles, and the component class itself.
 
