@@ -961,5 +961,811 @@ export class ParentComponent {
    **答:** 检查父组件是否正确传递了值，确保子组件具有 `@Input` 装饰器，并验证绑定语法是否正确。
 
 ---
+### 12. What is `@ViewChild` Decorator?
+**English:**  
+The `@ViewChild` decorator in Angular allows you to access a child component, directive, or DOM element within the parent component. It provides a way to interact directly with the child component’s properties and methods. `@ViewChild` is particularly useful for scenarios where you need to access or manipulate child components programmatically after the view has been initialized.
+
+**中文:**  
+Angular 中的 `@ViewChild` 装饰器允许父组件访问子组件、指令或 DOM 元素。它提供了一种方式，可以在视图初始化后直接与子组件的属性和方法交互。`@ViewChild` 在需要以编程方式访问或操作子组件的场景中特别有用。
+
+**Code Example:**
+
+```typescript
+import { Component, ViewChild } from '@angular/core';
+import { ChildComponent } from './child.component';
+
+@Component({
+  selector: 'app-parent',
+  template: `
+    <h2>Parent Component</h2>
+    <app-child></app-child>
+    <button (click)="changeChildProperty()">Change Child Property</button>
+  `
+})
+export class ParentComponent {
+  @ViewChild(ChildComponent) childComponent!: ChildComponent;
+
+  changeChildProperty() {
+    this.childComponent.childMessage = 'Message changed by Parent!';
+  }
+}
+
+// Child Component
+@Component({
+  selector: 'app-child',
+  template: `<p>{{ childMessage }}</p>`
+})
+export class ChildComponent {
+  childMessage = 'Initial Child Message';
+}
+```
+
+**Explanation:**
+1. **`@ViewChild(ChildComponent)`:** The `@ViewChild` decorator is used to access the `ChildComponent` instance in the parent component.
+2. **`changeChildProperty()` Method:** This method in the parent component updates the `childMessage` property of the child component when the button is clicked.
+
+**中文解释:**
+1. **`@ViewChild(ChildComponent)`:** `@ViewChild` 装饰器用于在父组件中访问 `ChildComponent` 实例。
+2. **`changeChildProperty()` 方法:** 父组件中的该方法在按钮点击时更新子组件的 `childMessage` 属性。
+
+**Tip:**
+- Use `@ViewChild` when you need to call a method or access a property in a child component from the parent component.
+- **中文提示:** 当需要在父组件中调用子组件的方法或访问子组件的属性时，可以使用 `@ViewChild`。
+
+**Warning:**
+- Always check that the `@ViewChild` property is defined after the view has been initialized (e.g., in `ngAfterViewInit`) to avoid undefined errors.
+- **中文警告:** 始终检查 `@ViewChild` 属性在视图初始化（如 `ngAfterViewInit`）后是否已定义，以避免未定义错误。
+
+**5 Interview Questions & Answers:**
+
+1. **Q:** What is the purpose of using `@ViewChild` in Angular?  
+   **A:** The `@ViewChild` decorator is used to access a child component, directive, or DOM element in the parent component.
+
+   **中文问答:**  
+   **问:** 在 Angular 中使用 `@ViewChild` 的目的是什么？  
+   **答:** `@ViewChild` 装饰器用于在父组件中访问子组件、指令或 DOM 元素。
+
+2. **Q:** How can you use `@ViewChild` to call a method in a child component?  
+   **A:** Use `@ViewChild` to get a reference to the child component instance, then call the method using that reference, e.g., `this.childComponent.someMethod()`.
+
+   **中文问答:**  
+   **问:** 如何使用 `@ViewChild` 调用子组件中的方法？  
+   **答:** 使用 `@ViewChild` 获取子组件实例的引用，然后使用该引用调用方法，例如 `this.childComponent.someMethod()`。
+
+3. **Q:** What is the difference between `@ViewChild` and `@Input`?  
+   **A:** `@Input` is used for passing data from parent to child, while `@ViewChild` is used for accessing child components and their properties or methods in the parent.
+
+   **中文问答:**  
+   **问:** `@ViewChild` 和 `@Input` 有什么区别？  
+   **答:** `@Input` 用于从父组件向子组件传递数据，而 `@ViewChild` 用于在父组件中访问子组件及其属性或方法。
+
+4. **Q:** In which lifecycle hook is `@ViewChild` typically accessed?  
+   **A:** `@ViewChild` is typically accessed in the `ngAfterViewInit` lifecycle hook because the child views are initialized only after this hook is called.
+
+   **中文问答:**  
+   **问:** 通常在哪个生命周期钩子中访问 `@ViewChild`？  
+   **答:** 通常在 `ngAfterViewInit` 生命周期钩子中访问 `@ViewChild`，因为只有在该钩子调用后子视图才会被初始化。
+
+5. **Q:** How would you troubleshoot a situation where `@ViewChild` is returning `undefined`?  
+   **A:** Ensure that the child component exists in the DOM and that the `@ViewChild` property is being accessed after the view is initialized (e.g., in `ngAfterViewInit`).
+
+   **中文问答:**  
+   **问:** 如何排查 `@ViewChild` 返回 `undefined` 的情况？  
+   **答:** 确保子组件存在于 DOM 中，并且 `@ViewChild` 属性是在视图初始化后（如 `ngAfterViewInit`）访问的。
+
+---
+
+### 13. What is `@Output` and `EventEmitter`?
+**English:**  
+The `@Output` decorator in Angular, used in conjunction with `EventEmitter`, allows a child component to send data or events back to the parent component. This is commonly used when a child component needs to notify its parent about a change or an action (e.g., button click, form submission). `@Output` and `EventEmitter` establish a communication channel from child to parent.
+
+**中文:**  
+Angular 中的 `@Output` 装饰器与 `EventEmitter` 搭配使用，允许子组件将数据或事件发送回父组件。当子组件需要通知父组件某个更改或动作时（例如按钮点击、表单提交），通常会使用 `@Output` 和 `EventEmitter`。`@Output` 和 `EventEmitter` 建立了从子组件到父组件的通信通道。
+
+**Code Example:**
+
+```typescript
+import { Component, EventEmitter, Output } from '@angular/core';
+
+@Component({
+  selector: 'app-child',
+  template: `<button (click)="sendMessage()">Send Message to Parent</button>`
+})
+export class ChildComponent {
+  @Output() messageEvent = new EventEmitter<string>();
+
+  sendMessage() {
+    this.messageEvent.emit('Hello from Child!');
+  }
+}
+
+// Parent Component
+@Component({
+  selector: 'app-parent',
+  template: `
+    <h2>Parent Component</h2>
+    <app-child (messageEvent)="receiveMessage($event)"></app-child>
+    <p>Message from Child: {{ message }}</p>
+  `
+})
+export class ParentComponent {
+  message: string;
+
+  receiveMessage($event: string) {
+    this.message = $event;
+  }
+}
+```
+
+**Explanation:**
+1. **`@Output` and `EventEmitter`:** The child component defines an output property using `@Output` and an instance of `EventEmitter<string>`.
+2. **`sendMessage()` Method:** When the button is clicked, the `sendMessage` method emits an event to notify the parent component.
+3. **Parent Component’s `receiveMessage()` Method:** The parent component listens to the `messageEvent` and handles it using the `receiveMessage` method.
+
+**中文解释:**
+1. **`@Output` 和 `EventEmitter`:** 子组件使用 `@Output` 和 `EventEmitter<string>` 实例定义一个输出属性。
+2. **`sendMessage()` 方法:** 当按钮被点击时，`sendMessage` 方法发射一个事件来通知父组件。
+3. **父组件的 `receiveMessage()` 方法:** 父组件监听 `messageEvent` 并使用 `receiveMessage` 方法处理它。
+
+**Tip:**
+- Use `@Output` and `EventEmitter` for scenarios where a child component needs to inform the parent about an event or state change.
+- **中文提示:** 在子组件需要通知父组件某个事件或状态更改的场景中使用 `@Output` 和 `EventEmitter`。
+
+**Warning:**
+- Avoid overusing `EventEmitter` for unrelated components, as it can lead to tightly coupled components. Consider using a shared service instead.
+- **中文警告:** 避免在不相关组件中过度使用 `EventEmitter`，因为这会导致组件高度耦合。建议使用共享服务替代。
+
+**5 Interview Questions & Answers:**
+
+1. **Q:** What is the purpose of `@Output` in Angular?  
+   **A:** The `@Output` decorator is used to create a custom event and pass data from a child component to a parent component using `EventEmitter`.
+
+   **中文问答:**  
+   **问:** Angular 中 `@Output` 的作用是什么？  
+   **答:** `@Output` 装饰器用于创建自定义事件，并使用 `EventEmitter` 将数据从子组件传递到父组件。
+
+
+
+2. **Q:** How does `EventEmitter` work in Angular?  
+   **A:** `EventEmitter` creates a custom event that the parent component can subscribe to. It is used with the `@Output` decorator to emit values.
+
+   **中文问答:**  
+   **问:** `EventEmitter` 在 Angular 中是如何工作的？  
+   **答:** `EventEmitter` 创建一个父组件可以订阅的自定义事件。它与 `@Output` 装饰器一起使用来发射值。
+
+3. **Q:** How would you pass a complex object from a child component to a parent component?  
+   **A:** Use `@Output` with `EventEmitter` to emit the complex object, e.g., `this.messageEvent.emit({ name: 'John', age: 30 })`.
+
+   **中文问答:**  
+   **问:** 如何将复杂对象从子组件传递到父组件？  
+   **答:** 使用 `@Output` 和 `EventEmitter` 发射复杂对象，例如 `this.messageEvent.emit({ name: 'John', age: 30 })`。
+
+4. **Q:** Can `@Output` be used to pass data from parent to child component?  
+   **A:** No, `@Output` is used to pass data from child to parent. Use `@Input` for parent-to-child communication.
+
+   **中文问答:**  
+   **问:** `@Output` 能否用于将数据从父组件传递到子组件？  
+   **答:** 不能，`@Output` 用于将数据从子组件传递到父组件。使用 `@Input` 进行父组件到子组件的通信。
+
+5. **Q:** How can you handle an event emitted by a child component in the parent component?  
+   **A:** Bind the emitted event to a parent component method using the `(eventName)="parentMethod($event)"` syntax.
+
+   **中文问答:**  
+   **问:** 如何在父组件中处理子组件发射的事件？  
+   **答:** 使用 `(eventName)="parentMethod($event)"` 语法将发射的事件绑定到父组件的方法。
+
+---
+
+### 14. What is String Interpolation?
+**English:**  
+String Interpolation in Angular is a form of data binding used to display dynamic data from the component's class in the HTML template. It is represented using double curly braces (`{{ }}`). String interpolation evaluates the expressions inside the curly braces and converts them into a string that is displayed in the template. It is mainly used to bind properties, method results, or variables from the component class to the view.
+
+**中文:**  
+Angular 中的字符串插值是一种数据绑定形式，用于在 HTML 模板中显示来自组件类的动态数据。它使用双大括号 (`{{ }}`) 表示。字符串插值会计算大括号内的表达式，并将其转换为字符串显示在模板中。它主要用于将组件类中的属性、方法结果或变量绑定到视图中。
+
+**Code Example:**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-interpolation',
+  template: `
+    <h2>Welcome, {{ userName }}!</h2>
+    <p>The current year is {{ currentYear }}</p>
+    <p>Sum of 10 and 20 is {{ addNumbers(10, 20) }}</p>
+  `
+})
+export class InterpolationComponent {
+  userName = 'Angular Developer';
+  currentYear = new Date().getFullYear();
+
+  addNumbers(a: number, b: number): number {
+    return a + b;
+  }
+}
+```
+
+**Explanation:**
+1. **`{{ userName }}`:** Displays the value of the `userName` property from the component class.
+2. **`{{ currentYear }}`:** Displays the current year using the `currentYear` property.
+3. **`{{ addNumbers(10, 20) }}`:** Calls the `addNumbers` method and displays the result of adding 10 and 20.
+
+**中文解释:**
+1. **`{{ userName }}`:** 显示组件类中 `userName` 属性的值。
+2. **`{{ currentYear }}`:** 使用 `currentYear` 属性显示当前年份。
+3. **`{{ addNumbers(10, 20) }}`:** 调用 `addNumbers` 方法，并显示 10 和 20 相加的结果。
+
+**Tip:**
+- Use string interpolation for simple property bindings, and for displaying method results or expressions in the template.
+- **中文提示:** 使用字符串插值进行简单属性绑定，以及在模板中显示方法结果或表达式。
+
+**Warning:**
+- Avoid using complex logic inside interpolation expressions as it can lead to performance issues.
+- **中文警告:** 避免在插值表达式中使用复杂逻辑，因为这可能导致性能问题。
+
+**5 Interview Questions & Answers:**
+
+1. **Q:** What is string interpolation in Angular?  
+   **A:** String interpolation is a form of data binding in Angular that binds component class properties, methods, or variables to the view using double curly braces (`{{ }}`).
+
+   **中文问答:**  
+   **问:** Angular 中的字符串插值是什么？  
+   **答:** 字符串插值是 Angular 中的一种数据绑定形式，使用双大括号 (`{{ }}`) 将组件类的属性、方法或变量绑定到视图中。
+
+2. **Q:** Can string interpolation be used to call methods in Angular?  
+   **A:** Yes, string interpolation can call methods in the component class, but it is recommended to use it for simple expressions only.
+
+   **中文问答:**  
+   **问:** 字符串插值能否用于调用 Angular 中的方法？  
+   **答:** 可以，字符串插值可以调用组件类中的方法，但建议仅用于简单表达式。
+
+3. **Q:** How do you perform property binding using string interpolation?  
+   **A:** You can perform property binding using `{{ propertyName }}`, where `propertyName` is a variable or a property from the component class.
+
+   **中文问答:**  
+   **问:** 如何使用字符串插值进行属性绑定？  
+   **答:** 可以使用 `{{ propertyName }}` 进行属性绑定，其中 `propertyName` 是组件类中的变量或属性。
+
+4. **Q:** What are the limitations of string interpolation?  
+   **A:** String interpolation can only bind to properties and expressions that result in a string. It cannot be used for complex data manipulation or multi-line expressions.
+
+   **中文问答:**  
+   **问:** 字符串插值的局限性是什么？  
+   **答:** 字符串插值只能绑定到结果为字符串的属性和表达式。它不能用于复杂的数据操作或多行表达式。
+
+5. **Q:** Can you bind HTML content using string interpolation?  
+   **A:** No, string interpolation only binds text content. To bind HTML content, use property binding with `[innerHTML]`.
+
+   **中文问答:**  
+   **问:** 能否使用字符串插值绑定 HTML 内容？  
+   **答:** 不能，字符串插值只能绑定文本内容。要绑定 HTML 内容，可以使用 `[innerHTML]` 属性绑定。
+
+---
+
+### 15. What is Property Binding?
+**English:**  
+Property Binding in Angular is a technique that allows you to bind the values of component properties to the attributes or properties of HTML elements in the template. It is represented using square brackets (`[property]="expression"`). Property binding helps dynamically set element properties, such as disabling a button, changing the source of an image, or setting a CSS class.
+
+**中文:**  
+Angular 中的属性绑定是一种技术，允许将组件属性的值绑定到模板中 HTML 元素的属性上。它使用方括号 (`[property]="expression"`) 表示。属性绑定可以动态地设置元素的属性，例如禁用按钮、更改图片源或设置 CSS 类。
+
+**Code Example:**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-property-binding',
+  template: `
+    <button [disabled]="isButtonDisabled">Click Me</button>
+    <img [src]="imageUrl" alt="Angular Logo" />
+    <p [innerHTML]="htmlContent"></p>
+  `
+})
+export class PropertyBindingComponent {
+  isButtonDisabled = true;
+  imageUrl = 'https://angular.io/assets/images/logos/angular/angular.png';
+  htmlContent = '<span style="color: red">This is HTML content bound using property binding.</span>';
+}
+```
+
+**Explanation:**
+1. **`[disabled]="isButtonDisabled"`:** Binds the `disabled` attribute of the button to the `isButtonDisabled` property.
+2. **`[src]="imageUrl"`:** Sets the image source dynamically using the `imageUrl` property.
+3. **`[innerHTML]="htmlContent"`:** Binds the `innerHTML` property of the `<p>` tag to display dynamic HTML content.
+
+**中文解释:**
+1. **`[disabled]="isButtonDisabled"`:** 将按钮的 `disabled` 属性绑定到 `isButtonDisabled` 属性。
+2. **`[src]="imageUrl"`:** 使用 `imageUrl` 属性动态设置图片源。
+3. **`[innerHTML]="htmlContent"`:** 将 `<p>` 标签的 `innerHTML` 属性绑定到动态 HTML 内容。
+
+**Tip:**
+- Use property binding for dynamically setting attributes and properties of elements that are dependent on the component’s data.
+- **中文提示:** 对于依赖组件数据的元素属性和属性设置，使用属性绑定。
+
+**Warning:**
+- Ensure that the property names used in property binding are valid properties of the target HTML element.
+- **中文警告:** 确保在属性绑定中使用的属性名称是目标 HTML 元素的有效属性。
+
+**5 Interview Questions & Answers:**
+
+1. **Q:** What is property binding in Angular?  
+   **A:** Property binding is a data binding technique used to bind component properties to the attributes or properties of HTML elements.
+
+   **中文问答:**  
+   **问:** Angular 中的属性绑定是什么？  
+   **答:** 属性绑定是一种数据绑定技术，用于将组件属性绑定到 HTML 元素的属性上。
+
+2. **Q:** How is property binding different from attribute binding?  
+   **A:** Property binding binds to the DOM properties of an element, whereas attribute binding only changes the initial state of the attributes.
+
+   **中文问答:**  
+   **问:** 属性绑定与属性（attribute）绑定有何不同？  
+   **答:** 属性绑定绑定到元素的 DOM 属性，而属性（attribute）绑定仅更改属性的初始状态。
+
+3. **Q:** How would you disable a button conditionally using property binding?  
+   **A:** Use `[disabled]="isButtonDisabled"`, where `isButtonDisabled` is a boolean property in the component class.
+
+   **中文问答:**  
+   **问:** 如何使用属性绑定有条件地禁用按钮？  
+   **答:** 使用 `[disabled]="isButtonDisabled"`，其中 `isButtonDisabled` 是组件类中的布尔属性。
+
+4. **Q:** Can property binding be used to bind methods to element properties?  
+   **A:** No, property binding should only be used for binding values or expressions that result in a value. Use event binding to handle methods.
+
+   **中文问答:**  
+   **问:** 属性绑定能否用于将方法绑定到元素属性？  
+   **答:** 不能，属性绑定仅用于绑定值或表达式的结果。使用事件绑定来处理方法。
+
+5. **Q:** What are some common use cases for property binding?  
+   **A:** Common use cases include dynamically disabling elements, changing image sources
+
+, setting CSS classes, and binding HTML content.
+
+   **中文问答:**  
+   **问:** 属性绑定的常见用例有哪些？  
+   **答:** 常见用例包括动态禁用元素、更改图片源、设置 CSS 类和绑定 HTML 内容。
+
+---
+
+### 16. What is Class Binding?
+**English:**  
+Class Binding in Angular is a type of property binding used to dynamically add or remove CSS classes from an HTML element. It uses the `[class]` syntax or `[class.class-name]` syntax. With class binding, you can conditionally apply CSS classes to an element based on the values of component properties. This technique is particularly useful for styling elements dynamically or applying multiple classes at once.
+
+**中文:**  
+Angular 中的类绑定是一种属性绑定形式，用于动态地向 HTML 元素添加或移除 CSS 类。它使用 `[class]` 语法或 `[class.class-name]` 语法。通过类绑定，可以根据组件属性的值有条件地将 CSS 类应用到元素。这种技术在动态样式元素或一次性应用多个类时非常有用。
+
+**Code Example:**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-class-binding',
+  template: `
+    <div [class.active]="isActive">Active Class</div>
+    <div [class]="currentClass">Current Class</div>
+    <button (click)="toggleActive()">Toggle Active Class</button>
+  `,
+  styles: [
+    `.active { color: green; }`,
+    `.highlight { font-weight: bold; }`
+  ]
+})
+export class ClassBindingComponent {
+  isActive = true;
+  currentClass = 'highlight';
+
+  toggleActive() {
+    this.isActive = !this.isActive;
+  }
+}
+```
+
+**Explanation:**
+1. **`[class.active]="isActive"`:** Adds or removes the `active` class based on the `isActive` property.
+2. **`[class]="currentClass"`:** Dynamically applies the value of the `currentClass` property as the class name.
+3. **`toggleActive()` Method:** Toggles the `isActive` property value between `true` and `false`, which in turn toggles the `active` class on the first `<div>`.
+
+**中文解释:**
+1. **`[class.active]="isActive"`:** 根据 `isActive` 属性的值添加或移除 `active` 类。
+2. **`[class]="currentClass"`:** 动态地将 `currentClass` 属性的值作为类名应用。
+3. **`toggleActive()` 方法:** 在 `true` 和 `false` 之间切换 `isActive` 属性值，从而在第一个 `<div>` 上切换 `active` 类。
+
+**Tip:**
+- Use class binding to dynamically style elements based on state changes in the component, such as applying active classes on button clicks or conditionally highlighting elements.
+- **中文提示:** 使用类绑定根据组件中的状态变化动态设置元素样式，例如在按钮点击时应用 active 类或有条件地高亮显示元素。
+
+**Warning:**
+- Avoid using too many class bindings on a single element as it can lead to cluttered templates and reduce readability.
+- **中文警告:** 避免在单个元素上使用过多的类绑定，这会导致模板混乱并降低可读性。
+
+**5 Interview Questions & Answers:**
+
+1. **Q:** What is class binding in Angular?  
+   **A:** Class binding is a property binding technique used to add or remove CSS classes dynamically on an HTML element based on component property values.
+
+   **中文问答:**  
+   **问:** Angular 中的类绑定是什么？  
+   **答:** 类绑定是一种属性绑定技术，根据组件属性的值动态地向 HTML 元素添加或移除 CSS 类。
+
+2. **Q:** How do you conditionally apply a CSS class using class binding?  
+   **A:** Use `[class.class-name]="expression"`, where `class-name` is the CSS class, and `expression` is a boolean property in the component class.
+
+   **中文问答:**  
+   **问:** 如何使用类绑定有条件地应用 CSS 类？  
+   **答:** 使用 `[class.class-name]="expression"`，其中 `class-name` 是 CSS 类，`expression` 是组件类中的布尔属性。
+
+3. **Q:** Can you apply multiple CSS classes dynamically using class binding?  
+   **A:** Yes, use `[class]="expression"`, where `expression` is a string of class names separated by spaces or an object mapping class names to boolean values.
+
+   **中文问答:**  
+   **问:** 能否使用类绑定动态地应用多个 CSS 类？  
+   **答:** 可以，使用 `[class]="expression"`，其中 `expression` 是以空格分隔的类名字符串，或者是将类名映射为布尔值的对象。
+
+4. **Q:** How do you toggle a CSS class dynamically using class binding?  
+   **A:** Use a boolean property in the component class and bind it using `[class.class-name]="property"`. Change the property value to toggle the class.
+
+   **中文问答:**  
+   **问:** 如何使用类绑定动态地切换 CSS 类？  
+   **答:** 在组件类中使用布尔属性，并使用 `[class.class-name]="property"` 进行绑定。更改属性值来切换类。
+
+5. **Q:** What is the difference between `[ngClass]` and class binding?  
+   **A:** `[ngClass]` provides more flexibility and allows applying multiple classes conditionally, while class binding (`[class]`) is mainly for single class binding.
+
+   **中文问答:**  
+   **问:** `[ngClass]` 和类绑定的区别是什么？  
+   **答:** `[ngClass]` 提供了更多的灵活性，可以有条件地应用多个类，而类绑定 (`[class]`) 主要用于单个类的绑定。
+
+---
+
+### 17. What is Style Binding?
+**English:**  
+Style Binding in Angular is a technique that allows you to dynamically set the styles of an HTML element using the `[style]` or `[style.style-property]` syntax. It binds a component property to a CSS style property, allowing the style to change based on the component’s state or data. This is particularly useful for dynamically changing visual aspects like background color, width, height, or margins.
+
+**中文:**  
+Angular 中的样式绑定是一种技术，它使用 `[style]` 或 `[style.style-property]` 语法动态设置 HTML 元素的样式。它将组件属性绑定到 CSS 样式属性，使样式可以根据组件的状态或数据而变化。这在动态更改背景颜色、宽度、高度或边距等视觉属性时特别有用。
+
+**Code Example:**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-style-binding',
+  template: `
+    <p [style.color]="textColor">This text has dynamic color!</p>
+    <p [style.fontSize.px]="fontSize">This text has dynamic font size!</p>
+    <button (click)="increaseFontSize()">Increase Font Size</button>
+  `
+})
+export class StyleBindingComponent {
+  textColor = 'blue';
+  fontSize = 16;
+
+  increaseFontSize() {
+    this.fontSize += 2;
+  }
+}
+```
+
+**Explanation:**
+1. **`[style.color]="textColor"`:** Sets the `color` style property of the paragraph based on the `textColor` property.
+2. **`[style.fontSize.px]="fontSize"`:** Sets the `fontSize` in pixels (`px`) based on the `fontSize` property.
+3. **`increaseFontSize()` Method:** Increases the `fontSize` property by 2 units whenever the button is clicked, dynamically changing the text size.
+
+**中文解释:**
+1. **`[style.color]="textColor"`:** 根据 `textColor` 属性设置段落的 `color` 样式属性。
+2. **`[style.fontSize.px]="fontSize"`:** 根据 `fontSize` 属性以像素（`px`）为单位设置 `fontSize` 样式属性。
+3. **`increaseFontSize()` 方法:** 每次点击按钮时将 `fontSize` 属性增加 2 个单位，从而动态地更改文本大小。
+
+**Tip:**
+- Use style binding for dynamic style changes such as hover effects, responsive layouts, or user interaction effects.
+- **中文提示:** 使用样式绑定进行动态样式更改，例如悬停效果、响应式布局或用户交互效果。
+
+**Warning:**
+- Ensure that the style property names in `[style]` or `[style.style-property]` are correctly spelled and match the CSS property names.
+- **中文警告:** 确保 `[style]` 或 `[style.style-property]` 中的样式属性名称拼写正确，并与 CSS 属性名称匹配。
+
+**5 Interview Questions & Answers:**
+
+1. **Q:** What is style binding in Angular?  
+   **A:** Style binding is a data binding technique used to bind component properties to CSS style properties of HTML elements dynamically.
+
+   **中文问答:**  
+   **问:** Angular 中的样式绑定是什么？  
+   **答:** 样式绑定是一种数据绑定技术，用于将组件属性动态地绑定到 HTML 元素的 CSS 样式属性。
+
+2. **Q:** How do you dynamically set a CSS property using style binding?  
+   **A:** Use `[style.style-property]="expression"`, where `style-property` is the CSS property to bind, and `expression` is a component property.
+
+   **中文问答:**  
+   **问:** 如何使用样式绑定动态地设置 CSS 属性？  
+   **答:** 使用
+
+ `[style.style-property]="expression"`，其中 `style-property` 是要绑定的 CSS 属性，`expression` 是组件属性。
+
+3. **Q:** Can you use style binding for setting styles like `px`, `em`, or `%`?  
+   **A:** Yes, you can specify units such as `px`, `em`, or `%` using `[style.property.unit]="value"` syntax, e.g., `[style.width.px]="width"`.
+
+   **中文问答:**  
+   **问:** 样式绑定能否用于设置 `px`、`em` 或 `%` 等单位的样式？  
+   **答:** 可以，使用 `[style.property.unit]="value"` 语法指定单位，例如 `[style.width.px]="width"`。
+
+4. **Q:** How do you apply multiple styles dynamically using style binding?  
+   **A:** Use `[style]="styleObject"`, where `styleObject` is an object containing key-value pairs of style properties and their values.
+
+   **中文问答:**  
+   **问:** 如何使用样式绑定动态地应用多个样式？  
+   **答:** 使用 `[style]="styleObject"`，其中 `styleObject` 是一个包含样式属性及其值的键值对对象。
+
+5. **Q:** What is the difference between `[style]` and `[ngStyle]`?  
+   **A:** `[style]` is used for binding a single style property, whereas `[ngStyle]` is used for binding multiple styles at once using an object.
+
+   **中文问答:**  
+   **问:** `[style]` 和 `[ngStyle]` 有何区别？  
+   **答:** `[style]` 用于绑定单个样式属性，而 `[ngStyle]` 用于使用对象一次性绑定多个样式。
+
+---
+
+### 18. What is Event Binding?
+**English:**  
+Event Binding in Angular is a technique used to listen to events, such as user interactions, and execute component logic based on those events. It uses the `()` syntax, where the event name (e.g., `click`, `input`, `change`) is placed inside the parentheses. Event Binding allows you to respond to user actions such as button clicks, keyboard inputs, mouse movements, and more.
+
+**中文:**  
+Angular 中的事件绑定是一种用于监听事件（如用户交互）并基于这些事件执行组件逻辑的技术。它使用 `()` 语法，其中事件名称（如 `click`、`input`、`change`）放置在括号内。事件绑定使您能够响应用户操作，例如按钮点击、键盘输入、鼠标移动等。
+
+**Code Example:**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-event-binding',
+  template: `
+    <button (click)="onClick()">Click Me</button>
+    <input (input)="onInputChange($event)" placeholder="Type something..." />
+    <p>{{ inputText }}</p>
+  `
+})
+export class EventBindingComponent {
+  inputText = '';
+
+  onClick() {
+    alert('Button was clicked!');
+  }
+
+  onInputChange(event: any) {
+    this.inputText = event.target.value;
+  }
+}
+```
+
+**Explanation:**
+1. **`(click)="onClick()"`:** Binds the `click` event of the button to the `onClick()` method, which displays an alert message.
+2. **`(input)="onInputChange($event)"`:** Binds the `input` event of the text input field to the `onInputChange()` method, which updates the `inputText` property with the value typed by the user.
+
+**中文解释:**
+1. **`(click)="onClick()"`:** 将按钮的 `click` 事件绑定到 `onClick()` 方法，该方法显示一个提示消息。
+2. **`(input)="onInputChange($event)"`:** 将文本输入框的 `input` 事件绑定到 `onInputChange()` 方法，该方法使用用户输入的值更新 `inputText` 属性。
+
+**Tip:**
+- Use event binding to handle user interactions such as form submissions, button clicks, and keypress events to trigger corresponding component logic.
+- **中文提示:** 使用事件绑定处理用户交互，例如表单提交、按钮点击和按键事件，以触发相应的组件逻辑。
+
+**Warning:**
+- Avoid using event binding for heavy computational logic, as it can cause performance issues and slow down the UI.
+- **中文警告:** 避免在事件绑定中使用繁重的计算逻辑，因为这可能会导致性能问题并减慢 UI 的响应速度。
+
+**5 Interview Questions & Answers:**
+
+1. **Q:** What is event binding in Angular?  
+   **A:** Event binding is a technique used to bind an event (e.g., click, input) in the HTML template to a method in the component class.
+
+   **中文问答:**  
+   **问:** Angular 中的事件绑定是什么？  
+   **答:** 事件绑定是一种将 HTML 模板中的事件（如 click、input）与组件类中的方法绑定的技术。
+
+2. **Q:** How do you pass event data to a method using event binding?  
+   **A:** Use `$event` to pass the event data to the method, e.g., `(click)="methodName($event)"`.
+
+   **中文问答:**  
+   **问:** 如何使用事件绑定将事件数据传递给方法？  
+   **答:** 使用 `$event` 将事件数据传递给方法，例如 `(click)="methodName($event)"`。
+
+3. **Q:** Can event binding be used for custom events?  
+   **A:** Yes, event binding can be used for both native events (e.g., click) and custom events emitted by child components.
+
+   **中文问答:**  
+   **问:** 事件绑定能否用于自定义事件？  
+   **答:** 可以，事件绑定既可以用于原生事件（如 click），也可以用于子组件发射的自定义事件。
+
+4. **Q:** What is the difference between property binding and event binding?  
+   **A:** Property binding binds data from the component to the view, whereas event binding binds an event in the view to a method in the component.
+
+   **中文问答:**  
+   **问:** 属性绑定和事件绑定有什么区别？  
+   **答:** 属性绑定将数据从组件绑定到视图，而事件绑定将视图中的事件绑定到组件中的方法。
+
+5. **Q:** How can you prevent default event actions in event binding?  
+   **A:** Use `$event.preventDefault()` inside the event handler method to prevent the default action of an event.
+
+   **中文问答:**  
+   **问:** 如何在事件绑定中阻止默认事件操作？  
+   **答:** 在事件处理方法中使用 `$event.preventDefault()` 来阻止事件的默认操作。
+
+---
+
+### 19. What is Event Filtering?
+**English:**  
+Event Filtering in Angular is a technique used to listen for specific events or to conditionally execute logic based on event properties. Event filtering allows you to filter out certain events (e.g., key presses) and execute code only if specific conditions are met. This technique is useful when you want to restrict event handling to specific keys or inputs.
+
+**中文:**  
+Angular 中的事件过滤是一种用于监听特定事件或根据事件属性有条件地执行逻辑的技术。事件过滤允许您筛选出某些事件（如按键）并仅在满足特定条件时执行代码。这种技术在您希望将事件处理限制为特定按键或输入时特别有用。
+
+**Code Example:**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-event-filtering',
+  template: `
+    <input (keydown)="onKeyDown($event)" placeholder="Type something..." />
+    <p>{{ message }}</p>
+  `
+})
+export class EventFilteringComponent {
+  message = '';
+
+  onKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.message = 'Enter key pressed!';
+    } else {
+      this.message = 'Please press the Enter key.';
+    }
+  }
+}
+```
+
+**Explanation:**
+1. **`(keydown)="onKeyDown($event)"`:** Binds the `keydown` event of the input field to the `onKeyDown()` method.
+2. **Event Filtering:** The `onKeyDown()` method checks if the pressed key is `Enter`. If it is, a message is displayed; otherwise, a different message is shown.
+
+**中文解释:**
+1. **`(keydown)="onKeyDown($event)"`:** 将输入框的 `keydown` 事件绑定到 `onKeyDown()` 方法。
+2. **事件过滤:** `onKeyDown()` 方法检查按下的是否是 `Enter` 键。如果是，则显示一条消息；否则，显示另一条消息。
+
+**Tip:**
+- Use event filtering to handle keyboard events, such as executing logic only when the `Enter` key is pressed or preventing unwanted keypresses.
+- **中文提示:** 使用事件过滤处理键盘事件，例如仅在按下 `Enter` 键时执行逻辑或阻止不需要的按键。
+
+**Warning:**
+- Avoid using complex logic in event filtering, as it can make the code harder to maintain and understand.
+- **中文警告:** 避免在事件过滤中使用复杂逻辑，因为这会使代码难以维护和理解。
+
+**5 Interview Questions & Answers:**
+
+1. **Q:** What is event filtering in Angular?  
+   **A:** Event filtering is a technique used to listen for specific events or conditionally execute logic based on event properties, such as filtering key presses or mouse events.
+
+   **中文问答:**  
+   **问:** Angular 中的事件过滤是什么？  
+   **答:** 事件过滤是一种用于监听特定事件或根据事件属性有条件地执行逻辑的技术，例如筛选按键事件或鼠标事件。
+
+2. **Q:** How can you filter keyboard events in Angular?  
+   **A:** Use event filtering with the `keydown` or `keypress` events and check the `event.key` or `event.keyCode` properties to filter specific keys.
+
+   **中文问答:**  
+   **问:** 如何在 Angular 中过滤键盘事件？  
+   **答:** 使用 `keydown` 或 `keypress` 事件进行事件过滤，并检查 `event.key` 或 `event.keyCode` 属性来过滤特定按键。
+
+3. **Q:** Can event filtering be used with custom events?  
+   **A:** Yes, event filtering can be applied to both native and custom events by checking specific event properties.
+
+   **中文问答:**  
+   **问:** 事件过滤能否用于自定义事件？  
+   **答:** 可以，事件过滤既可以用于原生事件，也可以用于自定义事件，通过检查特定的事件属性进行过滤。
+
+4. **Q:** What is the difference between event binding and event filtering?  
+   **A:** Event binding connects an event in the template to a method in the component, while event filtering adds conditional logic to execute code based on event properties.
+
+   **中文问答:**  
+   **问:** 事件绑定和事件过滤的区别是什么？  
+   **答:** 事件绑定将模板中的事件与组件中的方法连接起来，而事件过滤在事件属性的基础上添加条件
+
+逻辑以执行代码。
+
+5. **Q:** How can you prevent certain keys from being pressed using event filtering?  
+   **A:** Use `event.preventDefault()` inside the event handler method when the undesired key is detected.
+
+   **中文问答:**  
+   **问:** 如何使用事件过滤防止按下某些键？  
+   **答:** 当检测到不需要的按键时，在事件处理方法中使用 `event.preventDefault()`。
+
+---
+
+
+### 20. What is Template Variable?
+**English:**  
+A Template Variable in Angular is a way to reference a DOM element or an Angular component within the HTML template. It is declared using the `#variableName` syntax. Template variables can be used to access DOM properties, call component methods, or pass data between different parts of the template. They provide a means to manipulate or interact with elements directly within the view.
+
+**中文:**  
+Angular 中的模板变量是一种在 HTML 模板中引用 DOM 元素或 Angular 组件的方法。它使用 `#variableName` 语法声明。模板变量可以用于访问 DOM 属性、调用组件方法或在模板的不同部分之间传递数据。它们提供了一种直接在视图中操作或与元素交互的方式。
+
+**Code Example:**
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-template-variable',
+  template: `
+    <input #inputBox type="text" placeholder="Enter text" />
+    <button (click)="logInput(inputBox.value)">Log Input</button>
+  `
+})
+export class TemplateVariableComponent {
+  logInput(value: string) {
+    console.log('Input Value:', value);
+  }
+}
+```
+
+**Explanation:**
+1. **`#inputBox` Template Variable:** Declares a template variable named `inputBox` for the input element.
+2. **`inputBox.value`:** Uses the template variable to access the value of the input element and passes it to the `logInput()` method when the button is clicked.
+
+**中文解释:**
+1. **`#inputBox` 模板变量:** 为输入元素声明一个名为 `inputBox` 的模板变量。
+2. **`inputBox.value`:** 使用模板变量访问输入元素的值，并在按钮点击时将其传递给 `logInput()` 方法。
+
+**Tip:**
+- Use template variables when you need to directly access or manipulate a DOM element's properties in the component’s template.
+- **中文提示:** 当需要在组件的模板中直接访问或操作 DOM 元素的属性时，可以使用模板变量。
+
+**Warning:**
+- Template variables are limited to the scope of the template in which they are declared and cannot be accessed in other templates or components.
+- **中文警告:** 模板变量仅限于在声明它们的模板中使用，不能在其他模板或组件中访问。
+
+**5 Interview Questions & Answers:**
+
+1. **Q:** What is a template variable in Angular?  
+   **A:** A template variable is a reference to a DOM element or component instance that can be accessed within the template using `#variableName`.
+
+   **中文问答:**  
+   **问:** Angular 中的模板变量是什么？  
+   **答:** 模板变量是对 DOM 元素或组件实例的引用，可以在模板中使用 `#variableName` 访问。
+
+2. **Q:** How do you declare a template variable in Angular?  
+   **A:** Use the `#variableName` syntax within the HTML template to declare a template variable.
+
+   **中文问答:**  
+   **问:** 如何在 Angular 中声明模板变量？  
+   **答:** 在 HTML 模板中使用 `#variableName` 语法声明模板变量。
+
+3. **Q:** Can you use template variables to call methods of a component?  
+   **A:** Yes, you can use template variables to call methods of a component if the variable is referencing that component.
+
+   **中文问答:**  
+   **问:** 能否使用模板变量调用组件的方法？  
+   **答:** 可以，如果模板变量引用的是该组件，则可以使用模板变量调用组件的方法。
+
+4. **Q:** What are some limitations of template variables?  
+   **A:** Template variables are limited to the scope of the template in which they are declared and cannot be used to communicate across different components or templates.
+
+   **中文问答:**  
+   **问:** 模板变量有哪些局限性？  
+   **答:** 模板变量仅限于声明它们的模板作用域中使用，不能用于不同组件或模板之间的通信。
+
+5. **Q:** How can you access a DOM element’s property using a template variable?  
+   **A:** Use `#variableName.property`, where `variableName` is the template variable name and `property` is the DOM property, e.g., `inputBox.value`.
+
+   **中文问答:**  
+   **问:** 如何使用模板变量访问 DOM 元素的属性？  
+   **答:** 使用 `#variableName.property`，其中 `variableName` 是模板变量名，`property` 是 DOM 属性，例如 `inputBox.value`。
+
+---
 
 
