@@ -47,7 +47,7 @@ Azure Service Bus provides several key components that help achieve reliable mes
 
 Azure 服务总线提供了几个关键组件，以实现可靠的消息传递：
 
-### 1. **Queues (队列)**  
+### [1. **Queues (队列)**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Design%20Patterns/Azure%20Service%20Bus%20Queues.md)  
 Queues are used for point-to-point communication. A queue can have multiple senders and a single receiver. When a message is sent to the queue, it is stored until a receiver retrieves and processes it. This guarantees that each message is processed only once.
 
 队列用于点对点通信。一个队列可以有多个发送者和一个接收者。当消息被发送到队列时，它会被存储，直到接收者检索并处理它。这保证了每个消息只会被处理一次。
