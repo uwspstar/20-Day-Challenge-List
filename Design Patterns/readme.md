@@ -1,4 +1,8 @@
 # Commonly Used Design Patterns in Software Development
+---
+
+
+---
 
 Design patterns are common solutions to recurring software design problems. They provide a reusable blueprint to solve issues efficiently and improve code structure. Here are some of the most commonly used design patterns:
 
