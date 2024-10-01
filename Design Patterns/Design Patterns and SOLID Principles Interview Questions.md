@@ -71,7 +71,7 @@ Design patterns are categorized into three main types based on their purpose:
 
 ---
 
-#### 2. **What is Singleton Design Pattern? How to make thread-safe Singleton Design Pattern?**  
+#### [2. **What is Singleton Design Pattern? How to make thread-safe Singleton Design Pattern?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Design%20Patterns/Singleton%20Pattern%20(%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F).md)  
 **什么是单例设计模式？如何实现线程安全的单例设计模式？**
 
 **English**:  
