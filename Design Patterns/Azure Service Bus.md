@@ -56,7 +56,7 @@ Queues are used for point-to-point communication. A queue can have multiple send
   
   **场景示例**：后台处理、订单处理或任务分发。
 
-### 2. **Topics and Subscriptions (主题和订阅)**  
+### [2. **Topics and Subscriptions (主题和订阅)**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Design%20Patterns/Azure%20Service%20Bus%20Topics%20and%20Subscriptions.md)  
 Topics are used for publish/subscribe scenarios. Messages sent to a topic can be received by multiple subscriptions. Each subscription acts as an independent message queue and can apply filters to receive specific messages based on criteria.
 
 主题用于发布/订阅场景。发送到主题的消息可以被多个订阅接收。每个订阅都充当一个独立的消息队列，并可以应用过滤器来根据条件接收特定消息。
