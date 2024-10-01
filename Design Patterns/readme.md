@@ -22,7 +22,7 @@ Design patterns are common solutions to recurring software design problems. They
 
 ### 3. **Behavioral Patterns**
    These patterns focus on communication and interaction between objects.
-   - **Observer**: Defines a dependency between objects, where one object (subject) notifies others (observers) of state changes.
+   - [**Observer**:](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Design%20Patterns/Observer%20Pattern.md) Defines a dependency between objects, where one object (subject) notifies others (observers) of state changes.
      - Example: A news agency (subject) notifying subscribers (observers) of new articles.
    - **Strategy**: Allows selecting an algorithm or behavior at runtime by defining a family of interchangeable algorithms.
      - Example: Different sorting algorithms that can be chosen based on the data type and size.
