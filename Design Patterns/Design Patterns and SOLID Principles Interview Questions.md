@@ -108,7 +108,7 @@ public class Singleton {
 
 ---
 
-#### 3. **What is Factory Pattern? Why use Factory Pattern?**  
+#### [3. **What is Factory Pattern? Why use Factory Pattern?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Design%20Patterns/Factory%20Pattern.md)
 **什么是工厂模式？为什么使用工厂模式？**
 
 **English**:  
