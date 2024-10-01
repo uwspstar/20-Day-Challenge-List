@@ -4,7 +4,7 @@ Design patterns are common solutions to recurring software design problems. They
 
 ### 1. **Creational Patterns**
    These patterns deal with object creation mechanisms, aiming to create objects in a manner suitable for specific situations.
-   - **Singleton**: Ensures that a class has only one instance and provides a global access point to it.
+   - [**Singleton**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Design%20Patterns/Singleton%20Pattern%20(%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F).md): Ensures that a class has only one instance and provides a global access point to it.
      - Example: Managing a single database connection throughout the application.
    - **Factory Method**: Provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created.
      - Example: ShapeFactory in graphics programs to create different shapes like circle or rectangle.
