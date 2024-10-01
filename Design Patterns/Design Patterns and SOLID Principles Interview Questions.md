@@ -181,7 +181,7 @@ Design patterns are proven solutions to recurring design problems, while SOLID p
 
 ---
 
-#### 6. **What is Liskov Substitution Principle?**
+#### [6. **What is Liskov Substitution Principle?**](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Design%20Patterns/Liskov%20Substitution%20Principle.md)
 
   
 **什么是里氏替换原则？**
