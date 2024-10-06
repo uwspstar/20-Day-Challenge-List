@@ -1,4 +1,153 @@
-# Tree
+# 树 (Tree)
+
+### Definition
+树是一种非线性数据结构，由节点组成，节点之间通过边相连。树有一个根节点，其他节点称为子节点，具有层次结构。树广泛应用于计算机科学，如数据存储、组织和检索。
+
+### Key Concepts
+- **节点 (Node)**: 树的基本组成部分，可以包含数据和指向子节点的指针。
+- **边 (Edge)**: 连接两个节点的线，表示节点之间的关系。
+- **根节点 (Root)**: 树的最上层节点，没有父节点。
+- **叶子节点 (Leaf)**: 没有子节点的节点。
+- **高度 (Height)**: 从根节点到叶子节点的最长路径上的边数。
+
+### 树的类型
+- **二叉树 (Binary Tree)**: 每个节点最多有两个子节点，称为左子节点和右子节点。
+- **二叉搜索树 (Binary Search Tree)**: 一种特殊的二叉树，左子树的所有节点值小于根节点值，右子树的所有节点值大于根节点值。
+- **平衡树 (Balanced Tree)**: 树的高度保持在较低水平，确保操作效率，例如 AVL 树和红黑树。
+- **N 叉树 (N-ary Tree)**: 每个节点可以有 N 个子节点的树。
+
+### 树的操作
+1. **插入 (Insertion)**: 将新节点添加到树中，保持树的结构特性。
+2. **删除 (Deletion)**: 移除指定节点，并调整树以维持结构。
+3. **遍历 (Traversal)**: 访问树中的每个节点，常用方法有：
+   - 前序遍历 (Pre-order)
+   - 中序遍历 (In-order)
+   - 后序遍历 (Post-order)
+   - 层次遍历 (Level-order)
+
+### 时间复杂度分析
+- **插入/删除时间复杂度**: O(h)，其中 h 是树的高度，最坏情况下为 O(n)（链式结构）。
+- **遍历时间复杂度**: O(n)，需要访问每个节点一次。
+
+### Python 树的实现示例 (二叉树)
+```python
+class TreeNode:
+    def __init__(self, value):
+        self.value = value  # 节点值
+        self.left = None    # 左子节点
+        self.right = None   # 右子节点
+
+def insert(root, value):
+    if root is None:
+        return TreeNode(value)
+    elif value < root.value:
+        root.left = insert(root.left, value)  # 插入左子树
+    else:
+        root.right = insert(root.right, value)  # 插入右子树
+    return root
+
+def inorder_traversal(root):
+    if root:
+        inorder_traversal(root.left)  # 遍历左子树
+        print(root.value)              # 访问节点
+        inorder_traversal(root.right)  # 遍历右子树
+```
+
+---
+
+Here's an answer using your provided template for **树的遍历 (Tree Traversal)** methods including **前序遍历 (Pre-order)**, **中序遍历 (In-order)**, **后序遍历 (Post-order)**, and **层次遍历 (Level-order)**:
+
+---
+
+## 树的遍历 (Tree Traversal)
+
+### Definition
+树的遍历是访问树中每个节点的过程。遍历可以分为深度优先遍历（DFS）和广度优先遍历（BFS），常用的遍历方式包括前序遍历、中序遍历、后序遍历和层次遍历。
+
+### 1. 前序遍历 (Pre-order)
+**定义**: 在前序遍历中，首先访问根节点，然后遍历左子树，最后遍历右子树。
+
+**步骤**:
+1. 访问根节点。
+2. 遍历左子树。
+3. 遍历右子树。
+
+**时间复杂度**: O(n)，n 是树中节点的数量。
+
+**Python 实现**:
+```python
+def pre_order_traversal(root):
+    if root:
+        print(root.value)              # 访问节点
+        pre_order_traversal(root.left)  # 遍历左子树
+        pre_order_traversal(root.right) # 遍历右子树
+```
+
+### 2. 中序遍历 (In-order)
+**定义**: 在中序遍历中，首先遍历左子树，然后访问根节点，最后遍历右子树。
+
+**步骤**:
+1. 遍历左子树。
+2. 访问根节点。
+3. 遍历右子树。
+
+**时间复杂度**: O(n)。
+
+**Python 实现**:
+```python
+def in_order_traversal(root):
+    if root:
+        in_order_traversal(root.left)  # 遍历左子树
+        print(root.value)               # 访问节点
+        in_order_traversal(root.right)  # 遍历右子树
+```
+
+### 3. 后序遍历 (Post-order)
+**定义**: 在后序遍历中，首先遍历左子树，然后遍历右子树，最后访问根节点。
+
+**步骤**:
+1. 遍历左子树。
+2. 遍历右子树。
+3. 访问根节点。
+
+**时间复杂度**: O(n)。
+
+**Python 实现**:
+```python
+def post_order_traversal(root):
+    if root:
+        post_order_traversal(root.left)  # 遍历左子树
+        post_order_traversal(root.right) # 遍历右子树
+        print(root.value)                # 访问节点
+```
+
+### 4. 层次遍历 (Level-order)
+**定义**: 层次遍历是一种广度优先遍历方法，按照树的层级从上到下、从左到右访问每个节点。
+
+**步骤**:
+1. 使用队列来存储当前层的节点。
+2. 访问队列中的每个节点，并将其子节点添加到队列中。
+
+**时间复杂度**: O(n)。
+
+**Python 实现**:
+```python
+from collections import deque
+
+def level_order_traversal(root):
+    if root is None:
+        return
+
+    queue = deque([root])  # 初始化队列
+    while queue:
+        node = queue.popleft()  # 弹出队首节点
+        print(node.value)        # 访问节点
+
+        if node.left:            # 如果左子节点存在，加入队列
+            queue.append(node.left)
+        if node.right:           # 如果右子节点存在，加入队列
+            queue.append(node.right)
+```
 
 ---
 
