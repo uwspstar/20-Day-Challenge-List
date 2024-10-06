@@ -32,7 +32,7 @@ def merge_intervals(intervals):
             merged.append(current)  # 无交集，直接添加
             
     return merged  # 返回合并后的区间
-
+```
 ---
 好的，我们继续讲解 LeetCode 区间题目的详细解析和代码注释。以下是前五道区间题目，包括详细分析、逐行中文注释代码及复杂度分析。
 
