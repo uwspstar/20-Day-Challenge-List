@@ -210,7 +210,7 @@ class Solution:
 
 ---
 
-### 1. LeetCode 104: Maximum Depth of Binary Tree（最大二叉树深度）
+### [1. LeetCode 104: Maximum Depth of Binary Tree（最大二叉树深度）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Tree/LeetCode%20104%3A%20Maximum%20Depth%20of%20Binary%20Tree.md)
 
 **题目描述**：
 给定一个二叉树，找出其最大深度。二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。说明：叶子节点是指没有子节点的节点。
