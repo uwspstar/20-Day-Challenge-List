@@ -250,7 +250,7 @@ class Solution:
 
 ---
 
-### 2. LeetCode 101: Symmetric Tree（对称二叉树）
+### [2. LeetCode 101: Symmetric Tree（对称二叉树）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Tree/LeetCode%20101%3A%20Symmetric%20Tree.md)
 
 **题目描述**：
 给定一个二叉树，检查它是否是镜像对称的。
