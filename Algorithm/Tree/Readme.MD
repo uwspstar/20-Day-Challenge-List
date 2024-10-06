@@ -55,10 +55,6 @@ def inorder_traversal(root):
 
 ---
 
-Here's an answer using your provided template for **树的遍历 (Tree Traversal)** methods including **前序遍历 (Pre-order)**, **中序遍历 (In-order)**, **后序遍历 (Post-order)**, and **层次遍历 (Level-order)**:
-
----
-
 ## 树的遍历 (Tree Traversal)
 
 ### Definition
