@@ -164,12 +164,14 @@ namespace ConsoleApp
 
 #### English Explanation:
 
-**IL (Intermediate Language)** is the low-level, platform-independent language that is generated when you compile a .NET application. It is also known as **MSIL (Microsoft Intermediate Language)** or **CIL (Common Intermediate Language)**. When you write code in a .NET-supported language like C#, the compiler translates your source code into IL code. This IL code is not directly executable by the operating system. Instead, it gets converted to machine code by the **JIT (Just-In-Time)** compiler at runtime, which allows it to run on different platforms.
+**IL (Intermediate Language)** is the low-level, platform-independent language that is generated when you compile a .NET application. It is also known as **MSIL (Microsoft Intermediate Language)** or **CIL (Common Intermediate Language)**. When you write code in a .NET-supported language like C#, the `compiler` translates your source code into IL code. 
+
+This IL code is not directly executable by the operating system. Instead, it gets converted to machine code by the **JIT (Just-In-Time)** compiler at runtime, which allows it to run on different platforms.
 
 **Key Points:**
 - IL is platform-independent.
 - It is an intermediate step between high-level code (e.g., C#) and machine code.
-- `The .NET runtime (CLR) uses the IL code to manage memory, handle exceptions, and perform other runtime tasks.`
+- **`The .NET runtime (CLR, Common Language Runtime) uses the IL code to manage memory, handle exceptions, and perform other runtime tasks.`**
 - IL is essential for cross-language support in the .NET ecosystem.
 
 #### Code Example:
@@ -223,9 +225,9 @@ The .NET runtime (CLR) uses the IL code to manage memory, handle exceptions, and
   
   **安全性和类型安全**：CLR在执行之前强制类型安全并验证IL代码是否安全。这有助于防止未授权的内存访问，并提高整体安全性。
 
-- **Just-In-Time Compilation (JIT)**: Before executing the IL code, the CLR compiles it into machine code specific to the hardware architecture, ensuring optimized performance.
+- **Just-In-Time Compilation (JIT)**: `Before executing the IL code, the CLR compiles it into machine code specific to the hardware architecture, ensuring optimized performance.`
   
-  **即时编译（JIT）**：在执行IL代码之前，CLR将其编译为与硬件架构相关的机器代码，以确保优化的性能。
+  **即时编译（JIT）**：`在执行IL代码之前，CLR将其编译为与硬件架构相关的机器代码，以确保优化的性能.`
 
 ### Code Example:
 ```
@@ -487,10 +489,10 @@ These languages can interoperate within the same .NET environment because they a
 #### Chinese Explanation:
 
 **CLR（公共语言运行时）** 是 .NET 框架提供的运行时环境。它负责管理 .NET 程序的执行，无论使用的是哪种 .NET 语言编写的代码。CLR 的一些主要职责包括：
-1. **内存管理**：CLR 使用垃圾回收器自动管理内存的分配和释放。
-2. **异常处理**：CLR 提供统一的异常处理系统。
-3. **安全性**：CLR 强制执行代码访问安全（CAS）并验证代码的安全性。
-4. **JIT 编译**：CLR 使用 JIT 编译器在运行时将 IL 转换为机器码。
+1. **内存管理**：`CLR 使用垃圾回收器自动管理内存的分配和释放。`
+2. **异常处理**：`CLR 提供统一的异常处理系统。`
+3. **安全性**：`CLR 强制执行代码访问安全（CAS）并验证代码的安全性。`
+4. **JIT 编译**：`CLR 使用 JIT 编译器在运行时将 IL 转换为机器码。`
 
 ---
 
