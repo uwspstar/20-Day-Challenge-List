@@ -496,7 +496,7 @@ These languages can interoperate within the same .NET environment because they a
 
 ---
 
-### Question 9: What is managed and unmanaged code?
+### (Question 9: What is managed and unmanaged code?]()
 
 #### English Explanation:
 
@@ -596,7 +596,7 @@ The **Common Language Specification (CLS)** is a set of rules and guidelines tha
 
 ---
 
-### Question 14: Difference between Stack vs Heap?
+### [Question 14: Difference between Stack vs Heap?]()
 
 #### English Explanation:
 
@@ -617,7 +617,7 @@ The **Common Language Specification (CLS)** is a set of rules and guidelines tha
 
 **主要区别：**
 - **存储**：栈存储值类型；堆存储引用类型。
-- **管理**：栈是自动管理的；堆由垃圾回收器管理。
+- **管理**：`栈是自动管理的；堆由垃圾回收器管理。`
 - **访问速度**：栈更快；由于动态内存管理，堆较慢。
 
 ---
@@ -626,9 +626,9 @@ The **Common Language Specification (CLS)** is a set of rules and guidelines tha
 
 #### English Explanation:
 
-- **Value Types**: A **Value Type** holds the actual data. Examples include **int**, **float**, and **struct**. Value types are typically stored on the stack and are copied when assigned to another variable or passed to a method.
+- **Value Types**: A **Value Type** holds the actual data. Examples include **int**, **float**, and **struct**. `Value types are typically stored on the stack and are copied when assigned to another variable or passed to a method.`
 
-- **Reference Types**: A **Reference Type** holds a reference (or pointer) to the actual data stored in memory (usually on the heap). Examples include **classes**, **arrays**, and **string**. Reference types are passed by reference, meaning the actual memory address is passed rather than a copy of the data.
+- **Reference Types**: A **Reference Type** holds a reference (or pointer) to the actual data stored in memory (usually on the heap). Examples include **classes**, **arrays**, and **string**. Reference types are passed by reference, meaning `the actual memory address is passed rather than a copy of the data.`
 
 **Key Differences:**
 - Value types store the actual data, while reference types store a reference to the data.
@@ -706,7 +706,7 @@ The primary consequence of **boxing** and **unboxing** is performance overhead. 
   
 - **Implicit Casting**: Automatically performed by the compiler when there is no loss of data (e.g., converting an `int` to a `float`).
   
-- **Explicit Casting**: Must be explicitly stated in the code using a cast operator because data loss might occur (e.g., converting a `double` to an `int`).
+- **Explicit Casting**: Must be explicitly stated in the code using a cast operator because `data loss might occur` (e.g., converting a `double` to an `int`).
 
 #### Code Example:
 ```csharp
