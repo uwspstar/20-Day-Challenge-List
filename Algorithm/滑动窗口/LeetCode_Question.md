@@ -1,4 +1,3 @@
-```markdown
 | LeetCode Number | Question Name                                                                  | LeetCode Link                                               |
 |-----------------|--------------------------------------------------------------------------------|------------------------------------------------------------|
 | 3               | Longest Substring Without Repeating Characters                                 | [LeetCode 3](https://leetcode.com/problems/longest-substring-without-repeating-characters/)     |
@@ -30,4 +29,3 @@
 | 713             | Subarray Product Less Than K                                                   | [LeetCode 713](https://leetcode.com/problems/subarray-product-less-than-k/)                    |
 | 424             | Longest Repeating Character Replacement                                        | [LeetCode 424](https://leetcode.com/problems/longest-repeating-character-replacement/)         |
 | 340             | Length of Longest Substring with K Distinct Characters                         | [LeetCode 340](https://leetcode.com/problems/longest-substring-with-k-distinct-characters/)    |
-```
