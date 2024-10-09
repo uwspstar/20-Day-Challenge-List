@@ -182,7 +182,7 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 153. Explain the Singleton Pattern and its use.
 154. How did you implement the Singleton pattern?
 155. Can we use a static class instead of a Singleton with a private constructor?
-156. Static vs Singleton pattern.
+156. [Static vs Singleton pattern.](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Static%20vs%20Singleton%20Pattern.md)
 157. How did you implement thread safety in Singleton?
 158. What is double-null check in Singleton?
 159. Can Singleton pattern code be made easier with the Lazy keyword?
