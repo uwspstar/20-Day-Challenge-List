@@ -43,6 +43,17 @@ Let’s explore the key functions provided by the `heapq` module:
      ```python
      print(heapq.heappop(heap))  # Output: 5
      print(heap)  # Output: [10, 15]
+
+     ```
+     
+     ```python
+     import heapq
+
+     heap = [10, 15, 20]
+     heapq.heapify(heap)  # 确保 heap 是一个最小堆
+     print(heapq.heappushpop(heap, 25))  # 输出: 10
+     print(heap)  # 输出: [15, 25, 20]
+
      ```
 
 3. **`heapq.heappushpop(heap, item)`**  
