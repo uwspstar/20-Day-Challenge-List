@@ -15,9 +15,6 @@
 
 ---
 
-Here’s the information formatted in a Markdown table, combining both English and Chinese for each topic and its corresponding notes:
-
-```markdown
 | #  | Topic (主题)                                         | Notes (备注)                                                                                             |
 |----|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | 1  | Introduction to Distributed Systems (分布式系统介绍) | - Definition and characteristics of distributed systems (分布式系统的定义和特征)                             |
@@ -84,7 +81,29 @@ Here’s the information formatted in a Markdown table, combining both English a
 |    |                                                     | - CRDTs (Conflict-free Replicated Data Types) (CRDT（冲突自由复制数据类型）)                            |
 | 21 | Monitoring and Observability (监控与可观测性)       | - Logging, metrics, and tracing in distributed systems (分布式系统中的日志、指标和追踪)                   |
 |    |                                                     | - Distributed tracing tools (e.g., Jaeger, Zipkin) (分布式追踪工具，例如：Jaeger，Zipkin)              |
-|    |                                                     | - Centralized logging systems (集中式
+|    |                                                     | - Centralized logging systems (集中式日志系统)                                                          |
+| 22 | Distributed Scheduling Systems (分布式调度系统)      | - Distributed cron jobs and task scheduling (分布式定时任务和任务调度)                                  |
+|    |                                                     | - Tools like Apache Airflow, Kubernetes CronJobs (如Apache Airflow、Kubernetes CronJobs的工具)          |
+|    |                                                     | - Distributed job management strategies (分布式作业管理策略)                                          |
+| 23 | Geo-Distributed Systems (地理分布式系统)           | - Cross-data center replication (跨数据中心复制)                                                         |
+|    |                                                     | - Handling network latency and failures across regions (处理跨区域的网络延迟和故障)                       |
+|    |                                                     | - Designing systems for multiple geographic locations (为多个地理位置设计系统)                           |
+| 24 | Microservices Design (微服务设计)                    | - Communication patterns (synchronous vs. asynchronous) (通信模式（同步与异步）)                         |
+|    |                                                     | - Service decomposition and domain-driven design (服务分解与领域驱动设计)                               |
+|    |                                                     | - API Gateway patterns and sidecars (e.g., Istio) (API网关模式和边车（例如：Istio）)                    |
+| 25 | Distributed Search and Indexing (分布式搜索与索引)  | - Distributed search engines (e.g., Elasticsearch, Solr) (分布式搜索引擎，例如：Elasticsearch，Solr)    |
+|    |                                                     | - Index sharding and replication (索引分片与复制)                                                       |
+|    |                                                     | - Search consistency and fault tolerance (搜索一致性与容错)                                             |
+| 26 | Cloud-native Distributed Systems (云原生分布式系统)  | - Design principles for cloud-native applications (云原生应用的设计原则)                                 |
+|    |                                                     | - Kubernetes and container orchestration (Kubernetes和容器编排)                                        |
+|    |                                                     | - Service meshes (e.g., Istio, Linkerd) (服务网格（例如：Istio，Linkerd）)                             |
+| 27 | Testing and Debugging Distributed Systems (分布式系统的测试与调试) | - Unit testing, integration testing, and chaos engineering (单元测试、集成测试和混沌工程)          |
+|    |                                                     | - Debugging in distributed environments (在分布式环境中的调试)                                          |
+|    |                                                     | - Fault injection techniques and tools (e.g., Chaos Monkey) (故障注入技术和工具（例如：Chaos Monkey）)   |
+| 28 | Serverless Architectures (无服务器架构)               | - Understanding FaaS (Function as a Service) and BaaS (Backend as a Service) (理解FaaS（功能即服务）和BaaS（后端即服务）) |
+|    |                                                     | - Benefits and challenges of serverless (无服务器的好处与挑战)                                          |
+|    |                                                     | - Scaling and orchestration of serverless functions (无服务器函数的扩展与编排)                           |
+ 
 
 ---
 
