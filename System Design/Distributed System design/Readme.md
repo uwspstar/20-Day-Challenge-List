@@ -1,6 +1,8 @@
 
 # Distributed System Design
 
+---
+
 | #  | Topic (主题)               | Notes (备注)                                     |
 |----|----------------------------|-------------------------------------------------|
 | 1  | Image/video sharing app (图片/视频分享应用)  | - Instagram (Instagram)                         |
@@ -11,6 +13,7 @@
 |    |                            | - Instagram user and home timelines (Instagram 用户和主页时间线) |
 | 5  | Notification system (通知系统)             | - Sending social media updates to users (向用户发送社交媒体更新) |
 
+---
 
 ### 1. **Introduction to Distributed Systems (分布式系统介绍)**
    - Definition and characteristics of distributed systems
