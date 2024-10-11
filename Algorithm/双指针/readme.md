@@ -39,6 +39,8 @@ def two_pointer_algorithm(arr):
 ---
 
 ### 1. LeetCode 167: Two Sum II - Input Array Is Sorted（两数之和 II - 输入有序数组）
+[https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+
 
 **题目描述**：
 给定一个升序排列的整数数组 `numbers` 和一个目标值 `target`，找到两个数，使它们的和等于目标值 `target`。返回这两个数的下标（从 1 开始计数）。
