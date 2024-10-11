@@ -15,6 +15,79 @@
 
 ---
 
+Here’s the information formatted in a Markdown table, combining both English and Chinese for each topic and its corresponding notes:
+
+```markdown
+| #  | Topic (主题)                                         | Notes (备注)                                                                                             |
+|----|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| 1  | Introduction to Distributed Systems (分布式系统介绍) | - Definition and characteristics of distributed systems (分布式系统的定义和特征)                             |
+|    |                                                     | - Common use cases and challenges (常见用例和挑战)                                                        |
+|    |                                                     | - Examples of distributed systems (e.g., microservices, databases) (分布式系统的例子，例如：微服务，数据库)     |
+| 2  | CAP Theorem (CAP 定理)                             | - Understanding consistency, availability, and partition tolerance (理解一致性、可用性和分区容忍性)            |
+|    |                                                     | - Trade-offs in distributed systems (分布式系统中的权衡)                                                  |
+|    |                                                     | - Examples of systems prioritizing different aspects of CAP (优先考虑CAP不同方面的系统示例)                 |
+| 3  | Distributed System Architectures (分布式系统架构)   | - Client-server vs. peer-to-peer (客户端-服务器与对等网络)                                                |
+|    |                                                     | - Service-oriented architecture (SOA) and microservices (面向服务的架构和微服务)                          |
+|    |                                                     | - Event-driven architecture (EDA) (事件驱动架构)                                                         |
+|    |                                                     | - Data flow and pipeline architectures (数据流和管道架构)                                                |
+| 4  | Data Replication (数据复制)                         | - Synchronous vs. asynchronous replication (同步与异步复制)                                               |
+|    |                                                     | - Conflict resolution in data replication (数据复制中的冲突解决)                                          |
+|    |                                                     | - Data consistency models (eventual consistency, strong consistency) (数据一致性模型：最终一致性、强一致性)  |
+| 5  | Distributed Consensus Algorithms (分布式共识算法)   | - Paxos, Raft, and other consensus protocols (Paxos、Raft及其他共识协议)                                 |
+|    |                                                     | - Byzantine fault tolerance (BFT) (拜占庭容错)                                                           |
+|    |                                                     | - Leader election algorithms (领导者选举算法)                                                            |
+| 6  | Fault Tolerance & Reliability (容错与可靠性)         | - Failure models and handling failure in distributed systems (分布式系统中的故障模型和故障处理)             |
+|    |                                                     | - Redundancy and replication for fault tolerance (容错的冗余和复制)                                        |
+|    |                                                     | - Checkpointing and logging strategies (检查点和日志策略)                                               |
+| 7  | Scalability (可扩展性)                             | - Horizontal vs. vertical scaling (横向与纵向扩展)                                                        |
+|    |                                                     | - Load balancing strategies (负载均衡策略)                                                               |
+|    |                                                     | - Sharding and partitioning (分片与分区)                                                                 |
+|    |                                                     | - Elastic scaling (弹性扩展)                                                                             |
+| 8  | Distributed Data Stores (分布式数据存储)           | - NoSQL databases (e.g., Cassandra, MongoDB) (NoSQL数据库，例如：Cassandra，MongoDB)                      |
+|    |                                                     | - Distributed file systems (e.g., HDFS, Google File System) (分布式文件系统，例如：HDFS，谷歌文件系统)     |
+|    |                                                     | - Consistent hashing and its role in distributed databases (一致性哈希及其在分布式数据库中的作用)           |
+| 9  | Coordination Services (协调服务)                   | - ZooKeeper, etcd, and other coordination systems (ZooKeeper，etcd及其他协调系统)                        |
+|    |                                                     | - Leader election, configuration management, and synchronization (领导者选举、配置管理和同步)              |
+|    |                                                     | - Service discovery in distributed environments (分布式环境中的服务发现)                                   |
+| 10 | Concurrency and Synchronization (并发与同步)         | - Multithreading and concurrency models in distributed systems (分布式系统中的多线程与并发模型)            |
+|    |                                                     | - Locks, semaphores, and other synchronization primitives (锁、信号量及其他同步原语)                       |
+|    |                                                     | - Deadlocks and how to avoid them (死锁及其避免方法)                                                      |
+| 11 | Networking Basics (网络基础)                       | - TCP/IP, UDP, and sockets (TCP/IP、UDP和套接字)                                                         |
+|    |                                                     | - Message passing and RPC (Remote Procedure Call) (消息传递与RPC（远程过程调用）)                          |
+|    |                                                     | - Network partitions and their impact on distributed systems (网络分区及其对分布式系统的影响)                 |
+| 12 | Messaging Systems (消息系统)                        | - Message queues (e.g., RabbitMQ, Kafka) (消息队列，例如：RabbitMQ，Kafka)                             |
+|    |                                                     | - Event streaming and pub/sub systems (事件流和发布/订阅系统)                                           |
+|    |                                                     | - Idempotency and delivery guarantees (at-least-once, exactly-once) (幂等性与投递保证（至少一次，准确一次）) |
+| 13 | Security in Distributed Systems (分布式系统的安全性) | - Encryption, authentication, and authorization mechanisms (加密、身份验证和授权机制)                     |
+|    |                                                     | - Public key infrastructure (PKI) and SSL/TLS (公钥基础设施（PKI）和SSL/TLS)                             |
+|    |                                                     | - Handling secure communication between distributed components (处理分布式组件之间的安全通信)                |
+| 14 | Consistency Models (一致性模型)                     | - Strong, eventual, and causal consistency (强一致性、最终一致性和因果一致性)                           |
+|    |                                                     | - Quorum-based approaches (基于法定人数的方法)                                                         |
+|    |                                                     | - Read and write consistency in distributed databases (分布式数据库中的读写一致性)                         |
+| 15 | Distributed Transactions (分布式事务)                | - Two-phase commit (2PC) and three-phase commit (3PC) (两阶段提交（2PC）和三阶段提交（3PC）)            |
+|    |                                                     | - Distributed transaction coordinators (分布式事务协调者)                                              |
+|    |                                                     | - Saga pattern for long-running transactions (长时间运行事务的Saga模式)                                   |
+| 16 | Time and Ordering (时间与顺序)                     | - Logical clocks (e.g., Lamport clocks) (逻辑时钟，例如：Lamport时钟)                                    |
+|    |                                                     | - Vector clocks and their use in conflict resolution (向量时钟及其在冲突解决中的应用)                      |
+|    |                                                     | - Global time synchronization challenges (NTP, GPS) (全球时间同步的挑战（NTP，GPS）)                      |
+| 17 | Load Balancing and Reverse Proxy (负载均衡与反向代理) | - Types of load balancers (software vs. hardware) (负载均衡器的类型（软件与硬件）)                      |
+|    |                                                     | - Load balancing algorithms (round-robin, least connections) (负载均衡算法（轮询，最少连接）)             |
+|    |                                                     | - Reverse proxy and its role in distributed systems (反向代理及其在分布式系统中的作用)                    |
+| 18 | Service Discovery (服务发现)                         | - Static vs. dynamic service discovery (静态与动态服务发现)                                            |
+|    |                                                     | - Service discovery tools (e.g., Consul, Eureka) (服务发现工具，例如：Consul，Eureka)                    |
+|    |                                                     | - Challenges and strategies in service discovery in dynamic environments (动态环境中服务发现的挑战与策略)   |
+| 19 | Caching in Distributed Systems (分布式系统中的缓存)  | - Distributed cache solutions (e.g., Redis, Memcached) (分布式缓存解决方案，例如：Redis，Memcached)       |
+|    |                                                     | - Cache invalidation strategies (缓存失效策略)                                                          |
+|    |                                                     | - Handling cache consistency in distributed systems (处理分布式系统中的缓存一致性)                       |
+| 20 | Eventual Consistency & Conflict Resolution (最终一致性与冲突解决) | - Types of conflicts (e.g., read-write, write-write) (冲突类型，例如：读写，写写)                  |
+|    |                                                     | - Vector clocks and causal consistency (向量时钟和因果一致性)                                         |
+|    |                                                     | - CRDTs (Conflict-free Replicated Data Types) (CRDT（冲突自由复制数据类型）)                            |
+| 21 | Monitoring and Observability (监控与可观测性)       | - Logging, metrics, and tracing in distributed systems (分布式系统中的日志、指标和追踪)                   |
+|    |                                                     | - Distributed tracing tools (e.g., Jaeger, Zipkin) (分布式追踪工具，例如：Jaeger，Zipkin)              |
+|    |                                                     | - Centralized logging systems (集中式
+
+---
+
 ### 1. **Introduction to Distributed Systems (分布式系统介绍)**
    - Definition and characteristics of distributed systems
    - Common use cases and challenges
