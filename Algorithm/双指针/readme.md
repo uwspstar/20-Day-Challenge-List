@@ -165,7 +165,7 @@ class Solution:
 
 ---
 
-### 4. LeetCode 11: Container With Most Water（盛最多水的容器）
+### [4. LeetCode 11: Container With Most Water（盛最多水的容器）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/LeetCode%2011%3A%20%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8%20(Container%20With%20Most%20Water).md)
 
 **题目描述**：
 给定一个长度为 `n` 的整数数组 `height`，数组中的每个元素代表柱子的高度。找出能够盛水最多的两个柱子，返回它们能够盛水的最大面积。
@@ -207,7 +207,7 @@ class Solution:
 
 ---
 
-### 5. LeetCode 26: Remove Duplicates from Sorted Array（删除有序数组中的重复项）
+### [5. LeetCode 26: Remove Duplicates from Sorted Array（删除有序数组中的重复项）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/LeetCode%2026%3A%20%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9%20(Remove%20Duplicates%20from%20Sorted%20Array).md)
 
 **题目描述**：
 给定一个升序排列的整数数组 `nums`，删除其中的重复元素，使每个元素只出现一次，并返回新的长度。不要使用额外的数组空间，必须在原地修改数组并使用 O(1) 额外空间。
