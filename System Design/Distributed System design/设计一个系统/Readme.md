@@ -14,7 +14,7 @@
 
 | #  | Topic (主题)               | Notes (备注)                                     |
 |----|----------------------------|-------------------------------------------------|
-| 1  | Image/video sharing app (图片/视频分享应用)  | - Instagram (Instagram)                         |
+| 1  | Image/video sharing app (图片/视频分享应用)  | - [Instagram (Instagram)](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/Instagram%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1.md)                         |
 |    |                            | - Pinterest (Pinterest)                         |
 | 2  | Chat/messenger app (聊天/消息应用)         | - [Whatsapp (Whatsapp) ](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/WhatsApp%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1.md)                         |
 | 3  | Url shortener (短网址)                    | - [Tiny URL (Tiny URL) ](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/Tiny%20URL%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1.md)                         |
