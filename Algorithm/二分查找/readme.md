@@ -36,8 +36,6 @@ def binary_search(arr, target):
     return -1  # 未找到目标值
 ```
 
-### 10 道 LeetCode 二分查找题目及详细解释
-
 ---
 
 好的，以下是30道LeetCode中常见的二分查找相关题目，包括详细解释、逐行中文注释代码以及时间和空间复杂度分析。
