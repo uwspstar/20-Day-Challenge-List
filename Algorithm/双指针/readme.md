@@ -38,8 +38,7 @@ def two_pointer_algorithm(arr):
 
 ---
 
-### 1. LeetCode 167: Two Sum II - Input Array Is Sorted（两数之和 II - 输入有序数组）
-[https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+### [1. LeetCode 167: Two Sum II - Input Array Is Sorted（两数之和 II - 输入有序数组）](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
 
 **题目描述**：
@@ -83,7 +82,7 @@ class Solution:
 
 ---
 
-### 2. LeetCode 344: Reverse String（反转字符串）
+### [2. LeetCode 344: Reverse String（反转字符串）](https://leetcode.com/problems/reverse-string/)
 
 **题目描述**：
 编写一个函数，其作用是将输入的字符串数组 `s` 原地反转，不能使用额外的空间，必须使用 O(1) 的额外空间复杂度。
