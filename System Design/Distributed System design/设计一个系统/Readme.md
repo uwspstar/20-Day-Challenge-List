@@ -7,6 +7,7 @@
 - [Sharding vs Replication](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/Sharding%20vs%20Replication.md)
 - [API 设计步骤](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/API%20%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4.md)
 - [数据库选择步骤](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E6%8B%A9%E6%AD%A5%E9%AA%A4.md)
+- [RabbitMQ vs Kafka](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/RabbitMQ%20vs%20Kafka.md)
 
 
 ---
