@@ -39,10 +39,7 @@
 2. **面积计算**：
    - 容器的容量由两条线段之间的距离和它们的最小高度决定。面积计算公式为：
 $$
-
-     \[
-     \text{Area} = (\text{right} - \text{left}) \times \min(\text{height[left]}, \text{height[right]})
-     \]
+\text{Area} = (\text{right} - \text{left}) \times \min(\text{height[left]}, \text{height[right]})
 $$
 
 
