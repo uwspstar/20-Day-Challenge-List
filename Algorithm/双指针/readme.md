@@ -38,7 +38,7 @@ def two_pointer_algorithm(arr):
 
 ---
 
-### [1. LeetCode 167: Two Sum II - Input Array Is Sorted（两数之和 II - 输入有序数组）](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+### [1. LeetCode 167: Two Sum II - Input Array Is Sorted（两数之和 II - 输入有序数组）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/LeetCode%20167%3A%20%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%20II%20-%20%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84.md)
 
 
 **题目描述**：
@@ -82,7 +82,7 @@ class Solution:
 
 ---
 
-### [2. LeetCode 344: Reverse String（反转字符串）](https://leetcode.com/problems/reverse-string/)
+### [2. LeetCode 344: Reverse String（反转字符串）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/LeetCode%20344%3A%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%20(Reverse%20String).md)
 
 **题目描述**：
 编写一个函数，其作用是将输入的字符串数组 `s` 原地反转，不能使用额外的空间，必须使用 O(1) 的额外空间复杂度。
@@ -117,7 +117,7 @@ class Solution:
 
 ---
 
-### 3. LeetCode 345: Reverse Vowels of a String（反转字符串中的元音字母）
+### [3. LeetCode 345: Reverse Vowels of a String（反转字符串中的元音字母）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/LeetCode%20345%3A%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%85%83%E9%9F%B3%E5%AD%97%E6%AF%8D%20(Reverse%20Vowels%20of%20a%20String).md)
 
 **题目描述**：
 编写一个函数，其作用是将输入字符串 `s` 中的元音字母反转，只反转元音字母，其他字符保持不变。
