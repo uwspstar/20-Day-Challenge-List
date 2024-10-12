@@ -19,6 +19,6 @@
 | 2  | Chat/messenger app (聊天/消息应用)         | - [Whatsapp (Whatsapp) ](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/WhatsApp%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1.md)                         |
 | 3  | Url shortener (短网址)                    | - [Tiny URL (Tiny URL) ](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/Tiny%20URL%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1.md)                         |
 | 4  | News Feed (新闻 Feed)                   | - [Facebook (Facebook)](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B1%BB%E4%BC%BC%E4%BA%8E%20Facebook%20%E7%9A%84%E7%B3%BB%E7%BB%9F.md)                          |
-|    |                            | - Instagram user and home timelines (Instagram 用户和主页时间线) |
+|    |                            | - [Instagram user and home timelines (Instagram 用户和主页时间线)](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Distributed%20System%20design/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E7%B3%BB%E7%BB%9F/%E7%94%A8%E6%88%B7%E5%92%8C%E4%B8%BB%E9%A1%B5%E6%97%B6%E9%97%B4%E7%BA%BF%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1.md) |
 | 5  | Notification system (通知系统)             | - Sending social media updates to users (向用户发送社交媒体更新) |
 
