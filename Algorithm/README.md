@@ -62,7 +62,7 @@
 - [字典树](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E5%AD%97%E5%85%B8%E6%A0%91) 
 
 #### 算法和技术  
-- 二分查找  
+- [二分查找](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)  
 - [深度优先搜索](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2)    
 - [广度优先搜索](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2)    
 - [动态规划](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)   
@@ -85,7 +85,7 @@
 - [二分查找](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)  
 - [前缀和](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E5%89%8D%E7%BC%80%E5%92%8C)  
 - [深度优先搜索](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2)  
-- 堆  
+- [堆](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E5%A0%86)    
 - [广度优先搜索](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2)  
 - [动态规划](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92) 
 - [栈](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/Stack)   
@@ -96,7 +96,7 @@
 - 环检测  
 - 最小生成树  
 - [区间问题](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E5%8C%BA%E9%97%B4)  
-- 字典树
+- [字典树](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E5%AD%97%E5%85%B8%E6%A0%91) 
 
 
 
