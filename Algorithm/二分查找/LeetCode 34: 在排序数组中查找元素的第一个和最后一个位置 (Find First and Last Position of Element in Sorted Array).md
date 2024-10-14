@@ -1,6 +1,6 @@
 ### LeetCode 34: 在排序数组中查找元素的第一个和最后一个位置 (Find First and Last Position of Element in Sorted Array)
 
--  https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
   
 ---
 
