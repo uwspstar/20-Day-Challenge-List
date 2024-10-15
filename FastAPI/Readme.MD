@@ -4,6 +4,7 @@
 ### Quick Start
 - [Quick Start Demo](https://github.com/uwspstar/20-Day-Challenge-List/edit/main/FastAPI/Quick%20Start%20Demo.md)
 - [Using FastAPI to Build Python Web APIs](https://realpython.com/fastapi-python-web-apis/)
+- [RESTful API 最佳实践](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/RESTful%20API%20%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md
 
 ### More
 - [How to Handle Asynchronous HTTP Requests in Python FastAPI](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/How%20to%20Handle%20Asynchronous%20HTTP%20Requests%20in%20Python%20FastAPI.md)
