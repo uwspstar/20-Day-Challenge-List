@@ -1,4 +1,4 @@
-### RESTful API 最佳实践 (Angular 示例代码)
+# RESTful API 最佳实践 (Angular 示例代码)
 
 在这个部分，我们将展示如何使用 **Angular** 来与RESTful API进行交互。通过HttpClient模块，我们可以在Angular中发送GET、POST、PUT、DELETE等请求，并处理API返回的状态码和数据。
 
