@@ -224,7 +224,7 @@ def search(nums: List[int], target: int) -> int:
 
 ---
 
-### 2. LeetCode 33: Search in Rotated Sorted Array（搜索旋转排序数组）
+### [2. LeetCode 33: Search in Rotated Sorted Array（搜索旋转排序数组）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%2033%3A%20%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%20(Search%20in%20Rotated%20Sorted%20Array).md)
 
 **题目描述**：
 假设按照升序排序的数组在预先未知的某个点上进行了旋转（例如：数组 `[0,1,2,4,5,6,7]` 可能变为 `[4,5,6,7,0,1,2]`），请在其中搜索目标值，返回其索引位置。如果目标值不存在，返回 -1。
