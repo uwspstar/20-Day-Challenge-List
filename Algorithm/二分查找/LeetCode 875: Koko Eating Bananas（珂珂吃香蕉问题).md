@@ -1,5 +1,7 @@
 ### LeetCode 875: Koko Eating Bananas（珂珂吃香蕉问题）
 
+https://leetcode.com/problems/koko-eating-bananas/description/
+
 **题目描述**：
 珂珂喜欢吃香蕉。她有一堆香蕉，第 `i` 堆中有 `piles[i]` 根香蕉。警卫已经离开，并将在 `h` 小时后回来。珂珂可以以每小时 `k` 根香蕉的速度吃完香蕉。如果她吃完一堆香蕉需要超过一小时，她将会在下一个小时继续吃这一堆，直到吃完为止。请你计算出珂珂可以在 `h` 小时内吃完所有香蕉的最小速度 `k`。
 
