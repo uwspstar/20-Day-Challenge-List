@@ -1,5 +1,7 @@
 ### LeetCode 540: Single Element in a Sorted Array（有序数组中的单一元素）
 
+https://leetcode.com/problems/single-element-in-a-sorted-array/description/
+
 **题目描述**：
 给定一个只包含整数的有序数组，其中每个元素都会出现两次，只有一个元素只会出现一次。请你找出并返回这个单一的元素。
 
