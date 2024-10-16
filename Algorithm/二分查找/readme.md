@@ -1218,8 +1218,6 @@ class Solution:
 
 ### [28. LeetCode 278: First Bad Version（第一个错误的版本）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%20278%3A%20First%20Bad%20Version%EF%BC%88%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%94%99%E8%AF%AF%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%89.md)
 
-### LeetCode 278: First Bad Version（第一个错误的版本）
-
 **题目描述**：
 你是产品经理，目前正在带领一个团队开发一个新产品。然而，某一天你发现产品的某个版本存在问题，导致后续的所有版本都出错。假设你有 `n` 个版本 [1, 2, ..., n]，你想找出导致之后所有版本出错的第一个错误版本。你可以通过调用 `isBadVersion(version)` API 来判断版本是否出错。请你实现一个函数来查找第一个错误的版本。
 
@@ -1256,7 +1254,7 @@ class Solution:
 
 ---
 
-### [28. LeetCode 875: Koko Eating Bananas（珂珂吃香蕉问题）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%20875%3A%20Koko%20Eating%20Bananas%EF%BC%88%E7%8F%82%E7%8F%82%E5%90%83%E9%A6%99%E8%95%89%E9%97%AE%E9%A2%98.md)
+### [29. LeetCode 875: Koko Eating Bananas（珂珂吃香蕉问题）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%20875%3A%20Koko%20Eating%20Bananas%EF%BC%88%E7%8F%82%E7%8F%82%E5%90%83%E9%A6%99%E8%95%89%E9%97%AE%E9%A2%98.md)
 
 
 
