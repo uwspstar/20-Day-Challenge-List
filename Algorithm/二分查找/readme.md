@@ -189,7 +189,7 @@ def binary_search(arr: List[int], target: int) -> int:  # 定义二分查找函�
 
 ---
 
-### 1. LeetCode 704: Binary Search（二分查找）
+### [1. LeetCode 704: Binary Search（二分查找）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%20704%3A%20Binary%20Search%EF%BC%88%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%EF%BC%89.md)
 
 **题目描述**：
 给定一个排序数组 `nums` 和一个目标值 `target`，在数组中查找目标值，返回目标值所在的索引位置。如果目标值不存在于数组中，返回 -1。
