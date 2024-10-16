@@ -19,6 +19,7 @@
 - **[LeetCode 75](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Leetcode%2075.md)**
 - **[Blind 75](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Blind%2075.md)**
 - **[NeetCode 150](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/NeetCode%20150.md)**
+- **[Python 中的主要数据结构，如 list、dict、set 的工作原理](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Python%20%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%8C%E5%A6%82%20%60list%60%E3%80%81%60dict%60%E3%80%81%60set%60%20%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.md)**
 
 ------
  
