@@ -1,6 +1,8 @@
 ### LeetCode 153: Find Minimum in Rotated Sorted Array（寻找旋转排序数组中的最小值）
 
+---
 **Key Tips 旋转排序数组: # if mid <= last element, then belongs to lower half**
+---
 
 https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 
