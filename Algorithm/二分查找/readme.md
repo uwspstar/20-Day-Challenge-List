@@ -312,7 +312,7 @@ def search(nums: List[int], target: int) -> bool:
 
 ---
 
-### 4. LeetCode 153: Find Minimum in Rotated Sorted Array（寻找旋转排序数组中的最小值）
+### [4. LeetCode 153: Find Minimum in Rotated Sorted Array（寻找旋转排序数组中的最小值）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%20153%3A%20Find%20Minimum%20in%20Rotated%20Sorted%20Array%EF%BC%88%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC).md)
 
 **题目描述**：
 假设按照升序排序的数组在预先未知的某个点上进行了旋转，请找出其中最小的元素。
