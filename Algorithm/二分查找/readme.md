@@ -1213,3 +1213,65 @@ class Solution:
 
 **题目分析**：
 这道题可以用二分查找来解决。由于平方函数是单调递增的，我们可以通过不断缩小搜索范围，找到一个整数 `y`，使得 `y^2 <= x` 且 `(y + 1)^2 > x`。最终，右指针 `r` 会指向满足条件的整数平方根。
+
+---
+
+### [28. LeetCode 278: First Bad Version（第一个错误的版本）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%20278%3A%20First%20Bad%20Version%EF%BC%88%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%94%99%E8%AF%AF%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%89.md)
+
+### LeetCode 278: First Bad Version（第一个错误的版本）
+
+**题目描述**：
+你是产品经理，目前正在带领一个团队开发一个新产品。然而，某一天你发现产品的某个版本存在问题，导致后续的所有版本都出错。假设你有 `n` 个版本 [1, 2, ..., n]，你想找出导致之后所有版本出错的第一个错误版本。你可以通过调用 `isBadVersion(version)` API 来判断版本是否出错。请你实现一个函数来查找第一个错误的版本。
+
+你应该尽量减少对 `isBadVersion` API 的调用次数。
+
+**代码实现**：
+```python
+# The isBadVersion API is already defined for you.
+# def isBadVersion(version: int) -> bool:
+
+class Solution:
+    def firstBadVersion(self, n: int) -> int:
+        # 初始化左右指针
+        l, r = 1, n
+        idx = -1  # 用于记录第一个错误版本的索引
+        
+        # 二分查找第一个错误版本
+        while l <= r:
+            mid = (l + r) // 2
+            # 如果当前版本是错误版本，可能是第一个错误版本
+            if isBadVersion(mid):
+                idx = mid  # 更新第一个错误版本的索引
+                r = mid - 1  # 错误版本可能在左侧
+            else:
+                # 如果当前版本是正确的，错误版本在右侧
+                l = mid + 1
+        
+        # 返回第一个错误版本的索引
+        return idx
+
+# 时间复杂度：O(log n) - 二分查找的时间复杂度
+# 空间复杂度：O(1) - 只使用了常量级别的额外空间
+```
+
+**题目分析**：
+该问题可以使用二分查找来高效解决。因为版本数组是有序的，从某个版本开始都是错误版本，因此我们可以利用二分查找缩小查找范围，直到找到第一个错误的版本。
+
+**解决方案详解**：
+
+- **初始化条件**：
+  - 左边界 `l` 初始化为 1，右边界 `r` 初始化为 `n`，即所有版本的范围。
+  - 使用 `idx` 记录第一个错误版本的索引。
+
+- **二分查找的过程**：
+  - 每次计算中间值 `mid`，调用 `isBadVersion(mid)`：
+    - 如果 `isBadVersion(mid)` 返回 `True`，说明当前版本以及之后的版本都是错误的，可能第一个错误版本在左侧，因此将右边界 `r` 移动到 `mid - 1`，同时更新 `idx` 为 `mid`。
+    - 如果 `isBadVersion(mid)` 返回 `False`，说明当前版本是正确的，错误版本在右侧，因此将左边界 `l` 移动到 `mid + 1`。
+
+- **结束条件**：
+  - 当左右指针交错时，循环结束，`idx` 就是第一个错误版本的索引。
+
+**复杂度分析**：
+- **时间复杂度**：O(log n)，我们每次迭代都将查找范围缩小一半，因此时间复杂度为 O(log n)。
+- **空间复杂度**：O(1)，只使用了常量空间来存储指针和中间变量.
+
