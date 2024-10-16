@@ -1,5 +1,12 @@
 ### LeetCode 33: 搜索旋转排序数组 (Search in Rotated Sorted Array)
 
+---
+
+**Key Tips 旋转排序数组: # if mid <= last element, then belongs to lower half**
+
+---
+
+
 https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 
 **题目描述**：
