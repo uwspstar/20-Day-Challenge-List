@@ -50,7 +50,7 @@
 接下来的步骤是学习基础的数据结构和算法。  
 你应该涵盖的一些主题包括：  
 
-#### 数据结构  
+#### [数据结构](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Python%20%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%8C%E5%A6%82%20%60list%60%E3%80%81%60dict%60%E3%80%81%60set%60%20%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.md)  
 - [数组](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Day2_Array.md)  
 - [链表](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/%E9%93%BE%E8%A1%A8)  
 - [栈](https://github.com/uwspstar/20-Day-Challenge-List/tree/main/Algorithm/Stack)  
