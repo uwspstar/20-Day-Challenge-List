@@ -1172,3 +1172,44 @@ def searchRange(nums: List[int], target: int) -> List[int]:
 
 **题目分析**：
 该题的关键是用二分查找找到目标值的边界位置。通过分别查找第一个和最后一个出现位置，可以有效地减少时间复杂度。
+
+---
+
+### [27. LeetCode 69: Sqrt(x)（求平方根）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%2069%3A%20%E8%AE%A1%E7%AE%97%E5%B9%B3%E6%96%B9%E6%A0%B9%20(Calculate%20Square%20Root).md)
+
+**题目描述**：
+给定一个非负整数 `x`，计算并返回 `x` 的平方根，结果只保留整数部分，向下取整。
+
+**代码实现**：
+```python
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        # 边界处理：如果 x 是 0，直接返回 0
+        if x == 0:
+            return 0
+        
+        # 初始化左右指针
+        left, right = 1, x
+        
+        # 当左指针小于等于右指针时继续二分查找
+        while left <= right:
+            mid = (left + right) // 2
+            # 如果 mid 的平方等于 x，直接返回 mid
+            if mid * mid == x:
+                return mid
+            # 如果 mid 的平方小于 x，说明平方根在 mid 的右边
+            elif mid * mid < x:
+                left = mid + 1
+            # 如果 mid 的平方大于 x，说明平方根在 mid 的左边
+            else:
+                right = mid - 1
+        
+        # 返回右指针，因为当循环结束时，right 指向的就是小于等于平方根的整数部分
+        return right
+
+# 时间复杂度：O(log x) - 二分查找的时间复杂度
+# 空间复杂度：O(1) - 只使用了常量级别的额外空间
+```
+
+**题目分析**：
+这道题可以用二分查找来解决。由于平方函数是单调递增的，我们可以通过不断缩小搜索范围，找到一个整数 `y`，使得 `y^2 <= x` 且 `(y + 1)^2 > x`。最终，右指针 `r` 会指向满足条件的整数平方根。
