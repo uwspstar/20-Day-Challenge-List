@@ -168,8 +168,92 @@ class Solution:
 
 ---
 
-### 推荐相似问题：
+### LeetCode 34: Find First and Last Position of Element in Sorted Array（在排序数组中查找元素的第一个和最后一个位置）
 
-1. [LeetCode 704: 二分查找](https://leetcode.com/problems/binary-search/)
-2. [LeetCode 153: 寻找旋转排序数组中的最小值](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-3. [LeetCode 162: 寻找峰值](https://leetcode.com/problems/find-peak-element/)
+**题目描述**：
+给定一个按照非递减顺序排序的整数数组 `nums` 和一个目标值 `target`，找出给定目标值在数组中的第一个和最后一个位置。如果数组中不存在目标值，返回 `[-1, -1]`。
+
+**代码实现**：
+```python
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        # 初始化左右指针
+        left, right = 0, len(nums) - 1
+        first_pos, last_pos = -1, -1
+        
+        # 寻找第一个出现的位置
+        while left <= right:
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                first_pos = mid
+                right = mid - 1  # 继续在左半部分寻找
+            elif nums[mid] > target:
+                right = mid - 1
+            else:
+                left = mid + 1
+        
+        # 寻找最后一个出现的位置
+        left, right = 0, len(nums) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                last_pos = mid
+                left = mid + 1  # 继续在右半部分寻找
+            elif nums[mid] > target:
+                right = mid - 1
+            else:
+                left = mid + 1
+        
+        # 返回第一个和最后一个位置
+        return [first_pos, last_pos]
+
+# 时间复杂度：O(log n) - 每次查找的时间复杂度为 O(log n)，因为使用了二分查找。
+# 空间复杂度：O(1) - 只使用了常量级别的额外空间。
+```
+
+**题目分析**：
+该问题要求我们在排序数组中找到目标值的第一个和最后一个位置。由于数组是有序的，我们可以使用二分查找来高效地完成这个任务。我们将二分查找分成两个部分：先找到第一个位置，再找到最后一个位置。
+
+**解决方案详解**：
+
+- **初始化条件**：
+  - 使用左右指针 `left` 和 `right` 来界定查找范围。初始时，`left` 为 0，`right` 为数组的最后一个索引 `len(nums) - 1`。
+  - `first_pos` 和 `last_pos` 分别记录目标值第一次和最后一次出现的索引。
+
+- **查找第一个出现的位置**：
+  - 每次计算中间索引 `mid`，如果 `nums[mid] == target`，我们记录 `first_pos = mid`，并继续在左侧（`right = mid - 1`）寻找，直到找到目标值的最左边界。
+  
+- **查找最后一个出现的位置**：
+  - 同样地，我们再次使用二分查找来查找目标值的最右边界。如果 `nums[mid] == target`，我们记录 `last_pos = mid`，并继续在右侧（`left = mid + 1`）寻找，直到找到最右边界。
+
+- **结束条件**：
+  - 当左右指针交错时，循环结束，返回目标值的第一个和最后一个位置。如果目标值不存在，则返回 `[-1, -1]`。
+
+**复杂度分析**：
+- **时间复杂度**：O(log n)，因为我们使用了二分查找，每次查找都将范围缩小一半。
+- **空间复杂度**：O(1)，只使用了常量空间来存储指针和结果变量。
+
+**示例讲解**：
+
+#### 示例 1:
+```
+输入: nums = [5,7,7,8,8,10], target = 8
+```
+- 寻找第一个位置：
+  - 初始状态：`left = 0`, `right = 5`，`mid = (0 + 5) // 2 = 2`，`nums[2] = 7 < 8`，更新左指针：`left = 3`。
+  - 第二次迭代：`mid = (3 + 5) // 2 = 4`，`nums[4] = 8 == 8`，更新 `first_pos = 4`，继续在左侧查找：`right = 3`。
+  - 第三次迭代：`mid = (3 + 3) // 2 = 3`，`nums[3] = 8 == 8`，更新 `first_pos = 3`，继续在左侧查找：`right = 2`。
+- 寻找最后一个位置：
+  - 初始状态：`left = 0`, `right = 5`，`mid = (0 + 5) // 2 = 2`，`nums[2] = 7 < 8`，更新左指针：`left = 3`。
+  - 第二次迭代：`mid = (3 + 5) // 2 = 4`，`nums[4] = 8 == 8`，更新 `last_pos = 4`，继续在右侧查找：`left = 5`。
+  - 第三次迭代：`mid = (5 + 5) // 2 = 5`，`nums[5] = 10 > 8`，更新右指针：`right = 4`。
+- 返回 `[3, 4]`。
+
+#### 示例 2:
+```
+输入: nums = [5,7,7,8,8,10], target = 6
+```
+- 查找第一个位置时无法找到，返回 `[-1, -1]`。
+
+**总结**：
+通过二分查找方法，我们可以高效地找到目标值的第一个和最后一个位置，时间复杂度为 O(log n)。该方法利用排序数组的特性，在 O(log n) 时间内解决问题。
