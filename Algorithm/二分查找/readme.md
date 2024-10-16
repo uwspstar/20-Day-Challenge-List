@@ -697,7 +697,7 @@ def searchMatrix(matrix: List[List[int]], target: int) -> bool:
 
 ---
 
-### 14. LeetCode 852: Peak Index in a Mountain Array（山脉数组的峰顶索引）
+### [14. LeetCode 852: Peak Index in a Mountain Array（山脉数组的峰顶索引）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%20852%3A%20Peak%20Index%20in%20a%20Mountain%20Array%EF%BC%88%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%B3%B0%E5%80%BC%E7%B4%A2%E5%BC%95%EF%BC%89.md)
 
 **题目描述**：
 符合山脉数组定义的数组 `arr` 中，找出峰顶元素的索引。
