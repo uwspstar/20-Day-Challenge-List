@@ -11,6 +11,9 @@ import math
 
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
+        # mix_speed = l
+        # max_speed = r
+        # mid is choosen speed
         # 定义最小速度为1，最大速度为香蕉堆中最多的香蕉数量
         l, r = 1, max(piles)
         ans = r  # 初始化结果为最大速度
