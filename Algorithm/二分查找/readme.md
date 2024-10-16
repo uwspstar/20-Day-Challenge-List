@@ -1256,9 +1256,9 @@ class Solution:
 
 ---
 
-### [28. LeetCode 875: Koko Eating Bananas（珂珂吃香蕉问题）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%20875%3A%20Koko%20Eating%20Bananas%EF%BC%88%E7%8F%82%E7%8F%82%E5%90%83%E9%A6%99%E8%95%89%E9%97%AE%E9%A2%98).md)
+### [28. LeetCode 875: Koko Eating Bananas（珂珂吃香蕉问题）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/LeetCode%20875%3A%20Koko%20Eating%20Bananas%EF%BC%88%E7%8F%82%E7%8F%82%E5%90%83%E9%A6%99%E8%95%89%E9%97%AE%E9%A2%98.md)
 
-### LeetCode 875: Koko Eating Bananas（珂珂吃香蕉问题）
+
 
 **题目描述**：
 珂珂喜欢吃香蕉。她有一堆香蕉，第 `i` 堆中有 `piles[i]` 根香蕉。警卫已经离开，并将在 `h` 小时后回来。珂珂可以以每小时 `k` 根香蕉的速度吃完香蕉。如果她吃完一堆香蕉需要超过一小时，她将会在下一个小时继续吃这一堆，直到吃完为止。请你计算出珂珂可以在 `h` 小时内吃完所有香蕉的最小速度 `k`。
