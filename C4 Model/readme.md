@@ -34,9 +34,9 @@
   
 #### 第三天: Context 图 - 系统上下文的可视化
 - **学习内容**:
-  - 学习如何创建 Context 图。
-  - 使用 Context 图表示系统与外部实体的交互。
-  - Context 图的最佳实践，如清晰的边界和角色定义。
+  - [学习如何创建 Context 图。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%20Context%20%E5%9B%BE.md)
+  - [使用 Context 图表示系统与外部实体的交互。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E4%BD%BF%E7%94%A8%20Context%20%E5%9B%BE%E8%A1%A8%E7%A4%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E5%A4%96%E9%83%A8%E5%AE%9E%E4%BD%93%E7%9A%84%E4%BA%A4%E4%BA%92.md)
+  - [Context 图的最佳实践，如清晰的边界和角色定义。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/Context%20%E5%9B%BE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md)
 - **目标**:
   - 掌握如何使用 Context 图清晰展示系统的外部关系。
   - 理解在不同场景下 Context 图的应用。
@@ -45,9 +45,9 @@
   
 #### 第四天: Container 图 - 容器和关系的识别
 - **学习内容**:
-  - 学习如何创建 Container 图，展示系统中的容器及其交互关系。
-  - 理解容器与组件之间的区别，识别每个容器的职责。
-  - Container 图的最佳实践，强调模块化和清晰的边界。
+  - [学习如何创建 Container 图，展示系统中的容器及其交互关系。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%20Container%20%E5%9B%BE.md)
+  - [理解容器与组件之间的区别，识别每个容器的职责。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E7%90%86%E8%A7%A3%E5%AE%B9%E5%99%A8%E4%B8%8E%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+  - [Container 图的最佳实践，强调模块化和清晰的边界。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/Container%20%E5%9B%BE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md)
 - **目标**:
   - 通过 Container 图准确表示系统的主要构件及其交互。
   - 理解容器在系统扩展性和维护性中的重要性。
