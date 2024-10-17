@@ -1,4 +1,6 @@
-## Title: [LeetCode 344: 反转字符串 (Reverse String)](https://leetcode.com/problems/reverse-string/)
+## LeetCode 344: 反转字符串 (Reverse String)
+
+https://leetcode.com/problems/reverse-string/
 
 ---
 
