@@ -13,7 +13,7 @@
   
 #### 第二天: C4 模型概述与优势
 - **学习内容**:
-  - C4 模型的核心概念（Context、Container、Component、Code）。
+  - [C4 模型的核心概念（Context、Container、Component、Code）。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/C4%20%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5.md)
   - 为什么 C4 模型能够简化复杂系统的理解。
   - C4 模型与其他架构模型的比较。
 - **目标**:
