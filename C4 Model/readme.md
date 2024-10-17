@@ -25,7 +25,7 @@
 - **学习内容**:
   - [C4 模型的核心概念（Context、Container、Component、Code）。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/C4%20%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5.md)
   - [为什么 C4 模型能够简化复杂系统的理解。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E4%B8%BA%E4%BB%80%E4%B9%88%20C4%20%E6%A8%A1%E5%9E%8B%E8%83%BD%E5%A4%9F%E7%AE%80%E5%8C%96%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%90%86%E8%A7%A3.md)
-  - C4 模型与其他架构模型的比较。
+  - [C4 模型与其他架构模型的比较。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/C4%20%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%85%B6%E4%BB%96%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%AF%94%E8%BE%83.md)
 - **目标**:
   - 掌握 C4 模型的关键概念及其在系统设计中的优势。
   - 理解使用 C4 模型的好处，如可视化和沟通效率。
