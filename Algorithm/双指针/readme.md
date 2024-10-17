@@ -809,7 +809,7 @@ class Solution:
 
 ---
 
-### [19. LeetCode 876: Middle of the Linked List（链表的中间节点）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/LeetCode%20876%3A%20Middle%20of%20the%20Linked%20List%EF%BC%88%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E8%8A%82%E7%82%B9).md)
+### 19. LeetCode 876: Middle of the Linked List（链表的中间节点)
 
 **题目描述**：
 给定一个单链表，找到链表的中间节点。如果链表的节点个数为偶数，则返回中间两个节点的第二个节点。
