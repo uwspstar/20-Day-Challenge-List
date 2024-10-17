@@ -1,4 +1,4 @@
-# C4 Model 学习计划（7天）
+# C4 Model （Context、Container、Component、Code）学习计划（7天）
 
 ---
 #### C4 模型的逐步分解和可视化让不同角色的人都能在各自的理解层次上与其他团队成员进行有效沟通：
