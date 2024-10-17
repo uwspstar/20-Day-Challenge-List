@@ -1,4 +1,6 @@
-## Title: [LeetCode 345: 反转字符串中的元音字母 (Reverse Vowels of a String)](https://leetcode.com/problems/reverse-vowels-of-a-string/)
+## LeetCode 345: 反转字符串中的元音字母 (Reverse Vowels of a String)
+
+https://leetcode.com/problems/reverse-vowels-of-a-string/
 
 ---
 
