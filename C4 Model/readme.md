@@ -19,7 +19,7 @@
   - 理解为什么软件架构对于大型系统的成功至关重要。
   - 掌握架构师如何通过设计高效、可扩展的系统来帮助团队。
 - **建议资源**:
-  - 学习不同的架构风格（例如微服务、单体架构）并进行比较。
+  - [学习不同的架构风格（例如微服务、单体架构）并进行比较。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%AD%A6%E4%B9%A0%E4%B8%8D%E5%90%8C%E7%9A%84%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC%E5%B9%B6%E8%BF%9B%E8%A1%8C%E6%AF%94%E8%BE%83.md)
   
 #### 第二天: C4 模型概述与优势
 - **学习内容**:
@@ -41,7 +41,7 @@
   - 掌握如何使用 Context 图清晰展示系统的外部关系。
   - 理解在不同场景下 Context 图的应用。
 - **实践**:
-  - 绘制一个常见应用的 Context 图。
+  - [绘制一个常见应用的 Context 图。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E7%BB%98%E5%88%B6%E4%B8%80%E4%B8%AA%E5%B8%B8%E8%A7%81%E5%BA%94%E7%94%A8%E7%9A%84%20Context%20%E5%9B%BE.md)
   
 #### 第四天: Container 图 - 容器和关系的识别
 - **学习内容**:
@@ -52,21 +52,21 @@
   - 通过 Container 图准确表示系统的主要构件及其交互。
   - 理解容器在系统扩展性和维护性中的重要性。
 - **实践**:
-  - 绘制一个项目的 Container 图，展示各个服务及其交互。
+  - [绘制一个项目的 Container 图，展示各个服务及其交互。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E7%BB%98%E5%88%B6%E9%A1%B9%E7%9B%AE%E7%9A%84%20Container%20%E5%9B%BE.md)
   
 #### 第五天: Component 图 - 容器的分解
 - **学习内容**:
-  - 学习如何分解容器并创建 Component 图，深入展示容器的内部组件。
-  - 理解容器分解的重要性，尤其是在系统复杂性增加时。
+  - [学习如何分解容器并创建 Component 图，深入展示容器的内部组件。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E5%88%86%E8%A7%A3%E5%AE%B9%E5%99%A8%E5%B9%B6%E5%88%9B%E5%BB%BA%20Component%20%E5%9B%BE.md)
+  - [理解容器分解的重要性，尤其是在系统复杂性增加时。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E7%90%86%E8%A7%A3%E5%AE%B9%E5%99%A8%E5%88%86%E8%A7%A3%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7.md)
 - **目标**:
   - 掌握如何使用 Component 图展示容器内部的具体实现。
   - 理解组件之间的依赖关系及其影响。
 - **实践**:
-  - 为一个具体的容器创建 Component 图，展示其主要组件。
+  - [为一个具体的容器创建 Component 图，展示其主要组件。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%85%B7%E4%BD%93%E7%9A%84%E5%AE%B9%E5%99%A8%E5%88%9B%E5%BB%BA%20Component%20%E5%9B%BE.md)
   
 #### 第六天: 动态图与架构决策文档
 - **学习内容**:
-  - 动态图：展示系统运行时的行为。
+  - [动态图：展示系统运行时的行为。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%8A%A8%E6%80%81%E5%9B%BE%EF%BC%9A%E5%B1%95%E7%A4%BA%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E6%97%B6%E7%9A%84%E8%A1%8C%E4%B8%BA.md)
   - 学习如何在动态图中捕获系统的动态交互。
   - 架构决策文档：如何记录关键的架构决策。
   - 使用架构决策模板和最佳实践。
