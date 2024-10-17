@@ -69,21 +69,21 @@
 #### 第六天: 动态图与架构决策文档
 - **学习内容**:
   - [动态图：展示系统运行时的行为。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%8A%A8%E6%80%81%E5%9B%BE%EF%BC%9A%E5%B1%95%E7%A4%BA%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E6%97%B6%E7%9A%84%E8%A1%8C%E4%B8%BA.md)
-  - 学习如何在动态图中捕获系统的动态交互。
-  - 架构决策文档：如何记录关键的架构决策。
-  - 使用架构决策模板和最佳实践。
+  - [学习如何在动态图中捕获系统的动态交互。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8A%A8%E6%80%81%E5%9B%BE%E4%B8%AD%E6%8D%95%E8%8E%B7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%A8%E6%80%81%E4%BA%A4%E4%BA%92.md)
+  - [架构决策文档：如何记录关键的架构决策。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%A6%82%E4%BD%95%E8%AE%B0%E5%BD%95%E5%85%B3%E9%94%AE%E7%9A%84%E6%9E%B6%E6%9E%84%E5%86%B3%E7%AD%96.md)
+  - [使用架构决策模板和最佳实践。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E4%BD%BF%E7%94%A8%E6%9E%B6%E6%9E%84%E5%86%B3%E7%AD%96%E6%A8%A1%E6%9D%BF%E5%92%8C%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md)
 - **目标**:
   - 掌握如何通过动态图展示系统的运行时行为。
   - 理解记录架构决策对项目长期成功的重要性。
 - **实践**:
-  - 为一个交互复杂的系统绘制动态图，展示其运行时的操作。
+  - [为一个交互复杂的系统绘制动态图，展示其运行时的操作。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%8A%A8%E6%80%81%E5%9B%BE%EF%BC%9A%E5%B1%95%E7%A4%BA%E4%BA%A4%E4%BA%92%E5%A4%8D%E6%9D%82%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E6%97%B6%E6%93%8D%E4%BD%9C.md)
   
-#### 第七天: C4 模型的集成与协作
+#### 第七天: [C4 模型的集成与协作](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%A6%82%E4%BD%95%E5%B0%86%20C4%20%E6%A8%A1%E5%9E%8B%E9%9B%86%E6%88%90%E5%88%B0%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B%E4%B8%AD.md)
 - **学习内容**:
   - 如何将 C4 模型集成到开发流程中。
   - C4 模型在文档和团队协作中的作用。
-  - 如何选择合适的 C4 建模工具（如 Structurizr、PlantUML）。
-  - 团队协作中的架构决策：如何在团队中达成共识。
+  - [如何选择合适的 C4 建模工具 如 Structurizr、PlantUML。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E5%90%88%E9%80%82%E7%9A%84%20C4%20%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7.md)
+  - [团队协作中的架构决策：如何在团队中达成共识。](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C4%20Model/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E4%B8%AD%E7%9A%84%E6%9E%B6%E6%9E%84%E5%86%B3%E7%AD%96%EF%BC%9A%E5%A6%82%E4%BD%95%E5%9C%A8%E5%9B%A2%E9%98%9F%E4%B8%AD%E8%BE%BE%E6%88%90%E5%85%B1%E8%AF%86.md)
 - **目标**:
   - 掌握如何在实际项目中使用 C4 模型，提升团队协作效率。
   - 理解不同工具的优势，并选择合适的工具进行建模。
