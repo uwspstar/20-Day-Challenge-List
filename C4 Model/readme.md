@@ -1,6 +1,7 @@
 # C4 Model 学习计划（7天）
 
 https://simonbrown.je/
+https://www.youtube.com/watch?v=x2-rSnhpw0g&list=PLq09o-chPdKSg0M1-6waungXY9ozQczU5
 
 **C**ontext、**C**ontainer、**C**omponent、**C**ode
 
