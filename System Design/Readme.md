@@ -3,6 +3,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
 #### Recommend Resources:
+- [不同层次的架构：从企业架构到应用架构](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E7%9A%84%E6%9E%B6%E6%9E%84:%20%E4%BB%8E%E4%BC%81%E4%B8%9A%E6%9E%B6%E6%9E%84%E5%88%B0%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84.md)
 - [System Design Interview Questions](https://codebitwave.com/system-design-interview-questions/)
 - [8 Must-Know Strategies to Scale Your System](https://codebitwave.com/system-design-101-8-must-know-strategies-to-scale-your-system/)
 - [From Zero to Hero](https://github.com/uwspstar/From-Zero-to-Hero/tree/main)
