@@ -1469,7 +1469,7 @@ class Solution:
 
 ---
 
-### 29. LeetCode 98: Validate Binary Search Tree（验证二叉搜索树）
+### [29. LeetCode 98: Validate Binary Search Tree（验证二叉搜索树）](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Algorithm/Tree/LeetCode%2098%3A%20%E6%9C%89%E6%95%88%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.md)
 
 **题目描述**：
 给定一个二叉树，判断其是否是一个有效的二叉搜索树（BST）。有效的 BST 定义如下：
