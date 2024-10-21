@@ -3,6 +3,8 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
 #### Recommend Resources:
+
+- [Software Architect vs. Solution Architect vs. Tech Lead vs. Principal Engineer](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/Software%20Architect%20vs.%20Solution%20Architect%20vs.%20Tech%20Lead%20vs.%20Principal%20Engineer.md)
 - [不同层次的架构：从企业架构到应用架构](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E7%9A%84%E6%9E%B6%E6%9E%84:%20%E4%BB%8E%E4%BC%81%E4%B8%9A%E6%9E%B6%E6%9E%84%E5%88%B0%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84.md)
 - [软件架构中常见的质量属性检查清单](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95.md)
 - [System Design Interview Questions](https://codebitwave.com/system-design-interview-questions/)
