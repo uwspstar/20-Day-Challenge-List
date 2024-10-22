@@ -10,6 +10,7 @@
 - [System Design Interview Questions](https://codebitwave.com/system-design-interview-questions/)
 - [8 Must-Know Strategies to Scale Your System](https://codebitwave.com/system-design-101-8-must-know-strategies-to-scale-your-system/)
 - [From Zero to Hero](https://github.com/uwspstar/From-Zero-to-Hero/tree/main)
+- [哈希函数 (Hash Function) vs. 哈希表 (Hash Table)](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/System%20Design/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0%20vs%20%E5%93%88%E5%B8%8C%E8%A1%A8.md)
 
 ------
 
