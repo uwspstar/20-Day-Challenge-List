@@ -78,6 +78,38 @@ def pre_order_traversal(root):
         pre_order_traversal(root.left)  # 遍历左子树
         pre_order_traversal(root.right) # 遍历右子树
 ```
+```python
+from typing import Optional, List
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        if not root:
+            return []  # 如果根节点为空，直接返回空列表
+
+        res = []  # 初始化结果列表
+        stk = [root]  # 初始化栈，将根节点入栈
+
+        # 当栈不为空时继续遍历
+        while stk:
+            cur = stk.pop()  # 弹出栈顶节点
+            res.append(cur.val)  # 将当前节点的值添加到结果列表
+
+            # 先将右子节点入栈，再将左子节点入栈
+            # 这样确保下次遍历时先访问左子节点
+            if cur.right:
+                stk.append(cur.right)
+            if cur.left:
+                stk.append(cur.left)
+
+        return res  # 返回前序遍历的结果
+```
 
 ### 2. 中序遍历 (In-order)
 **定义**: 在中序遍历中，首先遍历左子树，然后访问根节点，最后遍历右子树。
@@ -96,6 +128,38 @@ def in_order_traversal(root):
         in_order_traversal(root.left)  # 遍历左子树
         print(root.value)               # 访问节点
         in_order_traversal(root.right)  # 遍历右子树
+```
+```python
+from typing import Optional, List
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        res = []  # 初始化结果列表
+        stk = []  # 初始化栈
+        cur = root  # 从根节点开始
+
+        # 当当前节点存在或栈不为空时继续遍历
+        while cur or stk:
+            # 移动到最左子节点
+            while cur:
+                stk.append(cur)  # 将当前节点入栈
+                cur = cur.left  # 移动到左子节点
+            
+            # 弹出栈顶节点
+            cur = stk.pop()
+            res.append(cur.val)  # 将当前节点的值加入结果列表
+
+            # 移动到右子树
+            cur = cur.right
+
+        return res  # 返回中序遍历的结果
 ```
 
 ### 3. 后序遍历 (Post-order)
@@ -144,7 +208,39 @@ def level_order_traversal(root):
         if node.right:           # 如果右子节点存在，加入队列
             queue.append(node.right)
 ```
+```python
+from typing import Optional, List
 
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        if not root:
+            return []  # 如果根节点为空，直接返回空列表
+
+        res = []  # 初始化结果列表
+        stk = [root]  # 初始化栈，将根节点入栈
+
+        # 当栈不为空时继续遍历
+        while stk:
+            cur = stk.pop()  # 弹出栈顶节点
+            res.append(cur.val)  # 将当前节点的值添加到结果列表
+
+            # 先将左子节点入栈，再将右子节点入栈
+            # 这样确保遍历顺序为 根-右-左
+            if cur.left:
+                stk.append(cur.left)
+            if cur.right:
+                stk.append(cur.right)
+
+        # 最后将结果列表反转，得到后序遍历的顺序
+        return res[::-1]
+```
 ---
 
 #### 1. **题目编号和名称**
