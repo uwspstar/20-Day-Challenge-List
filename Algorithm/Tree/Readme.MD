@@ -180,34 +180,6 @@ def post_order_traversal(root):
         post_order_traversal(root.right) # 遍历右子树
         print(root.value)                # 访问节点
 ```
-
-### 4. 层次遍历 (Level-order)
-**定义**: 层次遍历是一种广度优先遍历方法，按照树的层级从上到下、从左到右访问每个节点。
-
-**步骤**:
-1. 使用队列来存储当前层的节点。
-2. 访问队列中的每个节点，并将其子节点添加到队列中。
-
-**时间复杂度**: O(n)。
-
-**Python 实现**:
-```python
-from collections import deque
-
-def level_order_traversal(root):
-    if root is None:
-        return
-
-    queue = deque([root])  # 初始化队列
-    while queue:
-        node = queue.popleft()  # 弹出队首节点
-        print(node.value)        # 访问节点
-
-        if node.left:            # 如果左子节点存在，加入队列
-            queue.append(node.left)
-        if node.right:           # 如果右子节点存在，加入队列
-            queue.append(node.right)
-```
 ```python
 from typing import Optional, List
 
@@ -241,6 +213,36 @@ class Solution:
         # 最后将结果列表反转，得到后序遍历的顺序
         return res[::-1]
 ```
+
+
+### 4. 层次遍历 (Level-order)
+**定义**: 层次遍历是一种广度优先遍历方法，按照树的层级从上到下、从左到右访问每个节点。
+
+**步骤**:
+1. 使用队列来存储当前层的节点。
+2. 访问队列中的每个节点，并将其子节点添加到队列中。
+
+**时间复杂度**: O(n)。
+
+**Python 实现**:
+```python
+from collections import deque
+
+def level_order_traversal(root):
+    if root is None:
+        return
+
+    queue = deque([root])  # 初始化队列
+    while queue:
+        node = queue.popleft()  # 弹出队首节点
+        print(node.value)        # 访问节点
+
+        if node.left:            # 如果左子节点存在，加入队列
+            queue.append(node.left)
+        if node.right:           # 如果右子节点存在，加入队列
+            queue.append(node.right)
+```
+
 ---
 
 #### 1. **题目编号和名称**
