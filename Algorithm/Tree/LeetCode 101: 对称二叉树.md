@@ -1,5 +1,3 @@
-以下是 LeetCode 问题 **"对称二叉树" (问题 101)** 的完整解决方案，包括详细的代码解释、示例执行和复杂度分析。
-
 ### LeetCode 问题：101. 对称二叉树
 
 https://leetcode.com/problems/symmetric-tree/description/
