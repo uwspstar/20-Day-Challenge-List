@@ -425,3 +425,88 @@ print(nested_dict)
 [English] Choosing the right default factory when using `defaultdict` is crucial to ensuring that your code is both efficient and intuitive. Whether you're counting items, grouping elements, ensuring uniqueness, or creating nested dictionaries, `defaultdict` simplifies these tasks by automatically managing missing keys in a way that best suits your needs.
 
 **Chinese** 在使用 `defaultdict` 时选择合适的默认工厂对于确保代码既高效又直观至关重要。无论你是在计数项目、分组元素、确保唯一性还是创建嵌套字典，`defaultdict` 都通过自动管理缺失的键来简化这些任务，以最适合你的需求的方式工作。
+
+---
+
+`defaultdict(set)` 是 Python 中 `collections` 模块下的一个特殊数据结构，用于创建一个**默认值为集合（set）的字典**。
+
+### 1. `defaultdict` 简介
+
+- **`defaultdict`** 是 Python 中的一种字典变体，它来自 `collections` 模块。
+- 当尝试访问一个**不存在的键**时，它不会抛出 `KeyError`，而是自动为该键创建一个默认值。
+- 默认值由 `default_factory` 参数提供，例如 `list`、`int`、`set` 等。
+
+### 2. 使用 `defaultdict(set)`
+
+#### 定义
+`defaultdict(set)` 创建了一个默认值为**空集合**的字典。
+
+#### 工作原理
+- 当你试图访问一个不存在的键时，`defaultdict` 会自动创建一个对应的**空集合**，并将其作为该键的默认值。
+- 这与普通的 `dict` 不同，普通字典在访问不存在的键时会抛出 `KeyError`。
+
+### 3. 示例代码
+
+```python
+from collections import defaultdict
+
+# 创建一个默认值为空集合的 defaultdict
+d = defaultdict(set)
+
+# 添加元素
+d['a'].add(1)  # 自动为 'a' 创建一个空集合，并添加元素 1
+d['a'].add(2)
+d['b'].add(3)  # 自动为 'b' 创建一个空集合，并添加元素 3
+
+print(d)  # 输出: defaultdict(<class 'set'>, {'a': {1, 2}, 'b': {3}})
+
+# 访问一个不存在的键
+print(d['c'])  # 输出: set()
+```
+
+### 4. 什么时候使用 `defaultdict(set)`
+
+`defaultdict(set)` 非常适合用于以下场景：
+
+#### 1. **图的邻接表表示**
+在图算法中，常用邻接表来表示图的边。使用 `defaultdict(set)` 可以轻松构建无向或有向图。
+
+```python
+from collections import defaultdict
+
+graph = defaultdict(set)
+edges = [(1, 2), (2, 3), (3, 4), (4, 1)]
+
+for u, v in edges:
+    graph[u].add(v)
+    graph[v].add(u)  # 对于无向图
+
+print(graph)
+# 输出: defaultdict(<class 'set'>, {1: {2, 4}, 2: {1, 3}, 3: {2, 4}, 4: {1, 3}})
+```
+
+#### 2. **统计元素的分组或关联**
+例如，需要将元素分组到某个键下，可以使用 `defaultdict(set)` 来自动创建空集合，并将相关元素添加进去。
+
+```python
+from collections import defaultdict
+
+d = defaultdict(set)
+data = [('apple', 'fruit'), ('carrot', 'vegetable'), ('banana', 'fruit')]
+
+for item, category in data:
+    d[category].add(item)
+
+print(d)
+# 输出: defaultdict(<class 'set'>, {'fruit': {'apple', 'banana'}, 'vegetable': {'carrot'}})
+```
+
+### 5. `defaultdict(set)` vs. 普通 `dict`
+
+| 特性               | `defaultdict(set)`                    | 普通 `dict`                           |
+|--------------------|---------------------------------------|---------------------------------------|
+| 默认值             | 自动创建空集合                       | 访问不存在的键时抛出 `KeyError`       |
+| 用法               | 用于需要自动初始化集合的情况         | 需要手动初始化键的值                 |
+| 常见应用场景       | 邻接表、元素分组、统计关联等         | 存储和查找键值对                      |
+
+**总结**：`defaultdict(set)` 是一种简洁、方便的方式，用于在处理字典的过程中自动创建集合，避免手动检查键是否存在，从而使代码更简洁和易读。
