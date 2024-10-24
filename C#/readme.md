@@ -17,6 +17,7 @@ As of September 2024, the current versions of C#, .NET Core, and .NET are as fol
 
 ----
 
+- [Database Performance Optimization](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Database%20Performance%20Optimization%20and%20Connection%20Management%20Standards.md)
 - [How Does Garbage Collection Work in C#?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/How%20Does%20Garbage%20Collection%20Work%20in%20C%23.md)
 - [What is Entity Framework?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/Entity%20Framework.md)
 - [What is LINQ?](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/C%23/LINQ.md)
