@@ -75,4 +75,3 @@ def sliding_window_fixed(input, window_size):
 
 ---
 
-This format provides a comprehensive understanding of both the flexible longest and shortest sliding window techniques. If you have any specific modifications or additional questions, feel free to ask!
