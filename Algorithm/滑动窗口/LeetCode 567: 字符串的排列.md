@@ -1,5 +1,7 @@
 ### LeetCode 567: Permutation in String（字符串的排列）
 
+https://leetcode.com/problems/permutation-in-string/description/
+
 **题目描述**：
 给定两个字符串 `s1` 和 `s2`，写一个函数判断 `s2` 中是否包含 `s1` 的某个排列。换句话说，判断 `s2` 中是否存在一个子串，它是 `s1` 的一个排列。
 
