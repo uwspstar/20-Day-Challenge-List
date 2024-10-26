@@ -599,3 +599,183 @@ class Solution:
         
         return res
 ```
+### LeetCode 1423: Maximum Points You Can Obtain from Cards（从卡牌中获得的最大点数）
+[LeetCode 1423](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)
+```python
+class Solution:
+    def maxScore(self, cardPoints: List[int], k: int) -> int:
+        n = len(cardPoints)
+        total = sum(cardPoints)  # 卡牌总和
+        window_sum = sum(cardPoints[:n - k])  # 初始化窗口为前 n-k 个元素的和
+        min_window_sum = window_sum  # 最小窗口和
+
+        # 滑动窗口遍历剩余部分
+        for i in range(n - k, n):
+            window_sum += cardPoints[i] - cardPoints[i - (n - k)]  # 移动窗口
+            min_window_sum = min(min_window_sum, window_sum)  # 更新最小窗口和
+        
+        # 最大得分等于总和减去最小窗口和
+        return total - min_window_sum
+```
+
+### LeetCode 485: Max Consecutive Ones（最大连续 1 的个数）
+[LeetCode 485](https://leetcode.com/problems/max-consecutive-ones/)
+```python
+class Solution:
+    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        max_count = 0  # 最大连续 1 的计数
+        current_count = 0  # 当前连续 1 的计数
+
+        # 遍历数组 nums
+        for num in nums:
+            if num == 1:
+                current_count += 1  # 增加连续 1 的计数
+                max_count = max(max_count, current_count)  # 更新最大计数
+            else:
+                current_count = 0  # 重置当前计数
+        
+        return max_count
+```
+
+### LeetCode 340: Longest Substring with K Distinct Characters（至多 K 个不同字符的最长子串）
+[LeetCode 340](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
+```python
+from collections import defaultdict
+
+class Solution:
+    def lengthOfLongestSubstringKDistinct(self, s: str, k: int) -> int:
+        l = 0  # 左指针
+        count = defaultdict(int)  # 字符频率表
+        max_len = 0  # 最长长度
+
+        # 右指针遍历字符串 s
+        for r in range(len(s)):
+            count[s[r]] += 1  # 增加当前字符的频率
+
+            # 如果字符种类超过 k，移动左指针
+            while len(count) > k:
+                count[s[l]] -= 1  # 减少左指针字符的频率
+                if count[s[l]] == 0:
+                    del count[s[l]]  # 如果频率为 0，删除字符
+                l += 1  # 左指针右移
+            
+            max_len = max(max_len, r - l + 1)  # 更新最长长度
+        
+        return max_len
+```
+
+### LeetCode 1208: Get Equal Substrings Within Budget（在预算内的等价子字符串）
+[LeetCode 1208](https://leetcode.com/problems/get-equal-substrings-within-budget/)
+```python
+class Solution:
+    def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
+        l = 0  # 左指针
+        current_cost = 0  # 当前转换成本
+        max_len = 0  # 最长子串长度
+
+        # 右指针遍历字符串 s 和 t
+        for r in range(len(s)):
+            current_cost += abs(ord(s[r]) - ord(t[r]))  # 计算转换成本
+
+            # 如果当前成本超过 maxCost，移动左指针
+            while current_cost > maxCost:
+                current_cost -= abs(ord(s[l]) - ord(t[l]))  # 减少左指针的成本
+                l += 1  # 左指针右移
+            
+            max_len = max(max_len, r - l + 1)  # 更新最长子串长度
+        
+        return max_len
+```
+
+### LeetCode 713: Subarray Product Less Than K（乘积小于 K 的子数组）
+[LeetCode 713](https://leetcode.com/problems/subarray-product-less-than-k/)
+```python
+class Solution:
+    def numSubarrayProductLessThanK(self, nums: List[int], k: int) -> int:
+        if k <= 1:
+            return 0  # 如果 k <= 1，不可能有乘积小于 k 的子数组
+
+        product = 1  # 当前窗口的乘积
+        l = 0  # 左指针
+        res = 0  # 结果计数
+
+        # 右指针遍历 nums
+        for r in range(len(nums)):
+            product *= nums[r]  # 增加当前元素到乘积
+
+            # 如果乘积不小于 k，移动左指针
+            while product >= k:
+                product //= nums[l]  # 除去左指针元素
+                l += 1
+            
+            res += r - l + 1  # 计算当前窗口的子数组数量
+        
+        return res
+```
+
+### LeetCode 424: Longest Repeating Character Replacement（替换后的最长重复字符）
+[LeetCode 424](https://leetcode.com/problems/longest-repeating-character-replacement/)
+```python
+from collections import defaultdict
+
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+        l = 0  # 左指针
+        count = defaultdict(int)  # 频率表
+        max_count = 0  # 当前窗口中出现最多次的字符频率
+        res = 0  # 结果
+
+        # 右指针遍历字符串 s
+        for r in range(len(s)):
+            count[s[r]] += 1  # 增加当前字符的频率
+            max_count = max(max_count, count[s[r]])  # 更新最大字符频率
+
+            # 如果需要替换的字符数量超过 k，则移动左指针
+            while (r - l + 1) - max_count > k:
+                count[s[l]] -= 1  # 减少左指针字符的频率
+                l += 1  # 左指针右移
+            
+            res = max(res, r - l + 1)  # 更新最长子串长度
+        
+        return res
+```
+
+### LeetCode 209: Minimum Size Subarray Sum（最小长度子数组和）
+[LeetCode 209](https://leetcode.com/problems/minimum-size-subarray-sum/)
+```python
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        l = 0  # 左指针
+        current_sum = 0  # 当前窗口的和
+        min_len = float('inf')  # 最小长度
+
+        # 右指针遍历 nums
+        for r in range(len(nums)):
+            current_sum += nums[r]  # 增加当前元素到和
+
+            # 当和大于等于目标值时，尝试收缩窗口
+            while current_sum >= target:
+                min_len = min(min_len, r - l + 1)  # 更新最小长度
+                current_sum -= nums[l]  # 减少左指针元素
+                l += 1  # 移动左指针
+        
+        return min_len if min_len != float('inf') else 0
+```
+
+### LeetCode 1423: Maximum Points You Can Obtain from Cards（从卡牌中获得的最大点数）
+[LeetCode 1423](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)
+```python
+class Solution:
+    def maxScore(self, cardPoints: List[int], k: int) -> int:
+        n = len(cardPoints)
+        total = sum(cardPoints)  # 卡牌总和
+        window_sum = sum(cardPoints[:n - k])  # 初始化窗口为前 n-k 个元素的和
+        min_window_sum = window_sum  # 最小窗口和
+
+        # 滑动窗口遍历剩余部分
+        for i in range(n - k, n):
+            window_sum += cardPoints[i] - cardPoints[i - (n - k)]  # 移动窗口
+            min_window_sum = min(min_window_sum, window_sum)  # 更新最小窗口和
+        
+        return total - min_window_sum
+```
