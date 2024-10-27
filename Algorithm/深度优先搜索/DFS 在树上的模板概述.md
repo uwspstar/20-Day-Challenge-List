@@ -92,6 +92,54 @@ def dfs(node, state):
     return ...  # 示例：返回 max(left, right) + 1
 ```
 
+---
+### 不同类型的 DFS 使用场景
+
+| 类型       | 描述                                                                           | 适用场景                                                       | 示例问题                          | 相关 LeetCode 题目                                               |
+|------------|--------------------------------------------------------------------------------|----------------------------------------------------------------|-----------------------------------|-----------------------------------------------------------------|
+| **前序 DFS** | 在遍历子节点之前处理当前节点。                                               | 适用于需要在访问子节点之前处理当前节点的情况，比如：           | 构建树的前序遍历结果、复制树结构  | [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/) <br> [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii/) <br> [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/) <br> [100. 相同的树](https://leetcode.cn/problems/same-tree/) <br> [437. 路径总和 III](https://leetcode.cn/problems/path-sum-iii/) |
+| **中序 DFS** | 在处理当前节点之前遍历左子树，在遍历右子树之前处理当前节点。                 | 适用于需要按照升序处理节点的情况，比如：                       | 求树中第 k 大/小的节点             | [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/) <br> [230. 二叉搜索树中第 K 小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/) <br> [98. 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/) <br> [501. 二叉搜索树中的众数](https://leetcode.cn/problems/find-mode-in-binary-search-tree/) <br> [783. 二叉搜索树节点最小距离](https://leetcode.cn/problems/minimum-distance-between-bst-nodes/) |
+| **后序 DFS** | 在遍历完子节点后处理当前节点。                                                | 适用于需要在处理完所有子节点后对当前节点进行计算或合并的情况，比如： | 计算子树的高度、删除叶子节点      | [104. 二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/) <br> [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/) <br> [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/) <br> [1123. 最深叶节点的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/) <br> [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/) |
+
+#### 示例代码
+
+1. **前序 DFS 示例：构建树的前序遍历**
+
+```python
+def preorder_traversal(node):
+    if not node:
+        return
+    print(node.val)  # 处理当前节点
+    preorder_traversal(node.left)  # 遍历左子树
+    preorder_traversal(node.right)  # 遍历右子树
+```
+
+2. **中序 DFS 示例：查找二叉搜索树中的第 k 小值**
+
+```python
+def inorder_traversal(node):
+    if not node:
+        return
+    inorder_traversal(node.left)  # 遍历左子树
+    print(node.val)  # 处理当前节点
+    inorder_traversal(node.right)  # 遍历右子树
+```
+
+3. **后序 DFS 示例：计算二叉树的最大深度**
+
+```python
+def postorder_traversal(node):
+    if not node:
+        return 0
+    left_depth = postorder_traversal(node.left)  # 遍历左子树
+    right_depth = postorder_traversal(node.right)  # 遍历右子树
+    return max(left_depth, right_depth) + 1  # 处理当前节点
+```
+
+---
+
+
+
 ### 4. 示例：计算二叉树的最大深度
 
 以下是使用 DFS 模板计算二叉树最大深度的示例。
