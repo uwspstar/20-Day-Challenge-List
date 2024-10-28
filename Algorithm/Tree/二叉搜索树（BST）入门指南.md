@@ -503,4 +503,691 @@ print(real_time.query(5, 15))
 
 ---
 
-通过以上内容，希望你对二叉搜索树有了更深入的理解，并能够在实际问题中灵活运用。持续练习和实践将帮助你巩固知识，提升解决复杂问题的能力。
+### 前序 DFS 相关题目
+
+#### 1. LeetCode 144: 二叉树的前序遍历
+[LeetCode 144: Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+
+#### 题目描述
+给定一个二叉树的根节点，返回二叉树的前序遍历序列。
+
+- **前序遍历**：根节点 -> 左子树 -> 右子树
+
+#### 代码实现与详细注释
+```python
+from typing import List, Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        result = []
+
+        # 辅助函数，递归前序遍历
+        def dfs(node):
+            if not node:
+                return
+            
+            # 访问根节点
+            result.append(node.val)
+            # 递归访问左子树
+            dfs(node.left)
+            # 递归访问右子树
+            dfs(node.right)
+
+        dfs(root)
+        return result
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 2. LeetCode 113: 路径总和 II
+[LeetCode 113: Path Sum II](https://leetcode.com/problems/path-sum-ii/)
+
+#### 题目描述
+给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径上节点值之和等于目标和的路径。
+
+#### 代码实现与详细注释
+```python
+from typing import List, Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
+        result = []
+
+        def dfs(node, path, current_sum):
+            if not node:
+                return
+            
+            # 添加当前节点值到路径
+            path.append(node.val)
+            current_sum += node.val
+
+            # 检查是否为叶子节点且路径和等于目标和
+            if not node.left and not node.right and current_sum == targetSum:
+                result.append(list(path))
+            else:
+                # 递归访问左子树和右子树
+                dfs(node.left, path, current_sum)
+                dfs(node.right, path, current_sum)
+
+            # 回溯
+            path.pop()
+
+        dfs(root, [], 0)
+        return result
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 3. LeetCode 129: 求根节点到叶节点数字之和
+[LeetCode 129: Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
+
+#### 题目描述
+给定一个二叉树，计算从根节点到叶子节点的所有路径所表示的数字之和。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def sumNumbers(self, root: Optional[TreeNode]) -> int:
+        def dfs(node, current_sum):
+            if not node:
+                return 0
+            
+            # 计算当前路径的数字
+            current_sum = current_sum * 10 + node.val
+            
+            # 如果是叶子节点，返回当前路径的数字
+            if not node.left and not node.right:
+                return current_sum
+
+            # 递归计算左右子树的数字和
+            return dfs(node.left, current_sum) + dfs(node.right, current_sum)
+
+        return dfs(root, 0)
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 4. LeetCode 100: 相同的树
+[LeetCode 100: Same Tree](https://leetcode.com/problems/same-tree/)
+
+#### 题目描述
+给定两棵二叉树，检查它们是否相同。
+
+- 两棵树相同，当且仅当它们的结构相同，且对应节点值相同。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        # 如果两棵树都为空，则相同
+        if not p and not q:
+            return True
+        
+        # 如果只有一棵树为空或节点值不同，则不相同
+        if not p or not q or p.val != q.val:
+            return False
+
+        # 递归检查左右子树
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 5. LeetCode 437: 路径总和 III
+[LeetCode 437: Path Sum III](https://leetcode.com/problems/path-sum-iii/)
+
+#### 题目描述
+给定一个二叉树和一个目标和，计算路径总和等于目标和的路径数量。这些路径不需要从根节点开始，也不需要在叶子节点结束。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+from collections import defaultdict
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
+        prefix_sum = defaultdict(int)
+        prefix_sum[0] = 1
+
+        def dfs(node, current_sum):
+            if not node:
+                return 0
+
+            current_sum += node.val
+            count = prefix_sum[current_sum - targetSum]
+            prefix_sum[current_sum] += 1
+
+            # 递归访问左右子树
+            count += dfs(node.left, current_sum)
+            count += dfs(node.right, current_sum)
+
+            # 回溯
+            prefix_sum[current_sum] -= 1
+
+            return count
+
+        return dfs(root, 0)
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+### 中序 DFS 相关题目
+
+#### 1. LeetCode 94: 二叉树的中序遍历
+[LeetCode 94: Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+
+#### 题目描述
+给定一个二叉树的根节点，返回二叉树的中序遍历序列。
+
+- **中序遍历**：左子树 -> 根节点 -> 右子树
+
+#### 代码实现与详细注释
+```python
+from typing import List, Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        result = []
+
+        # 辅助函数，递归中序遍历
+        def dfs(node):
+            if not node:
+                return
+            
+            # 递归访问左子树
+            dfs(node.left)
+            # 访问根节点
+            result.append(node.val)
+            # 递归访问右子树
+            dfs(node.right)
+
+        dfs(root)
+        return result
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 2. LeetCode 230: 二叉搜索树中第 K 小的元素
+[LeetCode 230: Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+
+#### 题目描述
+给定一个二叉搜索树的根节点和一个整数 `k`，返回树中第 `k` 小的元素。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        self.k = k
+        self.result = None
+
+        # 辅助函数，中序遍历
+        def inorder(node):
+            if not node or self.result is not None:
+                return
+            
+            # 递归访问左子树
+            inorder(node.left)
+
+            # 访问当前节点，检查是否是第 k 小元素
+            self.k -= 1
+            if self.k == 0:
+                self.result = node.val
+                return
+            
+            # 递归访问右子树
+            inorder(node.right)
+
+        inorder(root)
+        return self.result
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，最坏情况下需要遍历所有节点。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 3. LeetCode 98: 验证二叉搜索树
+[LeetCode 98: Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+
+#### 题目描述
+给定一个二叉树，编写一个函数来检查它是否是一个**有效的二叉搜索树**（Binary Search Tree, BST）。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        # 辅助函数，用于递归验证每个节点是否满足二叉搜索树的性质
+        def isValid(node, minVal, maxVal):
+            # 如果当前节点为空，则满足条件
+            if not node:
+                return True
+            
+            # 如果当前节点值不在 minVal 和 maxVal 范围内，则不是二叉搜索树
+            if not (minVal < node.val < maxVal):
+                return False
+            
+            # 递归检查左子树和右子树
+            # 左子树：所有节点必须小于当前节点值
+            # 右子树：所有节点必须大于当前节点值
+            return isValid(node.left, minVal, node.val) and isValid(node.right, node.val, maxVal)
+        
+        # 初始调用，最小值设为负无穷大，最大值设为正无穷大
+        return isValid(root, float('-inf'), float('inf'))
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 4. LeetCode 501: 二叉搜索树中的众数
+[LeetCode 501: Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/)
+
+#### 题目描述
+给定一个二叉搜索树的根节点，找到出现频率最高的元素。
+
+#### 代码实现与详细注释
+```python
+from typing import List, Optional
+from collections import defaultdict
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def findMode(self, root: Optional[TreeNode]) -> List[int]:
+        self.count = defaultdict(int)
+        self.max_count = 0
+        self.result = []
+
+        # 中序遍历二叉搜索树
+        def inorder(node):
+            if not node:
+                return
+            
+            inorder(node.left)
+            
+            # 统计节点值的频率
+            self.count[node.val] += 1
+            if self.count[node.val] > self.max_count:
+                self.max_count = self.count[node.val]
+                self.result = [node.val]
+            elif self.count[node.val] == self.max_count:
+                self.result.append(node.val)
+            
+            inorder(node.right)
+
+        inorder(root)
+        return self.result
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(n)，用于存储节点频率。
+
+---
+
+#### 5. LeetCode 783: 二叉搜索树节点最小距离
+[LeetCode 783: Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)
+
+#### 题目描述
+给定一个二叉搜索树的根节点，返回该树中任意两节点值之间的最小差。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def minDiffInBST(self, root: Optional[TreeNode]) -> int:
+        self.prev = -float('inf')
+        self.min_diff = float('inf')
+
+        # 中序遍历
+        def inorder(node):
+            if not node:
+                return
+            
+            inorder(node.left)
+            
+            # 更新最小差值
+            self.min_diff = min(self.min_diff, node.val - self.prev)
+            self.prev = node.val
+            
+            inorder(node.right)
+
+        inorder(root)
+        return self.min_diff
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+### 后序 DFS 相关题目
+
+#### 1. LeetCode 104: 二叉树的最大深度
+[LeetCode 104: Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+
+#### 题目描述
+给定一个二叉树，找出其最大深度。
+
+- 二叉树的最大深度是从根节点到最远叶子节点的最长路径上的节点数。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        # 如果节点为空，则深度为 0
+        if not root:
+            return 0
+
+        # 递归计算左子树和右子树的最大深度
+        left_depth = self.maxDepth(root.left)
+        right_depth = self.maxDepth(root.right)
+
+        # 当前节点的最大深度为左右子树最大深度加 1
+        return 1 + max(left_depth, right_depth)
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 2. LeetCode 110: 平衡二叉树
+[LeetCode 110: Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+
+#### 题目描述
+给定一个二叉树，判断它是否是**平衡的二叉树**。
+
+- 一个平衡的二叉树定义为：一个二叉树的每个节点的左右两个子树的高度差的绝对值不超过 1。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        def dfs(node):
+            # 如果当前节点为空，返回平衡状态为 True，高度为 0
+            if not node:
+                return True, 0
+
+            # 递归计算左右子树的平衡状态和高度
+            left_balanced, left_height = dfs(node.left)
+            right_balanced, right_height = dfs(node.right)
+
+            # 当前节点的平衡状态：左右子树都平衡且高度差不超过 1
+            balanced = left_balanced and right_balanced and abs(left_height - right_height) <= 1
+            # 当前节点的高度为左右子树的最大高度加 1
+            height = 1 + max(left_height, right_height)
+
+            return balanced, height
+
+        # 返回根节点的平衡状态
+        return dfs(root)[0]
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 3. LeetCode 543: 二叉树的直径
+[LeetCode 543: Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+
+#### 题目描述
+给定一棵二叉树，找到它的直径。
+
+- 二叉树的直径是任意两个节点路径中边数的最大值。这条路径可能不经过根节点。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        self.diameter = 0
+
+        def dfs(node):
+            if not node:
+                return 0
+
+            # 计算左子树和右子树的深度
+            left_depth = dfs(node.left)
+            right_depth = dfs(node.right)
+
+            # 更新二叉树的直径
+            self.diameter = max(self.diameter, left_depth + right_depth)
+
+            # 返回当前节点的深度
+            return 1 + max(left_depth, right_depth)
+
+        dfs(root)
+        return self.diameter
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 4. LeetCode 1123: 最深叶节点的最近公共祖先
+[LeetCode 1123: Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)
+
+#### 题目描述
+给定一棵二叉树，返回树中最深叶节点的最近公共祖先。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def lcaDeepestLeaves(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        def dfs(node):
+            if not node:
+                return 0, None
+            
+            # 递归计算左右子树的深度和最近公共祖先
+            left_depth, left_lca = dfs(node.left)
+            right_depth, right_lca = dfs(node.right)
+
+            # 如果左右子树的深度相同，当前节点就是最近公共祖先
+            if left_depth == right_depth:
+                return left_depth + 1, node
+            # 如果左子树的深度更大，返回左子树的最近公共祖先
+            elif left_depth > right_depth:
+                return left_depth + 1, left_lca
+            # 如果右子树的深度更大，返回右子树的最近公共祖先
+            else:
+                return right_depth + 1, right_lca
+
+        return dfs(root)[1]
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
+
+---
+
+#### 5. LeetCode 124: 二叉树中的最大路径和
+[LeetCode 124: Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+
+#### 题目描述
+给定一个非空二叉树，返回其最大路径和。
+
+- 路径和定义为任意两个节点之间路径上的节点值之和。路径不必经过根节点。
+
+#### 代码实现与详细注释
+```python
+from typing import Optional
+
+# 定义二叉树节点类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def maxPathSum(self, root: Optional[TreeNode]) -> int:
+        self.max_sum = float('-inf')
+
+        def dfs(node):
+            if not node:
+                return 0
+
+            # 递归计算左右子树的最大路径和
+            left_gain = max(dfs(node.left), 0)
+            right_gain = max(dfs(node.right), 0)
+
+            # 更新全局最大路径和
+            self.max_sum = max(self.max_sum, node.val + left_gain + right_gain)
+
+            # 返回当前节点的最大贡献值
+            return node.val + max(left_gain, right_gain)
+
+        dfs(root)
+        return self.max_sum
+```
+
+#### 复杂度分析
+- **时间复杂度**：O(n)，其中 n 是二叉树的节点数。
+- **空间复杂度**：O(h)，其中 h 是二叉树的高度。
