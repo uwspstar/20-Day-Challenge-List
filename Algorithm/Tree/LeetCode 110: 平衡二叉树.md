@@ -37,6 +37,33 @@ class Solution:
         return height(root) != -1
 ```
 
+```pyrhon
+class Solution:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        if not root:
+            return True  # 空树是平衡的
+
+        # 计算左右子树的高度
+        l_h = self.height(root.left)
+        r_h = self.height(root.right)
+
+        # 如果左右子树高度差超过 1，则返回 False
+        if abs(l_h - r_h) > 1:
+            return False
+        
+        # 递归判断左右子树是否平衡
+        return self.isBalanced(root.left) and self.isBalanced(root.right)
+    
+    def height(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0  # 空节点的高度为 0
+        
+        # 计算左右子树的最大高度并加上当前节点
+        return 1 + max(self.height(root.left), self.height(root.right))
+
+```
+
+
 ---
 
 ### 代码说明：
