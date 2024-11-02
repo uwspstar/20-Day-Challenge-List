@@ -1,42 +1,68 @@
 ### LeetCode 110: 平衡二叉树
 [LeetCode 110: Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 
-#### 题目描述
-一个二叉树被认为是平衡的，如果对于树中的每个节点，左右子树的高度（或深度）之差最多为 1。换句话说，树中每个节点的两个子树的深度差不超过 1。
+**题目描述**：  
+给定一个二叉树，判断它是否是高度平衡的二叉树。在这里，高度平衡二叉树的定义是：每个节点的左右两个子树的高度差的绝对值不超过 1。
 
-树的高度定义：二叉树中某个节点的高度是从该节点到叶子节点的最长路径上的边数。
 
-给定一个二叉树，判断它是否是平衡的。
-
-#### 参数
-- **root**: 二叉树的根节点。
-
-#### 返回结果
-- 一个布尔值，表示给定的树是否是平衡的。
-
-#### 示例
-##### 示例 1
-```
-      1
-     / \
-    2   3
-   / 
-  4   
-```
-
-对应的输入表示为：
+**代码实现**：
 ```python
-root = TreeNode(1)
-root.left = TreeNode(2)
-root.right = TreeNode(3)
-root.left.left = TreeNode(4)
+# 定义树节点的类
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+# 定义解决方案的类
+class Solution:
+    # 定义判断平衡的函数
+    def isBalanced(self, root: TreeNode) -> bool:
+        # 定义一个内部函数来计算节点的高度
+        def height(node):
+            # 如果节点为空，则高度为 0
+            if not node:
+                return 0
+            # 递归计算左右子树的高度
+            left_height = height(node.left)
+            right_height = height(node.right)
+            
+            # 如果左右子树不平衡，则直接返回 -1 表示不平衡
+            if left_height == -1 or right_height == -1 or abs(left_height - right_height) > 1:
+                return -1
+            # 否则返回当前节点的高度
+            return max(left_height, right_height) + 1
+
+        # 树的根节点调用 height 函数
+        return height(root) != -1
 ```
 
-**输出**：`True`
+---
 
-**解释**：根据定义，这是一个平衡的二叉树。
+### 代码说明：
 
-##### 示例 2
+1. **递归计算高度**：
+   - 使用一个内部函数 `height(node)` 来递归地计算树中每个节点的高度。
+   - 如果 `node` 为 `None`（即叶节点的子节点），返回高度 `0`。
+   
+2. **平衡判断**：
+   - 对于每个节点，先计算其左右子树的高度，即 `left_height` 和 `right_height`。
+   - 检查左右子树的平衡情况：
+     - 如果任意一边高度返回 `-1`（表示不平衡），或 `abs(left_height - right_height) > 1`（左右子树高度差大于 1），则返回 `-1` 表示该节点不平衡。
+   - 否则，返回当前节点的高度 `max(left_height, right_height) + 1`。
+
+3. **提前退出的优化**：
+   - `if left_height == -1 or right_height == -1` 表示左右子树中已有不平衡情况，无需继续递归。
+   - 这样可以减少计算，提高算法效率。
+
+4. **结果判断**：
+   - 调用 `height(root) != -1`，只要根节点返回的高度不为 `-1`，则表示整棵树平衡。
+
+---
+
+### 示例讲解：
+
+假设输入的二叉树为：
 ```
       1
      / \
@@ -47,27 +73,27 @@ root.left.left = TreeNode(4)
 4   4
 ```
 
-对应的输入表示为：
-```python
-root = TreeNode(1)
-root.left = TreeNode(2)
-root.right = TreeNode(2)
-root.left.left = TreeNode(3)
-root.left.right = TreeNode(3)
-root.left.left.left = TreeNode(4)
-root.left.left.right = TreeNode(4)
-```
+**运行过程**：
 
-**输出**：`False`
+1. 从根节点 `1` 开始，调用 `height` 函数。
+2. 递归计算节点 `1` 的左子树高度，进入 `height(2)`。
+3. 递归计算节点 `2` 的左子树高度，进入 `height(3)`。
+4. 递归计算节点 `3` 的左子树高度，进入 `height(4)`。
+   - 节点 `4` 没有子树，高度返回 `1`。
+5. 回到节点 `3`，计算右子树高度，右子树为空，返回高度 `1`。
+   - 节点 `3` 的左右子树高度差为 `0`，返回 `2`。
+6. 回到节点 `2`，计算右子树高度，右子树高度为 `1`。
+   - 节点 `2` 的左右子树高度差为 `1`，返回 `3`。
+7. 回到根节点 `1`，计算右子树高度，高度为 `1`。
+   - 根节点 `1` 的左右子树高度差为 `2`，返回 `-1` 表示树不平衡。
 
-**解释**：节点 2 的左右子树的高度差为 2，故树不平衡。
+最终返回 `False`，表示该树不平衡。
 
-### 代码实现与详细注释
-```python
-from typing import Optional
+---
 
-# 定义二叉树节点类
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-- `max(left[1], right[1])` 用于确保当前节点的高度是左右子树的最大高度加 1。
+### 复杂度分析：
+
+- **时间复杂度**：O(n)，其中 n 是树的节点数。我们需要访问每个节点一次以计算高度。
+- **空间复杂度**：O(h)，其中 h 是树的高度。递归调用的栈深度为树的高度，最坏情况下（例如链式结构），空间复杂度达到 O(n)。
+
+
