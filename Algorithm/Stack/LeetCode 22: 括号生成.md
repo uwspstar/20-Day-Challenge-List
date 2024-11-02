@@ -90,8 +90,8 @@ class Solution:
 **总结**：
 - 回溯法适用于生成所有可能组合的问题，可以通过条件约束生成合法的解集。
 - 本题利用回溯生成所有可能的括号组合，确保生成的每个组合都有效。
+
 ---
-This code generates all valid combinations of `n` pairs of parentheses using **backtracking**. Let's walk through the code and provide a detailed explanation, including a step-by-step example.
 
 ### LeetCode 22: 括号生成 (Generate Parentheses)
 
