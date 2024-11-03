@@ -1,108 +1,157 @@
-### LeetCode 567: Permutation in String（字符串的排列）
+### LeetCode 567: 字符串的排列 (Permutation in String)
 
-https://leetcode.com/problems/permutation-in-string/description/
+**题目描述**：  
+给定两个字符串 `s1` 和 `s2`，编写一个函数判断 `s2` 中是否包含 `s1` 的某个排列。如果包含，返回 `True`，否则返回 `False`。  
+换句话说，判断是否存在一个 `s2` 的子串，包含 `s1` 的所有字符且每个字符的个数相同。
 
-**题目描述**：
-给定两个字符串 `s1` 和 `s2`，写一个函数判断 `s2` 中是否包含 `s1` 的某个排列。换句话说，判断 `s2` 中是否存在一个子串，它是 `s1` 的一个排列。
+[LeetCode 567: Permutation in String](https://leetcode.com/problems/permutation-in-string/)
 
-**代码实现**：
+---
+
+### 解题思路
+
+1. **字符计数**：  
+   使用两个计数数组或字典 `count_s1` 和 `count_s2_window`，分别存储 `s1` 中字符的计数和 `s2` 当前窗口中字符的计数。
+
+2. **滑动窗口**：  
+   在 `s2` 中建立一个长度为 `len(s1)` 的滑动窗口，每次移动窗口时更新窗口内的字符计数，检查窗口内的字符计数是否与 `s1` 的字符计数匹配。
+
+3. **匹配判断**：  
+   - 如果在滑动过程中 `count_s1 == count_s2_window`，则说明找到了 `s1` 的一个排列，返回 `True`。
+   - 如果滑动完成后没有匹配，返回 `False`。
+
+---
+
+### 代码实现
+
 ```python
 from collections import Counter
 
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        n1, n2 = len(s1), len(s2)
-        
-        # 如果 s1 的长度大于 s2 的长度，直接返回 False
-        if n1 > n2:
+        # 如果 s1 的长度大于 s2，则直接返回 False
+        if len(s1) > len(s2):
             return False
-        
-        # 创建 s1 的频率计数器和 s2 的初始窗口计数器
+
+        # 初始化 s1 的字符计数和 s2 的初始窗口字符计数
         count_s1 = Counter(s1)
-        window = Counter(s2[:n1])
-        
-        # 检查初始窗口是否与 s1 的计数器相等
-        if count_s1 == window:
+        count_s2_window = Counter(s2[:len(s1)])
+
+        # 如果初始窗口匹配，直接返回 True
+        if count_s1 == count_s2_window:
             return True
-        
+
         # 滑动窗口遍历 s2
-        for i in range(n1, n2):
-            window[s2[i]] += 1  # 加入新的字符到窗口
-            window[s2[i - n1]] -= 1  # 移除离开窗口的字符
-            
-            # 如果某个字符的计数变为 0，则从窗口中删除该字符
-            if window[s2[i - n1]] == 0:
-                del window[s2[i - n1]]
-            
-            # 如果当前窗口与 s1 的计数器相等，则找到了一个排列
-            if count_s1 == window:
+        for i in range(len(s1), len(s2)):
+            # 增加当前字符到窗口
+            count_s2_window[s2[i]] += 1
+            # 移除窗口左侧的字符
+            count_s2_window[s2[i - len(s1)]] -= 1
+            # 如果字符计数变为 0，则删除该字符
+            if count_s2_window[s2[i - len(s1)]] == 0:
+                del count_s2_window[s2[i - len(s1)]]
+
+            # 检查窗口是否匹配
+            if count_s1 == count_s2_window:
                 return True
-        
+
+        # 遍历结束后未找到匹配，返回 False
         return False
 ```
 
-### 题目分析
+---
 
-- 题目要求在字符串 `s2` 中找到一个与字符串 `s1` 排列相同的子串。
-- 该问题可以通过**滑动窗口**和**频率计数**来解决。
+### 逐行解释
 
-### 解决方案详解
+1. **边界条件**：
+   ```python
+   if len(s1) > len(s2):
+       return False
+   ```
+   - 如果 `s1` 的长度大于 `s2`，则不可能存在 `s1` 的排列，因此直接返回 `False`。
 
-#### 1. **长度判断**
-```python
-if n1 > n2:
-    return False
-```
-- 如果 `s1` 的长度大于 `s2`，显然 `s2` 中不可能包含 `s1` 的排列，直接返回 `False`。
+2. **初始化字符计数**：
+   ```python
+   count_s1 = Counter(s1)
+   count_s2_window = Counter(s2[:len(s1)])
+   ```
+   - `count_s1` 统计 `s1` 中每个字符的频率。
+   - `count_s2_window` 初始化为 `s2` 中第一个窗口的字符计数，窗口大小为 `len(s1)`。
 
-#### 2. **频率计数器**
-- 使用 `Counter` 来统计 `s1` 的字符频率，并初始化 `s2` 中第一个窗口的字符频率。
+3. **初始匹配判断**：
+   ```python
+   if count_s1 == count_s2_window:
+       return True
+   ```
+   - 如果初始窗口的字符计数与 `s1` 的字符计数相等，则说明 `s2` 的前 `len(s1)` 个字符就是一个匹配的排列，直接返回 `True`。
 
-#### 3. **初始窗口检查**
-```python
-if count_s1 == window:
-    return True
-```
-- 检查 `s2` 中的初始窗口是否等于 `s1` 的频率计数器，如果相等则说明找到了排列。
+4. **滑动窗口遍历 `s2`**：
+   ```python
+   for i in range(len(s1), len(s2)):
+   ```
+   - 从 `len(s1)` 开始遍历 `s2` 的字符，并滑动窗口。
 
-#### 4. **滑动窗口遍历**
-- 从 `s2` 的第 `n1` 个字符开始，逐步向右滑动窗口。
-- 对于每个新的字符，将其加入到当前窗口计数器。
-- 移除离开窗口的字符，并在计数为 0 时从窗口中删除该字符。
-- 每次移动后，检查当前窗口是否与 `s1` 的频率计数器相等，如果相等则返回 `True`。
+5. **更新窗口**：
+   ```python
+   count_s2_window[s2[i]] += 1
+   count_s2_window[s2[i - len(s1)]] -= 1
+   ```
+   - 增加窗口右侧的新字符的计数。
+   - 移除窗口左侧字符的计数（将左侧字符的计数减 1）。
 
-#### 5. **返回结果**
-- 如果遍历完 `s2` 后没有找到匹配的排列，则返回 `False`。
+6. **删除计数为 0 的字符**：
+   ```python
+   if count_s2_window[s2[i - len(s1)]] == 0:
+       del count_s2_window[s2[i - len(s1)]]
+   ```
+   - 如果窗口左侧字符的计数减少到 0，删除该字符，保持 `count_s2_window` 的简洁性。
 
-### 复杂度分析
+7. **检查是否匹配**：
+   ```python
+   if count_s1 == count_s2_window:
+       return True
+   ```
+   - 每次滑动后，检查当前窗口的字符计数是否与 `count_s1` 匹配。如果匹配，则返回 `True`。
 
-- **时间复杂度**：O(n1 + n2)
-  - 创建初始频率计数器的时间为 O(n1)。
-  - 滑动窗口的时间为 O(n2 - n1)。
-  - 因此，总时间复杂度为 O(n1 + n2)。
+8. **遍历结束返回 `False`**：
+   ```python
+   return False
+   ```
+   - 如果遍历完所有窗口后都没有找到匹配的排列，返回 `False`。
 
-- **空间复杂度**：O(1)
-  - 因为字母表只有 26 个字母，`Counter` 的大小最多为常数级别，因此空间复杂度为 O(1)。
+---
 
-### 示例讲解
+### 示例讲解：逐步解析示例步骤
 
-#### 示例 1
-```
-输入: s1 = "ab", s2 = "eidbaooo"
-输出: True
-解释: s2 中存在一个子串 "ba"，它是 s1 的一个排列。
-```
-- 初始窗口为 "ei"，不匹配。
-- 移动窗口，依次变为 "id"、"db"、"ba"，找到匹配的排列 "ba"。
+假设输入 `s1 = "ab"`，`s2 = "eidbaooo"`：
 
-#### 示例 2
-```
-输入: s1 = "ab", s2 = "eidboaoo"
-输出: False
-解释: s2 中不存在 s1 的任何排列。
-```
-- 滑动窗口遍历完整个 `s2` 后，未找到匹配的排列。
+1. **初始化**：
+   - `count_s1 = Counter({'a': 1, 'b': 1})`
+   - `count_s2_window = Counter({'e': 1, 'i': 1})`
+
+2. **初始窗口检查**：
+   - `count_s1` 与 `count_s2_window` 不相等，继续滑动窗口。
+
+3. **滑动窗口更新**：
+   - `i = 2`，添加字符 `d`，移除字符 `e`
+     - `count_s2_window = Counter({'i': 1, 'd': 1})`
+   - `count_s1` 与 `count_s2_window` 不相等
+
+   - `i = 3`，添加字符 `b`，移除字符 `i`
+     - `count_s2_window = Counter({'d': 1, 'b': 1})`
+   - `count_s1` 与 `count_s2_window` 不相等
+
+   - `i = 4`，添加字符 `a`，移除字符 `d`
+     - `count_s2_window = Counter({'b': 1, 'a': 1})`
+   - `count_s1` 与 `count_s2_window` 相等，返回 `True`
+
+**最终结果**：`s2` 中存在 `s1` 的一个排列，因此返回 `True`。
+
+---
 
 ### 总结
-- 通过**滑动窗口**和**频率计数**，可以高效地解决字符串排列匹配问题。
-- 时间复杂度为 O(n1 + n2)，适用于较大的输入。
+
+- **时间复杂度 O(n)**：窗口滑动过程只需一次遍历 `s2`，因此整体时间复杂度为 O(n)。
+- **空间复杂度 O(1)**：计数器使用的空间与字符集大小相关（例如 26 个字母），可以视为常数空间。
+
+这个滑动窗口和计数方法有效地解决了在字符串中查找排列的问题，是一种高效的解法。
