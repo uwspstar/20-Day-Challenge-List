@@ -74,6 +74,26 @@ flowchart TB
     cacheService -->|Retrieves/Updates Cached Configurations| extCache
 ```
 
+```markdown
+    ```mermaid
+    %% C4 Container Diagram %%
+    flowchart TB
+        subgraph SystemBoundary[Configuration System]
+            app[Configuration API]
+            cacheService[Cache Service]
+            db[(Configuration Database)]
+        end
+    
+        user[Admin User]
+        extCache[External Cache System]
+    
+        user -->|Uses| app
+        app -->|Calls| cacheService
+        app -->|Reads/Writes Configuration| db
+        cacheService -->|Retrieves/Updates Cached Configurations| extCache
+    ```
+```
+
 
 ### 说明
 - **`Configuration API`**：为用户提供配置管理功能。
