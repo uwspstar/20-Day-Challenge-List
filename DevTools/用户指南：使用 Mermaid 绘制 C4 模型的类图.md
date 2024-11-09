@@ -126,24 +126,26 @@ flowchart TB
 ```
 
 ```markdown
-```mermaid
-%% C4 组件图 %%
-flowchart TB
-    subgraph CacheServiceBoundary[Cache Service]
-        GlobalConfigurationCache[GlobalConfigurationCache]
-        CacheManager[CacheManager]
-        CacheAdapter[CacheAdapter]
-    end
-
-    app[Configuration API]
-    extCache[External Cache System]
-
-    app -->|Reads/Writes Configuration| GlobalConfigurationCache
-    GlobalConfigurationCache -->|Manages Cache| CacheManager
-    CacheManager -->|Uses Adapter Pattern| CacheAdapter
-    CacheAdapter -->|Interacts with External Cache| extCache
+    ```mermaid
+    %% C4 组件图 %%
+    flowchart TB
+        subgraph CacheServiceBoundary[Cache Service]
+            GlobalConfigurationCache[GlobalConfigurationCache]
+            CacheManager[CacheManager]
+            CacheAdapter[CacheAdapter]
+        end
+    
+        app[Configuration API]
+        extCache[External Cache System]
+    
+        app -->|Reads/Writes Configuration| GlobalConfigurationCache
+        GlobalConfigurationCache -->|Manages Cache| CacheManager
+        CacheManager -->|Uses Adapter Pattern| CacheAdapter
+        CacheAdapter -->|Interacts with External Cache| extCache
+    ```
 ```
-```
+
+
 ### 说明
 - **`GlobalConfigurationCache`**：主要组件，负责管理配置缓存。
 - **`CacheManager`**：处理缓存相关操作。
@@ -181,30 +183,30 @@ classDiagram
 ```
 
 ```markdown
-```mermaid
-%% GlobalConfigurationCache 组件的类图 %%
-classDiagram
-    class GlobalConfigurationCache {
-        - ReaderWriterLockSlim _lock
-        - Dictionary~int, string~ _cache
-        + void Add(int key, string value)
-        + string? Get(int key)
-    }
-
-    class ReaderWriterLockSlim {
-        + EnterWriteLock()
-        + EnterReadLock()
-        + ExitWriteLock()
-        + ExitReadLock()
-    }
-
-    class Dictionary~int, string~ {
-        + TryGetValue(int key, string value) string?
-    }
-
-    GlobalConfigurationCache --> ReaderWriterLockSlim : uses
-    GlobalConfigurationCache --> Dictionary~int, string~ : contains
-```
+    ```mermaid
+    %% GlobalConfigurationCache 组件的类图 %%
+    classDiagram
+        class GlobalConfigurationCache {
+            - ReaderWriterLockSlim _lock
+            - Dictionary~int, string~ _cache
+            + void Add(int key, string value)
+            + string? Get(int key)
+        }
+    
+        class ReaderWriterLockSlim {
+            + EnterWriteLock()
+            + EnterReadLock()
+            + ExitWriteLock()
+            + ExitReadLock()
+        }
+    
+        class Dictionary~int, string~ {
+            + TryGetValue(int key, string value) string?
+        }
+    
+        GlobalConfigurationCache --> ReaderWriterLockSlim : uses
+        GlobalConfigurationCache --> Dictionary~int, string~ : contains
+    ```
 ```
 
 ### 说明
