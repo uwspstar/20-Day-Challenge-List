@@ -36,6 +36,49 @@
 3. **编写 Mermaid 类图代码**：
    - 使用 Mermaid 语法定义类、关系和方法。以下是基于 `GlobalConfigurationCache` 类的示例。
 
+```mermaid
+   classDiagram
+       class GlobalConfigurationCache {
+           - ReaderWriterLockSlim _lock
+           - Dictionary~int, string~ _cache
+           + void Add(int key, string value)
+           + string? Get(int key)
+       }
+
+       class ReaderWriterLockSlim {
+           + EnterWriteLock()
+           + EnterReadLock()
+           + ExitWriteLock()
+           + ExitReadLock()
+       }
+
+       class Dictionary~int, string~ {
+           + TryGetValue(int key, string value) string?
+       }
+
+       GlobalConfigurationCache --> ReaderWriterLockSlim : uses
+       GlobalConfigurationCache --> Dictionary~int, string~ : contains
+
+       GlobalConfigurationCache : + Add(int key, string value)
+       GlobalConfigurationCache : + Get(int key)
+
+       class AddMethod {
+           - bool lockAcquired
+           + EnterWriteLock()
+           + Add to _cache
+           + ExitWriteLock()
+       }
+
+       class GetMethod {
+           - bool lockAcquired
+           + EnterReadLock()
+           + TryGetValue from _cache
+           + ExitReadLock()
+       }
+
+       GlobalConfigurationCache --> AddMethod : calls
+       GlobalConfigurationCache --> GetMethod : calls
+   ```
    ```markdown
    ```mermaid
    classDiagram
@@ -106,6 +149,7 @@
   - 在箭头后添加 `: 关系名称` 来标注关系。
 
   ```mermaid
+  classDiagram
   ClassA --> ClassB : uses
   ```
 
@@ -124,6 +168,7 @@
    - 列出公共方法 `Add` 和 `Get`。
 
    ```mermaid
+   classDiagram
    class GlobalConfigurationCache {
        - ReaderWriterLockSlim _lock
        - Dictionary~int, string~ _cache
@@ -137,6 +182,7 @@
    - 定义 `Dictionary<int, string>` 类，包含用于缓存读取的 `TryGetValue` 方法。
 
    ```mermaid
+   classDiagram
    class ReaderWriterLockSlim {
        + EnterWriteLock()
        + EnterReadLock()
@@ -153,6 +199,7 @@
    - 定义 `GlobalConfigurationCache` 使用 `ReaderWriterLockSlim`，并包含 `Dictionary<int, string>`。
 
    ```mermaid
+   classDiagram
    GlobalConfigurationCache --> ReaderWriterLockSlim : uses
    GlobalConfigurationCache --> Dictionary~int, string~ : contains
    ```
@@ -161,6 +208,7 @@
    - 可以创建单独的类如 `AddMethod` 和 `GetMethod` 来进一步细化逻辑。
 
    ```mermaid
+   classDiagram
    class AddMethod {
        - bool lockAcquired
        + EnterWriteLock()
