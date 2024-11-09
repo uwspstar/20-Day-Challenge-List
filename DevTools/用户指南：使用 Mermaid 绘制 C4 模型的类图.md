@@ -30,18 +30,18 @@ flowchart TB
 ```
 
 ```markdown
-```mermaid
-%% C4 上下文图 %%
-flowchart TB
-    subgraph SystemBoundary[Configuration System]
-        system[Configuration Service]
-    end
-
-    user[Admin User]
-    cache[External Cache System]
-
-    user -->|Manages| system
-    system -->|Retrieves and Updates Configuration| cache
+    ```mermaid
+    %% C4 上下文图 %%
+    flowchart TB
+        subgraph SystemBoundary[Configuration System]
+            system[Configuration Service]
+        end
+    
+        user[Admin User]
+        cache[External Cache System]
+    
+        user -->|Manages| system
+        system -->|Retrieves and Updates Configuration| cache
 ```
 ```
 
@@ -72,23 +72,23 @@ flowchart TB
 ```
 
 ```markdown
-```mermaid
-%% C4 容器图 %%
-flowchart TB
-    subgraph SystemBoundary[Configuration System]
-        app[Configuration API]
-        cacheService[Cache Service]
-        db[(Configuration Database)]
-    end
-
-    user[Admin User]
-    extCache[External Cache System]
-
-    user -->|Uses| app
-    app -->|Calls| cacheService
-    app -->|Reads/Writes Configuration| db
-    cacheService -->|Retrieves/Updates Cached Configurations| extCache
-```
+    ```mermaid
+    %% C4 容器图 %%
+    flowchart TB
+        subgraph SystemBoundary[Configuration System]
+            app[Configuration API]
+            cacheService[Cache Service]
+            db[(Configuration Database)]
+        end
+    
+        user[Admin User]
+        extCache[External Cache System]
+    
+        user -->|Uses| app
+        app -->|Calls| cacheService
+        app -->|Reads/Writes Configuration| db
+        cacheService -->|Retrieves/Updates Cached Configurations| extCache
+    ```
 ```
 
 ### 说明
