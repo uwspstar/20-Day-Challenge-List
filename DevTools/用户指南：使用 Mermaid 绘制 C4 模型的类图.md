@@ -55,7 +55,7 @@ flowchart TB
 **容器图** 展示 `Configuration System` 中的容器，包括应用程序、数据库或微服务。
 
 ```mermaid
-%% C4 容器图 %%
+%% C4 Container Diagram %%
 flowchart TB
     subgraph SystemBoundary[Configuration System]
         app[Configuration API]
@@ -69,7 +69,6 @@ flowchart TB
     user -->|Uses| app
     app -->|Calls| cacheService
     app -->|Reads/Writes Configuration| db
-    cacheService -->|Retrieves/Updates Cached Configurations| extCache
 ```
 
 ```markdown
