@@ -1,5 +1,18 @@
 ### the six load balancing algorithms depicted in the image:
 
+### Explanation of Diagram Components:
+
+1. **轮询法 (Round Robin)**: Requests are distributed evenly to each server in a cyclic order.
+2. **粘性轮询法 (Sticky Round Robin)**: Requests from the same user are consistently sent to the same server, preserving session data.
+3. **源地址哈希法 (Source IP Hash)**: A hash of the user's IP address determines the server, ensuring that the same IP always goes to the same server.
+4. **加权轮询法 (Weighted Round Robin)**: Servers have different weights; higher-weight servers receive more requests.
+5. **最短响应时间法 (Least Response Time)**: Requests are sent to the server with the shortest response time for faster handling.
+6. **最小连接数法 (Least Connections)**: Requests are routed to the server with the fewest active connections to balance load dynamically.
+
+---
+
+1. **轮询法 (Round Robin)**: Requests are distributed evenly to each server in a cyclic order.
+
 ```mermaid
 graph TD
     subgraph RoundRobin[轮询法]
@@ -11,6 +24,11 @@ graph TD
         LoadBalancer1 --> Server3[服务器3]
     end
 ```
+
+---
+
+2. **粘性轮询法 (Sticky Round Robin)**: Requests from the same user are consistently sent to the same server, preserving session data.
+
 ```mermaid
 graph TD
     subgraph StickyRoundRobin[粘性轮询法]
@@ -21,6 +39,11 @@ graph TD
         LoadBalancer2 --> Server3_sticky[服务器3]
     end
 ```
+---
+
+3. **源地址哈希法 (Source IP Hash)**: A hash of the user's IP address determines the server, ensuring that the same IP always goes to the same server.
+
+
 ```mermaid
 graph TD
     subgraph SourceIPHash[源地址哈希法]
@@ -32,6 +55,12 @@ graph TD
         LoadBalancer3 --> Server3_hash[服务器3 Hash IP 2]
     end
 ```
+
+---
+
+4. **加权轮询法 (Weighted Round Robin)**: Servers have different weights; higher-weight servers receive more requests.
+
+
 ```mermaid
 graph TD
     subgraph WeightedRoundRobin[加权轮询法]
@@ -43,6 +72,11 @@ graph TD
         LoadBalancer4 --> Server3_weight[服务器3 权重 0.1]
     end
 ```
+
+---
+
+5. **最短响应时间法 (Least Response Time)**: Requests are sent to the server with the shortest response time for faster handling.
+
 ```mermaid
 graph TD
     subgraph LeastResponseTime[最短响应时间法]
@@ -54,6 +88,11 @@ graph TD
         LoadBalancer5 --> Server3_response[服务器3 响应时间 80ms]
     end
 ```
+
+---
+
+6. **最小连接数法 (Least Connections)**: Requests are routed to the server with the fewest active connections to balance load dynamically.
+
 ```mermaid
 graph TD
     subgraph LeastConnections[最小连接数法]
@@ -66,13 +105,5 @@ graph TD
     end
 ```
 
-### Explanation of Diagram Components:
-
-1. **轮询法 (Round Robin)**: Requests are distributed evenly to each server in a cyclic order.
-2. **粘性轮询法 (Sticky Round Robin)**: Requests from the same user are consistently sent to the same server, preserving session data.
-3. **源地址哈希法 (Source IP Hash)**: A hash of the user's IP address determines the server, ensuring that the same IP always goes to the same server.
-4. **加权轮询法 (Weighted Round Robin)**: Servers have different weights; higher-weight servers receive more requests.
-5. **最短响应时间法 (Least Response Time)**: Requests are sent to the server with the shortest response time for faster handling.
-6. **最小连接数法 (Least Connections)**: Requests are routed to the server with the fewest active connections to balance load dynamically.
 
 Each of these methods provides a different approach to distributing incoming traffic efficiently based on varying criteria like session persistence, IP hashing, server response times, or current connection counts.
