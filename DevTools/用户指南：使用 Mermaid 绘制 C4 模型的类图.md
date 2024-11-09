@@ -28,6 +28,7 @@ flowchart TB
     user -->|Manages| system
     system -->|Retrieves and Updates Configuration| cache
 ```
+
 ```markdown
 ```mermaid
 %% C4 上下文图 %%
@@ -70,6 +71,7 @@ flowchart TB
     app -->|Reads/Writes Configuration| db
     cacheService -->|Retrieves/Updates Cached Configurations| extCache
 ```
+
 ```markdown
 ```mermaid
 %% C4 容器图 %%
@@ -117,6 +119,7 @@ flowchart TB
     CacheManager -->|Uses Adapter Pattern| CacheAdapter
     CacheAdapter -->|Interacts with External Cache| extCache
 ```
+
 ```markdown
 ```mermaid
 %% C4 组件图 %%
@@ -169,6 +172,7 @@ classDiagram
     GlobalConfigurationCache --> ReaderWriterLockSlim : uses
     GlobalConfigurationCache --> Dictionary~int, string~ : contains
 ```
+
 ```markdown
 ```mermaid
 %% GlobalConfigurationCache 组件的类图 %%
