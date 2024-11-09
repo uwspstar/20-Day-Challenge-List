@@ -10,7 +10,9 @@ graph TD
         LoadBalancer1 --> Server2[服务器2]
         LoadBalancer1 --> Server3[服务器3]
     end
-
+```
+```mermaid
+graph TD
     subgraph StickyRoundRobin[粘性轮询法]
         User4 --> LoadBalancer2[负载均衡]
         User5 --> LoadBalancer2
@@ -18,7 +20,9 @@ graph TD
         LoadBalancer2 --> Server2_sticky[服务器2]
         LoadBalancer2 --> Server3_sticky[服务器3]
     end
-
+```
+```mermaid
+graph TD
     subgraph SourceIPHash[源地址哈希法]
         User6 --> LoadBalancer3[负载均衡]
         User7 --> LoadBalancer3
@@ -27,7 +31,9 @@ graph TD
         LoadBalancer3 --> Server2_hash[服务器2 Hash IP 1]
         LoadBalancer3 --> Server3_hash[服务器3 Hash IP 2]
     end
-
+```
+```mermaid
+graph TD
     subgraph WeightedRoundRobin[加权轮询法]
         User9 --> LoadBalancer4[负载均衡]
         User10 --> LoadBalancer4
@@ -36,7 +42,9 @@ graph TD
         LoadBalancer4 --> Server2_weight[服务器2 权重 0.3]
         LoadBalancer4 --> Server3_weight[服务器3 权重 0.1]
     end
-
+```
+```mermaid
+graph TD
     subgraph LeastResponseTime[最短响应时间法]
         User12 --> LoadBalancer5[负载均衡]
         User13 --> LoadBalancer5
@@ -45,7 +53,9 @@ graph TD
         LoadBalancer5 --> Server2_response[服务器2 响应时间 30ms]
         LoadBalancer5 --> Server3_response[服务器3 响应时间 80ms]
     end
-
+```
+```mermaid
+graph TD
     subgraph LeastConnections[最小连接数法]
         User15 --> LoadBalancer6[负载均衡]
         User16 --> LoadBalancer6
