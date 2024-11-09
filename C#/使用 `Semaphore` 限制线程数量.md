@@ -111,3 +111,151 @@ class Program
 ### 总结
 
 `Semaphore` 是 C# 中一种强大的同步工具，它允许你控制访问资源的并发线程数量。通过设置并发访问限制，可以防止资源耗尽并提高性能。使用 `try-finally` 确保在异常发生时正确释放 `Semaphore`，使 `Semaphore` 成为多线程应用中管理并发的可靠方法。
+
+---
+
+### Semaphore 与 SemaphoreSlim 的区别
+
+`Semaphore` 和 `SemaphoreSlim` 都是用于控制线程访问共享资源的同步原语。它们的作用类似，但在用例、性能和资源消耗方面有明显的区别。
+
+#### 1. **目的和使用场景**
+
+- **Semaphore**：
+  - 设计用于跨进程的同步场景，可以在多个进程间共享。
+  - 适用于多个应用程序或不同进程的线程之间需要协调访问的资源限制。
+  - 由于支持跨进程，因此资源消耗较高。
+
+- **SemaphoreSlim**：
+  - 一种轻量化的版本，**仅适用于单进程** 内部的线程同步。
+  - 适合单个应用程序内部的资源限制，例如线程池或共享资源。
+  - 占用内存和系统资源较少，适合不需要跨进程同步的高性能应用。
+
+#### 2. **性能**
+
+- **Semaphore**：
+  - 使用内核级对象进行同步，这在跨进程通信中更可靠，但在获取和释放锁方面相对较慢。
+  - 适合需要更高稳定性和跨进程信号传递的场景，即使性能略有下降。
+
+- **SemaphoreSlim**：
+  - 采用内核级和用户级的组合实现，专为不需要跨进程的场景而优化，锁的获取和释放更快。
+  - 由于开销更小，因此适合需要快速锁定和释放的单进程高性能应用场景。
+
+#### 3. **内存和资源消耗**
+
+- **Semaphore**：
+  - 由于支持跨进程同步，占用的资源更多，内存占用更大。
+  - 更适合多进程或系统级的应用场景，适用于多个应用或进程需要协调访问同一共享资源的情况。
+
+- **SemaphoreSlim**：
+  - 占用的内存和系统资源较少，效率更高。
+  - 尽量使用托管的用户级构造，仅在必要时使用内核级同步（例如锁争用较高时）。
+
+#### 4. **API 不同之处**
+
+- **Semaphore**：
+  - 使用 `WaitOne()` 方法获取锁，使用 `Release()` 方法释放锁。
+  - 可以指定初始计数和最大计数，灵活控制允许进入的线程数量。
+
+- **SemaphoreSlim**：
+  - 同样使用 `Wait()` 和 `Release()` 方法，但支持异步方法（`WaitAsync()`），适合 .NET 的异步编程。
+  - 更好地集成了 `async/await` 异步编程模式，适合现代 .NET 应用程序中的资源管理。
+
+#### 5. **常见用例对比**
+
+| 特性                | Semaphore                                      | SemaphoreSlim                              |
+|--------------------|------------------------------------------------|--------------------------------------------|
+| **跨进程使用**     | 支持，可以在多个进程之间共享                      | 不支持，仅限于单进程内部使用                |
+| **理想的使用场景** | 多进程应用、系统级资源                          | 单个应用程序、线程池、单进程资源            |
+| **资源使用**       | 资源消耗较高                                    | 资源消耗较低                               |
+| **性能**           | 较慢，因使用内核级同步                           | 较快，因使用用户级同步                     |
+| **异步支持**       | 不支持                                         | 支持，适合异步编程                          |
+
+### 代码示例
+
+以下是使用 `Semaphore` 控制对共享资源的访问的示例：
+
+#### 使用 `Semaphore` 的示例
+
+```csharp
+using System;
+using System.Threading;
+
+class Program
+{
+    private static readonly Semaphore semaphore = new Semaphore(2, 2); // 允许最多2个线程同时进入
+
+    static void Main()
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            Thread thread = new Thread(AccessResource);
+            thread.Name = $"Thread {i}";
+            thread.Start();
+        }
+    }
+
+    static void AccessResource()
+    {
+        Console.WriteLine($"{Thread.CurrentThread.Name} 正在等待进入...");
+        
+        semaphore.WaitOne(); // 获取信号量
+        try
+        {
+            Console.WriteLine($"{Thread.CurrentThread.Name} 已进入临界区。");
+            Thread.Sleep(1000); // 模拟工作
+        }
+        finally
+        {
+            Console.WriteLine($"{Thread.CurrentThread.Name} 正在释放信号量。");
+            semaphore.Release(); // 释放信号量
+        }
+    }
+}
+```
+
+#### 使用 `SemaphoreSlim` 的示例
+
+```csharp
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+class Program
+{
+    private static readonly SemaphoreSlim semaphoreSlim = new SemaphoreSlim(2, 2); // 允许最多2个线程同时进入
+
+    static async Task Main()
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            int threadNumber = i;
+            _ = Task.Run(async () => await AccessResourceAsync(threadNumber));
+        }
+
+        await Task.Delay(5000); // 等待所有任务完成
+    }
+
+    static async Task AccessResourceAsync(int threadNumber)
+    {
+        Console.WriteLine($"Thread {threadNumber} 正在等待进入...");
+
+        await semaphoreSlim.WaitAsync(); // 异步获取信号量
+        try
+        {
+            Console.WriteLine($"Thread {threadNumber} 已进入临界区。");
+            await Task.Delay(1000); // 模拟异步工作
+        }
+        finally
+        {
+            Console.WriteLine($"Thread {threadNumber} 正在释放信号量。");
+            semaphoreSlim.Release(); // 释放信号量
+        }
+    }
+}
+```
+
+### 总结
+
+- **Semaphore** 更适合跨进程同步的场景，适用于在多个应用或进程间协调资源访问。由于使用内核级同步，资源消耗更高，因此性能较 `SemaphoreSlim` 稍低。
+- **SemaphoreSlim** 是一个轻量化、仅限单进程的替代方案，设计用于单进程中的高性能场景。它在速度上更快，并且支持异步操作，适合现代 .NET 应用程序中的资源管理。
+- 
