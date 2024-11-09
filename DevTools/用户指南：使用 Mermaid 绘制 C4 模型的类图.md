@@ -69,6 +69,7 @@ flowchart TB
     user -->|Uses| app
     app -->|Calls| cacheService
     app -->|Reads/Writes Configuration| db
+    cacheService -->|Retrieves/Updates Cached Configurations| extCache
 ```
 
 
