@@ -42,13 +42,15 @@ flowchart TB
     
         user -->|Manages| system
         system -->|Retrieves and Updates Configuration| cache
-```
+    ```
 ```
 
 ### 说明
 - **`Configuration System`**：主系统边界，包含 `Configuration Service`。
 - **`Admin User`**：表示与系统交互以管理配置的用户。
 - **`External Cache System`**：存储或检索配置数据的外部系统。
+
+---
 
 ### 2. **容器图**
 
@@ -78,6 +80,8 @@ flowchart TB
 - **`Cache Service`**：与外部缓存系统交互。
 - **`Configuration Database`**：用于持久存储配置数据。
 - **`External Cache System`**：用于缓存配置数据的外部系统。
+
+---
 
 ### 3. **组件图**
 
@@ -124,6 +128,8 @@ flowchart TB
 - **`GlobalConfigurationCache`**：主要组件，负责管理配置缓存。
 - **`CacheManager`**：处理缓存相关操作。
 - **`CacheAdapter`**：提供接口以便与 `External Cache System` 交互。
+
+---
 
 ### 4. **代码级别的类图**
 
