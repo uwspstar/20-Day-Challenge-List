@@ -1,3 +1,46 @@
+### 
+```mermaid
+flowchart TD
+    Start["Start Program"] --> |Main| StartConsumers
+    Start --> |Main| RunProducer
+    
+    subgraph QueueControl["Queue Control Mechanism"]
+        direction TB
+        consumeEvent["consumeEvent (ManualResetEventSlim)"]
+        produceEvent["produceEvent (ManualResetEventSlim)"]
+    end
+    
+    subgraph ProducerConsumer["Producer & Consumer Threads"]
+        direction TB
+        
+        RunProducer["RunProducer - Producer Logic"]
+        ProduceItems["ProduceItems - Produce Items to Queue"]
+        Consume["Consume - Consumer Logic"]
+        ConsumerThreads["StartConsumers - Create Consumer Threads"]
+    end
+    
+    ConsumerThreads --> |Creates Consumers| Consume
+    
+    RunProducer --> |Wait for produceEvent| ProduceItems
+    RunProducer -.-> |Waits for 'p' input| ProduceItems
+    ProduceItems --> |Enqueue items to queue| queue((Queue))
+    queue --> Consume
+    
+    Consume --> |Dequeue items from queue| ConsumerCount["Increment consumerCount"]
+    ConsumerCount --> |Checks if all consumers done| ResetEvents["Reset Events for Producer"]
+    
+    ResetEvents --> |Reset consumeEvent and allow Producer| RunProducer
+    
+    consumeEvent --> |Signals when items ready| Consume
+    produceEvent --> |Allows Producer to produce items| RunProducer
+    
+    NoteStart["System waits for 'p' input to produce items"]
+    NoteConsumers["Consumers consume items until queue is empty"]
+    
+    RunProducer --> NoteStart
+    Consume --> NoteConsumers
+```
+
 ```csharp
 using System;
 using System.Collections.Generic;
