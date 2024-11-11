@@ -65,7 +65,10 @@ graph TD
         查询服务Azure[查询服务] --> SQLAzure[Azure SQL DTO]
         用户Azure --> 查询服务Azure
     end
+```
 
+```mermaid
+graph TD
     style 什么是CQRS fill:#A3BFFA,stroke:#333,stroke-width:1px;
     style CQRS核心概念 fill:#FEB2B2,stroke:#333,stroke-width:1px;
     style CQRS决策矩阵 fill:#DDA3FF,stroke:#333,stroke-width:1px;
