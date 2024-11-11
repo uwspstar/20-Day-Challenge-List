@@ -3,49 +3,49 @@
 ```mermaid
 graph TD
 
-    subgraph 什么是CQRS[什么是CQRS?]
-        CommandService[命令 (写操作)] --> Consistency[最终一致性]
-        Consistency --> QueryService[查询 (读操作)]
+    subgraph 什么是CQRS[什么是CQRS]
+        命令服务[命令 写操作] --> 最终一致性[最终一致性]
+        最终一致性 --> 查询服务[查询 读操作]
     end
     
     subgraph CQRS核心概念[CQRS核心概念]
-        Separation[关注点分离]
-        CommandModel[命令模型]
-        QueryModel[查询模型]
-        EventDriven[事件驱动架构]
+        关注点分离[关注点分离]
+        命令模型[命令模型]
+        查询模型[查询模型]
+        事件驱动架构[事件驱动架构]
         服务A --> 中介[中介] --> 服务B
         服务B --> 中介 --> 服务C
         服务C --> 中介 --> 服务D
     end
 
     subgraph CQRS决策矩阵[CQRS决策矩阵]
-        Performance[性能与可扩展性]
-        DomainComplexity[领域复杂性]
-        Audit[审计与合规]
-        Operational[操作复杂性]
-        DevelopmentScalability[开发团队的可扩展性]
+        性能与可扩展性[性能与可扩展性]
+        领域复杂性[领域复杂性]
+        审计与合规[审计与合规]
+        操作复杂性[操作复杂性]
+        开发团队的可扩展性[开发团队的可扩展性]
     end
 
     subgraph AWS上的CQRS[AWS上的CQRS]
         用户AWS[用户] --> 命令服务AWS[命令服务]
-        命令服务AWS --> DynamoDB[AWS DynamoDB (领域模型)]
-        查询服务AWS[查询服务] --> Aurora[AWS Aurora (DTO)]
+        命令服务AWS --> DynamoDB[AWS DynamoDB 领域模型]
+        查询服务AWS[查询服务] --> Aurora[AWS Aurora DTO]
         用户AWS --> 查询服务AWS
     end
 
     subgraph 云端的CQRS[云端的CQRS]
         用户Cloud[用户] --> 命令服务Cloud[命令服务]
         命令服务Cloud --> Lambda[Lambda函数]
-        Lambda --> DynamoDBCloud[云端DynamoDB (领域模型)]
-        查询服务Cloud[查询服务] --> AuroraCloud[云端Aurora (DTO)]
+        Lambda --> DynamoDBCloud[云端DynamoDB 领域模型]
+        查询服务Cloud[查询服务] --> AuroraCloud[云端Aurora DTO]
         用户Cloud --> 查询服务Cloud
     end
 
     subgraph Azure上的CQRS[Azure上的CQRS]
         用户Azure[用户] --> 命令服务Azure[命令服务]
-        命令服务Azure --> CosmosDB[Azure CosmosDB (领域模型)]
+        命令服务Azure --> CosmosDB[Azure CosmosDB 领域模型]
         CosmosDB --> 变更Feed[CosmosDB变更Feed]
-        查询服务Azure[查询服务] --> SQLAzure[Azure SQL (DTO)]
+        查询服务Azure[查询服务] --> SQLAzure[Azure SQL DTO]
         用户Azure --> 查询服务Azure
     end
 
@@ -55,6 +55,7 @@ graph TD
     style AWS上的CQRS fill:#B2F5EA,stroke:#333,stroke-width:1px;
     style 云端的CQRS fill:#D9F99D,stroke:#333,stroke-width:1px;
     style Azure上的CQRS fill:#C4B5FD,stroke:#333,stroke-width:1px;
+
 ```
 
 ### 各部分说明
