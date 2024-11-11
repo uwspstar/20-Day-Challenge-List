@@ -7,6 +7,10 @@ graph TD
         命令服务[命令 写操作] --> 最终一致性[最终一致性]
         最终一致性 --> 查询服务[查询 读操作]
     end
+```
+
+```mermaid
+graph TD
     
     subgraph CQRS核心概念[CQRS核心概念]
         关注点分离[关注点分离]
@@ -17,7 +21,10 @@ graph TD
         服务B --> 中介 --> 服务C
         服务C --> 中介 --> 服务D
     end
+```
 
+```mermaid
+graph TD
     subgraph CQRS决策矩阵[CQRS决策矩阵]
         性能与可扩展性[性能与可扩展性]
         领域复杂性[领域复杂性]
@@ -25,6 +32,10 @@ graph TD
         操作复杂性[操作复杂性]
         开发团队的可扩展性[开发团队的可扩展性]
     end
+```
+
+```mermaid
+graph TD
 
     subgraph AWS上的CQRS[AWS上的CQRS]
         用户AWS[用户] --> 命令服务AWS[命令服务]
@@ -32,7 +43,10 @@ graph TD
         查询服务AWS[查询服务] --> Aurora[AWS Aurora DTO]
         用户AWS --> 查询服务AWS
     end
+```
 
+```mermaid
+graph TD
     subgraph 云端的CQRS[云端的CQRS]
         用户Cloud[用户] --> 命令服务Cloud[命令服务]
         命令服务Cloud --> Lambda[Lambda函数]
@@ -40,7 +54,10 @@ graph TD
         查询服务Cloud[查询服务] --> AuroraCloud[云端Aurora DTO]
         用户Cloud --> 查询服务Cloud
     end
+```
 
+```mermaid
+graph TD
     subgraph Azure上的CQRS[Azure上的CQRS]
         用户Azure[用户] --> 命令服务Azure[命令服务]
         命令服务Azure --> CosmosDB[Azure CosmosDB 领域模型]
