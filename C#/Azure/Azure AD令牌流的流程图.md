@@ -5,17 +5,17 @@
 
 ```mermaid
 flowchart TD
-    Start[1. 开始 - 客户端应用程序] -->|2. 请求访问受保护的资源| ClientApp[客户端应用]
-    ClientApp -->|3. 向Azure AD发送身份验证请求| AzureAD[Azure AD]
-    AzureAD -->|4. 验证客户端凭据 ClientId TenantId ClientSecret| AzureADValidation[验证]
-    AzureADValidation -->|5. 验证通过| Token[生成访问令牌 Access Token]
-    AzureADValidation -->|5. 验证失败| Error[返回错误信息]
+    Start[1 开始 - 客户端应用程序] -->|2 请求访问受保护的资源| ClientApp[客户端应用]
+    ClientApp -->|3 向Azure AD发送身份验证请求| AzureAD[Azure AD]
+    AzureAD -->|4 验证客户端凭据 ClientId TenantId ClientSecret| AzureADValidation[验证]
+    AzureADValidation -->|5 验证通过| Token[生成访问令牌 Access Token]
+    AzureADValidation -->|5 验证失败| Error[返回错误信息]
     
-    Token -->|6. 返回访问令牌| ClientApp
-    ClientApp -->|7. 携带令牌访问API| ProtectedResource[受保护的API资源]
-    ProtectedResource -->|8. 验证令牌| TokenValidation[令牌验证]
-    TokenValidation -->|9. 令牌有效| Success[返回受保护数据]
-    TokenValidation -->|9. 令牌无效或过期| Unauthorized[拒绝访问]
+    Token -->|6 返回访问令牌| ClientApp
+    ClientApp -->|7 携带令牌访问API| ProtectedResource[受保护的API资源]
+    ProtectedResource -->|8 验证令牌| TokenValidation[令牌验证]
+    TokenValidation -->|9 令牌有效| Success[返回受保护数据]
+    TokenValidation -->|9 令牌无效或过期| Unauthorized[拒绝访问]
 
     style Start fill:#d3e3fc,stroke:#333,stroke-width:1px;
     style ClientApp fill:#b3d4fc,stroke:#333,stroke-width:1px;
