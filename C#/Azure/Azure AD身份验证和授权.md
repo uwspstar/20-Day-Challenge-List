@@ -10,16 +10,17 @@
 C4Context
 title Azure AD 认证与授权上下文模型
 
-Person(用户, "用户")
-System_Boundary(系统边界, "应用程序") {
-    System(API, "应用API", "C# Web API", "处理用户请求并执行授权检查")
+Person(用户, "用户") 
+
+Boundary(应用系统, "应用程序") {
+    System(API, "应用 API", "C# Web API", "处理用户请求并执行授权检查")
 }
 
-System_Ext(AD, "Azure AD", "身份服务", "提供身份验证和授权服务")
+System_Ext(AzureAD, "Azure AD", "身份服务", "提供身份验证和授权服务")
 
 Rel(用户, API, "发送请求", "HTTP")
-Rel(API, AD, "请求访问令牌", "OAuth2.0 / OpenID Connect")
-Rel(AD, API, "返回访问令牌", "JWT")
+Rel(API, AzureAD, "请求访问令牌", "OAuth2.0 / OpenID Connect")
+Rel(AzureAD, API, "返回访问令牌", "JWT")
 Rel(API, 用户, "返回授权后的数据", "HTTP")
 ```
 
