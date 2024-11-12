@@ -1,4 +1,6 @@
-JWT（JSON Web Token）是一种基于JSON格式的令牌标准，用于在各方之间安全地传输信息。JWT的结构简单、携带的信息丰富且自包含，因此在身份验证和授权中应用广泛。以下是对JWT的详细解释，包括其结构、各部分作用、常见用法以及安全注意事项。
+### JWT（JSON Web Token）
+
+是一种基于JSON格式的令牌标准，用于在各方之间安全地传输信息。JWT的结构简单、携带的信息丰富且自包含，因此在身份验证和授权中应用广泛。以下是对JWT的详细解释，包括其结构、各部分作用、常见用法以及安全注意事项。
 
 ---
 
@@ -11,8 +13,6 @@ JWT由三个部分组成，使用点号（`.`）分隔，通常格式如下：
 ```
 
 每个部分都分别使用Base64编码，以便于在网络上传输。
-
----
 
 ### 1. Header（头部）
 
@@ -35,8 +35,6 @@ JWT由三个部分组成，使用点号（`.`）分隔，通常格式如下：
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 ```
-
----
 
 ### 2. Payload（载荷）
 
@@ -73,8 +71,6 @@ Payload还可以包含自定义声明，如用户的角色、权限等。
 eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkphbmUgRG9lIiwiYWRtaW4iOnRydWUsImlzcyI6Imh0dHBzOi8veW91ci1hdXRoLXNlcnZlci5jb20iLCJhdWQiOiJ5b3VyLWNsaWVudC1pZCIsImV4cCI6MTYxNTE1NjQwMH0
 ```
 
----
-
 ### 3. Signature（签名）
 
 **Signature**部分用于验证令牌的真实性和数据的完整性。签名是根据以下内容生成的：
@@ -98,8 +94,6 @@ HMACSHA256(
 ```
 s5cCJv7S1NSjNf1aY0_gK3UZ5b9w9A1JH82A4Ps74dU
 ```
-
----
 
 ### JWT 示例
 
