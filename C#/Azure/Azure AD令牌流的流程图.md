@@ -1,13 +1,13 @@
 ### Azure AD令牌流的流程图
 
-此流程展示了客户端应用如何向Azure AD请求并获取访问令牌的过程。
+此流程展示了客户端应用如何向Azure AD请求并获取访问令牌的过程。 
 
 ```mermaid
 flowchart TD
     Start[开始 - 客户端应用程序] -->|请求访问受保护的资源| ClientApp[客户端应用]
     ClientApp -->|向Azure AD发送身份验证请求| AzureAD[Azure AD]
-    AzureAD -->|验证客户端凭据（ClientId, TenantId, ClientSecret）| AzureADValidation[验证]
-    AzureADValidation -->|验证通过| Token[生成访问令牌 (Access Token)]
+    AzureAD -->|验证客户端凭据 ClientId TenantId ClientSecret| AzureADValidation[验证]
+    AzureADValidation -->|验证通过| Token[生成访问令牌 Access Token]
     AzureADValidation -->|验证失败| Error[返回错误信息]
     
     Token -->|返回访问令牌| ClientApp
@@ -28,16 +28,17 @@ flowchart TD
     style Unauthorized fill:#ffcdd2,stroke:#333,stroke-width:1px;
 ```
 
-### 流程说明
+### 流程描述
 
-1. **客户端应用程序发起请求**：客户端应用程序请求访问受保护的API资源。
-2. **向Azure AD发送身份验证请求**：客户端应用向Azure AD请求访问令牌，传递`ClientId`、`TenantId`和`ClientSecret`等凭据。
-3. **Azure AD验证凭据**：Azure AD验证客户端凭据，确保身份验证请求的合法性。
-   - 如果验证成功，Azure AD生成并返回访问令牌。
+1. **开始**：客户端应用程序发起请求，想要访问受保护的资源。
+2. **请求身份验证**：客户端应用向Azure AD发送身份验证请求，包含ClientId、TenantId和ClientSecret。
+3. **Azure AD验证**：Azure AD验证凭据。
+   - 如果验证通过，生成访问令牌。
    - 如果验证失败，返回错误信息。
-4. **客户端获取令牌并访问受保护资源**：客户端应用携带令牌请求受保护的API资源。
-5. **受保护资源验证令牌**：受保护的API验证访问令牌的有效性。
+4. **返回访问令牌**：将生成的访问令牌返回给客户端应用。
+5. **携带令牌访问API**：客户端应用携带令牌请求受保护的API资源。
+6. **验证令牌**：受保护资源验证令牌。
    - 如果令牌有效，返回受保护的数据。
-   - 如果令牌无效或已过期，拒绝访问。
+   - 如果令牌无效或已过期，拒绝访问。 
 
-此流程图直观地展示了Azure AD身份验证和授权的令牌流，帮助理解Azure AD如何确保访问控制的安全性。
+希望这次可以正常渲染。如果还有问题，请尝试去掉部分内容或进一步简化。
