@@ -12,7 +12,6 @@
 
 - **Refresh Token**：用于获取新的Access Token的长效令牌。当Access Token过期时，应用程序可以使用Refresh Token向认证服务器请求新的Access Token，而不需要用户再次登录。
 
----
 
 ### C#代码示例：ID Token、Access Token 和 Refresh Token
 
@@ -188,7 +187,6 @@ public class Program
 - **`AcquireNewAccessTokenWithRefreshTokenAsync`**：使用Refresh Token获取新的Access Token。
 - **`CallProtectedApiAsync`**：使用Access Token调用受保护的API。
 
----
 
 ### Mermaid类图
 
@@ -226,15 +224,12 @@ Program --> TokenService : 依赖
 
 - **Program**：应用程序入口，通过`Main`方法实例化 `TokenService` 并调用其方法。
 
----
 
 通过上面的C#代码示例和类图，展示了如何通过Azure AD获取ID Token、Access Token和Refresh Token，并使用这些令牌在应用中进行身份验证和授权。这种实现方式常用于需要保护的Web应用或API中，有助于确保安全性和用户体验。
 
 ---
 
 以下是**ID Token**、**Access Token** 和 **Refresh Token** 的JWT（JSON Web Token）格式示例，每个示例都包含了典型的JWT结构，以帮助理解它们的内容和用途。每种令牌的结构基本相同，通常分为 **Header**、**Payload** 和 **Signature** 三部分。
-
----
 
 ### JWT 示例
 
@@ -338,7 +333,6 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM
 - **Signature**：
   由Header和Payload生成的签名部分。
 
----
 
 ### JWT 总结
 
