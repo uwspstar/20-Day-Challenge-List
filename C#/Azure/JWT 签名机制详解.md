@@ -2,6 +2,54 @@
 
 JWT 的签名部分是确保令牌的真实性和数据完整性的重要组成部分。通过签名，接收方可以验证JWT是否是由可信的颁发者生成的，且JWT中的数据是否在传输过程中被篡改。以下是对JWT签名部分的详细解释，包括如何生成、验证，以及如何选择合适的签名算法。
 
+```mermaid
+flowchart TD
+    Start[开始 - 客户端应用请求JWT] -->|1 生成Header和Payload| Encode[Base64编码Header和Payload]
+    Encode -->|2 将编码后的Header和Payload连接| Concatenate[连接Header和Payload]
+    Concatenate -->|3 使用密钥和签名算法生成签名| Sign[生成Signature]
+    Sign -->|4 拼接生成JWT令牌| JWT[完整的JWT: Header.Payload.Signature]
+    
+    JWT -->|5 客户端携带JWT发送请求| ClientRequest[客户端请求资源]
+    ClientRequest -->|6 服务端收到并解析JWT| ParseJWT[解析Header, Payload, Signature]
+    ParseJWT -->|7 验证签名算法| VerifyAlgorithm[验证签名算法]
+    VerifyAlgorithm -->|8 使用密钥重新生成签名| ReSign[重新生成Signature]
+    ReSign -->|9 比较生成的签名和JWT中的签名| CompareSignatures[签名验证]
+    
+    CompareSignatures -->|验证成功| Success[成功: JWT未被篡改, 允许访问]
+    CompareSignatures -->|验证失败| Failure[失败: JWT不可信, 拒绝访问]
+
+    style Start fill:#d3e3fc,stroke:#333,stroke-width:1px;
+    style Encode fill:#b3d4fc,stroke:#333,stroke-width:1px;
+    style Concatenate fill:#a2c4f9,stroke:#333,stroke-width:1px;
+    style Sign fill:#e3f2fd,stroke:#333,stroke-width:1px;
+    style JWT fill:#fdd835,stroke:#333,stroke-width:1px;
+    style ClientRequest fill:#c8e6c9,stroke:#333,stroke-width:1px;
+    style ParseJWT fill:#dcedc8,stroke:#333,stroke-width:1px;
+    style VerifyAlgorithm fill:#f8bbd0,stroke:#333,stroke-width:1px;
+    style ReSign fill:#A5D6A7,stroke:#333,stroke-width:1px;
+    style CompareSignatures fill:#F8BBD0,stroke:#333,stroke-width:1px;
+    style Success fill:#a5d6a7,stroke:#333,stroke-width:1px;
+    style Failure fill:#ffcdd2,stroke:#333,stroke-width:1px;
+```
+
+### 流程步骤说明
+
+1. **生成Header和Payload**：客户端生成JWT的Header和Payload部分，并分别对它们进行Base64编码。
+2. **连接编码后的Header和Payload**：将编码后的Header和Payload通过点号连接。
+3. **生成签名**：使用预定的签名算法和密钥对连接的字符串生成签名。
+4. **拼接生成JWT令牌**：将签名添加到Header和Payload后，生成完整的JWT。
+5. **客户端携带JWT发送请求**：客户端携带生成的JWT向服务端请求资源。
+6. **服务端解析JWT**：服务端解析JWT，将其分解为Header、Payload和Signature三部分。
+7. **验证签名算法**：服务端检查JWT的Header，确定签名算法是否正确。
+8. **重新生成签名**：服务端使用相同的算法和密钥重新生成签名。
+9. **比较签名**：将重新生成的签名与JWT中的签名进行比较，验证JWT是否未被篡改。
+
+- **验证成功**：如果签名匹配，则JWT未被篡改，允许客户端访问资源。
+- **验证失败**：如果签名不匹配，则JWT可能已被篡改或不可信，拒绝客户端访问。
+
+此流程图直观展示了JWT的生成、传输和验证过程，有助于理解JWT如何确保数据的完整性和安全性。
+
+
 ---
 
 ### JWT 签名的组成
