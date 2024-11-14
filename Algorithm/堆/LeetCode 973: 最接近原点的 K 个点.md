@@ -1,5 +1,6 @@
 ### LeetCode 973: K Closest Points to Origin
-[LeetCode 题目链接](https://leetcode.com/problems/k-closest-points-to-origin/)
+
+https://leetcode.com/problems/k-closest-points-to-origin/
 
 **题目描述**：
 给定一个二维平面上的点列表，找到离原点 (0, 0) 最近的 k 个点。
