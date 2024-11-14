@@ -1,4 +1,14 @@
 ### Microsoft Graph API 
+Microsoft Graph 是一个统一的 API 端点，为开发者提供从 Microsoft 365、Windows 和 Enterprise Mobility + Security 服务中获取数据和智能的途径。它使开发者能够构建应用程序，与包括用户、群组、邮件、日历和文件在内的多种资源进行交互。
+
+将人工智能（AI）融入 Microsoft Graph 后，进一步增强了其功能，使其能够基于组织数据提供洞察和分析。例如，Microsoft Graph Data Connect 支持批量提取大量数据集，从而实现高级数据分析和机器学习应用。
+
+此外，微软还引入了 AI 驱动的功能，如 Copilot，它与 Microsoft 365 应用程序集成，帮助用户完成诸如撰写邮件、总结会议和分析数据等任务。Copilot 利用 Microsoft Graph 访问相关的组织数据，提供上下文感知的帮助。
+
+开发者可以利用 Microsoft Graph API 访问这些 AI 驱动的功能，并将其集成到自定义应用程序中，从而提升组织的生产力和协作能力。
+
+- https://learn.microsoft.com/en-us/graph/overview
+- https://developer.microsoft.com/en-us/graph/graph-explorer
 
 下面是使用 C# 和 Azure 配合 Microsoft Graph API 获取用户数据的详细步骤以及代码示例。这个过程包括 Azure 应用程序注册、权限配置、获取访问令牌、调用 Microsoft Graph API 和处理数据的具体实现。
 
