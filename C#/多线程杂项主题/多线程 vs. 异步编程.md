@@ -185,7 +185,7 @@ class Program
 
 ### 序列图：多线程 vs. 异步编程
 
-以下是一个 **Mermaid 序列图**，展示了两种方法的执行流程差异。
+以下是一个 **序列图**，展示了两种方法的执行流程差异。
 
 ```mermaid
 sequenceDiagram
