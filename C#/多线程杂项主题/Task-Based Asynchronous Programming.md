@@ -135,52 +135,49 @@ async Task DownloadDataAsync()
 
 ---
 
-Yes, a **Mermaid sequence diagram** can help illustrate how `await` creates a callback point and how the method resumes execution in stages, allowing the main thread to continue processing other tasks.
-
-Here's a Mermaid sequence diagram for better understanding:
+一个 ** 序列图**可以很好地展示 `await` 如何创建回调点以及方法如何分阶段恢复执行，让主线程可以继续处理其他任务。
 
 ```mermaid
 sequenceDiagram
-    participant MainThread
-    participant DownloadDataAsync
-    participant DownloadFileAsync
-    participant ProcessDataAsync
+    participant 主线程 as MainThread
+    participant 下载数据异步 as DownloadDataAsync
+    participant 下载文件异步 as DownloadFileAsync
+    participant 处理数据异步 as ProcessDataAsync
 
-    MainThread->>+DownloadDataAsync: Call DownloadDataAsync()
-    DownloadDataAsync->>+DownloadFileAsync: await DownloadFileAsync()
-    DownloadFileAsync-->>DownloadDataAsync: Returns Data (Callback Point 1)
+    主线程->>+下载数据异步: 调用 DownloadDataAsync()
+    下载数据异步->>+下载文件异步: await DownloadFileAsync()
+    下载文件异步-->>下载数据异步: 返回数据 (回调点 1)
 
-    Note right of DownloadDataAsync: Paused at Callback Point 1<br>Waiting for DownloadFileAsync to complete
+    Note right of 下载数据异步: 在回调点 1 暂停<br>等待 DownloadFileAsync 完成
 
-    DownloadDataAsync->>+ProcessDataAsync: await ProcessDataAsync(data)
-    ProcessDataAsync-->>DownloadDataAsync: Returns Processed Result (Callback Point 2)
+    下载数据异步->>+处理数据异步: await ProcessDataAsync(data)
+    处理数据异步-->>下载数据异步: 返回处理结果 (回调点 2)
 
-    Note right of DownloadDataAsync: Paused at Callback Point 2<br>Waiting for ProcessDataAsync to complete
+    Note right of 下载数据异步: 在回调点 2 暂停<br>等待 ProcessDataAsync 完成
 
-    DownloadDataAsync->>-MainThread: Completion Message "Data processing completed"
+    下载数据异步->>-主线程: 完成消息 "Data processing completed"
 
-    Note right of MainThread: Main thread remains non-blocking,<br>can continue other tasks between callback points
+    Note right of 主线程: 主线程保持非阻塞<br>可在回调点之间继续其他任务
 ```
 
-### Explanation of the Diagram
+### 图解说明
 
-1. **Starting the Method**:
-   - `MainThread` calls `DownloadDataAsync`. The method begins execution on a separate thread but pauses at each `await` point, allowing the main thread to continue without being blocked.
+1. **方法开始**：
+   - `主线程`调用 `DownloadDataAsync`。方法开始在一个独立的线程上执行，但在每个 `await` 点暂停，以便主线程保持非阻塞。
 
-2. **First Callback Point**:
-   - `DownloadDataAsync` encounters the first `await` at `DownloadFileAsync()`, creating **Callback Point 1**.
-   - At this point, the method waits for `DownloadFileAsync` to complete but does not block `MainThread`.
+2. **第一个回调点**：
+   - `DownloadDataAsync` 在调用 `DownloadFileAsync()` 时遇到第一个 `await`，此时创建**回调点 1**。
+   - 此时，方法等待 `DownloadFileAsync` 完成，但不会阻塞 `主线程`。
 
-3. **Resuming Execution**:
-   - When `DownloadFileAsync` completes, `DownloadDataAsync` resumes from **Callback Point 1** and continues with `ProcessDataAsync`.
+3. **恢复执行**：
+   - 当 `DownloadFileAsync` 完成后，`DownloadDataAsync` 从**回调点 1**恢复执行，继续调用 `ProcessDataAsync`。
 
-4. **Second Callback Point**:
-   - `DownloadDataAsync` encounters another `await` with `ProcessDataAsync(data)`, creating **Callback Point 2**.
-   - The method pauses again until `ProcessDataAsync` completes, while `MainThread` can still process other tasks.
+4. **第二个回调点**：
+   - `DownloadDataAsync` 遇到另一个 `await`，即 `ProcessDataAsync(data)`，创建了**回调点 2**。
+   - 方法再次暂停，等待 `ProcessDataAsync` 完成，同时 `主线程`仍可处理其他任务。
 
-5. **Final Completion**:
-   - After `ProcessDataAsync` finishes, `DownloadDataAsync` resumes from **Callback Point 2** and prints "Data processing completed." to signal the method's completion.
+5. **最终完成**：
+   - 在 `ProcessDataAsync` 完成后，`DownloadDataAsync` 从**回调点 2**恢复，打印“Data processing completed.”，标志方法的完成。
 
-### Summary
-This sequence diagram demonstrates the **non-blocking** behavior of `await`, showing how each `await` point creates a callback stage. This non-blocking, stage-based execution keeps the main thread free to handle other tasks, highlighting the efficiency and responsiveness of Task-Based Asynchronous Programming (TAP).
-
+### 总结
+此序列图展示了 `await` 的**非阻塞**行为，显示了每个 `await` 点如何创建一个回调阶段。分阶段的非阻塞执行使主线程能够继续处理其他任务，突显了基于任务的异步编程 (TAP) 的效率和响应性。
