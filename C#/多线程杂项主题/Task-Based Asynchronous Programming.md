@@ -135,7 +135,7 @@ async Task DownloadDataAsync()
 
 ---
 
-一个 ** 序列图**可以很好地展示 `await` 如何创建回调点以及方法如何分阶段恢复执行，让主线程可以继续处理其他任务。 
+**序列图**可以很好地展示 `await` 如何创建回调点以及方法如何分阶段恢复执行，让主线程可以继续处理其他任务。 
 
 ```mermaid
 sequenceDiagram
