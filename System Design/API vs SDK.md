@@ -19,7 +19,7 @@
 3. API 返回响应给客户端。
 
 ```mermaid
-flowchart TD
+flowchart LR
     ClientSystem[客户端系统] -->|发送请求| OpenPlatformAPI[开放平台 API]
     OpenPlatformAPI -->|请求处理| PaymentSystem[支付系统]
     PaymentSystem -->|返回响应| OpenPlatformAPI
@@ -44,7 +44,7 @@ flowchart TD
 4. API 返回响应，SDK 将结果返回给客户端应用程序。
 
 ```mermaid
-flowchart TD
+flowchart LR
     ClientSystem[客户端系统] -->|调用SDK方法| SDK[SDK]
     SDK -->|发送请求| OpenPlatformAPI[开放平台 API]
     OpenPlatformAPI -->|请求处理| PaymentSystem[支付系统]
