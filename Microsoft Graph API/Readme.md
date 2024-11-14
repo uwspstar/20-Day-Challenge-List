@@ -87,11 +87,11 @@ namespace GraphApiExample
 下面的流程图可视化了上述步骤的流程，每个步骤有对应的中文编号。
 
 ```mermaid
-graph TD
-    A[1. 配置机密客户端应用] --> B[2. 获取 Microsoft Graph API 令牌]
-    B --> C[3. 创建 GraphServiceClient 实例]
-    C --> D[4. 发送请求获取用户列表]
-    D --> E[5. 显示用户信息]
+graph LR
+    A[1 配置机密客户端应用] --> B[2 获取 Microsoft Graph API 令牌]
+    B --> C[3 创建 GraphServiceClient 实例]
+    C --> D[4 发送请求获取用户列表]
+    D --> E[5 显示用户信息]
 ```
 
 ### 每步流程中文解释
