@@ -135,7 +135,7 @@ async Task DownloadDataAsync()
 
 ---
 
-一个 ** 序列图**可以很好地展示 `await` 如何创建回调点以及方法如何分阶段恢复执行，让主线程可以继续处理其他任务。
+一个 ** 序列图**可以很好地展示 `await` 如何创建回调点以及方法如何分阶段恢复执行，让主线程可以继续处理其他任务。 
 
 ```mermaid
 sequenceDiagram
@@ -144,23 +144,32 @@ sequenceDiagram
     participant 下载文件异步 as DownloadFileAsync
     participant 处理数据异步 as ProcessDataAsync
 
-    主线程->>+下载数据异步: 调用 DownloadDataAsync()
-    下载数据异步->>+下载文件异步: await DownloadFileAsync()
-    下载文件异步-->>下载数据异步: 返回数据 (回调点 1)
+    主线程->>+下载数据异步: (1) 调用 DownloadDataAsync()
+    下载数据异步->>+下载文件异步: (2) await DownloadFileAsync()
+    下载文件异步-->>下载数据异步: (3) 返回数据 (回调点 1)
 
-    Note right of 下载数据异步: 在回调点 1 暂停<br>等待 DownloadFileAsync 完成
+    Note right of 下载数据异步: (3) 在回调点 1 暂停<br>等待 DownloadFileAsync 完成
 
-    下载数据异步->>+处理数据异步: await ProcessDataAsync(data)
-    处理数据异步-->>下载数据异步: 返回处理结果 (回调点 2)
+    下载数据异步->>+处理数据异步: (4) await ProcessDataAsync(data)
+    处理数据异步-->>下载数据异步: (5) 返回处理结果 (回调点 2)
 
-    Note right of 下载数据异步: 在回调点 2 暂停<br>等待 ProcessDataAsync 完成
+    Note right of 下载数据异步: (5) 在回调点 2 暂停<br>等待 ProcessDataAsync 完成
 
-    下载数据异步->>-主线程: 完成消息 "Data processing completed"
+    下载数据异步->>-主线程: (6) 完成消息 "Data processing completed"
 
-    Note right of 主线程: 主线程保持非阻塞<br>可在回调点之间继续其他任务
+    Note right of 主线程: (6) 主线程保持非阻塞<br>可在回调点之间继续其他任务
 ```
 
-### 图解说明
+### 流程说明
+
+1. **步骤 (1)**: 主线程调用 `DownloadDataAsync`，开始异步方法。
+2. **步骤 (2)**: `DownloadDataAsync` 在 `await DownloadFileAsync()` 时暂停，等待文件下载完成。
+3. **步骤 (3)**: 文件下载完成，回调点 1 触发，`DownloadDataAsync` 恢复执行。
+4. **步骤 (4)**: 方法继续执行，遇到 `await ProcessDataAsync(data)`，创建回调点 2。
+5. **步骤 (5)**: 数据处理完成，触发回调点 2，`DownloadDataAsync` 恢复。
+6. **步骤 (6)**: 最终打印“Data processing completed”，方法执行完毕。
+
+### 这样带有编号的流程图可以更清晰地展示每一步的执行顺序，有助于理解 `await` 的回调点机制。
 
 1. **方法开始**：
    - `主线程`调用 `DownloadDataAsync`。方法开始在一个独立的线程上执行，但在每个 `await` 点暂停，以便主线程保持非阻塞。
