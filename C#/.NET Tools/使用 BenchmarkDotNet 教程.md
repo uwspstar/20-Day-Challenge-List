@@ -519,3 +519,105 @@ public void FullyOptimizedMethod()
 3. **降低 StdDev**：减少随机性和资源争用，提升运行稳定性。
 
 通过系统性优化，代码性能可显著提升。
+
+---
+
+### 分析日志Log内容
+
+#### 1. **日志概览**  
+这段日志来自 `BenchmarkDotNet`，用于在 .NET 环境下运行性能基准测试。主要内容包括基准测试执行流程、具体方法的性能测量结果，以及系统环境信息。
+
+---
+
+#### 2. **日志结构**
+以下是日志的主要组成部分及其意义：
+
+##### **1) BenchmarkRunner 初始化**
+```plaintext
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+```
+- **解释**：运行器启动，发现两个基准测试方法 `MathOperations.Addition` 和 `MathOperations.Multiplication`。
+
+##### **2) 构建基准测试应用**
+```plaintext
+// ***** Building 1 exe(s) in Parallel: Start   *****
+start dotnet restore ...
+command took 0.56 sec and exited with 0
+start dotnet build ...
+command took 2.27 sec and exited with 0
+```
+- **解释**：在运行基准测试前，工具会生成临时独立的可执行文件，分别编译完成后耗时 0.56 秒和 2.27 秒，且成功退出 (exit code = 0)。
+
+##### **3) 执行基准测试**
+```plaintext
+MathOperations.Addition: DefaultJob
+Launch: 1 / 1
+Execute: dotnet ... --benchmarkName MathOperations.Addition ...
+```
+- **解释**：启动 `Addition` 方法的基准测试，执行了 1 次。
+
+##### **4) 权限问题**
+```plaintext
+Failed to set up high priority (Permission denied).
+```
+- **解释**：尝试以高优先级运行失败，原因是缺乏权限。建议确保运行环境允许提升进程优先级（需 `sudo` 或管理员权限）。
+
+##### **5) 运行环境信息**
+```plaintext
+Runtime=.NET 8.0.8, Arm64 RyuJIT AdvSIMD
+GC=Concurrent Workstation
+```
+- **解释**：
+  - 使用 .NET 8.0.8。
+  - JIT 编译器为 Arm64 RyuJIT，支持硬件加速指令集（如 `AdvSIMD`）。
+  - 垃圾回收器 (GC) 为并发模式，适合客户端应用。
+
+##### **6) 测试数据**
+日志详细记录了 **Jitting**、**Warmup**、**Actual** 阶段的运行数据：
+```plaintext
+WorkloadActual   1: 262144 op, 720178042.00 ns, 2.7473 us/op
+```
+- **解释**：在实际测试阶段，完成了 262,144 次操作，耗时 720,178,042 纳秒，每次操作平均耗时 2.7473 微秒。
+
+##### **7) 测试结果**
+```plaintext
+MathOperations.Addition: Mean = 2.735 μs, StdDev = 0.006 μs
+MathOperations.Multiplication: Mean = 48.641 ns, StdDev = 0.316 ns
+```
+- **解释**：
+  - `Addition` 的平均耗时为 2.735 微秒。
+  - `Multiplication` 的平均耗时为 48.641 纳秒。
+  - 标准差（StdDev）表明结果的离散程度。
+
+---
+
+#### 3. **关键性能指标解释**
+1. **Mean（平均值）**：每次操作的平均耗时，越小越好。
+   - Addition: `2.735 μs`，表示加法运算稍慢。
+   - Multiplication: `48.641 ns`，表示乘法运算更快。
+2. **StdDev（标准差）**：结果波动性。低标准差（如 Addition 的 `0.006 μs`）表明结果稳定。
+3. **N（样本数）**：每个基准测试重复了 14 次，以确保结果可信。
+4. **ConfidenceInterval（置信区间）**：高置信度下的结果范围。例如，Addition 的 `99.9% CI` 为 `[2.729 μs; 2.741 μs]`。
+
+---
+
+#### 4. **建议与改进**
+- **权限问题**：为提升进程优先级，运行时需要更高权限。执行命令前添加 `sudo`。
+- **基准测试优化**：
+  - 确保机器资源空闲，避免背景进程影响结果。
+  - 使用 `MemoryDiagnoser`，分析内存分配和垃圾回收的影响。
+
+---
+
+#### 5. **总结**
+- **Addition 的结果**：
+  - 平均耗时较高，稳定性良好。
+  - 适合分析 CPU 的基本性能。
+- **Multiplication 的结果**：
+  - 平均耗时显著低，体现出硬件加速对乘法的优化。
+  - 结果稳定（标准差低）。
+
+基准测试是验证代码效率的关键工具，通过这些数据可以优化代码逻辑和算法设计。
+
+
