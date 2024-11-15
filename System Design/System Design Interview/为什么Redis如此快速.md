@@ -62,7 +62,7 @@ flowchart LR
 ```
 
 ```mermaid
-flowchart LR
+flowchart TB
         IO["2 I/O Multiplexing & Single-threaded Execution"]
         
         subgraph "I/O Management"
