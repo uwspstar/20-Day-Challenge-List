@@ -40,6 +40,7 @@ Here's a Mermaid diagram that translates the concepts from the image into Chines
 ```mermaid
 flowchart TB
     subgraph "Redis Performance Advantages"
+
         RAM["1 RAM-Based Storage
         Redis uses RAM instead of disk
         RAM access much faster than SSD/HDD"]
