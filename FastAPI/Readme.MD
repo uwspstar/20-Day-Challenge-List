@@ -2,6 +2,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
 ### Quick Start
+- [](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/%E6%8E%A8%E8%8D%90%E7%9A%84%20RESTful%20API%20%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97.md)
 - [Quick Start Demo](https://github.com/uwspstar/20-Day-Challenge-List/edit/main/FastAPI/Quick%20Start%20Demo.md)
 - [Using FastAPI to Build Python Web APIs](https://realpython.com/fastapi-python-web-apis/)
 - [RESTful API 最佳实践](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/FastAPI/RESTful%20API%20%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md)
