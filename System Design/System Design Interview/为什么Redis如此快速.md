@@ -59,6 +59,9 @@ flowchart LR
         L3 --> MainMem
         MainMem --> SSD
         SSD --> HDD
+```
+```mermaid
+flowchart LR
 
         IO["2 I/O Multiplexing & Single-threaded Execution"]
         
@@ -80,7 +83,9 @@ flowchart LR
         Dispatch --> Process
         
         IO --> Socket1
-
+```
+```mermaid
+flowchart LR
         DS["3 Efficient Data Structures"]
         
         subgraph "Data Structures"
