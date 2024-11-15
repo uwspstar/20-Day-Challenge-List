@@ -40,58 +40,61 @@ Here's a Mermaid diagram that translates the concepts from the image into Chines
 ```mermaid
 flowchart TB
     subgraph Redis性能优势
-    
-    RAM[1. 基于RAM\nRedis使用RAM而不是磁盘\nRAM访问速度远快于SSD和HDD]
-    
-    subgraph RAM层次
-        Register[寄存器: 0.3ns]
-        L1[一级缓存 (L1 Cache): 0.9ns]
-        L2[二级缓存 (L2 Cache): 2.8ns]
-        L3[三级缓存 (L3 Cache): 12.9ns]
-        RAM内存[内存 (RAM): 120ns]
-        SSD[固态硬盘 (SSD): 50-150us]
-        HDD[硬盘驱动器 (HDD): 1-10ms]
-    end
-    RAM --> RAM层次
 
-    Multiplexing[2. I/O多路复用与单线程读写]
-    subgraph IOMulti[多线程管理和单线程执行]
-        Socket1[套接字1]
-        Socket2[套接字2]
-        Socket3[套接字3]
-        Multiplexer[多路复用]
-        EventLoop[事件循环]
-        Queue[任务队列]
-        Dispatcher[事件分发器]
-        Processors[事件处理器]
-    end
-    Socket1 --> Multiplexer
-    Socket2 --> Multiplexer
-    Socket3 --> Multiplexer
-    Multiplexer --> EventLoop
-    EventLoop --> Queue
-    Queue --> Dispatcher
-    Dispatcher --> Processors
-    Multiplexing --> IOMulti
-    
-    DataStructure[3. 高效的数据结构]
-    subgraph DataStruct[数据结构]
-        String[字符串 -> SDS]
-        List[列表 -> 链表 / ZipList]
-        Hash[哈希 -> HashTable / ZipList]
-        Set[集合 -> IntSet]
-        SortedSet[有序集合 -> SkipList]
-    end
-    
-    SDS[简单动态字符串 (SDS)]
-    SDS -->|O(1) 查询字符串长度| DataStructure
-    SDS -->|预分配空间| DataStructure
-    SDS -->|使用“free”记录未来空间| DataStructure
-    
-    SkipList[跳表 (Skip List)]
-    SkipList -->|分层索引以快速查找| DataStructure
-    DataStructure --> DataStruct
-    
+        RAM[1. 基于RAM\nRedis使用RAM而不是磁盘，\nRAM访问速度远快于SSD和HDD]
+
+        subgraph RAM层次
+            Register[寄存器: 0.3ns]
+            L1Cache[一级缓存 L1: 0.9ns]
+            L2Cache[二级缓存 L2: 2.8ns]
+            L3Cache[三级缓存 L3: 12.9ns]
+            RAM内存[内存 RAM: 120ns]
+            SSD[固态硬盘 SSD: 50-150us]
+            HDD[硬盘驱动器 HDD: 1-10ms]
+        end
+        RAM --> RAM层次
+
+        Multiplexing[2. I/O多路复用与单线程读写]
+        
+        subgraph IO_Multi[多线程管理和单线程执行]
+            Socket1[套接字1]
+            Socket2[套接字2]
+            Socket3[套接字3]
+            Multiplexer[多路复用]
+            EventLoop[事件循环]
+            TaskQueue[任务队列]
+            EventDispatcher[事件分发器]
+            EventProcessors[事件处理器]
+        end
+        
+        Socket1 --> Multiplexer
+        Socket2 --> Multiplexer
+        Socket3 --> Multiplexer
+        Multiplexer --> EventLoop
+        EventLoop --> TaskQueue
+        TaskQueue --> EventDispatcher
+        EventDispatcher --> EventProcessors
+        Multiplexing --> IO_Multi
+
+        DataStructure[3. 高效的数据结构]
+        
+        subgraph Data_Structures[数据结构]
+            String[字符串 -> SDS]
+            List[列表 -> 链表 / ZipList]
+            Hash[哈希 -> HashTable / ZipList]
+            Set[集合 -> IntSet]
+            SortedSet[有序集合 -> SkipList]
+        end
+
+        SDS[简单动态字符串 SDS]
+        SDS -->|O(1) 查询字符串长度| DataStructure
+        SDS -->|预分配空间| DataStructure
+        SDS -->|使用“free”记录未来空间| DataStructure
+
+        SkipList[跳表 Skip List]
+        SkipList -->|分层索引以快速查找| DataStructure
+        DataStructure --> Data_Structures
+
     end
 ```
 
