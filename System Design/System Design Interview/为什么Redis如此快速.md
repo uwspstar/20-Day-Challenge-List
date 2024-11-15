@@ -51,7 +51,9 @@ flowchart LR
             SSD["SSD: 50-150μs"]
             HDD["HDD: 1-10ms"]
         end
-
+```
+```mermaid
+flowchart LR
         RAM --> Register
         Register --> L1
         L1 --> L2
@@ -59,9 +61,6 @@ flowchart LR
         L3 --> MainMem
         MainMem --> SSD
         SSD --> HDD
-```
-```mermaid
-flowchart LR
 
         IO["2 I/O Multiplexing & Single-threaded Execution"]
         
@@ -83,9 +82,7 @@ flowchart LR
         Dispatch --> Process
         
         IO --> Socket1
-```
-```mermaid
-flowchart LR
+
         DS["3 Efficient Data Structures"]
         
         subgraph "Data Structures"
