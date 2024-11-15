@@ -40,7 +40,7 @@ Here's a Mermaid diagram that translates the concepts from the image into Chines
 ```mermaid
 flowchart LR
     subgraph "Redis Performance Advantages"
-        RAM["1 RAM-Based Storage Redis uses RAM instead of disk RAM access much faster than SSD/HDD"]
+        RAM["1 RAM-Based Storage: Redis uses RAM instead of disk RAM access much faster than SSD/HDD"]
 
         subgraph "Memory Hierarchy"
             Register["Register: 0.3ns"]
