@@ -51,9 +51,7 @@ flowchart LR
             SSD["SSD: 50-150μs"]
             HDD["HDD: 1-10ms"]
         end
-```
-```mermaid
-flowchart LR
+
         RAM --> Register
         Register --> L1
         L1 --> L2
