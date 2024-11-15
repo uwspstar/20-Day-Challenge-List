@@ -40,7 +40,7 @@ Here's a Mermaid diagram that translates the concepts from the image into Chines
 ```mermaid
 flowchart LR
     subgraph "Redis Performance Advantages"
-        RAM["1. RAM-Based Storage Redis uses RAM instead of disk RAM access much faster than SSD/HDD"]
+        RAM["1 RAM-Based Storage Redis uses RAM instead of disk RAM access much faster than SSD/HDD"]
 
         subgraph "Memory Hierarchy"
             Register["Register: 0.3ns"]
@@ -60,8 +60,7 @@ flowchart LR
         MainMem --> SSD
         SSD --> HDD
 
-        IO["2. I/O Multiplexing &
-        Single-threaded Execution"]
+        IO["2 I/O Multiplexing & Single-threaded Execution"]
         
         subgraph "I/O Management"
             Socket1["Socket 1"]
@@ -82,7 +81,7 @@ flowchart LR
         
         IO --> Socket1
 
-        DS["3. Efficient Data Structures"]
+        DS["3 Efficient Data Structures"]
         
         subgraph "Data Structures"
             String["String → SDS"]
