@@ -39,62 +39,78 @@ Here's a Mermaid diagram that translates the concepts from the image into Chines
 
 ```mermaid
 flowchart TB
-    subgraph Redis性能优势
+    subgraph "Redis Performance Advantages"
+        RAM["1. RAM-Based Storage
+        Redis uses RAM instead of disk
+        RAM access much faster than SSD/HDD"]
 
-        RAM[1. 基于RAM\nRedis使用RAM而不是磁盘\nRAM访问速度远快于SSD和HDD]
-
-        subgraph RAM层次
-            Register[寄存器: 0.3ns]
-            L1Cache[一级缓存: 0.9ns]
-            L2Cache[二级缓存: 2.8ns]
-            L3Cache[三级缓存: 12.9ns]
-            RAM内存[RAM: 120ns]
-            SSD[SSD: 50-150us]
-            HDD[HDD: 1-10ms]
-        end
-        RAM --> RAM层次
-
-        Multiplexing[2. I/O多路复用与单线程执行]
-        
-        subgraph IO_Multi[多线程管理和单线程执行]
-            Socket1[套接字1]
-            Socket2[套接字2]
-            Socket3[套接字3]
-            Multiplexer[多路复用]
-            EventLoop[事件循环]
-            TaskQueue[任务队列]
-            EventDispatcher[事件分发器]
-            EventProcessors[事件处理器]
-        end
-        
-        Socket1 --> Multiplexer
-        Socket2 --> Multiplexer
-        Socket3 --> Multiplexer
-        Multiplexer --> EventLoop
-        EventLoop --> TaskQueue
-        TaskQueue --> EventDispatcher
-        EventDispatcher --> EventProcessors
-        Multiplexing --> IO_Multi
-
-        DataStructure[3. 高效的数据结构]
-        
-        subgraph Data_Structures[数据结构]
-            String[字符串 -> SDS]
-            List[列表 -> 链表 / ZipList]
-            Hash[哈希 -> 哈希表 / ZipList]
-            Set[集合 -> IntSet]
-            SortedSet[有序集合 -> 跳表]
+        subgraph "Memory Hierarchy"
+            Register["Register: 0.3ns"]
+            L1["L1 Cache: 0.9ns"]
+            L2["L2 Cache: 2.8ns"]
+            L3["L3 Cache: 12.9ns"]
+            MainMem["RAM: 120ns"]
+            SSD["SSD: 50-150μs"]
+            HDD["HDD: 1-10ms"]
         end
 
-        SDS[简单动态字符串 (SDS)]
-        SDS -->|O(1) 查询字符串长度| DataStructure
-        SDS -->|预分配空间| DataStructure
-        SDS -->|使用“free”记录空闲空间| DataStructure
+        RAM --> Register
+        Register --> L1
+        L1 --> L2
+        L2 --> L3
+        L3 --> MainMem
+        MainMem --> SSD
+        SSD --> HDD
 
-        SkipList[跳表 (Skip List)]
-        SkipList -->|分层索引以快速查找| DataStructure
-        DataStructure --> Data_Structures
+        IO["2. I/O Multiplexing &
+        Single-threaded Execution"]
+        
+        subgraph "I/O Management"
+            Socket1["Socket 1"]
+            Socket2["Socket 2"]
+            Socket3["Socket 3"]
+            Mux["Multiplexer"]
+            ELoop["Event Loop"]
+            Queue["Task Queue"]
+            Dispatch["Event Dispatcher"]
+            Process["Event Processors"]
+        end
+        
+        Socket1 & Socket2 & Socket3 --> Mux
+        Mux --> ELoop
+        ELoop --> Queue
+        Queue --> Dispatch
+        Dispatch --> Process
+        
+        IO --> Socket1
 
+        DS["3. Efficient Data Structures"]
+        
+        subgraph "Data Structures"
+            String["String → SDS"]
+            List["List → LinkedList/ZipList"]
+            Hash["Hash → HashTable/ZipList"]
+            Set["Set → IntSet"]
+            ZSet["Sorted Set → SkipList"]
+        end
+
+        SDS["Simple Dynamic String (SDS)
+        - O(1) length lookup
+        - Pre-allocated space
+        - Free space tracking"]
+
+        SkipList["Skip List
+        - Layered indexes
+        - Fast search/insert"]
+
+        DS --> String
+        DS --> List
+        DS --> Hash
+        DS --> Set
+        DS --> ZSet
+        
+        String --> SDS
+        ZSet --> SkipList
     end
 ```
 
