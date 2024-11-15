@@ -73,14 +73,15 @@ flowchart TB
             Queue["Task Queue"]
             Dispatch["Event Dispatcher"]
             Process["Event Processors"]
+        
+        
+           Socket1 & Socket2 & Socket3 --> Mux
+           Mux --> ELoop
+           ELoop --> Queue
+           Queue --> Dispatch
+           Dispatch --> Process
         end
-        
-        Socket1 & Socket2 & Socket3 --> Mux
-        Mux --> ELoop
-        ELoop --> Queue
-        Queue --> Dispatch
-        Dispatch --> Process
-        
+
         IO --> Socket1
 
         DS["3 Efficient Data Structures"]
@@ -91,25 +92,27 @@ flowchart TB
             Hash["Hash → HashTable/ZipList"]
             Set["Set → IntSet"]
             ZSet["Sorted Set → SkipList"]
-        end
-
-        SDS["Simple Dynamic String (SDS)
-        - O(1) length lookup
-        - Pre-allocated space
-        - Free space tracking"]
-
-        SkipList["Skip List
-        - Layered indexes
-        - Fast search/insert"]
-
-        DS --> String
-        DS --> List
-        DS --> Hash
-        DS --> Set
-        DS --> ZSet
         
-        String --> SDS
-        ZSet --> SkipList
+
+           SDS["Simple Dynamic String (SDS)
+           - O(1) length lookup
+           - Pre-allocated space
+           - Free space tracking"]
+   
+           SkipList["Skip List
+           - Layered indexes
+           - Fast search/insert"]
+   
+           DS --> String
+           DS --> List
+           DS --> Hash
+           DS --> Set
+           DS --> ZSet
+           
+           String --> SDS
+           ZSet --> SkipList
+      end
+
     end
 ```
 
