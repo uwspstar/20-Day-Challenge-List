@@ -40,6 +40,7 @@ Here's a Mermaid diagram that translates the concepts from the image into Chines
 ```mermaid
 flowchart TB
     subgraph "Redis Performance Advantages"
+
         RAM["1 RAM-Based Storage: Redis uses RAM instead of disk RAM access much faster than SSD/HDD"]
 
         subgraph "Memory Hierarchy"
@@ -50,15 +51,16 @@ flowchart TB
             MainMem["RAM: 120ns"]
             SSD["SSD: 50-150μs"]
             HDD["HDD: 1-10ms"]
-        end
+        
 
-        RAM --> Register
-        Register --> L1
-        L1 --> L2
-        L2 --> L3
-        L3 --> MainMem
-        MainMem --> SSD
-        SSD --> HDD
+           RAM --> Register
+           Register --> L1
+           L1 --> L2
+           L2 --> L3
+           L3 --> MainMem
+           MainMem --> SSD
+           SSD --> HDD
+         end
  
         IO["2 I/O Multiplexing & Single-threaded Execution"]
         
