@@ -61,7 +61,12 @@ flowchart TB
            MainMem --> SSD
            SSD --> HDD
          end
- 
+ end
+```
+
+```mermaid
+flowchart TB
+    subgraph "Redis Performance Advantages" 
         IO["2 I/O Multiplexing & Single-threaded Execution"]
         
         subgraph "I/O Management"
@@ -81,7 +86,12 @@ flowchart TB
            Queue --> Dispatch
            Dispatch --> Process
         end
+ end
+```
 
+```mermaid
+flowchart TB
+    subgraph "Redis Performance Advantages" 
         IO --> Socket1
 
         DS["3 Efficient Data Structures"]
