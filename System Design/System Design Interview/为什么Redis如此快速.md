@@ -38,10 +38,11 @@ Redis通过I/O多路复用和单线程执行循环来提高执行效率，主要
 Here's a Mermaid diagram that translates the concepts from the image into Chinese. The diagram is represented using Mermaid syntax for better readability and a similar structure.
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph "Redis Performance Advantages"
-
-        RAM["1 RAM-Based Storage: Redis uses RAM instead of disk RAM access much faster than SSD/HDD"]
+        RAM["1. RAM-Based Storage
+        Redis uses RAM instead of disk
+        RAM access much faster than SSD/HDD"]
 
         subgraph "Memory Hierarchy"
             Register["Register: 0.3ns"]
@@ -51,23 +52,18 @@ flowchart LR
             MainMem["RAM: 120ns"]
             SSD["SSD: 50-150μs"]
             HDD["HDD: 1-10ms"]
-        
+        end
 
-           RAM --> Register
-           Register --> L1
-           L1 --> L2
-           L2 --> L3
-           L3 --> MainMem
-           MainMem --> SSD
-           SSD --> HDD
-         end
- end
-```
+        RAM --> Register
+        Register --> L1
+        L1 --> L2
+        L2 --> L3
+        L3 --> MainMem
+        MainMem --> SSD
+        SSD --> HDD
 
-```mermaid
-flowchart LR
-    subgraph "Redis Performance Advantages" 
-        IO["2 I/O Multiplexing & Single-threaded Execution"]
+        IO["2. I/O Multiplexing &
+        Single-threaded Execution"]
         
         subgraph "I/O Management"
             Socket1["Socket 1"]
@@ -78,23 +74,17 @@ flowchart LR
             Queue["Task Queue"]
             Dispatch["Event Dispatcher"]
             Process["Event Processors"]
-        
-        
-           Socket1 & Socket2 & Socket3 --> Mux
-           Mux --> ELoop
-           ELoop --> Queue
-           Queue --> Dispatch
-           Dispatch --> Process
         end
- end
-```
-
-```mermaid
-flowchart TB
-    subgraph "Redis Performance Advantages" 
+        
+        Socket1 & Socket2 & Socket3 --> Mux
+        Mux --> ELoop
+        ELoop --> Queue
+        Queue --> Dispatch
+        Dispatch --> Process
+        
         IO --> Socket1
 
-        DS["3 Efficient Data Structures"]
+        DS["3. Efficient Data Structures"]
         
         subgraph "Data Structures"
             String["String → SDS"]
@@ -102,27 +92,25 @@ flowchart TB
             Hash["Hash → HashTable/ZipList"]
             Set["Set → IntSet"]
             ZSet["Sorted Set → SkipList"]
+        end
+
+        SDS["Simple Dynamic String (SDS)
+        - O(1) length lookup
+        - Pre-allocated space
+        - Free space tracking"]
+
+        SkipList["Skip List
+        - Layered indexes
+        - Fast search/insert"]
+
+        DS --> String
+        DS --> List
+        DS --> Hash
+        DS --> Set
+        DS --> ZSet
         
-
-           SDS["Simple Dynamic String (SDS)
-           - O(1) length lookup
-           - Pre-allocated space
-           - Free space tracking"]
-   
-           SkipList["Skip List
-           - Layered indexes
-           - Fast search/insert"]
-   
-           DS --> String
-           DS --> List
-           DS --> Hash
-           DS --> Set
-           DS --> ZSet
-           
-           String --> SDS
-           ZSet --> SkipList
-      end
-
+        String --> SDS
+        ZSet --> SkipList
     end
 ```
 
