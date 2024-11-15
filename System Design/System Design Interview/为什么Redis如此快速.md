@@ -63,6 +63,9 @@ flowchart TB
         MainMem --> SSD
         SSD --> HDD
 
+         Break1[" "]
+         style Break1 fill:none,stroke:none
+
         IO["2 I/O Multiplexing &
         Single-threaded Execution"]
         
@@ -84,6 +87,9 @@ flowchart TB
         Dispatch --> Process
         
         IO --> Socket1
+
+         Break1[" "]
+         style Break1 fill:none,stroke:none
 
         DS["3 Efficient Data Structures"]
         
