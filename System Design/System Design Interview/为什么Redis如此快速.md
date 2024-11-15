@@ -38,7 +38,7 @@ Redis通过I/O多路复用和单线程执行循环来提高执行效率，主要
 Here's a Mermaid diagram that translates the concepts from the image into Chinese. The diagram is represented using Mermaid syntax for better readability and a similar structure.
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph "Redis Performance Advantages"
 
         RAM["1 RAM-Based Storage: Redis uses RAM instead of disk RAM access much faster than SSD/HDD"]
@@ -65,7 +65,7 @@ flowchart TB
 ```
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph "Redis Performance Advantages" 
         IO["2 I/O Multiplexing & Single-threaded Execution"]
         
