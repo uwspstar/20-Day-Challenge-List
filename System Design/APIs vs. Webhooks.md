@@ -220,7 +220,104 @@ sequenceDiagram
 
 通过这种方式，支付网关和商家系统实现了**事件驱动通信**，减少了客户端的轮询负担，同时提高了实时性。
 
-此图形化的方式直观展示了 Webhook 在事件通知中的具体应用和交互流程。
+
+```csharp
+// 导入必要的命名空间，用于 HTTP 操作和 JSON 序列化
+using System;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+
+// 模拟服务器 (支付网关) 负责发送 Webhook
+public class Server
+{
+    private static readonly HttpClient HttpClient = new HttpClient(); // 初始化可复用的 HttpClient，用于发送 HTTP 请求
+
+    public async Task SendWebhookAsync(string webhookUrl, WebhookPayload payload)
+    {
+        try
+        {
+            Console.WriteLine("1. 生成 Webhook 数据中..."); // 日志记录：开始生成 Webhook 数据
+            string jsonData = JsonSerializer.Serialize(payload); // 将负载数据序列化为 JSON 格式
+
+            Console.WriteLine("2. 正在向商家发送 Webhook..."); // 日志记录：准备发送 Webhook
+            var content = new StringContent(jsonData, System.Text.Encoding.UTF8, "application/json"); // 准备 HTTP POST 内容，包括 JSON 数据
+
+            HttpResponseMessage response = await HttpClient.PostAsync(webhookUrl, content); // 向 Webhook URL 发送 HTTP POST 请求
+            
+            // 检查返回的响应状态码，判断是否成功送达
+            if (response.IsSuccessStatusCode)
+                Console.WriteLine("3. Webhook 成功送达！"); // 日志记录：Webhook 送达成功
+            else
+                Console.WriteLine($"Webhook 送达失败，状态码: {response.StatusCode}"); // 日志记录：Webhook 送达失败，并记录状态码
+        }
+        catch (Exception ex)
+        {
+            // 捕获并记录在发送 Webhook 过程中发生的异常
+            Console.WriteLine($"发送 Webhook 出现错误: {ex.Message}");
+        }
+    }
+}
+
+// 模拟 Webhook 接收器 (商家服务)，用于处理接收到的 Webhook 请求
+[ApiController]
+[Route("api/[controller]")] // 定义路由为 "/api/WebhookReceiver"
+public class WebhookReceiverController : ControllerBase
+{
+    [HttpPost] // 指定此端点处理 HTTP POST 请求
+    public IActionResult ReceiveWebhook([FromBody] WebhookPayload payload)
+    {
+        Console.WriteLine("4. 商家服务接收到 Webhook..."); // 日志记录：Webhook 请求已接收
+        
+        // 验证 Webhook 签名，确保请求来源可信
+        if (!ValidateSignature(payload))
+        {
+            Console.WriteLine("Webhook 签名无效。"); // 日志记录：签名验证失败
+            return BadRequest("签名无效"); // 返回 HTTP 400 Bad Request 状态
+        }
+
+        // 处理接收到的 Webhook 事件
+        Console.WriteLine($"5. 正在处理 Webhook 事件: {payload.EventType}"); // 日志记录：显示正在处理的事件类型
+        return Ok(new { Message = "Webhook 处理成功" }); // 返回 HTTP 200 OK，并附带处理成功的消息
+    }
+
+    private bool ValidateSignature(WebhookPayload payload)
+    {
+        // 签名验证逻辑占位符（例如使用 HMAC 或令牌验证）
+        return true; // 为简单起见，假设验证通过
+    }
+}
+
+// 定义 Webhook 负载的结构
+public class WebhookPayload
+{
+    public string EventType { get; set; } // 事件类型，例如 "PaymentSuccess" (支付成功)
+    public string OrderId { get; set; } // 与事件相关的订单 ID
+    public decimal Amount { get; set; } // 事件涉及的金额
+}
+```
+
+---
+
+### **代码中的逐行解释**
+
+1. **服务器部分**：
+   - `SendWebhookAsync` 方法：
+     - 将 `WebhookPayload` 序列化为 JSON 格式。
+     - 通过 HTTP POST 请求将 Webhook 发送到商家的 Webhook 接收端点。
+     - 记录 Webhook 是否成功送达或失败。
+
+2. **Webhook 接收器部分**：
+   - `ReceiveWebhook` 方法：
+     - 接收来自服务器的 Webhook 负载并验证签名。
+     - 日志记录事件类型，处理接收到的事件数据。
+     - 返回适当的 HTTP 状态码，确认处理结果。
+
+3. **负载类**：
+   - 定义 Webhook 数据的结构，确保发送方和接收方都能正确解析和理解数据。
+
+通过在代码内部直接注释解释，每一行或代码块都清楚地说明其在 Webhook 工作流程中的作用和目的。
 
 
 ---
