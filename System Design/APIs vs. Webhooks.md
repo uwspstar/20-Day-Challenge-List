@@ -33,6 +33,52 @@
 
 ---
 
+### Webhook 流程图
+
+以下是 Webhook 工作流程的 Mermaid 序列图示例，使用中文标注并包含流程编号：
+
+```mermaid
+sequenceDiagram
+    participant 客户端 as 客户端
+    participant 服务器 as 服务器
+    participant Webhook接收器 as Webhook 接收器
+
+    Note over 服务器: 1. 事件发生
+    服务器->>服务器: 处理事件
+
+    Note over 服务器: 2. 准备 Webhook 数据
+    服务器->>Webhook接收器: 发送 Webhook 请求 (HTTP POST)
+
+    Note over Webhook接收器: 3. 接收请求并处理
+    Webhook接收器->>Webhook接收器: 验证请求签名
+
+    Webhook接收器->>服务器: 返回响应 (HTTP 200 OK)
+
+    Note over 客户端: 4. 可选：客户端检查状态
+    客户端->>服务器: 查询事件状态 (API 调用)
+    服务器->>客户端: 返回状态信息
+```
+
+### 中文流程描述
+
+1. **事件发生**：当系统内某个事件（例如订单支付成功）触发时，服务器会进行处理。
+2. **准备 Webhook 数据**：服务器整理相关数据（如事件类型和细节）并准备发送到客户端提供的 Webhook 接收 URL。
+3. **发送 Webhook 请求**：服务器通过 HTTP POST 请求，将事件数据推送到 Webhook 接收器。
+4. **接收并验证请求**：Webhook 接收器验证请求的合法性（如签名校验），处理事件数据后返回 HTTP 200 响应。
+5. **（可选）客户端检查状态**：如果客户端未收到 Webhook，或者需要进一步确认事件状态，可以通过 API 主动查询。
+
+---
+
+#### **Mermaid 图说明**
+
+- `participant` 定义交互的实体，例如客户端、服务器和 Webhook 接收器。
+- `Note over` 用于在流程步骤中标注中文描述和编号。
+- `->>` 表示发起的请求或消息流。
+
+这种图形化方式非常适合描述 Webhook 事件的流转过程，方便直观理解每个步骤。
+
+---
+
 #### **C# Code Example (C# 代码示例)**
 
 ##### API Example (API 示例)
