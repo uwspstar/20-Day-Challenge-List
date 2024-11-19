@@ -1,4 +1,5 @@
 ### Generative AI applications 
+- https://gemini.google.com/faq#coding
 
 ### Chatting
 - Customer service Chat
