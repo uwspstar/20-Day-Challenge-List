@@ -6,7 +6,7 @@
 #### Webhook vs Polling 两种与外部支付服务提供商（PSP）通信的方式：
 
 ```mermaid
-graph TD
+graph LR
     subgraph Webhook
         A1[用户] -->|通过API网关| A2[订单服务]
         A2 --> A3[支付服务]
@@ -15,8 +15,9 @@ graph TD
         A3 -->|返回结果| A1
     end
 ```
+
 ```mermaid
-graph TD
+graph LR
     subgraph Polling
         B1[用户] -->|通过API网关| B2[订单服务]
         B2 --> B3[支付服务]
