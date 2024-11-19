@@ -1,4 +1,29 @@
 ```mermaid
+
+classDiagram
+    class ML-powered Tasks {
+        <<Abstract>>
+    }
+
+    class Discriminative << ML-powered Tasks >>
+    class Generative << ML-powered Tasks >>
+
+    Discriminative "1" --> "*" ImageSegmentation
+    Discriminative "1" --> "*" ObjectDetection
+    Discriminative "1" --> "*" SentimentAnalysis
+    Discriminative "1" --> "*" NamedEntityRecognition
+    Discriminative "1" --> "*" RecommendationSystems
+    Discriminative "1" --> "*" AutomaticSpeechRecognition
+    Discriminative "1" --> "*" VisualSearch
+
+    Generative "1" --> "*" Chatbots
+    Generative "1" --> "*" Summarization
+    Generative "1" --> "*" ImageCaptioning
+    Generative "1" --> "*" TextToVideo
+    Generative "1" --> "*" TextToImage
+    Generative "1" --> "*" FaceGeneration
+    Generative "1" --> "*" AudioSynthesis
+    
 graph LR
     A[ML-powered Tasks] --> B[Discriminative]
     A --> C[Generative]
