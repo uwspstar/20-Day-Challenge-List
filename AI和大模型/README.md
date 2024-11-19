@@ -2,10 +2,9 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
 - [Harvard CS50’s Artificial Intelligence with Python – Full University Course](https://www.youtube.com/watch?v=5NgNicANyqM&t=2s)
-
 - [Deeplearning.ai](https://www.deeplearning.ai/courses/)
-
 - https://codebitwave.com/artificial-intelligence/
+- [Discriminative vs Generative](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/AI%E5%92%8C%E5%A4%A7%E6%A8%A1%E5%9E%8B/Discriminative%20vs%20Generative.md)
   
 ------
 
