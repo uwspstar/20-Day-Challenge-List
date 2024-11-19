@@ -84,25 +84,23 @@ graph TD
 ```mermaid
 graph TD
     subgraph 优化方法
-        A[分页 (Pagination)] -->|按页分块返回数据| B[服务 (Services)]
+        A[分页 Pagination] -->|按页分块返回数据| B[服务 Services]
         B -->|返回结果| A
 
-        C[异步日志记录 (Async Logging)] -->|写入无锁缓冲区| D[日志缓冲区 (Buffer)]
-        D -->|定期刷新到磁盘| E[磁盘 (Disk)]
+        C[异步日志记录 Async Logging] -->|写入无锁缓冲区| D[日志缓冲区 Buffer]
+        D -->|定期刷新到磁盘| E[磁盘 Disk]
 
-        F[缓存 (Caching)] -->|从缓存读取| G[缓存 (Cache)]
-        G -->|缓存未命中| H[数据库 (DB)]
+        F[缓存 Caching] -->|从缓存读取| G[缓存 Cache]
+        G -->|缓存未命中| H[数据库 DB]
         H -->|查询后更新缓存| G
         G -->|返回结果| F
 
-        I[负载压缩 (Payload Compression)] -->|压缩请求数据| J[服务 (Services)]
+        I[负载压缩 Payload Compression] -->|压缩请求数据| J[服务 Services]
         J -->|压缩响应数据| I
 
-        K[连接池 (Connection Pool)] -->|复用连接| L[数据库 (DB)]
+        K[连接池 Connection Pool] -->|复用连接| L[数据库 DB]
     end
 ```
-
-### 图解说明：
 
 1. **分页 (Pagination)**：
    - 数据按页分块返回给客户端，避免一次性加载过多数据。
