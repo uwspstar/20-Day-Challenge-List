@@ -4,8 +4,8 @@ classDiagram
         <<Abstract>>
     }
 
-    class Discriminative << ML-powered Tasks >>
-    class Generative << ML-powered Tasks >>
+    class Discriminative inherits ML-powered Tasks
+    class Generative inherits ML-powered Tasks
 
     Discriminative "1" --> "*" ImageSegmentation
     Discriminative "1" --> "*" ObjectDetection
@@ -22,7 +22,6 @@ classDiagram
     Generative "1" --> "*" TextToImage
     Generative "1" --> "*" FaceGeneration
     Generative "1" --> "*" AudioSynthesis
-
 ```
 
 ```mermaid
