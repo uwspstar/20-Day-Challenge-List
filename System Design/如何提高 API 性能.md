@@ -45,7 +45,7 @@
 ### **示例图解：提高 API 性能的 5 种技巧**
 
 ```mermaid
-graph TD
+graph LR
     A[客户端请求 API] --> B[API 服务]
     B --> C[分页（Pagination）]
     C -->|分块返回| A
