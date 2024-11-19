@@ -1,5 +1,5 @@
 ```mermaid
-graph TD
+graph LR
     A[ML-powered Tasks] --> B[Discriminative]
     A --> C[Generative]
     
