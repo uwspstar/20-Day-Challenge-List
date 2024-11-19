@@ -1,5 +1,5 @@
 ```mermaid
-classDiagram LR
+classDiagram
     class ML-powered Tasks {
         <<Abstract>>
     }
