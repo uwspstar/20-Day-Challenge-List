@@ -1,5 +1,4 @@
 ```mermaid
-
 classDiagram
     class ML-powered Tasks {
         <<Abstract>>
@@ -23,7 +22,10 @@ classDiagram
     Generative "1" --> "*" TextToImage
     Generative "1" --> "*" FaceGeneration
     Generative "1" --> "*" AudioSynthesis
-    
+
+```
+
+```mermaid
 graph LR
     A[ML-powered Tasks] --> B[Discriminative]
     A --> C[Generative]
