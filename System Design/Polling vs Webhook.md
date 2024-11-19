@@ -3,10 +3,10 @@
 #### 场景假设：
 假设我们运行一个电子商务网站，客户通过 API 网关将订单发送到订单服务，订单服务再将请求转发给支付服务以完成支付交易。支付服务与一个外部支付服务提供商（PSP）进行通信以完成交易。
 
-#### 两种与外部支付服务提供商（PSP）通信的方式：
+#### Webhook vs Polling 两种与外部支付服务提供商（PSP）通信的方式：
 
 ```mermaid
-graph TD
+graph LR
     subgraph Webhook
         A1[用户] -->|通过API网关| A2[订单服务]
         A2 --> A3[支付服务]
@@ -14,7 +14,9 @@ graph TD
         A4 -->|完成后回调通知| A3
         A3 -->|返回结果| A1
     end
-    
+```
+```mermaid
+graph LR
     subgraph Polling
         B1[用户] -->|通过API网关| B2[订单服务]
         B2 --> B3[支付服务]
@@ -23,8 +25,6 @@ graph TD
         B4 -->|支付完成| B3
         B3 -->|返回结果| B1
     end
-
-    Webhook -->|对比| Polling
 ```
 
 ### 说明：
