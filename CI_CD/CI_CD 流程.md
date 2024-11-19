@@ -239,4 +239,3 @@ https://hooks.slack.com/services/YOUR_SLACK_WEBHOOK
 4. 使用 Kubernetes YAML 配置文件部署至集群。
 5. C# 代码监控和管理容器状态，保证高可用性。
 6. Jenkins 通知开发人员，流程完成。
-7. 
