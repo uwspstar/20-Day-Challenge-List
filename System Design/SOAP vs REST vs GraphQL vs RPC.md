@@ -89,3 +89,58 @@ graph TD
 4. **RPC** 提供了高性能，适合微服务和内部通信。
 
 通过以上比较，我们可以根据不同场景选择合适的 API 风格，优化开发效率和系统性能。
+
+---
+
+以下是基于上述图片的信息，用 **Mermaid** 绘制的 API 架构风格的时序图，结合流程编号解释其关键特性。
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant 客户端
+    participant SOAP服务
+    participant REST服务
+    participant GraphQL服务
+    participant RPC服务
+
+    %% SOAP 流程
+    客户端->>+SOAP服务: 请求数据 (1)
+    SOAP服务-->>客户端: 返回 XML 数据 (2)
+    note over SOAP服务: 支持事务、安全性要求高
+
+    %% REST 流程
+    客户端->>+REST服务: GET 请求资源 (3)
+    REST服务-->>客户端: 返回 JSON 数据 (4)
+    note over REST服务: 遵循 HTTP 方法，简单易用
+
+    %% GraphQL 流程
+    客户端->>+GraphQL服务: 查询指定字段 (5)
+    GraphQL服务-->>客户端: 返回按需 JSON 数据 (6)
+    note over GraphQL服务: 灵活查询，支持复杂依赖
+
+    %% RPC 流程
+    客户端->>+RPC服务: 调用方法 (7)
+    RPC服务-->>客户端: 返回结果 (8)
+    note over RPC服务: 高性能，适合微服务通信
+```
+
+### 图解说明：
+1. **SOAP**:
+   - 强调 XML 格式的数据传输，适合企业级应用。
+   - 支持事务和强安全性。
+2. **REST**:
+   - 使用标准 HTTP 协议，资源基于 URL。
+   - 易于学习，社区大，广泛用于 Web 和移动应用。
+3. **GraphQL**:
+   - 客户端按需查询字段，避免过多或过少数据传输。
+   - 适合需要复杂依赖和高交互性的场景。
+4. **RPC**:
+   - 模拟本地调用的方式，支持高性能低延迟。
+   - 适合微服务架构，支持多种序列化格式（如 ProtoBuf）。
+
+### 总结
+根据业务需求选择适合的 API 风格，可以优化系统性能并提高开发效率：  
+- SOAP 用于安全性高、事务要求强的场景。  
+- REST 是通用的选择，适合大部分应用。  
+- GraphQL 灵活性强，适合前端需求多变的场景。  
+- RPC 高效，用于微服务间的通信。
