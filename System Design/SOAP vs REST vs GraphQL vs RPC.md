@@ -144,3 +144,164 @@ sequenceDiagram
 - REST 是通用的选择，适合大部分应用。  
 - GraphQL 灵活性强，适合前端需求多变的场景。  
 - RPC 高效，用于微服务间的通信。
+
+---
+
+### 使用 C# 示例代码展示如何根据业务需求选择合适的 API 风格
+
+以下代码通过不同的类和方法，演示了 SOAP、REST、GraphQL 和 RPC 四种 API 风格的用法。根据具体业务需求，可以选择合适的 API 风格来优化系统性能并提高开发效率。
+
+
+#### 1. SOAP 示例：适用于高安全性和事务性需求
+
+```csharp
+using System;
+using System.ServiceModel;
+
+[ServiceContract]
+public interface ISoapService
+{
+    [OperationContract]
+    string ProcessPayment(string transactionId);
+}
+
+public class SoapService : ISoapService
+{
+    public string ProcessPayment(string transactionId)
+    {
+        // 模拟处理事务
+        return $"Transaction {transactionId} processed securely.";
+    }
+}
+
+class SoapClientDemo
+{
+    public void Run()
+    {
+        ChannelFactory<ISoapService> factory = new ChannelFactory<ISoapService>(
+            new BasicHttpBinding(),
+            new EndpointAddress("http://localhost/soapService")
+        );
+
+        ISoapService client = factory.CreateChannel();
+        string response = client.ProcessPayment("TX12345");
+        Console.WriteLine(response);
+    }
+}
+```
+
+#### 2. REST 示例：适用于大部分 Web 和移动应用
+
+```csharp
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+class RestClientDemo
+{
+    public async Task Run()
+    {
+        using HttpClient client = new HttpClient();
+        HttpResponseMessage response = await client.GetAsync("http://localhost/api/resource");
+        string data = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"Received data: {data}");
+    }
+}
+```
+
+#### 3. GraphQL 示例：适用于前端数据需求灵活的场景
+
+```csharp
+using System;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+class GraphQLClientDemo
+{
+    public async Task Run()
+    {
+        using HttpClient client = new HttpClient();
+        var query = new
+        {
+            query = "{ product(id: \"1\") { id name price } }"
+        };
+
+        string jsonQuery = System.Text.Json.JsonSerializer.Serialize(query);
+        StringContent content = new StringContent(jsonQuery, Encoding.UTF8, "application/json");
+
+        HttpResponseMessage response = await client.PostAsync("http://localhost/graphql", content);
+        string data = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"GraphQL Response: {data}");
+    }
+}
+```
+
+#### 4. RPC 示例：适用于微服务间的高效通信
+
+```csharp
+using Grpc.Net.Client;
+using System;
+using System.Threading.Tasks;
+
+// 定义 RPC 服务接口
+public class RpcClientDemo
+{
+    public async Task Run()
+    {
+        using var channel = GrpcChannel.ForAddress("http://localhost:5000");
+        var client = new RpcService.RpcServiceClient(channel);
+        
+        var request = new ProcessRequest { TransactionId = "TX12345" };
+        var response = await client.ProcessTransactionAsync(request);
+        Console.WriteLine($"RPC Response: {response.Message}");
+    }
+}
+```
+
+### 综合调用示例
+
+以下代码展示了如何根据具体需求调用不同的 API 风格。
+
+```csharp
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        Console.WriteLine("Select API Style: 1=SOAP, 2=REST, 3=GraphQL, 4=RPC");
+        string choice = Console.ReadLine();
+
+        switch (choice)
+        {
+            case "1":
+                var soapClient = new SoapClientDemo();
+                soapClient.Run();
+                break;
+            case "2":
+                var restClient = new RestClientDemo();
+                await restClient.Run();
+                break;
+            case "3":
+                var graphQLClient = new GraphQLClientDemo();
+                await graphQLClient.Run();
+                break;
+            case "4":
+                var rpcClient = new RpcClientDemo();
+                await rpcClient.Run();
+                break;
+            default:
+                Console.WriteLine("Invalid choice.");
+                break;
+        }
+    }
+}
+```
+
+### 总结
+
+1. **SOAP**：适合高安全性和事务性需求场景，如支付系统。
+2. **REST**：通用，适用于大部分 Web 和移动应用。
+3. **GraphQL**：灵活，适合前端需求多变的数据查询场景。
+4. **RPC**：高效，适用于微服务间的低延迟通信。
+
+通过上述示例代码，可以根据具体的业务需求选择最适合的 API 风格，从而提高系统性能和开发效率。
