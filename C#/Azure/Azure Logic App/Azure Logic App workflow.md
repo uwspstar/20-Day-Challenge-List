@@ -52,3 +52,49 @@ graph LR
 5. **End**:
    - Workflow completes.
 
+---
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Client as Client
+    participant Server as Workflow Server
+
+    %% Step 1: HTTP Request Received
+    Client->>+Server: 1. Send HTTP Request (Trigger Workflow)
+
+    %% Step 2: Condition Check
+    Server->>Server: 2. Evaluate Condition
+    alt Condition is True
+        Server->>+Server: 3. Send Manual Review Request Email
+        Server->>+Server: 4. Enter Review Process
+        alt Review: Approve
+            Server->>+Server: 5. Process Order
+        else Review: Escalate
+            Server->>+Server: 6. Send Escalation Email
+            Server->>+Server: 7. Check Response
+            alt Response is True
+                Server->>+Server: 8. Process Order After Escalation
+            else Response is False
+                Server->>+Server: 9. Send Escalation Failure Email
+            end
+        else Review: Default
+            Server->>+Server: 10. No Specific Action
+        end
+    else Condition is False
+        Server->>+Server: 11. Process Order Without Review
+    end
+
+    %% Step 3: End Workflow
+    Server-->>-Client: 12. Respond with Workflow Completion
+```
+
+### Explanation:
+- **Step 1**: The client initiates the workflow by sending an HTTP request.
+- **Step 2**: The server evaluates a condition, branching into:
+  - If **true**, it follows the review process:
+    - Approve: Processes the order.
+    - Escalate: Sends an escalation email, checks the response, and processes accordingly.
+    - Default: No specific action.
+  - If **false**, the order is processed without review.
+- **Step 3**: The server responds to the client, signaling workflow completion.
