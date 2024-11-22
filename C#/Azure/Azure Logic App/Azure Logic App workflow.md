@@ -1,7 +1,7 @@
 ### Azure Logic App workflow
 
 ```mermaid
-graph TD
+graph LR
     A[Start: When an HTTP request is received] --> B{Condition}
     B -->|True| C[Send Manual Review Request Email]
     C --> D{Review}
