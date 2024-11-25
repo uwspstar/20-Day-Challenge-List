@@ -153,7 +153,7 @@ graph TD
 
 ```mermaid
 graph TD
-    A[1. 浏览器加载 WebAssembly 模块] --> B[2 验证模块的合法性]
+    A[1 浏览器加载 WebAssembly 模块] --> B[2 验证模块的合法性]
     B --> C[3 初始化沙盒环境]
     C --> D[4 限制内存访问]
     C --> E[5 限制功能调用]
