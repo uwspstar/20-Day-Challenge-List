@@ -177,6 +177,7 @@
 
 ```mermaid
 sequenceDiagram
+    autonumber
     participant 用户 as 用户
     participant 浏览器 as 浏览器
     participant WebAssembly as WebAssembly 应用
