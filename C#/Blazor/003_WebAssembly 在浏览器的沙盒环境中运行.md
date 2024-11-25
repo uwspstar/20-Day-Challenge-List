@@ -89,6 +89,168 @@ graph TD
 
 ---
 
+### **WebAssembly 在浏览器的沙盒环境中运行**
+
+**WebAssembly (WASM)** 是一种高效、安全的二进制格式，可以在浏览器的沙盒环境中运行，提供接近原生的性能，同时确保用户设备的安全。它运行在一个受限的沙盒中，避免了直接访问设备资源或操作系统功能，从而平衡了性能和安全性。
+
+---
+
+### **WebAssembly 的核心特性**
+
+| 特性                   | 说明                                                                 |
+|------------------------|----------------------------------------------------------------------|
+| **高性能**             | 通过二进制文件直接运行，接近原生代码的执行效率。                     |
+| **跨语言支持**         | 支持 C++、Rust、C# 等多种编程语言的编译运行。                         |
+| **沙盒隔离**           | 模块运行在沙盒中，与浏览器和系统资源完全隔离。                         |
+| **受控功能访问**        | 只能通过浏览器的 API（如 DOM 或 Web API）间接访问外部资源。            |
+| **安全性高**           | 内存和执行行为受到严格控制，防止恶意代码威胁。                         |
+
+---
+
+### **WebAssembly 的沙盒运行机制**
+
+1. **加载与验证**：
+   - 浏览器加载 WebAssembly 文件时，首先验证其合法性，确保符合安全规范。
+   - 格式或代码不合法的模块会被拒绝运行。
+
+2. **隔离执行**：
+   - WebAssembly 在沙盒中运行，与操作系统和浏览器的其他模块隔离，防止互相干扰。
+
+3. **受限内存访问**：
+   - WebAssembly 使用独立的线性内存，无法直接访问其他模块或系统内存。
+
+4. **功能调用**：
+   - WebAssembly 无法直接调用系统资源，只能通过浏览器暴露的受控 API 访问功能。
+
+5. **安全执行**：
+   - 运行时即使包含潜在的不安全代码，也会被沙盒环境限制其行为。
+
+---
+
+### **沙盒环境的优点**
+
+| 优点                  | 说明                                                                 |
+|-----------------------|----------------------------------------------------------------------|
+| **安全性**            | 防止未经授权的内存访问或恶意操作。                                    |
+| **跨平台兼容**        | 适用于所有主流浏览器和操作系统。                                       |
+| **模块化支持**        | 每个 WebAssembly 模块都在独立沙盒中运行，互不影响。                     |
+| **性能优化**          | 执行速度接近原生应用程序，适合高计算密集型任务。                       |
+
+---
+
+### **沙盒环境的限制**
+
+| 限制                   | 说明                                                                 |
+|------------------------|----------------------------------------------------------------------|
+| **无法直接访问 DOM**    | 必须通过 JavaScript 间接操作 DOM。                                   |
+| **缺乏系统权限**        | 无法直接调用操作系统功能（如文件系统、硬件控制等）。                   |
+| **内存分配有限**        | WebAssembly 的线性内存需要预先分配，不能动态扩展。                     |
+| **调试复杂**           | WebAssembly 是二进制格式，调试需要工具支持。                           |
+
+---
+
+### **带序号的运行流程图**
+
+以下是 WebAssembly 在浏览器中运行沙盒环境的完整流程图：
+
+```mermaid
+graph TD
+    A[1. 浏览器加载 WebAssembly 模块] --> B[2. 验证模块的合法性]
+    B --> C[3. 初始化沙盒环境]
+    C --> D[4. 限制内存访问]
+    C --> E[5. 限制功能调用]
+    D --> F[6. 安全执行 WebAssembly 代码]
+    E --> F
+```
+
+---
+
+### **WebAssembly 沙盒的交互序列图**
+
+以下序列图展示了 WebAssembly 沙盒从加载到安全运行的详细交互流程：
+
+```mermaid
+sequenceDiagram
+    participant 用户 as 用户
+    participant 浏览器 as 浏览器
+    participant WebAssembly as WebAssembly 模块
+    participant 沙盒环境 as 沙盒环境
+    participant API as 浏览器 API
+
+    用户->>浏览器: 1. 请求加载 WebAssembly 模块
+    浏览器->>WebAssembly: 2. 加载 .wasm 文件
+    浏览器->>浏览器: 3. 验证模块合法性
+    alt 模块合法
+        浏览器->>沙盒环境: 4. 初始化沙盒环境
+        沙盒环境->>WebAssembly: 5. 分配线性内存
+        WebAssembly->>沙盒环境: 6. 请求功能调用
+        沙盒环境->>API: 7. 调用受控 API
+        API-->>沙盒环境: 返回结果
+        沙盒环境-->>WebAssembly: 返回功能执行结果
+    else 模块非法
+        浏览器-->>用户: 拒绝加载并抛出错误
+    end
+    沙盒环境-->>浏览器: 8. 安全运行 WebAssembly 代码
+    浏览器-->>用户: 9. 返回处理后的页面
+```
+
+---
+
+### **C# 代码示例**
+
+以下是一个使用 **Blazor WebAssembly** 的计数器示例，展示 WebAssembly 的基本交互逻辑：
+
+#### **Counter.razor**
+```csharp
+@page "/counter"
+
+<h1>计数器示例</h1>
+
+<p>当前计数：@currentCount</p>
+
+<button @onclick="IncrementCount">点击增加</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
+```
+
+**解释**:
+- `@currentCount`: 动态绑定计数器值。
+- `@onclick="IncrementCount"`: 绑定按钮点击事件，触发逻辑更新计数器。
+
+---
+
+#### **Program.cs**
+```csharp
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+
+await builder.Build().RunAsync();
+```
+
+**解释**:
+- `builder.RootComponents.Add<App>("#app")`: 将根组件设置为 `<div id="app">`。
+- `await builder.Build().RunAsync()`: 启动 WebAssembly 应用。
+
+---
+
+### **总结**
+
+- WebAssembly 的沙盒环境确保了**高安全性**，防止恶意代码影响用户设备。
+- 它通过**受限内存**和**功能调用**实现了性能和安全的平衡。
+- 使用 WebAssembly（如 Blazor WebAssembly）开发的应用具有**高性能**和**跨平台支持**，非常适合需要高计算性能的现代 Web 应用场景。
+
+结合流程图和代码示例，可以更直观地理解 WebAssembly 如何运行以及沙盒环境的重要性。
+
 ### **总结**
 
 WebAssembly 在浏览器的沙盒环境中运行，提供了高性能的同时，确保了安全性和跨平台兼容性。它无法直接操作硬件或系统资源，必须通过浏览器的 API 与外部世界交互。虽然这种沙盒机制带来了限制，但它是确保 WebAssembly 成为现代 Web 开发重要工具的关键。
