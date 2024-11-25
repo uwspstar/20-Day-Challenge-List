@@ -171,7 +171,7 @@
 
 ---
 
-### **WebAssembly 的交互流程（Mermaid 图）**
+### **WebAssembly 的交互流程**
 
 以下是 WebAssembly 在浏览器中的交互流程，用于处理用户事件并更新 UI。
 
