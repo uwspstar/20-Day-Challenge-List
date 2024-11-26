@@ -43,9 +43,9 @@ gantt
     dateFormat  YYYY-MM-DD
     section CPU Core 1
     Task A           :a1, 2024-01-01, 1d
-    Task B           :after a1, 3d
-    Task A           :after a2, 3d
-    Task B           :after a3, 3d
+    Task B           :after a1, 1d
+    Task A           :after a2, 1d
+    Task B           :after a3, 1d
 
 ```
 
