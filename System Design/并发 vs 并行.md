@@ -46,7 +46,6 @@ gantt
     Task B           :after a1, 1d
     Task A           :after a2, 1d
     Task B           :after a3, 1d
-
 ```
 
 - **说明**：
