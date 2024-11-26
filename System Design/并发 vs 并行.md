@@ -2,8 +2,6 @@
 
 并行和并发是计算机科学中两个重要的概念，经常用于描述多任务执行的方式。虽然它们有一定的联系，但在实际实现和应用中存在显著区别。
 
----
-
 #### **核心区别：**
 
 | 特点           | 并行 (Parallelism)                                          | 并发 (Concurrency)                                     |
@@ -14,9 +12,6 @@
 | **目标**       | 提高处理能力，缩短运行时间。                                 | 提高任务切换效率，增强响应能力。                      |
 | **示例**       | 同时运行多个科学计算程序。                                   | 在浏览器中同时加载多个网页或任务调度。                |
 
----
-
-### **理解概念**
 
 #### 1. **并行 (Parallelism)**
 
@@ -32,7 +27,6 @@
 - **场景**：适用于 I/O 密集型任务，如网络请求、文件读取。
 - **形象比喻**：一个人（单核 CPU）抬两块石头，但快速切换抬石头的顺序，让别人以为在同时完成。
 
----
 
 ### **对比图解：并行 vs 并发**
 
@@ -79,7 +73,7 @@ gantt
 | **文件下载和处理**   | 否                                         | 是                                      |
 | **高性能计算**       | 是                                         | 否                                      |
 
----
+ 
 
 ### **总结 (Key Takeaways)**
 
@@ -87,9 +81,6 @@ gantt
 2. 并行可以视为更高效的并发，但需要硬件支持。
 3. 理解场景和需求，选择合适的模式优化系统性能。
 
----
-
-如果需要详细图解或代码示例，请进一步说明需求！
 
 ```mermaid
 flowchart TD
@@ -101,7 +92,10 @@ flowchart TD
         CPU1 --> Task1 --> Task2
         Note1[一个CPU核心依次执行每个任务，因此任务A在任务B之前完成。]
     end
+```
 
+```mermaid
+flowchart TD
     subgraph parallelNotConcurrency[并发，但不是并行]
         direction LR
         CPU2[CPU Core 1]
@@ -110,7 +104,10 @@ flowchart TD
         CPU2 --> Task1_2 -.-> Task2_2
         Note2[一个CPU核心依次执行每个任务，使得任务A和任务B可以大致在同一时间完成。]
     end
+```
 
+```mermaid
+flowchart TD
     subgraph concurrencyNotParallel[并行，但不是并发]
         direction LR
         CPU3[CPU Core 1]
@@ -121,7 +118,10 @@ flowchart TD
         CPU4 --> Task2_3
         Note3[两个CPU核心依次执行每个任务，因此任务A在任务B之前完成。]
     end
+```
 
+```mermaid
+flowchart TD
     subgraph concurrencyAndParallel[并发，且并行]
         direction LR
         CPU5[CPU Core 1]
@@ -135,10 +135,6 @@ flowchart TD
         Note4[两个CPU核心同时执行每个任务，因此两个任务大致在同一时间完成。]
     end
 ```
-
----
-
-### Diagram Description in Chinese
 
 #### 1. **不是并发，也不是并行**
    - **描述**：一个 CPU 核心依次执行每个任务，因此任务 A 在任务 B 之前完成。
