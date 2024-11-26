@@ -39,13 +39,13 @@
 #### 图 1: 并发 (Concurrency)
 ```mermaid
 gantt
-    title 并发任务执行示意图
+    title Concurrency Task Execution
     dateFormat  YYYY-MM-DD
     section CPU Core 1
     Task A           :a1, 2024-01-01, 1d
-    Task B           :after a1, 1d
-    Task A           :after a2, 1d
-    Task B           :after a3, 1d
+    Task B           :b1, after a1, 1d
+    Task A (Round 2) :a2, after b1, 1d
+    Task B (Round 2) :b2, after a2, 1d
 ```
 
 - **说明**：
