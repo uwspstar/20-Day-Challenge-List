@@ -19,7 +19,7 @@ flowchart TD
     Step8 --> Microservices[后端微服务]
     API_Gateway -->|9 错误处理| Step9[错误处理]
     API_Gateway -->|10 熔断机制| Step10[熔断]
-    API_Gateway -->|11 日志记录与监控| Step11[日志与监控 (ELK 堆栈)]
+    API_Gateway -->|11 日志记录与监控| Step11[日志与监控 ELK 堆栈]
     API_Gateway -->|12 数据缓存| Step12[Redis 缓存]
 ```
 
