@@ -216,3 +216,84 @@ This updated file structure is a **best practice** for medium to large Blazor pr
 - **Modularity**: Clear separation of components by feature.
 - **Scalability**: Ability to grow with the project by adding features without creating chaos.
 - **Maintainability**: Logical grouping simplifies navigation and team collaboration.
+
+---
+
+Here’s the **Mermaid diagram** that matches the updated Blazor file structure, reflecting the feature-based organization:
+
+```mermaid
+graph TD
+    A[BlazorApp] --> B[Components]
+    A --> S[Services]
+    A --> M[Models]
+    A --> AU[Authentication]
+    A --> W[wwwroot]
+    A --> P[Program.cs]
+    A --> AppSettings[appsettings.json / appsettings.Development.json]
+
+    B --> F[Feature]
+    F --> F1[Dashboard]
+    F1 --> F11[DashboardPage.razor]
+    F1 --> F12[DashboardStats.razor]
+    F --> F2[UserManagement]
+    F2 --> F21[UserList.razor]
+    F2 --> F22[UserForm.razor]
+    F2 --> F23[UserProfile.razor]
+    F --> F3[Reports]
+    F3 --> F31[ReportList.razor]
+    F3 --> F32[ReportDetails.razor]
+    F3 --> F33[ReportFilter.razor]
+    B --> L[Layout]
+    L --> L1[MainLayout.razor]
+    L --> L2[NavMenu.razor]
+    B --> S1[Shared]
+    S1 --> S11[Notification.razor]
+    B --> Import[_Imports.razor]
+    B --> App[App.razor]
+    B --> Routes[Routes.razor]
+
+    S --> S1[WeatherForecastService.cs]
+    S --> S2[AuthenticationService.cs]
+
+    M --> M1[User.cs]
+    M --> M2[WeatherForecast.cs]
+    M --> M3[Report.cs]
+    M --> M4[Enums.cs]
+
+    AU --> AU1[AuthStateProvider.cs]
+    AU --> AU2[TokenService.cs]
+
+    W --> WC[css]
+    WC --> WC1[site.css]
+    W --> WJ[js]
+    WJ --> WJ1[script.js]
+```
+
+---
+
+### **What This Mermaid Diagram Represents**
+- **Main Directory (`BlazorApp`)**: The root of the application.
+- **Feature-Based Components (`Components/Feature`)**:
+  - Organized into features (`Dashboard`, `UserManagement`, `Reports`).
+  - Each feature has its own Razor components.
+- **Common Layout and Shared Components (`Components/Layout`, `Components/Shared`)**:
+  - Layout components like `MainLayout.razor` and `NavMenu.razor`.
+  - Shared reusable components like `Notification.razor`.
+- **Services (`Services/`)**:
+  - Contains business logic for API communication.
+- **Models (`Models/`)**:
+  - Defines data structures for the application.
+- **Authentication (`Authentication/`)**:
+  - Handles user authentication and state management.
+- **Static Files (`wwwroot/`)**:
+  - CSS and JavaScript files stored for static serving.
+
+---
+
+### **How to Use This Structure**
+- Each folder has a specific role:
+  - **`Components/Feature`**: Contains feature-specific components for modularity.
+  - **`Services/`**: Manages logic for interacting with APIs or external resources.
+  - **`Models/`**: Houses data representations shared across the application.
+  - **`Authentication/`**: Encapsulates authentication logic for better maintainability.
+  - **`wwwroot/`**: Stores static resources served directly to the client.
