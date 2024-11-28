@@ -4,6 +4,7 @@
 
 ```mermaid
 flowchart TD
+    autonumber
     EA[企业架构<br>Enterprise Architecture]
     BA[业务架构<br>Business Architecture]
     AA[应用架构<br>Application Architecture]
