@@ -222,7 +222,7 @@ This updated file structure is a **best practice** for medium to large Blazor pr
 Here’s the **Mermaid diagram** that matches the updated Blazor file structure, reflecting the feature-based organization:
 
 ```mermaid
-graph TD
+graph LR
     A[BlazorApp] --> B[Components]
     A --> S[Services]
     A --> M[Models]
