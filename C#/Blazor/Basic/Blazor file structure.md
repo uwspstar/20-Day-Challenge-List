@@ -1,4 +1,4 @@
-# Blazor file structur
+# Blazor file structure
 
 ## **Updated File Structure**
 
