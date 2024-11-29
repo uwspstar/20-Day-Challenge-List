@@ -263,9 +263,9 @@ graph LR
     AU --> AU1[AuthStateProvider.cs]
     AU --> AU2[TokenService.cs]
 
-    W --> WC[css]
+    W --> WC[css /]
     WC --> WC1[site.css]
-    W --> WJ[js]
+    W --> WJ[js /]
     WJ --> WJ1[script.js]
 ```
 
