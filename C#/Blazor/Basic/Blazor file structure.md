@@ -271,7 +271,7 @@ graph LR
 
 ---
 
-### **What This Mermaid Diagram Represents**
+### **What This Diagram Represents**
 - **Main Directory (`BlazorApp`)**: The root of the application.
 - **Feature-Based Components (`Components/Feature`)**:
   - Organized into features (`Dashboard`, `UserManagement`, `Reports`).
