@@ -154,15 +154,11 @@ graph LR
   - Holds **reusable, generic UI controls** (e.g., `Button.razor`, `Modal.razor`).
   - Includes code-behind files (e.g., `Button.razor.cs`) and supporting classes (e.g., `DataTableColumn.cs`).
 
----
-
 #### **2. Services/**
 
 - **Purpose**:
   - Contains **cross-feature or app-wide services**, such as `WeatherForecastService.cs` and `AuthenticationService.cs`.
   - Shared logic, such as an `ApiClient.cs` for HTTP requests, is also placed here.
-
----
 
 #### **3. Models/**
 
@@ -170,23 +166,17 @@ graph LR
   - Defines shared data models (e.g., `User.cs`, `WeatherForecast.cs`) and enums (e.g., `Enums.cs`).
   - Models represent the structure of data shared between components and services.
 
----
-
 #### **4. Authentication/**
 
 - **Purpose**:
   - Manages authentication and authorization logic (e.g., `AuthStateProvider.cs`, `TokenService.cs`).
   - Keeps sensitive authentication logic separate from other app logic.
 
----
-
 #### **5. Utilities/**
 
 - **Purpose**:
   - Contains general-purpose helper classes and extensions (e.g., `StringHelper.cs`, `ValidationHelper.cs`).
   - These utilities are reusable throughout the app but not tied to any specific feature.
-
----
 
 #### **6. wwwroot/**
 
@@ -196,8 +186,6 @@ graph LR
     - **css/**: Custom styles (`site.css`).
     - **js/**: Custom JavaScript logic (`script.js`).
     - **images/**: Static image assets (optional).
-
----
 
 ### **Key Features of This Structure**
 
@@ -218,17 +206,6 @@ graph LR
 5. **Maintainability**:
    - Clear separation of logic (UI in `Components/`, logic in `Services/`, data in `Models/`) makes the codebase easier to maintain and scale.
 
----
-
-### **When to Use This Structure**
-
-- **Ideal for Medium to Large Projects**:
-  - This structure is designed for scalable Blazor apps with multiple features and reusable components.
-
-- **Overhead for Small Projects**:
-  - For small projects, this structure might be overly complex. A simpler version without `Feature/` subdivisions or a flat `Components/` folder might suffice.
-
----
 
 ### **Conclusion**
 
