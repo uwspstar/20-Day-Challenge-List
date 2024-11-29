@@ -224,10 +224,11 @@ Here’s the **Mermaid diagram** that matches the updated Blazor file structure,
 ```mermaid
 graph LR
     A[BlazorApp] --> B[Components]
-    A --> S[Services]
-    A --> M[Models]
-    A --> AU[Authentication]
-    A --> W[wwwroot]
+    A --> S[Services/]
+    A --> S1[Shared/]
+    A --> M[Models/]
+    A --> AU[Authentication/]
+    A --> W[wwwroot/]
     A --> P[Program.cs]
     A --> AppSettings[appsettings.json / appsettings.Development.json]
 
