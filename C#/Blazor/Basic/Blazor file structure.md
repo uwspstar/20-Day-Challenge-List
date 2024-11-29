@@ -46,8 +46,6 @@ BlazorApp/
 └── appsettings.Development.json
 ```
 
----
-
 ### **What Each Folder Does**
 
 #### **1. Components/Feature/**
@@ -74,8 +72,6 @@ Organized components by **features**, allowing better modularity and scalability
     - `ReportDetails.razor`: Displays detailed information about a specific report.
     - `ReportFilter.razor`: A reusable component for filtering reports.
 
----
-
 #### **2. Components/Layout/**
 
 Contains shared layout components used across the application.
@@ -85,16 +81,12 @@ Contains shared layout components used across the application.
 - **NavMenu.razor**:
   - Provides navigation links for the app.
 
----
-
 #### **3. Components/Shared/**
 
 Contains shared components that are not tied to any specific feature.
 
 - **Notification.razor**:
   - A reusable notification or toast component for displaying messages across the app.
-
----
 
 #### **4. Services/**
 
@@ -104,8 +96,6 @@ Encapsulates business logic and API interactions.
   - Example service to fetch weather data.
 - **AuthenticationService.cs**:
   - Handles user authentication and session management.
-
----
 
 #### **5. Models/**
 
@@ -120,8 +110,6 @@ Defines strongly-typed data structures.
 - **Enums.cs**:
   - Contains enumerations for shared values (e.g., user roles or report statuses).
 
----
-
 #### **6. Authentication/**
 
 Centralizes authentication and authorization logic.
@@ -130,8 +118,6 @@ Centralizes authentication and authorization logic.
   - Implements authentication state management for the app.
 - **TokenService.cs**:
   - Handles JWT token storage, validation, and refresh logic.
-
----
 
 #### **7. wwwroot/**
 
@@ -142,19 +128,13 @@ Contains static files served directly to the client.
 - **js/script.js**:
   - Custom JavaScript for additional interactivity.
 
----
-
 #### **8. Program.cs**
 
 The entry point for configuring services, middleware, and the app's startup process.
 
----
-
 #### **9. appsettings.json / appsettings.Development.json**
 
 Store application configuration for different environments.
-
----
 
 ### **Why This Structure Works Well**
 
@@ -174,14 +154,10 @@ Store application configuration for different environments.
 5. **Scalability**:
    - As the app grows, more features can be added without disrupting the overall structure.
 
----
-
 ### **When to Use This Structure**
 
 - **Small to Medium Projects**: The feature-based structure provides flexibility without unnecessary complexity.
 - **Large Projects**: For larger projects, this structure can be extended further by introducing subfolders (e.g., `Feature/Dashboard/Widgets/`) or grouping related services and models under feature-specific folders.
-
----
 
 ### **Potential Improvements for Larger Projects**
 
@@ -206,20 +182,6 @@ Store application configuration for different environments.
      ```csharp
      namespace BlazorApp.Components.Feature.Dashboard;
      ```
-
----
-
-### **Conclusion**
-
-This updated file structure is a **best practice** for medium to large Blazor projects, offering:
-
-- **Modularity**: Clear separation of components by feature.
-- **Scalability**: Ability to grow with the project by adding features without creating chaos.
-- **Maintainability**: Logical grouping simplifies navigation and team collaboration.
-
----
-
-Here’s the **Mermaid diagram** that matches the updated Blazor file structure, reflecting the feature-based organization:
 
 ```mermaid
 graph LR
@@ -270,8 +232,6 @@ graph LR
     W --> WI[images /]
 ```
 
----
-
 ### **What This Diagram Represents**
 - **Main Directory (`BlazorApp`)**: The root of the application.
 - **Feature-Based Components (`Components/Feature`)**:
@@ -289,8 +249,6 @@ graph LR
 - **Static Files (`wwwroot/`)**:
   - CSS, JavaScript and image files stored for static serving.
 
----
-
 ### **How to Use This Structure**
 - Each folder has a specific role:
   - **`Components/Feature`**: Contains feature-specific components for modularity.
@@ -298,3 +256,11 @@ graph LR
   - **`Models/`**: Houses data representations shared across the application.
   - **`Authentication/`**: Encapsulates authentication logic for better maintainability.
   - **`wwwroot/`**: Stores static resources served directly to the client.
+
+### **Conclusion**
+
+This updated file structure is a **best practice** for medium to large Blazor projects, offering:
+
+- **Modularity**: Clear separation of components by feature.
+- **Scalability**: Ability to grow with the project by adding features without creating chaos.
+- **Maintainability**: Logical grouping simplifies navigation and team collaboration.
