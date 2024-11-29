@@ -225,7 +225,6 @@ Here’s the **Mermaid diagram** that matches the updated Blazor file structure,
 graph LR
     A[BlazorApp] --> B[Components /]
     A --> S[Services /]
-    A --> Sh[Shared /]
     A --> M[Models /]
     A --> AU[Authentication /]
     A --> W[wwwroot /]
