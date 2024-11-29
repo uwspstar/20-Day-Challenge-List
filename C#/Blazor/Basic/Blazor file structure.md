@@ -267,7 +267,7 @@ graph LR
     WC --> WC1[site.css]
     W --> WJ[js /]
     WJ --> WJ1[script.js]
-    W --> WI[image /]
+    W --> WI[images /]
 ```
 
 ---
@@ -287,7 +287,7 @@ graph LR
 - **Authentication (`Authentication/`)**:
   - Handles user authentication and state management.
 - **Static Files (`wwwroot/`)**:
-  - CSS and JavaScript files stored for static serving.
+  - CSS, JavaScript and image files stored for static serving.
 
 ---
 
