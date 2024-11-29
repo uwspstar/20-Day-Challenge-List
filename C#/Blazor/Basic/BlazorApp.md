@@ -21,12 +21,12 @@ BlazorApp/
 │   ├── Layout/                   # Layout components
 │   │   ├── MainLayout.razor
 │   │   └── NavMenu.razor
+│   │   └── Breadcrumb.razor
 │   ├── Shared/                   # Shared UI components
 │   │   ├── Notification.razor
-│   │   └── Breadcrumb.razor
 │   ├── Controls/                 # Reusable UI controls
 │   │   ├── Button.razor
-│   │   ├── Button.razor.cs       # Code-behind for Button
+│   │       └──  Button.razor.cs  # Code-behind for Button
 │   │   ├── TextInput.razor
 │   │   ├── Modal.razor
 │   │   └── DataTable.razor
@@ -97,14 +97,15 @@ graph LR
     C --> C5[DataTable.razor]
     C5 --> C6[DataTableColumn.cs]
 
-    B --> Sh[Shared /]
-    Sh --> S11[Notification.razor]
-    Sh --> S12[Breadcrumb.razor]
-
     B --> L[Layout /]
-    L -->L1[NavMenu.razor]
-    L -->L2[MainLayout.razor]
+    L -->L1[MainLayout.razor]
+    L -->L2[NavMenu.razor]
+    L --> L3[Breadcrumb.razor]
 
+    B --> Sh[Shared /]
+    Sh --> Sh1[Notification.razor]
+    
+    
     B --> Import[_Imports.razor]
     B --> App[App.razor]
     B --> Routes[Routes.razor]
@@ -136,9 +137,6 @@ graph LR
     WJ --> WJ1[script.js]
     W --> WI[images]
 ```
----
-
-### **Folder Explanations**
 
 #### **1. Components/**
 
