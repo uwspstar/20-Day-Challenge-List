@@ -267,6 +267,7 @@ graph LR
     WC --> WC1[site.css]
     W --> WJ[js /]
     WJ --> WJ1[script.js]
+    W --> WI[image /]
 ```
 
 ---
