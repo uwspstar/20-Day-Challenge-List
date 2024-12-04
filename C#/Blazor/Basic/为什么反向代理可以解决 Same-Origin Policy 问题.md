@@ -72,7 +72,35 @@
 
 ---
 
+### **反向代理的工作流程**
+
+```mermaid
+sequenceDiagram
+    participant Browser as 浏览器 (Blazor 应用)
+    participant Proxy as 反向代理服务器 (https://localhost:7001)
+    participant Target as 目标服务器 (https://example.com)
+
+    Browser->>Proxy: 请求 /api/proxy/fetch?url=https://example.com
+    Proxy->>Target: 请求目标内容 (https://example.com)
+    Target-->>Proxy: 返回目标内容
+    Proxy-->>Browser: 将目标内容返回给浏览器
+```
+
+### **图解说明**
+1. **浏览器请求反向代理**：
+   - 用户通过 iframe 或 API 请求，访问反向代理服务器的 `/api/proxy/fetch` 接口。
+   - 请求包含 `url` 参数，指定目标服务器的地址。
+
+2. **反向代理向目标服务器发起请求**：
+   - 反向代理服务器使用 `HttpClient` 代替浏览器访问目标服务器（`https://example.com`）。
+   - 由于此请求由服务器发出，不受浏览器同源策略的限制。
+
+3. **目标服务器返回响应**：
+   - 目标服务器处理请求，并将响应数据返回给反向代理。
+
+4. **反向代理将响应传递给浏览器**：
+   - 反向代理将目标服务器的数据传递回浏览器，浏览器认为数据来源于同源的反向代理。
+
+
 #### **7. 总结**
 反向代理通过充当中间层，将跨域请求转化为同源请求，从而绕过了浏览器的同源策略限制。这种方法安全、高效，并且在现代 Web 开发中非常常见。只要正确配置，反向代理可以在保持安全性的同时提供强大的跨域能力。
-
-如果您有更多疑问，请随时告诉我！
