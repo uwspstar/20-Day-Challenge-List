@@ -10,7 +10,7 @@ In ASP.NET MVC, **validation** is used to ensure that the data submitted by user
 4. **Fluent Validation** (External Libraries like FluentValidation)
 
 #### 1. Data Annotations
-
+- https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-9.0
 Data annotations are attributes that you can apply directly to model properties. These attributes help validate the data entered by the user.
 
 #### Example Model with Data Annotations:
