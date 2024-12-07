@@ -1,4 +1,5 @@
 ### C# 数据注解（Data Annotation）
+- https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-9.0
 
 C# 数据注解是一个强大的工具，主要用于对类和属性进行验证、格式化或数据库映射。它通常被用于 **ASP.NET Core** 应用程序中，尤其是模型绑定和验证场景。以下是详细介绍及示例。
 
