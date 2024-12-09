@@ -390,6 +390,10 @@ To avoid cross-origin issues entirely, configure a reverse proxy in the Blazor a
 
 **Steps:**
 1. Modify the Blazor app's `Program.cs` to include a reverse proxy:
+   ```txt
+   dotnet add package Yarp.ReverseProxy
+   ```
+
    ```csharp
    app.Map("/api/fetch", proxyApp =>
    {
@@ -401,7 +405,7 @@ To avoid cross-origin issues entirely, configure a reverse proxy in the Blazor a
    });
    ```
 
-2. Change the iframe source in your Blazor app to:
+3. Change the iframe source in your Blazor app to:
    ```html
    <iframe src="https://localhost:5001/api/fetch?url=https://example.com" width="600" height="400"></iframe>
    ```
