@@ -426,6 +426,64 @@ app.Map("/api/fetch", async context =>
 });
 ```
 
+```csharp
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Yarp.ReverseProxy;
+using Yarp.ReverseProxy.Forwarder;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container
+builder.Services.AddReverseProxy(); // Add YARP reverse proxy services
+
+// Build the app
+var app = builder.Build();
+
+// Middleware pipeline
+app.UseRouting();
+
+// Example reverse proxy using RunProxy
+app.Map("/api/fetch", proxyApp =>
+{
+    // Use RunProxy to forward requests
+    proxyApp.RunProxy(async context =>
+    {
+        // Construct the target URI by appending path and query
+        var targetUri = new Uri("https://localhost:5058" + context.Request.Path + context.Request.QueryString);
+
+        // Forward the request to the target URI
+        return await context.ForwardTo(targetUri).Send();
+    });
+});
+
+// Optional: Example using HttpForwarder directly
+var forwarder = app.Services.GetRequiredService<HttpForwarder>();
+app.Map("/api/forward", async context =>
+{
+    var targetUri = new Uri("https://localhost:5058" + context.Request.Path + context.Request.QueryString);
+
+    // Forwarder configuration
+    var requestOptions = new ForwarderRequestConfig
+    {
+        ActivityTimeout = TimeSpan.FromSeconds(30)
+    };
+
+    // Forward the request
+    await forwarder.SendAsync(context, targetUri.ToString(), httpClient => { }, requestOptions);
+});
+
+// Default fallback route
+app.MapFallback(() => Results.Text("Reverse proxy is running!"));
+
+// Run the app
+app.Run();
+
+```
+
+
 3. Change the iframe source in your Blazor app to:
    ```html
    <iframe src="https://localhost:5001/api/fetch?url=https://example.com" width="600" height="400"></iframe>
