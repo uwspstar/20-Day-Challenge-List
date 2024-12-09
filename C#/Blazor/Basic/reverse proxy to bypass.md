@@ -404,6 +404,27 @@ To avoid cross-origin issues entirely, configure a reverse proxy in the Blazor a
        });
    });
    ```
+#### Configuration Issues
+If you encounter runtime issues with RunProxy, the YARP Forwarder might not be correctly configured. Try this alternate configuration using the HttpForwarder class:
+
+Replace RunProxy with HttpForwarder:
+```csharp
+var forwarder = app.Services.GetRequiredService<HttpForwarder>();
+
+app.Map("/api/fetch", async context =>
+{
+    var targetUri = new Uri("https://localhost:5058" + context.Request.Path + context.Request.QueryString);
+
+    // Prepare forwarder options
+    var requestOptions = new ForwarderRequestConfig
+    {
+        ActivityTimeout = TimeSpan.FromSeconds(100)
+    };
+
+    // Forward the request
+    await forwarder.SendAsync(context, targetUri.ToString(), httpClient => { }, requestOptions);
+});
+```
 
 3. Change the iframe source in your Blazor app to:
    ```html
