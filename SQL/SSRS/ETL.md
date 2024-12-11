@@ -33,7 +33,7 @@ Below is a diagram illustrating a simple ETL (Extract, Transform, Load) flow usi
 
 ```mermaid
 flowchart LR
-    A[Extract Data from Sources\n(e.g. SQL DB, Flat Files)] --> B[Transform Data\n(Apply Business Rules,\nCleansing, Aggregation)]
+    A[Extract Data from Sources\n e.g. SQL DB, Flat Files] --> B[Transform Data\n Apply Business Rules,\nCleansing, Aggregation]
     B --> C[Load Data into Target\n(Data Warehouse,\nReporting DB)]
     
     %% SSIS Integration
