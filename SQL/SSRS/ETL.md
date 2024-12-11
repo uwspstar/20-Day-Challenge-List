@@ -29,7 +29,7 @@ In summary, **SSIS is Microsoft’s ETL tool** that helps organizations efficien
 
 ---
 
-Below is a diagram illustrating a simple ETL (Extract, Transform, Load) flow using SSIS concepts. You can copy and paste this code into a Mermaid-compatible editor (such as [Mermaid Live Editor](https://mermaid.live/)) to visualize it.
+Below is a diagram illustrating a simple ETL (Extract, Transform, Load) flow using SSIS concepts.
 
 ```mermaid
 flowchart LR
