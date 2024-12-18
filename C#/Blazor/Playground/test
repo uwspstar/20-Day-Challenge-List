@@ -1,0 +1,72 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace ReportApi.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ReportsController : ControllerBase
+    {
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        public ReportsController(IHttpClientFactory httpClientFactory)
+        {
+            _httpClientFactory = httpClientFactory;
+        }
+
+        [HttpGet("Report")]
+        public async Task<IActionResult> GetReport(
+    string reportPath = "/NorthwindReports/NorthwindOrders",
+    string format = "PDF",
+    [FromQuery] Dictionary<string, string>? parameters = null)
+        {
+            try
+            {
+                // SSRS Report Server base URL
+                var reportServerUrl = "http://uwspstar:8080/ReportServer";
+
+                // Build the full SSRS URL
+                var reportUrl = $"{reportServerUrl}?{reportPath}&rs:Command=Render&rs:Format={format}";
+
+                // Append parameters if any
+                //if (parameters != null)
+                //{
+                //foreach (var param in parameters)
+                //{
+                //reportUrl += $"&{param.Key}={param.Value}";
+                //}
+                //}
+
+                // Use HttpClientHandler to pass Windows credentials
+                var handler = new HttpClientHandler
+                {
+                    UseDefaultCredentials = true // Enable Windows Authentication
+                };
+
+                var client = new HttpClient(handler);
+                var response = await client.GetAsync(reportUrl);
+
+                if (!response.IsSuccessStatusCode)
+                    return StatusCode((int)response.StatusCode, "Failed to retrieve the report");
+
+                // Read report content
+                var content = await response.Content.ReadAsByteArrayAsync();
+
+                // Determine content type based on format
+                var contentType = format.ToLower() switch
+                {
+                    "pdf" => "application/pdf",
+                    "excel" => "application/vnd.ms-excel",
+                    "word" => "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                    _ => "application/octet-stream"
+                };
+
+                // Return the report as a file
+                return File(content, contentType, $"Report.{format.ToLower()}");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error: {ex.Message}");
+            }
+        }
+    }
+}
