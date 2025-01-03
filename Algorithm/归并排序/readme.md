@@ -49,7 +49,3 @@ def merge(left, right):
     
     return sorted_array
 ```
-
----
-
-Feel free to ask if you need further modifications or additional topics!
