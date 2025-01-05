@@ -88,10 +88,6 @@ print(closest_points(points, 2, Point(0, 2)))
    使用欧几里得公式计算每个点到目标点的距离：
 
 $$
-\text{Cache Hit Ratio} = \frac{\text{缓存命中次数}}{\text{缓存命中次数} + \text{缓存未命中次数}} \times 100
-$$
-
-$$
 \text{distance} = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}
 $$
     
