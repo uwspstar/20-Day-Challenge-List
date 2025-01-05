@@ -1,0 +1,6 @@
+
+### 公式
+
+$$
+\text{Cache Hit Ratio} = \frac{\text{缓存命中次数}}{\text{缓存命中次数} + \text{缓存未命中次数}} \times 100
+$$
