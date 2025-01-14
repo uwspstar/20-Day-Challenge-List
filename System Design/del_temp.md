@@ -5,7 +5,7 @@ Here’s a **Mermaid diagram representation** for each part based on the provide
 ### **1. Adjuster Data Flow**
 
 ```mermaid
-flowchart TD
+flowchart LR
     Start1([Start])
     DailyPass[Daily pass refresh<br>Relevant adjuster data marked Ready for Work]
     StatusUpdate[Status updates for adjuster availability]
@@ -21,9 +21,9 @@ flowchart TD
 ### **2. Claim Data Flow**
 
 ```mermaid
-flowchart TD
+flowchart LR
     Start2([Start])
-    QueryClaim[Query Claim Data:<br>- Fetch relevant claim attributes<br>(Zip Code, Urgency, Complexity, etc.)]
+    QueryClaim[Query Claim Data:<br>- Fetch relevant claim attributes<br>Zip Code, Urgency, Complexity, etc.]
     SendToEngine[Send Data to Decision Engine]
     End2([End])
 
