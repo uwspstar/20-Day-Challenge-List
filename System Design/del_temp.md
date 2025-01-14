@@ -35,7 +35,7 @@ flowchart LR
 ### **3. Decision Engine Flow**
 
 ```mermaid
-flowchart TD
+flowchart LR
     Start3([Start])
     QueryData[Query Claim & Adjuster Data]
     AdjusterAvailable{Adjuster Available?}
