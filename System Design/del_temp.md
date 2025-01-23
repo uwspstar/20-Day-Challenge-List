@@ -8,7 +8,7 @@ flowchart TD
         A2[Service Requests/Responses]
     end
 
-    subgraph Client[Client .NET 6]
+    subgraph Client[Client Dotnet NET 6]
         B1[Blazor WASM]
         B2[Razor Components Views]
         B3[.NET]
