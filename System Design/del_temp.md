@@ -32,7 +32,7 @@ flowchart TD
         C4[Unit Of Work]
         C5[Data Repository]
         C6[Entity Framework Core]
-        C7[CTABS (Database)]
+        C7[CTABS Database]
         C3 --> C4
         C4 --> C5
         C5 --> C6
